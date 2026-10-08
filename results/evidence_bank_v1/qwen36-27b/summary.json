@@ -1,0 +1,670 @@
+{
+ "set": "evidence_bank_v1",
+ "model": "qwen36-27b",
+ "reference": "tdvra",
+ "questions": 60,
+ "bootstrap": {
+  "resamples": 10000,
+  "seed": 12345,
+  "over": "films"
+ },
+ "conditions": {
+  "q": {
+   "accuracy": 10.0,
+   "ci": [
+    10.0,
+    10.0
+   ],
+   "coverage": 60,
+   "delta": -53.3,
+   "delta_ci": [
+    -65.0,
+    -35.0
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 33,
+   "gained": 1,
+   "p_holm": 0.0048
+  },
+  "t": {
+   "accuracy": 8.3,
+   "ci": [
+    5.0,
+    15.0
+   ],
+   "coverage": 60,
+   "delta": -55.0,
+   "delta_ci": [
+    -70.0,
+    -30.0
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 35,
+   "gained": 2,
+   "p_holm": 0.0048
+  },
+  "td": {
+   "accuracy": 43.3,
+   "ci": [
+    40.0,
+    45.0
+   ],
+   "coverage": 60,
+   "delta": -20.0,
+   "delta_ci": [
+    -30.0,
+    0.0
+   ],
+   "p": 0.067993200679932,
+   "lost": 16,
+   "gained": 4,
+   "p_holm": 0.476
+  },
+  "tv": {
+   "accuracy": 31.7,
+   "ci": [
+    25.0,
+    40.0
+   ],
+   "coverage": 60,
+   "delta": -31.7,
+   "delta_ci": [
+    -45.0,
+    -20.0
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 21,
+   "gained": 2,
+   "p_holm": 0.0048
+  },
+  "tr": {
+   "accuracy": 23.3,
+   "ci": [
+    20.0,
+    25.0
+   ],
+   "coverage": 60,
+   "delta": -40.0,
+   "delta_ci": [
+    -50.0,
+    -20.0
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 26,
+   "gained": 2,
+   "p_holm": 0.0048
+  },
+  "ta": {
+   "accuracy": 18.3,
+   "ci": [
+    15.0,
+    20.0
+   ],
+   "coverage": 60,
+   "delta": -45.0,
+   "delta_ci": [
+    -60.0,
+    -25.0
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 29,
+   "gained": 2,
+   "p_holm": 0.0048
+  },
+  "tdvra": {
+   "accuracy": 63.3,
+   "ci": [
+    45.0,
+    75.0
+   ],
+   "coverage": 60,
+   "delta": 0.0,
+   "delta_ci": [
+    0.0,
+    0.0
+   ],
+   "p": null,
+   "lost": 0,
+   "gained": 0
+  },
+  "w_td": {
+   "accuracy": 27.1,
+   "ci": [
+    18.8,
+    37.5
+   ],
+   "coverage": 48,
+   "delta": -37.5,
+   "delta_ci": [
+    -43.8,
+    -25.0
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 19,
+   "gained": 1,
+   "p_holm": 0.0048
+  },
+  "w_tv": {
+   "accuracy": 25.0,
+   "ci": [
+    12.5,
+    31.2
+   ],
+   "coverage": 48,
+   "delta": -39.6,
+   "delta_ci": [
+    -50.0,
+    -31.2
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 20,
+   "gained": 1,
+   "p_holm": 0.0048
+  },
+  "w_tr": {
+   "accuracy": 12.5,
+   "ci": [
+    12.5,
+    12.5
+   ],
+   "coverage": 48,
+   "delta": -52.1,
+   "delta_ci": [
+    -68.8,
+    -31.2
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 26,
+   "gained": 1,
+   "p_holm": 0.0048
+  },
+  "w_ta": {
+   "accuracy": 8.3,
+   "ci": [
+    6.2,
+    12.5
+   ],
+   "coverage": 48,
+   "delta": -56.3,
+   "delta_ci": [
+    -75.0,
+    -31.2
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 27,
+   "gained": 0,
+   "p_holm": 0.0048
+  },
+  "w_tdv": {
+   "accuracy": 52.1,
+   "ci": [
+    31.2,
+    62.5
+   ],
+   "coverage": 48,
+   "delta": -12.5,
+   "delta_ci": [
+    -18.8,
+    -6.2
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 8,
+   "gained": 2,
+   "p_holm": 0.0048
+  },
+  "w_tdr": {
+   "accuracy": 39.6,
+   "ci": [
+    25.0,
+    56.2
+   ],
+   "coverage": 48,
+   "delta": -25.0,
+   "delta_ci": [
+    -31.2,
+    -18.8
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 14,
+   "gained": 2,
+   "p_holm": 0.0048
+  },
+  "w_tda": {
+   "accuracy": 35.4,
+   "ci": [
+    31.2,
+    37.5
+   ],
+   "coverage": 48,
+   "delta": -29.2,
+   "delta_ci": [
+    -43.8,
+    -12.5
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 15,
+   "gained": 1,
+   "p_holm": 0.0048
+  },
+  "w_tvr": {
+   "accuracy": 33.3,
+   "ci": [
+    25.0,
+    43.8
+   ],
+   "coverage": 48,
+   "delta": -31.3,
+   "delta_ci": [
+    -37.5,
+    -18.8
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 16,
+   "gained": 1,
+   "p_holm": 0.0048
+  },
+  "w_tva": {
+   "accuracy": 33.3,
+   "ci": [
+    25.0,
+    37.5
+   ],
+   "coverage": 48,
+   "delta": -31.3,
+   "delta_ci": [
+    -43.8,
+    -18.8
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 17,
+   "gained": 2,
+   "p_holm": 0.0048
+  },
+  "w_tra": {
+   "accuracy": 20.8,
+   "ci": [
+    12.5,
+    31.2
+   ],
+   "coverage": 48,
+   "delta": -43.8,
+   "delta_ci": [
+    -68.8,
+    -12.5
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 23,
+   "gained": 2,
+   "p_holm": 0.0048
+  },
+  "w_tdvr": {
+   "accuracy": 64.6,
+   "ci": [
+    37.5,
+    81.2
+   ],
+   "coverage": 48,
+   "delta": 0.0,
+   "delta_ci": [
+    -6.2,
+    6.2
+   ],
+   "p": 1.0,
+   "lost": 3,
+   "gained": 3,
+   "p_holm": 1.0
+  },
+  "w_tdva": {
+   "accuracy": 58.3,
+   "ci": [
+    43.8,
+    68.8
+   ],
+   "coverage": 48,
+   "delta": -6.3,
+   "delta_ci": [
+    -18.8,
+    0.0
+   ],
+   "p": 0.5937406259374063,
+   "lost": 6,
+   "gained": 3,
+   "p_holm": 1.0
+  },
+  "w_tdra": {
+   "accuracy": 47.9,
+   "ci": [
+    37.5,
+    56.2
+   ],
+   "coverage": 48,
+   "delta": -16.7,
+   "delta_ci": [
+    -25.0,
+    -6.2
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 10,
+   "gained": 2,
+   "p_holm": 0.0048
+  },
+  "w_tvra": {
+   "accuracy": 45.8,
+   "ci": [
+    43.8,
+    50.0
+   ],
+   "coverage": 48,
+   "delta": -18.8,
+   "delta_ci": [
+    -31.2,
+    0.0
+   ],
+   "p": 0.067993200679932,
+   "lost": 13,
+   "gained": 4,
+   "p_holm": 0.476
+  },
+  "w_tdvra": {
+   "accuracy": 70.8,
+   "ci": [
+    56.2,
+    81.2
+   ],
+   "coverage": 48,
+   "delta": 6.2,
+   "delta_ci": [
+    0.0,
+    12.5
+   ],
+   "p": 0.07479252074792521,
+   "lost": 1,
+   "gained": 4,
+   "p_holm": 0.476
+  },
+  "tdvra_cut": {
+   "accuracy": 8.3,
+   "ci": [
+    0.0,
+    12.5
+   ],
+   "coverage": 48,
+   "delta": -56.3,
+   "delta_ci": [
+    -81.2,
+    -31.2
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 27,
+   "gained": 0,
+   "p_holm": 0.0048
+  },
+  "tdvra_placebo": {
+   "accuracy": 62.5,
+   "ci": [
+    50.0,
+    75.0
+   ],
+   "coverage": 48,
+   "delta": -2.1,
+   "delta_ci": [
+    -6.2,
+    6.2
+   ],
+   "p": 0.5031496850314968,
+   "lost": 2,
+   "gained": 1,
+   "p_holm": 1.0
+  },
+  "tdv_fullframes": {
+   "accuracy": 58.3,
+   "ci": [
+    45.0,
+    65.0
+   ],
+   "coverage": 60,
+   "delta": -5.0,
+   "delta_ci": [
+    -10.0,
+    0.0
+   ],
+   "p": 0.067993200679932,
+   "lost": 6,
+   "gained": 3,
+   "p_holm": 0.476
+  }
+ },
+ "shapley": {
+  "window": {
+   "inputs": "DVRA",
+   "n": 48,
+   "D": {
+    "value": 26.7,
+    "ci": [
+     15.1,
+     34.9
+    ]
+   },
+   "V": {
+    "value": 24.0,
+    "ci": [
+     14.1,
+     29.2
+    ]
+   },
+   "R": {
+    "value": 12.2,
+    "ci": [
+     9.4,
+     15.1
+    ]
+   },
+   "A": {
+    "value": 8.0,
+    "ci": [
+     2.6,
+     15.1
+    ]
+   },
+   "DxV": {
+    "value": 0.0,
+    "ci": [
+     -6.2,
+     6.2
+    ]
+   },
+   "DxR": {
+    "value": -0.0,
+    "ci": [
+     -6.2,
+     6.2
+    ]
+   },
+   "DxA": {
+    "value": 0.0,
+    "ci": [
+     -6.2,
+     6.2
+    ]
+   },
+   "VxR": {
+    "value": -4.2,
+    "ci": [
+     -12.5,
+     0.0
+    ]
+   },
+   "VxA": {
+    "value": -0.0,
+    "ci": [
+     -0.0,
+     0.0
+    ]
+   },
+   "RxA": {
+    "value": 0.0,
+    "ci": [
+     -6.2,
+     6.2
+    ]
+   }
+  }
+ },
+ "evidence_type": {
+  "window": {
+   "inputs": "DVRA",
+   "threshold": 0.5,
+   "units": 51,
+   "untestable": 0,
+   "undetermined": 17,
+   "unstable": 6,
+   "coverage": 0.667,
+   "by_type": {
+    "n": 34,
+    "agreement": 0.618,
+    "kappa": 0.561,
+    "confusion": {
+     "audio -> audio": 2,
+     "dialogue -> dialogue": 6,
+     "dialogue -> several pairs": 1,
+     "dialogue and text -> dialogue and text": 1,
+     "dialogue and visual -> visual": 4,
+     "dialogue and visual -> visual and audio": 1,
+     "dialogue or audio -> dialogue or audio": 1,
+     "dialogue or text -> dialogue": 1,
+     "dialogue or text -> dialogue or text": 1,
+     "dialogue or visual -> dialogue": 4,
+     "dialogue or visual -> dialogue and visual": 1,
+     "text -> text": 3,
+     "text -> visual or text": 1,
+     "text and audio -> text and audio": 1,
+     "visual -> visual": 5,
+     "visual or audio -> visual or audio": 1
+    }
+   },
+   "by_family": {
+    "n": 34,
+    "agreement": 0.647,
+    "kappa": 0.364,
+    "confusion": {
+     "and -> and": 3,
+     "and -> single": 4,
+     "or -> and": 1,
+     "or -> or": 3,
+     "or -> single": 5,
+     "single -> or": 1,
+     "single -> other": 1,
+     "single -> single": 16
+    }
+   }
+  }
+ },
+ "unanswerable_abstention": {
+  "q": {
+   "rate": 0.667,
+   "n": 9
+  },
+  "t": {
+   "rate": 0.556,
+   "n": 9
+  },
+  "td": {
+   "rate": 1.0,
+   "n": 9
+  },
+  "tv": {
+   "rate": 0.889,
+   "n": 9
+  },
+  "tr": {
+   "rate": 1.0,
+   "n": 9
+  },
+  "ta": {
+   "rate": 1.0,
+   "n": 9
+  },
+  "tdvra": {
+   "rate": 0.778,
+   "n": 9
+  },
+  "tdv_fullframes": {
+   "rate": 1.0,
+   "n": 9
+  }
+ },
+ "evidence_necessity": {
+  "tdvra_cut": {
+   "audio": {
+    "broken": 2,
+    "solved": 2,
+    "rate": 1.0,
+    "placebo_rate": 0.0,
+    "net": 1.0
+   },
+   "dialogue": {
+    "broken": 6,
+    "solved": 7,
+    "rate": 0.857,
+    "placebo_rate": 0.0,
+    "net": 0.857
+   },
+   "dialogue and text": {
+    "broken": 1,
+    "solved": 1,
+    "rate": 1.0,
+    "placebo_rate": 0.0,
+    "net": 1.0
+   },
+   "dialogue and visual": {
+    "broken": 4,
+    "solved": 4,
+    "rate": 1.0,
+    "placebo_rate": 0.0,
+    "net": 1.0
+   },
+   "dialogue or audio": {
+    "broken": 1,
+    "solved": 1,
+    "rate": 1.0,
+    "placebo_rate": 0.0,
+    "net": 1.0
+   },
+   "dialogue or text": {
+    "broken": 2,
+    "solved": 2,
+    "rate": 1.0,
+    "placebo_rate": 0.0,
+    "net": 1.0
+   },
+   "dialogue or visual": {
+    "broken": 3,
+    "solved": 4,
+    "rate": 0.75,
+    "placebo_rate": 0.25,
+    "net": 0.5
+   },
+   "text": {
+    "broken": 4,
+    "solved": 4,
+    "rate": 1.0,
+    "placebo_rate": 0.0,
+    "net": 1.0
+   },
+   "visual": {
+    "broken": 4,
+    "solved": 5,
+    "rate": 0.8,
+    "placebo_rate": 0.2,
+    "net": 0.6
+   },
+   "visual or audio": {
+    "broken": 0,
+    "solved": 1,
+    "rate": 0.0,
+    "placebo_rate": 0.0,
+    "net": 0.0
+   }
+  }
+ }
+}

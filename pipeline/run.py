@@ -1,0 +1,182 @@
+"""Run the reader on the evidence bank under each condition of an experiment, against an OpenAI-compatible server
+(vLLM).
+
+    python -m pipeline.run --experiment configs/experiments/evidence_bank_v1.json --model qwen36-27b \
+        --url http://127.0.0.1:8010/v1/chat/completions [--conditions q,t] [--films mf2_17,...] [--ids hh53_007,...] \
+        [--concurrency 4]
+
+Writes one record per (condition, question, repeat) to results/<experiment name>/<model>/<condition>.jsonl: the reply,
+the parsed answer, its score, the judge's verdict when the scoring rules cannot decide, latency, token counts and the
+request's fingerprint (`request_sha256`, see `fingerprint`; scripts/show_prompts.py prints the same value for the
+request it rebuilds, so a stored answer can be traced to the exact prompt).
+The experiment names its item set, the frame set shown as V (`frames`), the decoding settings (`repeats`), its
+conditions and optionally a subset of films (`films`); the results folder is its `name` (default: the item set).
+Questions are processed film by film, so that the questions of a film reuse the cached film prefix; a re-run skips
+the calls that already have a scored record. Answers that the rules cannot score are judged by the same model,
+without the film (conditions.judge_prompt); a call that fails five times is left without a score and retried on the
+next run.
+"""
+import argparse
+import hashlib
+import json
+import time
+import urllib.error
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor
+from threading import Lock
+
+from . import conditions as C
+from .common import CONFIGS, DATA, EVALS, RESULTS, read_json, read_jsonl
+
+FRAME_DIRS = {"full": "frames", "notext": "frames_notext"}
+# sent with every request, with the temperature and seed of the repeat: vLLM fills unset sampling parameters from the
+# model's own generation config
+SAMPLING = {"top_p": 0.95, "top_k": 20, "min_p": 0.0, "repetition_penalty": 1.0, "presence_penalty": 0.0,
+            "frequency_penalty": 0.0}
+PER_ITEM = ("cut_evidence", "cut_placebo", "window_only")  # transforms that depend on the question's evidence
+MAX_TOKENS, JUDGE_MAX_TOKENS, ATTEMPTS = 128, 16, 5
+
+
+def post(url, body, timeout=1800):
+    req = urllib.request.Request(url, json.dumps(body).encode(), {"Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        return {"error": f"HTTP {e.code}: {e.read()[:300]!r}"}
+    except (urllib.error.URLError, OSError, TimeoutError) as e:
+        return {"error": f"connection: {e}"}
+
+
+def complete(url, body):
+    """(reply text, token usage), or (None, the last error) after ATTEMPTS failed calls."""
+    for attempt in range(ATTEMPTS):
+        j = post(url, body)
+        if "choices" in j:
+            return (j["choices"][0]["message"].get("content") or "").split("</think>")[-1].strip(), j.get("usage") or {}
+        time.sleep(10 * (attempt + 1))
+    return None, j.get("error")
+
+
+def applies(cond, item):
+    """Transforms that depend on the cited evidence apply only to questions that cite evidence."""
+    return cond.get("transform") not in PER_ITEM or bool(item["evidence"])
+
+
+def request(item, cond, film, ev, frame_dir, rep, model):
+    """The chat-completion request for one question under one condition."""
+    image = lambda x: {"type": "image_url", "image_url": {"url": f"file://{DATA / 'films' / x[0] / frame_dir / x[1]}"}}
+    return {"model": model, **SAMPLING, **rep, "max_tokens": MAX_TOKENS, "chat_template_kwargs": {"enable_thinking": False},
+            "messages": [{"role": "system", "content": C.SYSTEM},
+                         {"role": "user", "content": C.film_parts(cond, film, ev, image) + [{"type": "text", "text": C.question(item)}]}]}
+
+
+def fingerprint(body) -> str:
+    """First 16 hex digits of the sha256 of the request as canonical JSON (keys sorted). The image parts are absolute
+    file paths, so the same request rebuilt from another data root has another fingerprint."""
+    return hashlib.sha256(json.dumps(body, sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:16]
+
+
+def judge(url, model, item, answer):
+    """(score, verdict) from the model as judge; (None, None) when the call fails."""
+    text, _ = complete(url, {"model": model, "temperature": 0.0, "max_tokens": JUDGE_MAX_TOKENS,
+                             "chat_template_kwargs": {"enable_thinking": False}, "messages": C.judge_prompt(item, answer)})
+    if text is None:
+        return None, None
+    v = C.parse_verdict(text)
+    return (0, "unclear") if v is None else (v, text[:20])
+
+
+def done_calls(path):
+    if not path.exists():
+        return set()
+    return {(r["film"], r["id"], r["rep"]) for r in map(json.loads, open(path)) if r.get("correct") is not None}
+
+
+def run_condition(name, cond, items, films, exp, model, url, concurrency):
+    out = RESULTS / exp.get("name", exp["items"]) / model / f"{name}.jsonl"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    done, lock = done_calls(out), Lock()
+    reps = exp["repeats"]
+    cond = {**cond, "frames": cond.get("frames", exp["frames"])}
+    frame_dir = FRAME_DIRS[cond["frames"]]
+    per_item = cond.get("transform") in PER_ITEM
+    with open(out, "a") as fh:
+        for fid in sorted(films):
+            calls = [(it, k) for it in items if it["film"] == fid and applies(cond, it)
+                     for k in range(len(reps)) if (fid, it["id"], k) not in done]
+            if not calls:
+                continue
+            ev = None if per_item else C.events(films[fid], cond)
+
+            def call(c):
+                it, k = c
+                e = C.events(films[fid], cond, it) if per_item else ev
+                rec = {"condition": name, "model": model, "film": fid, "id": it["id"], "rep": k, "gold": it["reference"],
+                       "n_frames": sum(x[0] == "frame" for x in e), "frames": cond["frames"]}
+                body = request(it, cond, films[fid], e, frame_dir, reps[k], model)
+                rec["request_sha256"] = fingerprint(body)
+                t0 = time.time()
+                text, usage = complete(url, body)
+                if text is None:
+                    rec.update(correct=None, error=usage)
+                else:
+                    pred = C.parse_answer(text)
+                    correct = C.score_open(it, pred)
+                    if correct is None:
+                        correct, verdict = judge(url, model, it, pred)
+                        rec["judged"] = verdict
+                        if correct is None:
+                            rec["error"] = "judge call failed"
+                    rec.update(text=text[:500], pred=pred, correct=correct, latency_s=round(time.time() - t0, 2),
+                               prompt_tokens=usage.get("prompt_tokens"),
+                               cached_tokens=(usage.get("prompt_tokens_details") or {}).get("cached_tokens"))
+                with lock:
+                    fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
+                    fh.flush()
+                return rec
+
+            t0 = time.time()
+            recs = [call(calls[0])]  # the first call fills the prefix cache that the others reuse
+            with ThreadPoolExecutor(concurrency) as pool:
+                recs += list(pool.map(call, calls[1:]))
+            ok = [r for r in recs if r["correct"] is not None]
+            print(f"{time.strftime('%T')} {model} {name} {fid}: {sum(r['correct'] for r in ok)}/{len(ok)} correct, "
+                  f"{sum('judged' in r for r in recs)} judged, {len(recs) - len(ok)} failed, {time.time() - t0:.0f} s",
+                  flush=True)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--experiment", required=True)
+    ap.add_argument("--model", required=True, help="served model name (configs/models/<model>.env)")
+    ap.add_argument("--url", required=True)
+    ap.add_argument("--conditions", default="", help="comma-separated subset; default: all in the experiment")
+    ap.add_argument("--films", default="", help="comma-separated video ids; default: the experiment's films, or all")
+    ap.add_argument("--ids", default="", help="comma-separated question ids; default: all")
+    ap.add_argument("--concurrency", type=int, default=4)
+    a = ap.parse_args()
+    exp = read_json(a.experiment)
+    conds = read_json(CONFIGS / "conditions.json")["conditions"]
+    items = read_jsonl(DATA / "items" / f"{exp['items']}.jsonl")
+    for key, wanted in (("film", exp.get("films")), ("film", a.films.split(",") if a.films else None),
+                        ("id", a.ids.split(",") if a.ids else None)):
+        if wanted:
+            items = [it for it in items if it[key] in set(wanted)]
+    listed = {f["video_id"]: f for f in read_json(EVALS / exp["items"] / "films.json")}
+    films = {}
+    for f in sorted({it["film"] for it in items}):
+        path = DATA / "films" / f / "film.json"
+        # the question-only and title-only conditions need no extracted input: title and year come from the film list
+        films[f] = read_json(path) if path.exists() else {"id": f, "title": listed[f]["title"], "year": listed[f]["year"]}
+    for f, film in films.items():
+        if (ocr := DATA / "ocr" / f"{f}.json").exists():
+            film["screens"] = read_json(ocr)["screens"]
+        if (snd := DATA / "sounds" / f"{f}.json").exists():
+            film["sounds"] = read_json(snd)["events"]
+    for name in (a.conditions.split(",") if a.conditions else exp["conditions"]):
+        run_condition(name, conds[name], items, films, exp, a.model, a.url, a.concurrency)
+
+
+if __name__ == "__main__":
+    main()

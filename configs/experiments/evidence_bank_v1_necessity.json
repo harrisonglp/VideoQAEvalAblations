@@ -1,0 +1,9 @@
+{
+ "description": "Evidence necessity: the evidence cut and its placebo on a stratified 15-film subset (300 questions), one greedy run; analysed with the main experiment.",
+ "name": "evidence_bank_v1",
+ "items": "evidence_bank_v1",
+ "frames": "notext",
+ "repeats": [{"temperature": 0.0, "seed": 0}],
+ "films": ["mf2_9", "mf2_10", "mf2_17", "mf2_22", "mf2_24", "mf2_25", "mf2_27", "mf2_33", "chnb_Becky_Sharp_1935", "chnb_Blood_on_the_Sun_1945", "chnb_Bulldog_Drummond_1929", "chnb_Gulliver_s_Travels_1939", "chnb_McLintock_1963", "chnb_Parlor_Bedroom_and_Bath_1931", "chnb_The_Perils_of_Pauline_1947"],
+ "conditions": ["tdvra_cut", "tdvra_placebo"]
+}

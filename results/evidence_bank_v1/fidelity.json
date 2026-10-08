@@ -1,0 +1,108 @@
+{
+ "set": "evidence_bank_v1",
+ "items": 798,
+ "reachable": {
+  "captured": 651,
+  "n": 798,
+  "rate": 0.816
+ },
+ "by_source": {
+  "heard": {
+   "captured": 62,
+   "n": 92,
+   "rate": 0.674
+  },
+  "read": {
+   "captured": 136,
+   "n": 240,
+   "rate": 0.567
+  },
+  "said": {
+   "captured": 542,
+   "n": 724,
+   "rate": 0.749
+  },
+  "seen": {
+   "captured": 507,
+   "n": 580,
+   "rate": 0.874
+  }
+ },
+ "by_type": {
+  "audio": {
+   "captured": 29,
+   "n": 48,
+   "rate": 0.604
+  },
+  "dialogue": {
+   "captured": 139,
+   "n": 196,
+   "rate": 0.709
+  },
+  "dialogue and audio": {
+   "captured": 6,
+   "n": 9,
+   "rate": 0.667
+  },
+  "dialogue and text": {
+   "captured": 12,
+   "n": 19,
+   "rate": 0.632
+  },
+  "dialogue and visual": {
+   "captured": 105,
+   "n": 115,
+   "rate": 0.913
+  },
+  "dialogue or audio": {
+   "captured": 3,
+   "n": 3,
+   "rate": 1.0
+  },
+  "dialogue or text": {
+   "captured": 36,
+   "n": 36,
+   "rate": 1.0
+  },
+  "dialogue or visual": {
+   "captured": 80,
+   "n": 81,
+   "rate": 0.988
+  },
+  "text": {
+   "captured": 72,
+   "n": 107,
+   "rate": 0.673
+  },
+  "text and audio": {
+   "captured": 0,
+   "n": 2,
+   "rate": 0.0
+  },
+  "visual": {
+   "captured": 153,
+   "n": 162,
+   "rate": 0.944
+  },
+  "visual and audio": {
+   "captured": 1,
+   "n": 1,
+   "rate": 1.0
+  },
+  "visual and text": {
+   "captured": 2,
+   "n": 5,
+   "rate": 0.4
+  },
+  "visual or audio": {
+   "captured": 11,
+   "n": 12,
+   "rate": 0.917
+  },
+  "visual or text": {
+   "captured": 2,
+   "n": 2,
+   "rate": 1.0
+  }
+ }
+}

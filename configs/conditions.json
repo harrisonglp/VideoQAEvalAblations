@@ -1,0 +1,30 @@
+{
+ "description": "The study's conditions. inputs: T title and year, D transcript, V frames (the experiment's frame set unless `frames` is set), R on-screen text, A sounds. transform window_only keeps the cited evidence ± pad_s; cut_evidence and cut_placebo are described in pipeline/conditions.py.",
+ "conditions": {
+  "q": {"description": "Question only: no title and no film", "inputs": ""},
+  "t": {"description": "Title and year only", "inputs": "T"},
+  "td": {"description": "Whole film: title + transcript", "inputs": "TD"},
+  "tv": {"description": "Whole film: title + frames", "inputs": "TV"},
+  "tr": {"description": "Whole film: title + on-screen text", "inputs": "TR"},
+  "ta": {"description": "Whole film: title + sounds", "inputs": "TA"},
+  "tdvra": {"description": "Whole film: title + transcript + frames + on-screen text + sounds", "inputs": "TDVRA"},
+  "w_td": {"description": "Excerpts (cited evidence ± 60 s): title + transcript", "inputs": "TD", "transform": "window_only", "pad_s": 60},
+  "w_tv": {"description": "Excerpts (cited evidence ± 60 s): title + frames", "inputs": "TV", "transform": "window_only", "pad_s": 60},
+  "w_tr": {"description": "Excerpts (cited evidence ± 60 s): title + on-screen text", "inputs": "TR", "transform": "window_only", "pad_s": 60},
+  "w_ta": {"description": "Excerpts (cited evidence ± 60 s): title + sounds", "inputs": "TA", "transform": "window_only", "pad_s": 60},
+  "w_tdv": {"description": "Excerpts (cited evidence ± 60 s): title + transcript + frames", "inputs": "TDV", "transform": "window_only", "pad_s": 60},
+  "w_tdr": {"description": "Excerpts (cited evidence ± 60 s): title + transcript + on-screen text", "inputs": "TDR", "transform": "window_only", "pad_s": 60},
+  "w_tda": {"description": "Excerpts (cited evidence ± 60 s): title + transcript + sounds", "inputs": "TDA", "transform": "window_only", "pad_s": 60},
+  "w_tvr": {"description": "Excerpts (cited evidence ± 60 s): title + frames + on-screen text", "inputs": "TVR", "transform": "window_only", "pad_s": 60},
+  "w_tva": {"description": "Excerpts (cited evidence ± 60 s): title + frames + sounds", "inputs": "TVA", "transform": "window_only", "pad_s": 60},
+  "w_tra": {"description": "Excerpts (cited evidence ± 60 s): title + on-screen text + sounds", "inputs": "TRA", "transform": "window_only", "pad_s": 60},
+  "w_tdvr": {"description": "Excerpts (cited evidence ± 60 s): title + transcript + frames + on-screen text", "inputs": "TDVR", "transform": "window_only", "pad_s": 60},
+  "w_tdva": {"description": "Excerpts (cited evidence ± 60 s): title + transcript + frames + sounds", "inputs": "TDVA", "transform": "window_only", "pad_s": 60},
+  "w_tdra": {"description": "Excerpts (cited evidence ± 60 s): title + transcript + on-screen text + sounds", "inputs": "TDRA", "transform": "window_only", "pad_s": 60},
+  "w_tvra": {"description": "Excerpts (cited evidence ± 60 s): title + frames + on-screen text + sounds", "inputs": "TVRA", "transform": "window_only", "pad_s": 60},
+  "w_tdvra": {"description": "Excerpts (cited evidence ± 60 s): title + transcript + frames + on-screen text + sounds", "inputs": "TDVRA", "transform": "window_only", "pad_s": 60},
+  "tdvra_cut": {"description": "Whole film, all inputs, with the cited evidence (± 10 s) removed and every transcript line (± 1 s), screen of text and sound label that states the answer (numbers up to 12 excepted)", "inputs": "TDVRA", "transform": "cut_evidence", "pad_s": 10, "answer_mentions": true},
+  "tdvra_placebo": {"description": "Whole film, all inputs, with stretches of the same lengths as in tdvra_cut removed away from the evidence and from every mention of the answer", "inputs": "TDVRA", "transform": "cut_placebo", "pad_s": 10, "seed": 12345, "answer_mentions": true},
+  "tdv_fullframes": {"description": "Whole film: title + transcript + frames with the on-screen text visible (no text track)", "inputs": "TDV", "frames": "full"}
+ }
+}

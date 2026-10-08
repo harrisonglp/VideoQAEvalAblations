@@ -1,0 +1,8 @@
+{
+ "description": "Closed-book screen: question only and title only, four sampled runs; questions answered correctly without the film are revised before the bank is frozen.",
+ "name": "evidence_bank_v1_screen",
+ "items": "evidence_bank_v1",
+ "frames": "notext",
+ "repeats": [{"temperature": 0.7, "seed": 1}, {"temperature": 0.7, "seed": 2}, {"temperature": 0.7, "seed": 3}, {"temperature": 0.7, "seed": 4}],
+ "conditions": ["q", "t"]
+}
