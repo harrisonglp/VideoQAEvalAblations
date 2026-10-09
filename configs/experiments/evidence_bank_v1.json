@@ -1,10 +1,10 @@
 {
- "description": "Main experiment: every question of the evidence bank under 33 conditions, one greedy run.",
+ "description": "Main experiment: every question of the evidence bank under 34 conditions, one greedy run.",
  "name": "evidence_bank_v1",
  "items": "evidence_bank_v1",
  "frames": "notext",
  "repeats": [{"temperature": 0.0, "seed": 0}],
- "conditions": ["q", "t", "td", "tv", "tr", "ta", "tdv", "tdr", "tda", "tvr", "tva", "tra", "tdvr", "tdva", "tdra", "tvra", "tdvra", "w_td", "w_tv", "w_tr", "w_ta", "w_tdv", "w_tdr", "w_tda", "w_tvr", "w_tva", "w_tra", "w_tdvr", "w_tdva", "w_tdra", "w_tvra", "w_tdvra", "tdv_fullframes"],
+ "conditions": ["q", "t", "td", "tv", "tr", "ta", "tdv", "tdr", "tda", "tvr", "tva", "tra", "tdvr", "tdva", "tdra", "tvra", "tdvra", "w_td", "w_tv", "w_tr", "w_ta", "w_tdv", "w_tdr", "w_tda", "w_tvr", "w_tva", "w_tra", "w_tdvr", "w_tdva", "w_tdra", "w_tvra", "w_tdvra", "tdv_fullframes", "w_tdv_fullframes"],
  "reference": "tdvra",
  "sufficient": 0.5
 }

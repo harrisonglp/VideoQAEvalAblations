@@ -64,6 +64,7 @@ is what the answer depends on. It's not that the film just got shorter.
 - `tdv_fullframes`: title, transcript and frames *with* their on-screen text visible, and no OCR or sound lanes. Next to
   `tdv` it shows what the masking takes away; next to `tdvra` it shows how much the OCR lane adds over reading text
   off the frames yourself.
+- `w_tdv_fullframes`: the same, restricted to the excerpts, so it can be compared with `w_tdv`.
 
 ## How a question gets sorted
 
@@ -85,7 +86,7 @@ per question, one column per condition).
 
 | Experiment | Conditions |
 |---|---|
-| `evidence_bank_v1` | `q`, `t`, all 15 whole-film, all 15 excerpt, `tdv_fullframes` (33) |
+| `evidence_bank_v1` | `q`, `t`, all 15 whole-film, all 15 excerpt, `tdv_fullframes`, `w_tdv_fullframes` (34) |
 | `evidence_bank_v1_necessity` | `tdvra_cut`, `tdvra_placebo` (15 films) |
 | `evidence_bank_v1_reliability` | the main ones minus the whole-film pairs and triples (23), 4 sampled runs |
 | `evidence_bank_v1_screen` | `q`, `t`, 4 sampled runs |

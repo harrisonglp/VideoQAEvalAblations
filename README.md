@@ -54,7 +54,7 @@ sounds lane) and `materials` (`materials/<id>/*.tsv`, read by `pipeline.validate
 - **Conditions** (`configs/conditions.json`, implemented in `pipeline/conditions.py`): question only; title only; the
   title with every combination of lanes, over the whole film and restricted to excerpts (cited evidence ± 60 s); all
   lanes with the cited evidence and every mention of the answer (numbers up to 12 excepted) cut out, and a placebo cut
-  of the same length elsewhere; and the transcript with unmasked frames. What each one is, how they're named and how
+  of the same length elsewhere; and the transcript with unmasked frames, over the whole film and in excerpts. What each one is, how they're named and how
   they're used to sort questions: [`configs/README.md`](configs/README.md).
 - **Scoring:** rules first (`conditions.score_open`: normalised match against the answer and its aliases, numbers in
   digits or words within a tolerance, times, abstention for unanswerable questions); the answers the rules cannot
@@ -62,7 +62,7 @@ sounds lane) and `materials` (`materials/<id>/*.tsv`, read by `pipeline.validate
 
 | Experiment (`configs/experiments/`) | Questions | Conditions | Runs |
 |---|---|---|---|
-| `evidence_bank_v1.json` | all 1,000 | the 33 whole-film, excerpt and control conditions | 1, greedy |
+| `evidence_bank_v1.json` | all 1,000 | the 34 whole-film, excerpt and control conditions | 1, greedy |
 | `evidence_bank_v1_necessity.json` | 300 (15 films, stratified) | evidence cut and placebo | 1, greedy |
 | `evidence_bank_v1_reliability.json` | 200 (10 films, drawn at random) | 23 of the main conditions (not the whole-film lane pairs and triples) | 4, temperature 0.7 |
 | `evidence_bank_v1_screen.json` | all 1,000 | question only, title only | 4, temperature 0.7 |
