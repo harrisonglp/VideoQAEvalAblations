@@ -52,18 +52,18 @@ sounds lane) and `materials` (`materials/<id>/*.tsv`, read by `pipeline.validate
   32 GiB KV cache, prefix caching, at most 4 sequences). Thinking is disabled, replies are limited to 128 tokens, and
   temperature, seed, top-p (0.95), top-k (20) and min-p (0) are sent with each request (`pipeline/run.py`).
 - **Conditions** (`configs/conditions.json`, implemented in `pipeline/conditions.py`): question only; title only; the
-  title with each lane or all lanes over the whole film; the title with every combination of lanes restricted to
-  excerpts (cited evidence ± 60 s); all lanes with the cited evidence and every mention of the answer (numbers up to
-  12 excepted) cut out, and a placebo cut of the same length elsewhere; and the transcript with unmasked frames.
+  title with every combination of lanes, over the whole film and restricted to excerpts (cited evidence ± 60 s); all
+  lanes with the cited evidence and every mention of the answer (numbers up to 12 excepted) cut out, and a placebo cut
+  of the same length elsewhere; and the transcript with unmasked frames.
 - **Scoring:** rules first (`conditions.score_open`: normalised match against the answer and its aliases, numbers in
   digits or words within a tolerance, times, abstention for unanswerable questions); the answers the rules cannot
   decide are judged by the reader itself, without the film (`conditions.judge_prompt`, greedy).
 
 | Experiment (`configs/experiments/`) | Questions | Conditions | Runs |
 |---|---|---|---|
-| `evidence_bank_v1.json` | all 1,000 | the 23 whole-film, excerpt and control conditions | 1, greedy |
+| `evidence_bank_v1.json` | all 1,000 | the 33 whole-film, excerpt and control conditions | 1, greedy |
 | `evidence_bank_v1_necessity.json` | 300 (15 films, stratified) | evidence cut and placebo | 1, greedy |
-| `evidence_bank_v1_reliability.json` | 200 (10 films, drawn at random) | the 23 conditions | 4, temperature 0.7 |
+| `evidence_bank_v1_reliability.json` | 200 (10 films, drawn at random) | 23 of the main conditions (not the whole-film lane pairs and triples) | 4, temperature 0.7 |
 | `evidence_bank_v1_screen.json` | all 1,000 | question only, title only | 4, temperature 0.7 |
 
 ```bash

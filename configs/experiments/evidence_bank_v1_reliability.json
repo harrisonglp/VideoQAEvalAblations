@@ -1,5 +1,5 @@
 {
- "description": "Run-to-run reliability: four sampled runs of the main conditions on 10 films (200 questions), drawn with seed 20261007, 6 MF2 and 4 CHNB.",
+ "description": "Run-to-run reliability: four sampled runs of 23 of the main conditions (all but the whole-film lane pairs and triples) on 10 films (200 questions), drawn with seed 20261007, 6 MF2 and 4 CHNB.",
  "name": "evidence_bank_v1_reliability",
  "items": "evidence_bank_v1",
  "frames": "notext",
