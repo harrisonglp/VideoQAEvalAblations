@@ -54,7 +54,8 @@ sounds lane) and `materials` (`materials/<id>/*.tsv`, read by `pipeline.validate
 - **Conditions** (`configs/conditions.json`, implemented in `pipeline/conditions.py`): question only; title only; the
   title with every combination of lanes, over the whole film and restricted to excerpts (cited evidence ± 60 s); all
   lanes with the cited evidence and every mention of the answer (numbers up to 12 excepted) cut out, and a placebo cut
-  of the same length elsewhere; and the transcript with unmasked frames.
+  of the same length elsewhere; and the transcript with unmasked frames. What each one is, how they're named and how
+  they're used to sort questions: [`configs/README.md`](configs/README.md).
 - **Scoring:** rules first (`conditions.score_open`: normalised match against the answer and its aliases, numbers in
   digits or words within a tolerance, times, abstention for unanswerable questions); the answers the rules cannot
   decide are judged by the reader itself, without the film (`conditions.judge_prompt`, greedy).
