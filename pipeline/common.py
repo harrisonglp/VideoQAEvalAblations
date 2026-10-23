@@ -36,6 +36,30 @@ def write_jsonl(path, rows):
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
 
 
+def read_profile(name: str) -> dict:
+    """The KEY=VALUE settings of configs/models/<name>.env (a value may be single-quoted). A profile's file name is
+    its served model name."""
+    out = {}
+    path = CONFIGS / "models" / f"{name}.env"
+    if not path.exists():
+        return out
+    for line in path.read_text().splitlines():
+        line = line.strip()
+        if line and not line.startswith("#") and "=" in line:
+            k, v = line.split("=", 1)
+            out[k] = v[1:-1] if len(v) >= 2 and v[0] == v[-1] == "'" else v
+    return out
+
+
+def request_options(model: str) -> tuple[dict, int | None]:
+    """(fields added to every request of this model, its answer token limit or None for the default), from its
+    profile's REQUEST_EXTRA (JSON) and MAX_TOKENS. Without REQUEST_EXTRA, thinking is turned off through the chat
+    template, as for the first reader."""
+    p = read_profile(model)
+    extra = json.loads(p["REQUEST_EXTRA"]) if p.get("REQUEST_EXTRA") else {"chat_template_kwargs": {"enable_thinking": False}}
+    return extra, int(p["MAX_TOKENS"]) if p.get("MAX_TOKENS") else None
+
+
 def source_video(video_id: str) -> Path:
     """Path of the source video, looked up in every evals/*/films.json."""
     for listing in sorted(EVALS.glob("*/films.json")):

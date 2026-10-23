@@ -90,6 +90,9 @@ per question, one column per condition).
 | `evidence_bank_v1_necessity` | `tdvra_cut`, `tdvra_placebo` (15 films) |
 | `evidence_bank_v1_reliability` | the main ones minus the whole-film pairs and triples (23), 4 sampled runs |
 | `evidence_bank_v1_screen` | `q`, `t`, 4 sampled runs |
+| `evidence_bank_v1_panel` | `q`, `t`, the 5 whole-film single-lane and all-lane sets, all 15 excerpt sets, for every evaluation reader |
+| `evidence_bank_v1_panel_wholefilm` | the 10 whole-film pairs and triples, for every evaluation reader |
+| `evidence_bank_v1_smoke` | as the panel experiment, on 2 films |
 
 To see exactly what the reader gets for a question under a condition:
 

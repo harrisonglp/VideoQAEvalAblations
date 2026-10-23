@@ -66,6 +66,9 @@ sounds lane) and `materials` (`materials/<id>/*.tsv`, read by `pipeline.validate
 | `evidence_bank_v1_necessity.json` | 300 (15 films, stratified) | evidence cut and placebo | 1, greedy |
 | `evidence_bank_v1_reliability.json` | 200 (10 films, drawn at random) | 23 of the main conditions (not the whole-film lane pairs and triples) | 4, temperature 0.7 |
 | `evidence_bank_v1_screen.json` | all 1,000 | question only, title only | 4, temperature 0.7 |
+| `evidence_bank_v1_panel.json` | all 1,000, per evaluation reader | question only, title only, the 15 excerpt lane sets, the whole film with one lane or all lanes | 1, greedy, fixed judge |
+| `evidence_bank_v1_panel_wholefilm.json` | all 1,000, per evaluation reader | the whole-film lane pairs and triples | 1, greedy, fixed judge |
+| `evidence_bank_v1_smoke.json` | 40 (2 films) | as the panel experiment, to test a reader before the panel run | 1, greedy, fixed judge |
 
 ```bash
 pipeline/serve.sh start configs/models/qwen36-27b.env
@@ -78,6 +81,29 @@ pipeline/serve.sh stop configs/models/qwen36-27b.env
 The necessity experiment writes to the same results folder and is analysed with the main experiment. Before a run:
 `python -m pipeline.items` (items), `python -m pipeline.validate evals/evidence_bank_v1/questions.jsonl` (questions
 against the extracted inputs) and `python -m pipeline.fidelity` (how much of each question's evidence the inputs carry).
+
+## Panel: several readers, labels verified or reassigned
+
+The evaluation readers (`configs/models/`: `gemma4-31b`, `nemotron35-super-vl`, `command-a-plus`, and
+`muse-spark-open` when it can be served) each run the panel experiment. Each profile pins the model's revision and
+sets its request options (thinking off). Answers the rules cannot score are left for one fixed judge, so grading is
+the same for every reader:
+
+```bash
+python -m pipeline.run --experiment configs/experiments/evidence_bank_v1_panel.json --model gemma4-31b \
+    --url http://127.0.0.1:8011/v1/chat/completions --judge none                     # per reader, resumable
+python -m pipeline.judge --experiment configs/experiments/evidence_bank_v1_panel.json --model gemma4-31b \
+    --judge-model gemma4-31b --url http://127.0.0.1:8011/v1/chat/completions         # the judge, for every reader
+python -m pipeline.analyze configs/experiments/evidence_bank_v1_panel.json gemma4-31b  # per reader
+python -m pipeline.panel configs/experiments/panel_v1.json                             # results/evidence_bank_v1/panel/
+```
+
+`pipeline.panel` (`configs/experiments/panel_v1.json`) types every question from the readers' excerpt ablations,
+verifies or reassigns its synthetic label to the evidence source the readers do best with (rule `best`; `threshold`
+is a sensitivity analysis), and measures leave-one-model-out agreement: labels reassigned from two (or three) readers
+against the measured type of a reader that took no part, before and after, averaged over the folds, with bootstrap
+intervals over films. It also writes each reader's accuracy profile, the single-lane matrix, the agreement between
+readers (the ceiling) and a routing check. Outputs: `summary.json`, `labels.csv`, `folds.csv`, `profiles.csv`.
 
 ## Models
 
@@ -143,7 +169,7 @@ runs and a segment, read or label near its threshold can flip.
 
 ```
 pipeline/   speech, screen_text, frames, sounds (lanes); validation_sounds; films, materials; extract (entry point);
-            items, conditions, run, analyze, validate, fidelity; common; page_cache; serve.sh
+            items, conditions, run, judge, analyze, panel, validate, fidelity; common; page_cache; serve.sh
 configs/    conditions.json, experiments/, models/ (vLLM profile)
 evals/      evidence_bank_v1/ (questions, films, README, FORMAT)
 envs/       package lists of the environments; models.sha256

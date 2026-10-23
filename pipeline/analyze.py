@@ -154,6 +154,10 @@ def main():
     items = read_jsonl(DATA / "items" / f"{exp['items']}.jsonl")
     by_id = {it["id"]: it for it in items}
     out_dir = RESULTS / exp.get("name", exp["items"]) / model
+    pending = {c: n for c in conds if (out_dir / f"{c}.jsonl").exists()
+               and (n := sum(1 for r in read_jsonl(out_dir / f"{c}.jsonl") if r.get("pending_judge")))}
+    if pending:
+        sys.exit(f"answers still waiting for the judge (run pipeline.judge first): {pending}")
     S, skipped = {}, {}
     for c in conds:
         if (out_dir / f"{c}.jsonl").exists():

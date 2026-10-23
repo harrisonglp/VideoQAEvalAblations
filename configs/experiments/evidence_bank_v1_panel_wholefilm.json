@@ -1,0 +1,10 @@
+{
+ "description": "Panel experiment, whole-film lane pairs and triples (the whole-film factorial), run after the main panel conditions.",
+ "name": "evidence_bank_v1",
+ "items": "evidence_bank_v1",
+ "frames": "notext",
+ "repeats": [{"temperature": 0.0, "seed": 0}],
+ "conditions": ["tdv", "tdr", "tda", "tvr", "tva", "tra", "tdvr", "tdva", "tdra", "tvra"],
+ "reference": "tdvra",
+ "sufficient": 0.5
+}

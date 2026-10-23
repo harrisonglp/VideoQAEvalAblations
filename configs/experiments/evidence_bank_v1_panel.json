@@ -1,0 +1,10 @@
+{
+ "description": "Panel experiment: every question of the evidence bank, for each evaluation reader, under the question-only and title-only conditions, the 15 excerpt lane sets (the factorial the labels come from) and the whole film with one lane or all lanes. One greedy run; answers the rules cannot score are left for the fixed judge (pipeline.judge).",
+ "name": "evidence_bank_v1",
+ "items": "evidence_bank_v1",
+ "frames": "notext",
+ "repeats": [{"temperature": 0.0, "seed": 0}],
+ "conditions": ["q", "t", "td", "tv", "tr", "ta", "tdvra", "w_td", "w_tv", "w_tr", "w_ta", "w_tdv", "w_tdr", "w_tda", "w_tvr", "w_tva", "w_tra", "w_tdvr", "w_tdva", "w_tdra", "w_tvra", "w_tdvra"],
+ "reference": "tdvra",
+ "sufficient": 0.5
+}

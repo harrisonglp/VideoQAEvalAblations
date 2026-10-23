@@ -13,8 +13,9 @@ The experiment names its item set, the frame set shown as V (`frames`), the deco
 conditions and optionally a subset of films (`films`); the results folder is its `name` (default: the item set).
 Questions are processed film by film, so that the questions of a film reuse the cached film prefix; a re-run skips
 the calls that already have a scored record. Answers that the rules cannot score are judged by the same model,
-without the film (conditions.judge_prompt); a call that fails five times is left without a score and retried on the
-next run.
+without the film (conditions.judge_prompt), or, with `--judge none`, stored with `pending_judge` for a later pass with
+one fixed judge model (pipeline.judge); a call that fails five times is left without a score and retried on the next
+run. Each model's request options (thinking off, answer token limit) come from its profile, configs/models/<model>.env.
 """
 import argparse
 import hashlib
@@ -26,7 +27,7 @@ from concurrent.futures import ThreadPoolExecutor
 from threading import Lock
 
 from . import conditions as C
-from .common import CONFIGS, DATA, EVALS, RESULTS, read_json, read_jsonl
+from .common import CONFIGS, DATA, EVALS, RESULTS, read_json, read_jsonl, request_options
 
 FRAME_DIRS = {"full": "frames", "notext": "frames_notext"}
 # sent with every request, with the temperature and seed of the repeat: vLLM fills unset sampling parameters from the
@@ -35,6 +36,8 @@ SAMPLING = {"top_p": 0.95, "top_k": 20, "min_p": 0.0, "repetition_penalty": 1.0,
             "frequency_penalty": 0.0}
 PER_ITEM = ("cut_evidence", "cut_placebo", "window_only")  # transforms that depend on the question's evidence
 MAX_TOKENS, JUDGE_MAX_TOKENS, ATTEMPTS = 128, 16, 5
+# what reasoning models put before the answer when the server does not separate it: the answer follows the last marker
+REASONING_ENDS = ("</think>", "<channel|>", "<|END_THINKING|>")
 
 
 def post(url, body, timeout=1800):
@@ -53,7 +56,10 @@ def complete(url, body):
     for attempt in range(ATTEMPTS):
         j = post(url, body)
         if "choices" in j:
-            return (j["choices"][0]["message"].get("content") or "").split("</think>")[-1].strip(), j.get("usage") or {}
+            text = j["choices"][0]["message"].get("content") or ""
+            for end in REASONING_ENDS:
+                text = text.split(end)[-1]
+            return text.strip(), j.get("usage") or {}
         time.sleep(10 * (attempt + 1))
     return None, j.get("error")
 
@@ -66,7 +72,8 @@ def applies(cond, item):
 def request(item, cond, film, ev, frame_dir, rep, model):
     """The chat-completion request for one question under one condition."""
     image = lambda x: {"type": "image_url", "image_url": {"url": f"file://{DATA / 'films' / x[0] / frame_dir / x[1]}"}}
-    return {"model": model, **SAMPLING, **rep, "max_tokens": MAX_TOKENS, "chat_template_kwargs": {"enable_thinking": False},
+    extra, max_tokens = request_options(model)
+    return {"model": model, **SAMPLING, **rep, "max_tokens": max_tokens or MAX_TOKENS, **extra,
             "messages": [{"role": "system", "content": C.SYSTEM},
                          {"role": "user", "content": C.film_parts(cond, film, ev, image) + [{"type": "text", "text": C.question(item)}]}]}
 
@@ -79,8 +86,9 @@ def fingerprint(body) -> str:
 
 def judge(url, model, item, answer):
     """(score, verdict) from the model as judge; (None, None) when the call fails."""
-    text, _ = complete(url, {"model": model, "temperature": 0.0, "max_tokens": JUDGE_MAX_TOKENS,
-                             "chat_template_kwargs": {"enable_thinking": False}, "messages": C.judge_prompt(item, answer)})
+    extra, _ = request_options(model)
+    text, _ = complete(url, {"model": model, "temperature": 0.0, "max_tokens": JUDGE_MAX_TOKENS, **extra,
+                             "messages": C.judge_prompt(item, answer)})
     if text is None:
         return None, None
     v = C.parse_verdict(text)
@@ -88,12 +96,14 @@ def judge(url, model, item, answer):
 
 
 def done_calls(path):
+    """Calls with a scored record, or with an answer waiting for the fixed judge."""
     if not path.exists():
         return set()
-    return {(r["film"], r["id"], r["rep"]) for r in map(json.loads, open(path)) if r.get("correct") is not None}
+    return {(r["film"], r["id"], r["rep"]) for r in map(json.loads, open(path))
+            if r.get("correct") is not None or r.get("pending_judge")}
 
 
-def run_condition(name, cond, items, films, exp, model, url, concurrency):
+def run_condition(name, cond, items, films, exp, model, url, concurrency, judge_mode="self"):
     out = RESULTS / exp.get("name", exp["items"]) / model / f"{name}.jsonl"
     out.parent.mkdir(parents=True, exist_ok=True)
     done, lock = done_calls(out), Lock()
@@ -123,7 +133,9 @@ def run_condition(name, cond, items, films, exp, model, url, concurrency):
                 else:
                     pred = C.parse_answer(text)
                     correct = C.score_open(it, pred)
-                    if correct is None:
+                    if correct is None and judge_mode == "none":
+                        rec["pending_judge"] = True
+                    elif correct is None:
                         correct, verdict = judge(url, model, it, pred)
                         rec["judged"] = verdict
                         if correct is None:
@@ -141,9 +153,10 @@ def run_condition(name, cond, items, films, exp, model, url, concurrency):
             with ThreadPoolExecutor(concurrency) as pool:
                 recs += list(pool.map(call, calls[1:]))
             ok = [r for r in recs if r["correct"] is not None]
+            pending = sum(bool(r.get("pending_judge")) for r in recs)
             print(f"{time.strftime('%T')} {model} {name} {fid}: {sum(r['correct'] for r in ok)}/{len(ok)} correct, "
-                  f"{sum('judged' in r for r in recs)} judged, {len(recs) - len(ok)} failed, {time.time() - t0:.0f} s",
-                  flush=True)
+                  f"{sum('judged' in r for r in recs)} judged, {pending} for the judge, "
+                  f"{len(recs) - len(ok) - pending} failed, {time.time() - t0:.0f} s", flush=True)
 
 
 def main():
@@ -155,6 +168,8 @@ def main():
     ap.add_argument("--films", default="", help="comma-separated video ids; default: the experiment's films, or all")
     ap.add_argument("--ids", default="", help="comma-separated question ids; default: all")
     ap.add_argument("--concurrency", type=int, default=4)
+    ap.add_argument("--judge", choices=("self", "none"), default="self",
+                    help="self: the reader judges the answers the rules cannot score; none: leave them for pipeline.judge")
     a = ap.parse_args()
     exp = read_json(a.experiment)
     conds = read_json(CONFIGS / "conditions.json")["conditions"]
@@ -175,7 +190,7 @@ def main():
         if (snd := DATA / "sounds" / f"{f}.json").exists():
             film["sounds"] = read_json(snd)["events"]
     for name in (a.conditions.split(",") if a.conditions else exp["conditions"]):
-        run_condition(name, conds[name], items, films, exp, a.model, a.url, a.concurrency)
+        run_condition(name, conds[name], items, films, exp, a.model, a.url, a.concurrency, a.judge)
 
 
 if __name__ == "__main__":

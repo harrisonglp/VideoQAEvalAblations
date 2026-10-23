@@ -1,9 +1,10 @@
 #!/bin/bash
 # pipeline/serve.sh start|stop configs/models/<name>.env
 # Starts a vLLM OpenAI-compatible server for one model profile (MODEL SERVED_NAME PORT GPU_FRACTION MAX_LEN KV_BYTES
-# EXTRA_ARGS) with a fixed KV-cache size, prefix caching, local-file images allowed under the shared root (so the frames
-# in DATA must resolve to paths inside it), and all caches under that root. The GPU lock is held only while the server
-# loads. The server runs in its own process group, so `stop` removes it completely.
+# EXTRA_ARGS; VLLM_ENV names the server environment under the shared root's envs/, default vllm) with a fixed KV-cache
+# size, prefix caching, local-file images allowed under the shared root (so the frames in DATA must resolve to paths
+# inside it), and all caches under that root (model weights under SERVE_HF_HOME if set). The GPU lock is held only
+# while the server loads. The server runs in its own process group, so `stop` removes it completely.
 set -u
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 SHARED=${SHARED_ROOT:-/data/cinesage}
@@ -22,7 +23,7 @@ if [ "$action" = stop ]; then
 fi
 
 set -a; source "$profile"; set +a
-export PATH=$SHARED/envs/vllm/bin:$PATH HF_HOME=$SHARED/hf-cache HF_HUB_OFFLINE=1 VLLM_NO_USAGE_STATS=1 SHARED \
+export PATH=$SHARED/envs/${VLLM_ENV:-vllm}/bin:$PATH HF_HOME=${SERVE_HF_HOME:-$SHARED/hf-cache} HF_HUB_OFFLINE=1 VLLM_NO_USAGE_STATS=1 SHARED \
   XDG_CACHE_HOME=$SHARED/cache/serving-home/xdg-cache VLLM_CACHE_ROOT=$SHARED/cache/serving-home/vllm \
   TRITON_CACHE_DIR=$SHARED/cache/serving-home/triton TORCHINDUCTOR_CACHE_DIR=$SHARED/cache/serving-home/torchinductor
 # unified memory: release page-cache pages first so the GPU pool can be allocated
