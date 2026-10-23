@@ -51,12 +51,20 @@ def read_profile(name: str) -> dict:
     return out
 
 
+# the reply the prompt asks for ({"id": ..., "answer": ...}); with ANSWER_SCHEMA=1 the server constrains decoding to it
+ANSWER_SCHEMA = {"type": "json_schema", "json_schema": {"name": "answer", "strict": True, "schema": {
+    "type": "object", "properties": {"id": {"type": "string"}, "answer": {"type": "string"}},
+    "required": ["id", "answer"], "additionalProperties": False}}}
+
+
 def request_options(model: str) -> tuple[dict, int | None]:
     """(fields added to every request of this model, its answer token limit or None for the default), from its
-    profile's REQUEST_EXTRA (JSON) and MAX_TOKENS. Without REQUEST_EXTRA, thinking is turned off through the chat
-    template, as for the first reader."""
+    profile's REQUEST_EXTRA (JSON), ANSWER_SCHEMA (1: replies constrained to the answer JSON, as response_format) and
+    MAX_TOKENS. Without REQUEST_EXTRA, thinking is turned off through the chat template, as for the first reader."""
     p = read_profile(model)
     extra = json.loads(p["REQUEST_EXTRA"]) if p.get("REQUEST_EXTRA") else {"chat_template_kwargs": {"enable_thinking": False}}
+    if p.get("ANSWER_SCHEMA") == "1":
+        extra = {**extra, "response_format": ANSWER_SCHEMA}
     return extra, int(p["MAX_TOKENS"]) if p.get("MAX_TOKENS") else None
 
 

@@ -74,8 +74,14 @@ class RequestOptions(unittest.TestCase):
         with mock.patch("pipeline.common.read_profile", return_value=prof):
             self.assertEqual(request_options("x"), ({"chat_template_kwargs": {"reasoning": False}}, 1024))
 
+    def test_answer_schema(self):
+        with mock.patch("pipeline.common.read_profile", return_value={"REQUEST_EXTRA": "{}", "ANSWER_SCHEMA": "1"}):
+            extra, _ = request_options("x")
+        schema = extra["response_format"]["json_schema"]["schema"]
+        self.assertEqual(schema["required"], ["id", "answer"])
+
     def test_real_profiles_parse(self):
-        for m in ("qwen36-27b", "gemma4-31b", "nemotron35-super-vl", "command-a-plus"):
+        for m in ("qwen36-27b", "gemma4-31b", "nemotron35-super-vl", "command-a-plus", "muse-spark-open"):
             extra, _ = request_options(m)
             self.assertIsInstance(extra, dict)
 
