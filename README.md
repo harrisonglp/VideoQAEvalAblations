@@ -84,10 +84,11 @@ against the extracted inputs) and `python -m pipeline.fidelity` (how much of eac
 
 ## Panel: several readers, labels verified or reassigned
 
-The evaluation readers (`configs/models/`: `gemma4-31b`, `nemotron35-super-vl`, `command-a-plus`, and
-`muse-spark-open` when it can be served) each run the panel experiment. Each profile pins the model's revision and
-sets its request options (thinking off). Answers the rules cannot score are left for one fixed judge, so grading is
-the same for every reader:
+The evaluation readers (`configs/models/`: `gemma4-31b`, `nemotron35-super-vl`, `command-a-plus`, `muse-spark-open`)
+each run the panel experiment. Each profile pins the model's revision and sets its request options: thinking off, or
+the lowest reasoning effort for `muse-spark-open`, whose reasoning cannot be turned off, and replies constrained to the
+answer's JSON schema. Answers the rules cannot score are left for one fixed judge, so grading is the same for every
+reader:
 
 ```bash
 python -m pipeline.run --experiment configs/experiments/evidence_bank_v1_panel.json --model gemma4-31b \
@@ -99,10 +100,11 @@ python -m pipeline.panel configs/experiments/panel_v1.json                      
 ```
 
 `pipeline.panel` (`configs/experiments/panel_v1.json`) types every question from the readers' excerpt ablations,
-verifies or reassigns its synthetic label to the evidence source the readers do best with (rule `best`; `threshold`
-is a sensitivity analysis), and measures leave-one-model-out agreement: labels reassigned from two (or three) readers
-against the measured type of a reader that took no part, before and after, averaged over the folds, with bootstrap
-intervals over films. It also writes each reader's accuracy profile, the single-lane matrix, the agreement between
+verifies or reassigns its synthetic label to the evidence source the readers do best with (rule `best`;
+`panel_v1_threshold.json` runs rule `threshold` as a sensitivity analysis into `panel_threshold/`), and measures
+leave-one-model-out agreement: labels reassigned from two (or three) readers against the measured type of a reader
+that took no part, before and after, averaged over the folds, with bootstrap intervals over films. Folds with two
+training readers are also reported per three-reader panel. It also writes each reader's accuracy profile, the single-lane matrix, the agreement between
 readers (the ceiling) and a routing check. Outputs: `summary.json`, `labels.csv`, `folds.csv`, `profiles.csv`.
 
 ## Models

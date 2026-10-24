@@ -1,0 +1,12 @@
+{
+ "description": "Sensitivity analysis of panel_v1: rule threshold (every lane whose pooled score reaches tau counts) instead of best. Writes to results/<experiment>/panel_threshold/.",
+ "experiment": "configs/experiments/evidence_bank_v1_panel.json",
+ "readers": ["gemma4-31b", "nemotron35-super-vl", "command-a-plus", "muse-spark-open"],
+ "judge": "gemma4-31b",
+ "rule": "threshold",
+ "tau": 0.5,
+ "train_sizes": [1, 2, 3],
+ "bootstrap": 2000,
+ "seed": 12345,
+ "out": "panel_threshold"
+}

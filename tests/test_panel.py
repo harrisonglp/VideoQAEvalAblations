@@ -64,6 +64,17 @@ class Bootstrap(unittest.TestCase):
         self.assertLessEqual(res["gain_ci"][0], 25.0)
 
 
+class ByPanel(unittest.TestCase):
+    def test_four_readers_give_four_panels_of_three_folds(self):
+        readers = ["a", "b", "c", "d"]
+        rows = [({"held_out": h, "train": "+".join(T)}, {}) for h in readers
+                for T in panel.combinations([m for m in readers if m != h], 2)]
+        groups = panel.by_panel(rows, readers)
+        self.assertEqual(sorted(groups), ["a+b+c", "a+b+d", "a+c+d", "b+c+d"])
+        for name, folds in groups.items():
+            self.assertEqual(sorted(r["held_out"] for r, _ in folds), name.split("+"))
+
+
 class RequestOptions(unittest.TestCase):
     def test_default_turns_thinking_off(self):
         with mock.patch("pipeline.common.read_profile", return_value={}):

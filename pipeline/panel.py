@@ -26,7 +26,8 @@ Leave-one-model-out
     the synthetic label with h's type (before) and of the label reassigned from T (after). Agreement is exact type and,
     separately, label family; Cohen's kappa as in pipeline.analyze. Fold results are averaged per training-set size.
     95% intervals: bootstrap over films (all questions of a drawn film together), the same resamples for before and
-    after, so their difference is paired.
+    after, so their difference is paired. With more than three readers, the folds of training size 2 are also
+    reported per three-reader panel (each panel: three folds, every reader held out once).
 Also
     The ceiling: agreement between two readers' measured types. Profiles: every reader's accuracy per condition on
     the answerable questions, and the single-lane matrix (labelled single-source type x lane given alone, excerpts).
@@ -34,8 +35,9 @@ Also
     the same evidence source (chosen on the other films), by synthetic and by reassigned label (pooled from all
     readers, so the reassigned labels have seen every reader).
 
-Outputs in results/<experiment name>/panel/: summary.json, labels.csv (per question: label, each reader's measured
-type, pooled type, status), folds.csv (one row per fold), profiles.csv (reader x condition accuracy).
+Outputs in results/<experiment name>/panel/ (or the configuration's `out` folder): summary.json, labels.csv (per
+question: label, each reader's measured type, pooled type, status), folds.csv (one row per fold), profiles.csv (reader x
+condition accuracy).
 """
 import collections
 import csv
@@ -107,6 +109,16 @@ def boot_mean(per_fold, films_order, B, seed):
     return {"before": round(100 * pt[0], 1), "before_ci": ci([x[0] for x in bs]),
             "after": round(100 * pt[1], 1), "after_ci": ci([x[1] for x in bs]),
             "gain": round(100 * (pt[1] - pt[0]), 1), "gain_ci": ci([x[1] - x[0] for x in bs])}
+
+
+def by_panel(rows, readers):
+    """Folds of training size 2 grouped by the three readers they involve (the training pair and the held-out
+    reader), so each group is a three-reader leave-one-model-out with three folds. rows: (fold row, per film)."""
+    groups = collections.defaultdict(list)
+    for row, per_film in rows:
+        names = set(row["train"].split("+")) | {row["held_out"]}
+        groups["+".join(m for m in readers if m in names)].append((row, per_film))
+    return dict(groups)
 
 
 def main():
@@ -181,6 +193,10 @@ def main():
             "folds": len(rows), **res, "kappa_before": mean("kappa_before"), "kappa_after": mean("kappa_after"),
             "family_before": round(100 * mean("family_before"), 1), "family_after": round(100 * mean("family_after"), 1),
             "coverage": mean("coverage")}
+    if len(readers) > 3 and 2 in by_size:
+        summary["leave_one_model_out"]["train_2"]["by_panel"] = {
+            name: {"folds": len(rows), **boot_mean([pf for _, pf in rows], films_order, B, seed)}
+            for name, rows in by_panel(by_size[2], readers).items()}
 
     final = reassign(readers)
     summary["status_all_readers"] = dict(collections.Counter(s for u, (_, s) in final.items() if want[u] != "untestable"))
@@ -222,7 +238,7 @@ def main():
         routing["n"] = len(pool)
         summary["routing_whole_film_all_lanes"] = routing
 
-    out = base / "panel"
+    out = base / cfg.get("out", "panel")
     write_json(out / "summary.json", summary)
     with open(out / "labels.csv", "w", newline="") as f:
         w = csv.writer(f)
