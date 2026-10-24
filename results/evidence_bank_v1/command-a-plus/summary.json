@@ -1,0 +1,575 @@
+{
+ "set": "evidence_bank_v1",
+ "model": "command-a-plus",
+ "reference": "tdvra",
+ "questions": 1000,
+ "bootstrap": {
+  "resamples": 10000,
+  "seed": 12345,
+  "over": "films"
+ },
+ "conditions": {
+  "q": {
+   "accuracy": 15.1,
+   "ci": [
+    14.8,
+    15.4
+   ],
+   "coverage": 1000,
+   "delta": -16.3,
+   "delta_ci": [
+    -18.7,
+    -14.0
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 193,
+   "gained": 30,
+   "p_holm": 0.0042
+  },
+  "t": {
+   "accuracy": 15.8,
+   "ci": [
+    15.3,
+    16.3
+   ],
+   "coverage": 1000,
+   "delta": -15.6,
+   "delta_ci": [
+    -18.0,
+    -13.3
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 191,
+   "gained": 35,
+   "p_holm": 0.0042
+  },
+  "td": {
+   "accuracy": 28.8,
+   "ci": [
+    26.9,
+    30.7
+   ],
+   "coverage": 1000,
+   "delta": -2.6,
+   "delta_ci": [
+    -4.7,
+    -0.4
+   ],
+   "p": 0.021997800219978002,
+   "lost": 81,
+   "gained": 55,
+   "p_holm": 0.044
+  },
+  "tv": {
+   "accuracy": 15.5,
+   "ci": [
+    15.0,
+    16.0
+   ],
+   "coverage": 1000,
+   "delta": -15.9,
+   "delta_ci": [
+    -18.3,
+    -13.5
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 189,
+   "gained": 30,
+   "p_holm": 0.0042
+  },
+  "tr": {
+   "accuracy": 20.1,
+   "ci": [
+    18.8,
+    21.4
+   ],
+   "coverage": 1000,
+   "delta": -11.3,
+   "delta_ci": [
+    -13.5,
+    -9.2
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 158,
+   "gained": 45,
+   "p_holm": 0.0042
+  },
+  "ta": {
+   "accuracy": 16.2,
+   "ci": [
+    15.6,
+    16.9
+   ],
+   "coverage": 1000,
+   "delta": -15.2,
+   "delta_ci": [
+    -17.5,
+    -13.0
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 185,
+   "gained": 33,
+   "p_holm": 0.0042
+  },
+  "tdvra": {
+   "accuracy": 31.4,
+   "ci": [
+    29.1,
+    33.7
+   ],
+   "coverage": 1000,
+   "delta": 0.0,
+   "delta_ci": [
+    0.0,
+    0.0
+   ],
+   "p": null,
+   "lost": 0,
+   "gained": 0
+  },
+  "w_td": {
+   "accuracy": 24.2,
+   "ci": [
+    22.1,
+    26.3
+   ],
+   "coverage": 798,
+   "delta": 0.3,
+   "delta_ci": [
+    -2.3,
+    2.8
+   ],
+   "p": 0.8809119088091191,
+   "lost": 70,
+   "gained": 72,
+   "p_holm": 0.8809
+  },
+  "w_tv": {
+   "accuracy": 3.6,
+   "ci": [
+    2.5,
+    4.8
+   ],
+   "coverage": 798,
+   "delta": -20.3,
+   "delta_ci": [
+    -23.4,
+    -17.2
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 180,
+   "gained": 18,
+   "p_holm": 0.0042
+  },
+  "w_tr": {
+   "accuracy": 8.6,
+   "ci": [
+    7.0,
+    10.4
+   ],
+   "coverage": 798,
+   "delta": -15.3,
+   "delta_ci": [
+    -18.2,
+    -12.5
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 154,
+   "gained": 32,
+   "p_holm": 0.0042
+  },
+  "w_ta": {
+   "accuracy": 2.1,
+   "ci": [
+    1.1,
+    3.4
+   ],
+   "coverage": 798,
+   "delta": -21.8,
+   "delta_ci": [
+    -24.7,
+    -19.0
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 184,
+   "gained": 10,
+   "p_holm": 0.0042
+  },
+  "w_tdv": {
+   "accuracy": 29.2,
+   "ci": [
+    26.8,
+    31.7
+   ],
+   "coverage": 798,
+   "delta": 5.3,
+   "delta_ci": [
+    2.0,
+    8.5
+   ],
+   "p": 0.0023997600239976003,
+   "lost": 58,
+   "gained": 100,
+   "p_holm": 0.0096
+  },
+  "w_tdr": {
+   "accuracy": 31.3,
+   "ci": [
+    28.8,
+    33.9
+   ],
+   "coverage": 798,
+   "delta": 7.4,
+   "delta_ci": [
+    4.9,
+    9.8
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 40,
+   "gained": 99,
+   "p_holm": 0.0042
+  },
+  "w_tda": {
+   "accuracy": 27.4,
+   "ci": [
+    25.2,
+    29.8
+   ],
+   "coverage": 798,
+   "delta": 3.5,
+   "delta_ci": [
+    0.8,
+    6.1
+   ],
+   "p": 0.012198780121987801,
+   "lost": 63,
+   "gained": 91,
+   "p_holm": 0.0366
+  },
+  "w_tvr": {
+   "accuracy": 12.5,
+   "ci": [
+    10.4,
+    14.8
+   ],
+   "coverage": 798,
+   "delta": -11.4,
+   "delta_ci": [
+    -14.5,
+    -8.3
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 141,
+   "gained": 50,
+   "p_holm": 0.0042
+  },
+  "w_tva": {
+   "accuracy": 8.0,
+   "ci": [
+    6.3,
+    9.8
+   ],
+   "coverage": 798,
+   "delta": -15.9,
+   "delta_ci": [
+    -19.1,
+    -12.7
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 169,
+   "gained": 42,
+   "p_holm": 0.0042
+  },
+  "w_tra": {
+   "accuracy": 10.9,
+   "ci": [
+    9.0,
+    12.8
+   ],
+   "coverage": 798,
+   "delta": -13.0,
+   "delta_ci": [
+    -16.2,
+    -10.0
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 149,
+   "gained": 45,
+   "p_holm": 0.0042
+  },
+  "w_tdvr": {
+   "accuracy": 38.7,
+   "ci": [
+    35.9,
+    41.6
+   ],
+   "coverage": 798,
+   "delta": 14.8,
+   "delta_ci": [
+    11.9,
+    17.8
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 24,
+   "gained": 142,
+   "p_holm": 0.0042
+  },
+  "w_tdva": {
+   "accuracy": 34.2,
+   "ci": [
+    31.4,
+    37.0
+   ],
+   "coverage": 798,
+   "delta": 10.3,
+   "delta_ci": [
+    7.0,
+    13.4
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 45,
+   "gained": 127,
+   "p_holm": 0.0042
+  },
+  "w_tdra": {
+   "accuracy": 35.5,
+   "ci": [
+    32.4,
+    38.5
+   ],
+   "coverage": 798,
+   "delta": 11.5,
+   "delta_ci": [
+    8.6,
+    14.3
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 30,
+   "gained": 122,
+   "p_holm": 0.0042
+  },
+  "w_tvra": {
+   "accuracy": 16.3,
+   "ci": [
+    13.9,
+    18.6
+   ],
+   "coverage": 798,
+   "delta": -7.6,
+   "delta_ci": [
+    -10.8,
+    -4.5
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 137,
+   "gained": 76,
+   "p_holm": 0.0042
+  },
+  "w_tdvra": {
+   "accuracy": 42.2,
+   "ci": [
+    39.3,
+    45.1
+   ],
+   "coverage": 798,
+   "delta": 18.3,
+   "delta_ci": [
+    15.4,
+    21.3
+   ],
+   "p": 0.00019998000199980003,
+   "lost": 17,
+   "gained": 163,
+   "p_holm": 0.0042
+  }
+ },
+ "shapley": {
+  "window": {
+   "inputs": "DVRA",
+   "n": 798,
+   "D": {
+    "value": 25.1,
+    "ci": [
+     23.1,
+     27.0
+    ]
+   },
+   "V": {
+    "value": 5.5,
+    "ci": [
+     4.0,
+     7.0
+    ]
+   },
+   "R": {
+    "value": 8.4,
+    "ci": [
+     6.9,
+     10.0
+    ]
+   },
+   "A": {
+    "value": 3.3,
+    "ci": [
+     2.2,
+     4.5
+    ]
+   },
+   "DxV": {
+    "value": 1.4,
+    "ci": [
+     -0.4,
+     3.1
+    ]
+   },
+   "DxR": {
+    "value": -1.5,
+    "ci": [
+     -3.3,
+     0.3
+    ]
+   },
+   "DxA": {
+    "value": 1.1,
+    "ci": [
+     -0.4,
+     2.6
+    ]
+   },
+   "VxR": {
+    "value": 0.3,
+    "ci": [
+     -0.9,
+     1.4
+    ]
+   },
+   "VxA": {
+    "value": 2.3,
+    "ci": [
+     1.0,
+     3.5
+    ]
+   },
+   "RxA": {
+    "value": 0.1,
+    "ci": [
+     -0.9,
+     1.1
+    ]
+   }
+  }
+ },
+ "evidence_type": {
+  "window": {
+   "inputs": "DVRA",
+   "threshold": 0.5,
+   "units": 848,
+   "untestable": 0,
+   "undetermined": 505,
+   "unstable": 126,
+   "coverage": 0.404,
+   "by_type": {
+    "n": 343,
+    "agreement": 0.644,
+    "kappa": 0.535,
+    "confusion": {
+     "audio -> audio": 13,
+     "audio -> dialogue and audio": 2,
+     "audio -> several pairs": 5,
+     "audio -> three or more sources": 1,
+     "dialogue -> dialogue": 131,
+     "dialogue -> dialogue and visual": 1,
+     "dialogue -> several pairs": 2,
+     "dialogue -> three or more sources": 3,
+     "dialogue and audio -> audio": 2,
+     "dialogue and audio -> dialogue and audio": 1,
+     "dialogue and text -> several pairs": 1,
+     "dialogue and visual -> dialogue and visual": 5,
+     "dialogue and visual -> three or more sources": 5,
+     "dialogue and visual -> visual": 4,
+     "dialogue or audio -> dialogue": 2,
+     "dialogue or audio -> three or more sources": 1,
+     "dialogue or text -> dialogue": 12,
+     "dialogue or text -> dialogue and text": 1,
+     "dialogue or text -> dialogue or text": 7,
+     "dialogue or text -> dialogue or visual": 1,
+     "dialogue or text -> text": 8,
+     "dialogue or text -> three or more sources": 3,
+     "dialogue or visual -> dialogue": 26,
+     "dialogue or visual -> dialogue and audio": 1,
+     "dialogue or visual -> dialogue and visual": 3,
+     "dialogue or visual -> dialogue or visual": 1,
+     "dialogue or visual -> several pairs": 3,
+     "dialogue or visual -> three or more sources": 1,
+     "dialogue or visual -> visual": 1,
+     "prior -> prior": 6,
+     "text -> dialogue and text": 3,
+     "text -> several pairs": 3,
+     "text -> text": 42,
+     "text -> three or more sources": 4,
+     "text -> visual and text": 1,
+     "text -> visual or text": 1,
+     "visual -> dialogue and visual": 2,
+     "visual -> several pairs": 6,
+     "visual -> three or more sources": 4,
+     "visual -> visual": 15,
+     "visual -> visual and audio": 2,
+     "visual -> visual and text": 1,
+     "visual and text -> text": 2,
+     "visual or audio -> several pairs": 2,
+     "visual or audio -> visual": 1,
+     "visual or text -> visual": 1
+    }
+   },
+   "by_family": {
+    "n": 343,
+    "agreement": 0.647,
+    "kappa": 0.224,
+    "confusion": {
+     "and -> and": 6,
+     "and -> other": 6,
+     "and -> single": 8,
+     "or -> and": 5,
+     "or -> or": 9,
+     "or -> other": 10,
+     "or -> single": 51,
+     "prior -> prior": 6,
+     "single -> and": 12,
+     "single -> or": 1,
+     "single -> other": 28,
+     "single -> single": 201
+    }
+   }
+  }
+ },
+ "unanswerable_abstention": {
+  "q": {
+   "rate": 0.993,
+   "n": 152
+  },
+  "t": {
+   "rate": 1.0,
+   "n": 152
+  },
+  "td": {
+   "rate": 0.895,
+   "n": 152
+  },
+  "tv": {
+   "rate": 0.993,
+   "n": 152
+  },
+  "tr": {
+   "rate": 0.974,
+   "n": 152
+  },
+  "ta": {
+   "rate": 1.0,
+   "n": 152
+  },
+  "tdvra": {
+   "rate": 0.803,
+   "n": 152
+  }
+ }
+}

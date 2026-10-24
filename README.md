@@ -100,12 +100,20 @@ python -m pipeline.panel configs/experiments/panel_v1.json                      
 ```
 
 `pipeline.panel` (`configs/experiments/panel_v1.json`) types every question from the readers' excerpt ablations,
-verifies or reassigns its synthetic label to the evidence source the readers do best with (rule `best`;
-`panel_v1_threshold.json` runs rule `threshold` as a sensitivity analysis into `panel_threshold/`), and measures
-leave-one-model-out agreement: labels reassigned from two (or three) readers against the measured type of a reader
-that took no part, before and after, averaged over the folds, with bootstrap intervals over films. Folds with two
-training readers are also reported per three-reader panel. It also writes each reader's accuracy profile, the single-lane matrix, the agreement between
-readers (the ceiling) and a routing check. Outputs: `summary.json`, `labels.csv`, `folds.csv`, `profiles.csv`.
+verifies or reassigns its synthetic label to the evidence source the readers do best with (rule `best`), and
+measures leave-one-model-out agreement: labels reassigned from one, two or three readers against the measured type
+of a reader that took no part, before and after, averaged over the folds, with bootstrap intervals over films. Folds
+with two training readers are also reported per three-reader panel. It also writes each reader's accuracy profile,
+the single-lane matrix, the agreement between readers (the ceiling) and a routing check. Outputs: `summary.json`,
+`labels.csv`, `folds.csv`, `profiles.csv`. Two variants write next to it: `panel_v1_threshold.json` (rule
+`threshold`, into `panel_threshold/`) and `panel_v1_without_muse.json` (the three other readers, into
+`panel_without_muse/`). The whole-film pairs and triples (`evidence_bank_v1_panel_wholefilm.json`) were not run for
+the panel.
+
+Results (`results/evidence_bank_v1/panel/summary.json`): with two training readers, the synthetic labels agree with
+the held-out reader's measured type on 65.5% of the questions it types (95% CI 62.9-67.9), and the reassigned labels
+on 72.8% (70.7-74.9), averaged over the 12 folds (four three-reader panels); 70.3% with one training reader and 76.1%
+with three.
 
 ## Models
 
@@ -120,13 +128,18 @@ readers (the ceiling) and a routing check. Outputs: `summary.json`, `labels.csv`
 | PANNs CNN14 (AudioSet) | panns_inference 0.1.1 | `Cnn14_mAP=0.431.pth` | `0dc499e40e9761ef5ea061ffc77697697f277f6a960894903df3ada000e34b31` |
 | MIT/ast-finetuned-audioset-10-10-0.4593 (validation only) | snapshot f826b80d28226b62986cc218e5cec390b1096902 | `model.safetensors` | `ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d` |
 | Qwen/Qwen3.6-27B-FP8 (reader) | snapshot e89b16ebf1988b3d6befa7de50abc2d76f26eb09 | 80 files | `envs/models.sha256` |
+| google/gemma-4-31B-it (panel reader, judge) | snapshot 842da3794eaa0b77d5f08bae87a17459d91ff475 | all files | `envs/panel_models/gemma4-31b.sha256` |
+| nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4 (panel reader) | snapshot 59b8721646c38111a242da18218859fb2b454322 | all files | `envs/panel_models/nemotron35-super-vl.sha256` |
+| CohereLabs/command-a-plus-05-2026-w4a4 (panel reader) | snapshot ebd2d72c0f9a84389c6b057136d38c435aea2700 | all files | `envs/panel_models/command-a-plus.sha256` |
+| meta-models/Muse-Spark-Open-816B-A42B-NVFP4 (panel reader) | snapshot 4239e4db19376904f2e82c167e78f70abb5455fe | all files | `envs/panel_models/muse-spark-open.sha256` |
 
 `envs/models.sha256` lists every model file (with configs, tokenizers and preprocessors) by its path under the shared
 root: `cd /data/cinesage && sha256sum -c <repo>/envs/models.sha256`. The lanes read the models offline from the caches
 that `pipeline.extract` sets (set the same variables to run a lane module directly): `HF_HOME=/data/cinesage/hf-cache`
 and `HF_HUB_OFFLINE=1` (Qwen3-ASR, AST); `HOME=/data/cinesage/cache/serving-home` (PANNs in `panns_data/`) with
 `XDG_CACHE_HOME=$HOME/.cache` (htdemucs in `torch/hub/checkpoints/`); `PADDLE_PDX_CACHE_HOME=/data/cinesage/cache/paddlex`
-(PaddleOCR, with the other variables of `extract.ENV_EXTRA`).
+(PaddleOCR, with the other variables of `extract.ENV_EXTRA`). The panel readers' lists in `envs/panel_models/` are
+relative to each model's snapshot folder: `cd <snapshot> && sha256sum -c <repo>/envs/panel_models/<profile>.sha256`.
 
 ## Environments and hardware
 
@@ -138,6 +151,8 @@ and `HF_HUB_OFFLINE=1` (Qwen3-ASR, AST); `HOME=/data/cinesage/cache/serving-home
 | `panns_env` | 3.12.3 | `sounds` (panns_inference) | `envs/panns_env.txt` |
 | `florence_env` | 3.10.20 | `validation_sounds` (Transformers) | `envs/florence_env.txt` |
 | `vllm` | 3.11.15 | `serve.sh` (vLLM 0.28.0) | `envs/vllm.txt` |
+| `vllm32` | 3.11.17 | `serve.sh` for the panel readers (vLLM 0.32.0, CUDA 12.9 build) | `envs/vllm32.txt` |
+| `muse` | container | `serve.sh` for `muse-spark-open` (Meta's vLLM container, CUDA 13.0) | `envs/muse.txt` |
 
 The environments live in `$SHARED_ROOT/envs/` (default `/data/cinesage/envs/`); `pipeline.extract` finds them there
 (override one with `PAPER1_PY_CLIENT`, `PAPER1_PY_SPEECH`, `PAPER1_PY_OCR`, `PAPER1_PY_SOUNDS` or

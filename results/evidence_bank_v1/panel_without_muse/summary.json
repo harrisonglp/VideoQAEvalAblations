@@ -1,0 +1,236 @@
+{
+ "experiment": "evidence_bank_v1",
+ "readers": [
+  "gemma4-31b",
+  "nemotron35-super-vl",
+  "command-a-plus"
+ ],
+ "tau": 0.5,
+ "rule": "best",
+ "bootstrap": {
+  "resamples": 2000,
+  "seed": 12345,
+  "over": "films"
+ },
+ "questions": 848,
+ "typed_by_excerpts": 798,
+ "leave_one_model_out": {
+  "train_1": {
+   "folds": 6,
+   "before": 66.8,
+   "before_ci": [
+    64.0,
+    69.5
+   ],
+   "after": 72.2,
+   "after_ci": [
+    69.7,
+    74.7
+   ],
+   "gain": 5.4,
+   "gain_ci": [
+    2.9,
+    8.0
+   ],
+   "kappa_before": 0.585,
+   "kappa_after": 0.64,
+   "family_before": 67.6,
+   "family_after": 72.8,
+   "coverage": 0.561
+  },
+  "train_2": {
+   "folds": 3,
+   "before": 66.8,
+   "before_ci": [
+    64.0,
+    69.5
+   ],
+   "after": 76.7,
+   "after_ci": [
+    74.2,
+    79.0
+   ],
+   "gain": 9.9,
+   "gain_ci": [
+    7.0,
+    13.0
+   ],
+   "kappa_before": 0.585,
+   "kappa_after": 0.691,
+   "family_before": 67.6,
+   "family_after": 76.8,
+   "coverage": 0.561
+  }
+ },
+ "status_all_readers": {
+  "kept": 348,
+  "verified": 338,
+  "reassigned": 162
+ },
+ "transitions_all_readers": {
+  "dialogue or visual -> dialogue": 46,
+  "dialogue and visual -> visual": 35,
+  "dialogue or text -> dialogue": 12,
+  "dialogue or text -> text": 9,
+  "dialogue or visual -> visual": 3,
+  "visual or audio -> visual": 3,
+  "dialogue -> three or more sources": 3,
+  "dialogue and visual -> three or more sources": 3,
+  "visual or audio -> audio": 3,
+  "dialogue and text -> text": 3,
+  "dialogue and audio -> audio": 2,
+  "text -> visual": 2,
+  "dialogue or audio -> dialogue": 2,
+  "text -> several pairs": 2,
+  "visual or text -> visual": 2,
+  "visual -> visual and text": 2,
+  "visual -> dialogue and visual": 2,
+  "text -> visual or text": 2,
+  "text -> three or more sources": 2,
+  "visual -> visual and audio": 1,
+  "dialogue or text -> dialogue or visual": 1,
+  "dialogue and audio -> dialogue": 1,
+  "dialogue and audio -> several pairs": 1,
+  "audio -> several pairs": 1,
+  "visual and text -> visual": 1
+ },
+ "status_by_family": {
+  "and": {
+   "kept": 93,
+   "reassigned": 51,
+   "verified": 7
+  },
+  "or": {
+   "reassigned": 87,
+   "kept": 33,
+   "verified": 14
+  },
+  "prior": {
+   "kept": 40,
+   "verified": 10
+  },
+  "single": {
+   "kept": 182,
+   "verified": 307,
+   "reassigned": 24
+  }
+ },
+ "ceiling": {
+  "gemma4-31b~nemotron35-super-vl": {
+   "n": 474,
+   "agreement": 0.825,
+   "kappa": 0.77
+  },
+  "gemma4-31b~command-a-plus": {
+   "n": 324,
+   "agreement": 0.701,
+   "kappa": 0.578
+  },
+  "nemotron35-super-vl~command-a-plus": {
+   "n": 330,
+   "agreement": 0.739,
+   "kappa": 0.63
+  }
+ },
+ "single_lane_matrix": {
+  "gemma4-31b": {
+   "dialogue": {
+    "w_td": 83.7,
+    "w_tv": 0.5,
+    "w_tr": 0.0,
+    "w_ta": 0.5,
+    "w_tdvra": 84.7
+   },
+   "visual": {
+    "w_td": 1.2,
+    "w_tv": 50.0,
+    "w_tr": 0.0,
+    "w_ta": 0.6,
+    "w_tdvra": 46.9
+   },
+   "text": {
+    "w_td": 0.0,
+    "w_tv": 5.6,
+    "w_tr": 73.8,
+    "w_ta": 0.0,
+    "w_tdvra": 76.6
+   },
+   "audio": {
+    "w_td": 0.0,
+    "w_tv": 4.2,
+    "w_tr": 0.0,
+    "w_ta": 56.2,
+    "w_tdvra": 58.3
+   }
+  },
+  "nemotron35-super-vl": {
+   "dialogue": {
+    "w_td": 85.2,
+    "w_tv": 0.0,
+    "w_tr": 0.5,
+    "w_ta": 0.0,
+    "w_tdvra": 82.1
+   },
+   "visual": {
+    "w_td": 1.2,
+    "w_tv": 50.6,
+    "w_tr": 0.6,
+    "w_ta": 1.9,
+    "w_tdvra": 50.6
+   },
+   "text": {
+    "w_td": 0.0,
+    "w_tv": 5.6,
+    "w_tr": 70.1,
+    "w_ta": 0.0,
+    "w_tdvra": 71.0
+   },
+   "audio": {
+    "w_td": 6.2,
+    "w_tv": 12.5,
+    "w_tr": 2.1,
+    "w_ta": 60.4,
+    "w_tdvra": 56.2
+   }
+  },
+  "command-a-plus": {
+   "dialogue": {
+    "w_td": 71.4,
+    "w_tv": 0.0,
+    "w_tr": 0.0,
+    "w_ta": 0.0,
+    "w_tdvra": 69.9
+   },
+   "visual": {
+    "w_td": 0.0,
+    "w_tv": 9.9,
+    "w_tr": 0.0,
+    "w_ta": 0.6,
+    "w_tdvra": 18.5
+   },
+   "text": {
+    "w_td": 0.0,
+    "w_tv": 0.9,
+    "w_tr": 46.7,
+    "w_ta": 0.0,
+    "w_tdvra": 50.5
+   },
+   "audio": {
+    "w_td": 0.0,
+    "w_tv": 0.0,
+    "w_tr": 0.0,
+    "w_ta": 29.2,
+    "w_tdvra": 43.8
+   }
+  }
+ },
+ "routing_whole_film_all_lanes": {
+  "routed_by_synthetic_label": 56.0,
+  "routed_by_reassigned_label": 57.9,
+  "gemma4-31b": 54.6,
+  "nemotron35-super-vl": 56.5,
+  "command-a-plus": 22.6,
+  "oracle_any_reader": 64.6,
+  "n": 848
+ }
+}

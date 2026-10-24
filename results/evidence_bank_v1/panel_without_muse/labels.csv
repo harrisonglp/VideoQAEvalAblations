@@ -1,0 +1,849 @@
+question,film,evidence_type,measured_gemma4-31b,measured_nemotron35-super-vl,measured_command-a-plus,panel_type,status
+ac30_002,chnb_Animal_Crackers_1930,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+ac30_003,chnb_Animal_Crackers_1930,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ac30_004,chnb_Animal_Crackers_1930,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ac30_005,chnb_Animal_Crackers_1930,visual,undetermined,visual,visual and audio,visual and audio,reassigned
+ac30_007,chnb_Animal_Crackers_1930,visual,undetermined,undetermined,undetermined,visual,kept
+ac30_008,chnb_Animal_Crackers_1930,text,text,text,undetermined,text,verified
+ac30_010,chnb_Animal_Crackers_1930,audio,undetermined,undetermined,undetermined,audio,kept
+ac30_012,chnb_Animal_Crackers_1930,dialogue or visual,dialogue or visual,visual,visual,visual,reassigned
+ac30_015,chnb_Animal_Crackers_1930,visual,visual,visual,visual,visual,verified
+ac30_016,chnb_Animal_Crackers_1930,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+ac30_017,chnb_Animal_Crackers_1930,prior,undetermined,prior,undetermined,prior,kept
+ac30_021,chnb_Animal_Crackers_1930,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ac30_022,chnb_Animal_Crackers_1930,dialogue or visual,dialogue,undetermined,undetermined,dialogue or visual,kept
+ac30_023,chnb_Animal_Crackers_1930,text,text,text,dialogue and text,text,verified
+ac30_024,chnb_Animal_Crackers_1930,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+ac30_025,chnb_Animal_Crackers_1930,dialogue and visual,undetermined,dialogue and visual,undetermined,dialogue and visual,kept
+ac30_026,chnb_Animal_Crackers_1930,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+ao46_001,chnb_Angel_on_My_Shoulder_1946,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ao46_004,chnb_Angel_on_My_Shoulder_1946,audio,audio,prior,undetermined,audio,verified
+ao46_005,chnb_Angel_on_My_Shoulder_1946,text,undetermined,undetermined,undetermined,text,kept
+ao46_006,chnb_Angel_on_My_Shoulder_1946,dialogue and visual,visual,undetermined,undetermined,dialogue and visual,kept
+ao46_007,chnb_Angel_on_My_Shoulder_1946,text,text,text,text,text,verified
+ao46_008,chnb_Angel_on_My_Shoulder_1946,dialogue or text,dialogue or visual,dialogue or visual,dialogue or visual,dialogue or visual,reassigned
+ao46_011,chnb_Angel_on_My_Shoulder_1946,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
+ao46_012,chnb_Angel_on_My_Shoulder_1946,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+ao46_015,chnb_Angel_on_My_Shoulder_1946,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ao46_016,chnb_Angel_on_My_Shoulder_1946,visual,undetermined,undetermined,undetermined,visual,kept
+ao46_017,chnb_Angel_on_My_Shoulder_1946,prior,undetermined,undetermined,undetermined,prior,kept
+ao46_021,chnb_Angel_on_My_Shoulder_1946,dialogue or text,undetermined,several pairs,text,text,reassigned
+ao46_022,chnb_Angel_on_My_Shoulder_1946,visual,prior,undetermined,undetermined,visual,kept
+ao46_023,chnb_Angel_on_My_Shoulder_1946,visual,undetermined,undetermined,undetermined,visual,kept
+ao46_024,chnb_Angel_on_My_Shoulder_1946,dialogue,dialogue or visual,dialogue,dialogue,dialogue,verified
+ao46_025,chnb_Angel_on_My_Shoulder_1946,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+ao46_026,chnb_Angel_on_My_Shoulder_1946,dialogue and audio,dialogue,dialogue,dialogue and audio,dialogue,reassigned
+aq30_003,chnb_All_Quiet_on_the_Western_Front_1930,text,undetermined,undetermined,undetermined,text,kept
+aq30_004,chnb_All_Quiet_on_the_Western_Front_1930,text,text,text,three or more sources,text,verified
+aq30_005,chnb_All_Quiet_on_the_Western_Front_1930,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+aq30_008,chnb_All_Quiet_on_the_Western_Front_1930,visual,visual,visual,undetermined,visual,verified
+aq30_010,chnb_All_Quiet_on_the_Western_Front_1930,visual,visual,visual,visual,visual,verified
+aq30_013,chnb_All_Quiet_on_the_Western_Front_1930,visual or audio,visual or audio,visual,undetermined,visual,reassigned
+aq30_014,chnb_All_Quiet_on_the_Western_Front_1930,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+aq30_016,chnb_All_Quiet_on_the_Western_Front_1930,audio,undetermined,undetermined,undetermined,audio,kept
+aq30_021,chnb_All_Quiet_on_the_Western_Front_1930,prior,undetermined,prior,undetermined,prior,kept
+aq30_023,chnb_All_Quiet_on_the_Western_Front_1930,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+aq30_024,chnb_All_Quiet_on_the_Western_Front_1930,dialogue or visual,visual,undetermined,undetermined,dialogue or visual,kept
+aq30_025,chnb_All_Quiet_on_the_Western_Front_1930,dialogue and visual,visual,visual,dialogue and visual,visual,reassigned
+aq30_029,chnb_All_Quiet_on_the_Western_Front_1930,dialogue,dialogue,dialogue,several pairs,dialogue,verified
+aq30_030,chnb_All_Quiet_on_the_Western_Front_1930,dialogue or visual,undetermined,dialogue,undetermined,dialogue or visual,kept
+aq30_031,chnb_All_Quiet_on_the_Western_Front_1930,dialogue and audio,audio,audio,audio,audio,reassigned
+aq30_033,chnb_All_Quiet_on_the_Western_Front_1930,visual,undetermined,undetermined,undetermined,visual,kept
+aq30_034,chnb_All_Quiet_on_the_Western_Front_1930,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+as49_001,mf2_24,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+as49_002,mf2_24,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+as49_003,mf2_24,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+as49_005,mf2_24,visual,undetermined,undetermined,undetermined,visual,kept
+as49_007,mf2_24,text,text,text,undetermined,text,verified
+as49_008,mf2_24,text,text,text,text,text,verified
+as49_009,mf2_24,audio,undetermined,undetermined,undetermined,audio,kept
+as49_011,mf2_24,dialogue or text,text,text,dialogue and text,text,reassigned
+as49_012,mf2_24,dialogue or visual,dialogue or visual,dialogue or visual,dialogue or visual,dialogue or visual,verified
+as49_013,mf2_24,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
+as49_014,mf2_24,dialogue and audio,several pairs,audio,undetermined,several pairs,reassigned
+as49_015,mf2_24,dialogue and visual,undetermined,visual,undetermined,dialogue and visual,kept
+as49_016,mf2_24,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+as49_017,mf2_24,prior,prior,prior,undetermined,prior,verified
+as49_021,mf2_24,visual,undetermined,undetermined,undetermined,visual,kept
+as49_022,mf2_24,visual,undetermined,undetermined,undetermined,visual,kept
+as49_023,mf2_24,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bb59_002,mf2_51,text,visual,visual,undetermined,visual,reassigned
+bb59_003,mf2_51,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+bb59_004,mf2_51,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bb59_005,mf2_51,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bb59_007,mf2_51,visual,undetermined,visual,undetermined,visual,kept
+bb59_008,mf2_51,visual,undetermined,undetermined,undetermined,visual,kept
+bb59_009,mf2_51,audio,three or more sources,several pairs,undetermined,several pairs,reassigned
+bb59_010,mf2_51,dialogue and audio,audio,undetermined,undetermined,dialogue and audio,kept
+bb59_013,mf2_51,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+bb59_016,mf2_51,dialogue and visual,visual,dialogue and visual,three or more sources,dialogue and visual,verified
+bb59_021,mf2_51,text,text,text,text,text,verified
+bb59_022,mf2_51,visual,undetermined,undetermined,undetermined,visual,kept
+bb59_023,mf2_51,dialogue,undetermined,dialogue,undetermined,dialogue,kept
+bb59_024,mf2_51,audio,audio,audio,several pairs,audio,verified
+bb59_025,mf2_51,prior,undetermined,prior,undetermined,prior,kept
+bb59_026,mf2_51,dialogue or visual,dialogue,dialogue,undetermined,dialogue,reassigned
+bb59_027,mf2_51,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+bd29_001,chnb_Bulldog_Drummond_1929,dialogue,dialogue,dialogue and visual,dialogue,dialogue,verified
+bd29_002,chnb_Bulldog_Drummond_1929,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bd29_003,chnb_Bulldog_Drummond_1929,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bd29_005,chnb_Bulldog_Drummond_1929,visual,visual,undetermined,visual and audio,visual,verified
+bd29_006,chnb_Bulldog_Drummond_1929,visual,undetermined,visual,visual,visual,verified
+bd29_008,chnb_Bulldog_Drummond_1929,text,text,text,text,text,verified
+bd29_009,chnb_Bulldog_Drummond_1929,text,text,text,undetermined,text,verified
+bd29_010,chnb_Bulldog_Drummond_1929,audio,undetermined,undetermined,undetermined,audio,kept
+bd29_013,chnb_Bulldog_Drummond_1929,dialogue or visual,dialogue,undetermined,undetermined,dialogue or visual,kept
+bd29_014,chnb_Bulldog_Drummond_1929,dialogue or visual,dialogue,dialogue,undetermined,dialogue,reassigned
+bd29_016,chnb_Bulldog_Drummond_1929,dialogue and text,undetermined,undetermined,undetermined,dialogue and text,kept
+bd29_017,chnb_Bulldog_Drummond_1929,prior,undetermined,undetermined,undetermined,prior,kept
+bd29_021,chnb_Bulldog_Drummond_1929,dialogue and visual,visual,visual,undetermined,visual,reassigned
+bd29_022,chnb_Bulldog_Drummond_1929,visual,undetermined,undetermined,undetermined,visual,kept
+bd29_023,chnb_Bulldog_Drummond_1929,audio,undetermined,undetermined,undetermined,audio,kept
+bd29_024,chnb_Bulldog_Drummond_1929,dialogue or audio,dialogue or audio,dialogue or audio,dialogue,dialogue,reassigned
+bd29_025,chnb_Bulldog_Drummond_1929,dialogue and visual,guessable,undetermined,dialogue and visual,dialogue and visual,verified
+bg30_002,chnb_The_Big_Trail_1930,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bg30_003,chnb_The_Big_Trail_1930,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+bg30_004,chnb_The_Big_Trail_1930,visual,visual,undetermined,undetermined,visual,kept
+bg30_006,chnb_The_Big_Trail_1930,visual,visual,visual,undetermined,visual,verified
+bg30_008,chnb_The_Big_Trail_1930,text,visual or text,text,text,text,verified
+bg30_009,chnb_The_Big_Trail_1930,audio,undetermined,undetermined,undetermined,audio,kept
+bg30_012,chnb_The_Big_Trail_1930,dialogue,dialogue,prior,dialogue,dialogue,verified
+bg30_013,chnb_The_Big_Trail_1930,text,undetermined,undetermined,undetermined,text,kept
+bg30_014,chnb_The_Big_Trail_1930,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+bg30_021,chnb_The_Big_Trail_1930,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+bg30_022,chnb_The_Big_Trail_1930,audio,audio,undetermined,audio,audio,verified
+bg30_023,chnb_The_Big_Trail_1930,prior,prior,undetermined,undetermined,prior,kept
+bg30_024,chnb_The_Big_Trail_1930,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+bg30_025,chnb_The_Big_Trail_1930,visual,undetermined,undetermined,undetermined,visual,kept
+bg30_026,chnb_The_Big_Trail_1930,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+bg30_027,chnb_The_Big_Trail_1930,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+bg30_028,chnb_The_Big_Trail_1930,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bk41_001,chnb_Billy_the_Kid_in_Santa_Fe_1941,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bk41_003,chnb_Billy_the_Kid_in_Santa_Fe_1941,dialogue,undetermined,dialogue,undetermined,dialogue,kept
+bk41_004,chnb_Billy_the_Kid_in_Santa_Fe_1941,visual,undetermined,undetermined,undetermined,visual,kept
+bk41_006,chnb_Billy_the_Kid_in_Santa_Fe_1941,visual,undetermined,undetermined,undetermined,visual,kept
+bk41_007,chnb_Billy_the_Kid_in_Santa_Fe_1941,visual,visual,visual,undetermined,visual,verified
+bk41_008,chnb_Billy_the_Kid_in_Santa_Fe_1941,text,text,text,undetermined,text,verified
+bk41_015,chnb_Billy_the_Kid_in_Santa_Fe_1941,dialogue or text,dialogue or text,dialogue or text,three or more sources,dialogue or text,verified
+bk41_016,chnb_Billy_the_Kid_in_Santa_Fe_1941,dialogue and visual,undetermined,visual,undetermined,dialogue and visual,kept
+bk41_018,chnb_Billy_the_Kid_in_Santa_Fe_1941,prior,undetermined,prior,undetermined,prior,kept
+bk41_021,chnb_Billy_the_Kid_in_Santa_Fe_1941,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+bk41_022,chnb_Billy_the_Kid_in_Santa_Fe_1941,dialogue or visual,dialogue or visual,dialogue or visual,three or more sources,dialogue or visual,verified
+bk41_023,chnb_Billy_the_Kid_in_Santa_Fe_1941,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bk41_027,chnb_Billy_the_Kid_in_Santa_Fe_1941,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bk41_028,chnb_Billy_the_Kid_in_Santa_Fe_1941,text,undetermined,undetermined,undetermined,text,kept
+bk41_029,chnb_Billy_the_Kid_in_Santa_Fe_1941,dialogue and text,undetermined,undetermined,undetermined,dialogue and text,kept
+bk41_030,chnb_Billy_the_Kid_in_Santa_Fe_1941,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
+bo45_001,chnb_Blood_on_the_Sun_1945,text,text,several pairs,undetermined,several pairs,reassigned
+bo45_002,chnb_Blood_on_the_Sun_1945,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bo45_003,chnb_Blood_on_the_Sun_1945,visual,visual,visual,dialogue and visual,visual,verified
+bo45_006,chnb_Blood_on_the_Sun_1945,dialogue or text,dialogue or text,dialogue or text,text,text,reassigned
+bo45_007,chnb_Blood_on_the_Sun_1945,text,text,text,text,text,verified
+bo45_009,chnb_Blood_on_the_Sun_1945,visual,visual,undetermined,undetermined,visual,kept
+bo45_011,chnb_Blood_on_the_Sun_1945,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bo45_012,chnb_Blood_on_the_Sun_1945,text,text,text,visual and text,text,verified
+bo45_014,chnb_Blood_on_the_Sun_1945,visual,undetermined,undetermined,undetermined,visual,kept
+bo45_016,chnb_Blood_on_the_Sun_1945,dialogue or visual,dialogue or visual,dialogue,undetermined,dialogue,reassigned
+bo45_017,chnb_Blood_on_the_Sun_1945,prior,undetermined,undetermined,undetermined,prior,kept
+bo45_021,chnb_Blood_on_the_Sun_1945,dialogue and visual,visual,visual,undetermined,visual,reassigned
+bo45_022,chnb_Blood_on_the_Sun_1945,dialogue or text,dialogue,dialogue,dialogue,dialogue,reassigned
+bo45_023,chnb_Blood_on_the_Sun_1945,dialogue,guessable,dialogue,dialogue,dialogue,verified
+bo45_024,chnb_Blood_on_the_Sun_1945,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bo45_025,chnb_Blood_on_the_Sun_1945,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+bo45_026,chnb_Blood_on_the_Sun_1945,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+br53_001,chnb_Beneath_the_12_Mile_Reef_1953,text,undetermined,undetermined,undetermined,text,kept
+br53_002,chnb_Beneath_the_12_Mile_Reef_1953,audio,audio,audio,undetermined,audio,verified
+br53_003,chnb_Beneath_the_12_Mile_Reef_1953,dialogue or text,undetermined,text,undetermined,dialogue or text,kept
+br53_004,chnb_Beneath_the_12_Mile_Reef_1953,visual,undetermined,undetermined,undetermined,visual,kept
+br53_006,chnb_Beneath_the_12_Mile_Reef_1953,dialogue,dialogue and visual,undetermined,undetermined,dialogue,kept
+br53_007,chnb_Beneath_the_12_Mile_Reef_1953,text,undetermined,undetermined,undetermined,text,kept
+br53_008,chnb_Beneath_the_12_Mile_Reef_1953,dialogue and visual,visual,undetermined,undetermined,dialogue and visual,kept
+br53_010,chnb_Beneath_the_12_Mile_Reef_1953,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+br53_014,chnb_Beneath_the_12_Mile_Reef_1953,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+br53_015,chnb_Beneath_the_12_Mile_Reef_1953,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+br53_016,chnb_Beneath_the_12_Mile_Reef_1953,visual,visual,visual,undetermined,visual,verified
+br53_017,chnb_Beneath_the_12_Mile_Reef_1953,prior,undetermined,prior,prior,prior,verified
+br53_021,chnb_Beneath_the_12_Mile_Reef_1953,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+br53_022,chnb_Beneath_the_12_Mile_Reef_1953,dialogue and visual,visual,dialogue and visual,undetermined,dialogue and visual,verified
+br53_023,chnb_Beneath_the_12_Mile_Reef_1953,visual,visual,undetermined,undetermined,visual,kept
+br53_024,chnb_Beneath_the_12_Mile_Reef_1953,visual,visual,visual,undetermined,visual,verified
+br53_025,chnb_Beneath_the_12_Mile_Reef_1953,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+bs35_001,chnb_Becky_Sharp_1935,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bs35_002,chnb_Becky_Sharp_1935,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bs35_005,chnb_Becky_Sharp_1935,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bs35_006,chnb_Becky_Sharp_1935,visual,visual,visual,undetermined,visual,verified
+bs35_007,chnb_Becky_Sharp_1935,visual,visual,visual,undetermined,visual,verified
+bs35_009,chnb_Becky_Sharp_1935,text,text,text,text,text,verified
+bs35_010,chnb_Becky_Sharp_1935,text,text,text,text,text,verified
+bs35_012,chnb_Becky_Sharp_1935,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
+bs35_013,chnb_Becky_Sharp_1935,dialogue or visual,dialogue or visual,any source,several pairs,dialogue or visual,verified
+bs35_014,chnb_Becky_Sharp_1935,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+bs35_016,chnb_Becky_Sharp_1935,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+bs35_021,chnb_Becky_Sharp_1935,dialogue,guessable,dialogue,dialogue,dialogue,verified
+bs35_022,chnb_Becky_Sharp_1935,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+bs35_023,chnb_Becky_Sharp_1935,visual,undetermined,undetermined,undetermined,visual,kept
+bs35_024,chnb_Becky_Sharp_1935,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+bs35_025,chnb_Becky_Sharp_1935,prior,undetermined,prior,undetermined,prior,kept
+bs35_026,chnb_Becky_Sharp_1935,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+bt34_001,mf2_20,text,text,undetermined,undetermined,text,kept
+bt34_002,mf2_20,visual or text,visual,visual or text,undetermined,visual,reassigned
+bt34_004,mf2_20,dialogue and visual,visual,undetermined,undetermined,dialogue and visual,kept
+bt34_005,mf2_20,dialogue,dialogue and visual,undetermined,undetermined,dialogue,kept
+bt34_006,mf2_20,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+bt34_007,mf2_20,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bt34_009,mf2_20,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bt34_011,mf2_20,visual,visual,visual,undetermined,visual,verified
+bt34_012,mf2_20,dialogue or visual,dialogue,dialogue,undetermined,dialogue,reassigned
+bt34_014,mf2_20,text,text,visual or text,undetermined,text,verified
+bt34_015,mf2_20,dialogue or visual,visual,visual,undetermined,visual,reassigned
+bt34_016,mf2_20,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+bt34_017,mf2_20,prior,undetermined,prior,undetermined,prior,kept
+bt34_021,mf2_20,visual and text,visual,visual,undetermined,visual,reassigned
+bt34_022,mf2_20,visual,visual and text,text,undetermined,visual and text,reassigned
+bt34_023,mf2_20,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+bt34_024,mf2_20,visual,undetermined,visual,undetermined,visual,kept
+cb50_001,mf2_46,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+cb50_003,mf2_46,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+cb50_005,mf2_46,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+cb50_007,mf2_46,visual,visual,visual,undetermined,visual,verified
+cb50_008,mf2_46,visual,undetermined,undetermined,undetermined,visual,kept
+cb50_010,mf2_46,text,undetermined,undetermined,undetermined,text,kept
+cb50_011,mf2_46,text,undetermined,undetermined,undetermined,text,kept
+cb50_014,mf2_46,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+cb50_015,mf2_46,dialogue and visual,visual,visual,undetermined,visual,reassigned
+cb50_017,mf2_46,prior,undetermined,prior,prior,prior,verified
+cb50_021,mf2_46,audio,undetermined,undetermined,undetermined,audio,kept
+cb50_022,mf2_46,visual or audio,visual,visual or audio,undetermined,visual,reassigned
+cb50_023,mf2_46,dialogue and visual,dialogue and visual,undetermined,undetermined,dialogue and visual,kept
+cb50_025,mf2_46,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+cb50_026,mf2_46,text,text,text,text,text,verified
+cb50_027,mf2_46,visual,undetermined,undetermined,visual,visual,kept
+cb50_028,mf2_46,visual or audio,undetermined,undetermined,undetermined,visual or audio,kept
+ck45_001,mf2_40,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ck45_002,mf2_40,dialogue,dialogue,undetermined,undetermined,dialogue,kept
+ck45_003,mf2_40,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ck45_004,mf2_40,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ck45_006,mf2_40,visual,visual,visual,undetermined,visual,verified
+ck45_009,mf2_40,visual,visual,visual,undetermined,visual,verified
+ck45_010,mf2_40,text,undetermined,undetermined,undetermined,text,kept
+ck45_011,mf2_40,text,text,text,undetermined,text,verified
+ck45_012,mf2_40,audio,undetermined,undetermined,undetermined,audio,kept
+ck45_013,mf2_40,dialogue or audio,audio,dialogue or audio,three or more sources,audio,reassigned
+ck45_014,mf2_40,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+ck45_015,mf2_40,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+ck45_017,mf2_40,prior,undetermined,prior,undetermined,prior,kept
+ck45_021,mf2_40,visual,undetermined,undetermined,undetermined,visual,kept
+ck45_022,mf2_40,dialogue and visual,visual,visual,undetermined,visual,reassigned
+ck45_023,mf2_40,dialogue and visual,visual,prior,undetermined,visual,reassigned
+ck45_024,mf2_40,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+dc61_001,mf2_34,audio,audio,audio,audio,audio,verified
+dc61_003,mf2_34,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+dc61_005,mf2_34,visual,visual,visual,undetermined,visual,verified
+dc61_006,mf2_34,visual,visual,visual,visual and text,visual,verified
+dc61_009,mf2_34,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+dc61_010,mf2_34,dialogue and visual,visual,visual,undetermined,visual,reassigned
+dc61_011,mf2_34,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+dc61_012,mf2_34,audio,guessable,audio,audio,audio,verified
+dc61_014,mf2_34,visual,undetermined,undetermined,undetermined,visual,kept
+dc61_016,mf2_34,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+dc61_017,mf2_34,text,text,undetermined,undetermined,text,kept
+dc61_018,mf2_34,prior,undetermined,undetermined,undetermined,prior,kept
+dc61_021,mf2_34,text,text,text,text,text,verified
+dc61_023,mf2_34,dialogue or text,dialogue or text,dialogue or text,dialogue,dialogue,reassigned
+dc61_025,mf2_34,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+dc61_026,mf2_34,visual and text,undetermined,dialogue and text,text,dialogue and text,reassigned
+dc61_027,mf2_34,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+dm63_001,mf2_25,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+dm63_002,mf2_25,dialogue,dialogue,undetermined,dialogue,dialogue,verified
+dm63_003,mf2_25,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+dm63_005,mf2_25,visual,undetermined,undetermined,undetermined,visual,kept
+dm63_006,mf2_25,visual,visual,visual,undetermined,visual,verified
+dm63_010,mf2_25,audio,audio,prior,audio,audio,verified
+dm63_011,mf2_25,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
+dm63_013,mf2_25,dialogue or visual,dialogue or visual,dialogue,dialogue and visual,dialogue,reassigned
+dm63_015,mf2_25,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+dm63_017,mf2_25,prior,undetermined,undetermined,undetermined,prior,kept
+dm63_021,mf2_25,audio,audio,audio,audio,audio,verified
+dm63_022,mf2_25,text,several pairs,undetermined,undetermined,text,kept
+dm63_023,mf2_25,dialogue or visual,dialogue or visual,undetermined,undetermined,dialogue or visual,kept
+dm63_025,mf2_25,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+dm63_026,mf2_25,visual,undetermined,undetermined,undetermined,visual,kept
+dm63_028,mf2_25,dialogue or text,undetermined,undetermined,undetermined,dialogue or text,kept
+dm63_029,mf2_25,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+dt45_001,mf2_49,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+dt45_004,mf2_49,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+dt45_005,mf2_49,visual,undetermined,undetermined,visual,visual,kept
+dt45_006,mf2_49,visual,visual,visual,undetermined,visual,verified
+dt45_007,mf2_49,visual,visual,visual,undetermined,visual,verified
+dt45_008,mf2_49,text,text,text,text,text,verified
+dt45_009,mf2_49,text,text,text,text,text,verified
+dt45_012,mf2_49,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
+dt45_014,mf2_49,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+dt45_015,mf2_49,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+dt45_017,mf2_49,prior,prior,undetermined,undetermined,prior,kept
+dt45_021,mf2_49,visual and text,text,text,text,text,reassigned
+dt45_023,mf2_49,dialogue or audio,guessable,dialogue,dialogue,dialogue,reassigned
+dt45_024,mf2_49,dialogue and text,undetermined,undetermined,undetermined,dialogue and text,kept
+dt45_025,mf2_49,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+dt45_026,mf2_49,dialogue,dialogue and visual,dialogue,undetermined,three or more sources,reassigned
+dt45_027,mf2_49,visual,guessable,visual,visual,visual,verified
+du52_001,mf2_13,text,text,text,text,text,verified
+du52_003,mf2_13,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+du52_006,mf2_13,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
+du52_007,mf2_13,dialogue and visual,visual,visual,undetermined,visual,reassigned
+du52_009,mf2_13,dialogue or text,undetermined,undetermined,three or more sources,dialogue or text,kept
+du52_010,mf2_13,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+du52_011,mf2_13,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+du52_012,mf2_13,audio,audio,audio,several pairs,audio,verified
+du52_014,mf2_13,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+du52_015,mf2_13,text,text,text,dialogue and text,text,verified
+du52_017,mf2_13,prior,undetermined,undetermined,undetermined,prior,kept
+du52_021,mf2_13,visual,undetermined,undetermined,undetermined,visual,kept
+du52_022,mf2_13,visual,undetermined,undetermined,undetermined,visual,kept
+du52_023,mf2_13,dialogue or text,dialogue or text,dialogue or text,dialogue or text,dialogue or text,verified
+du52_024,mf2_13,dialogue,guessable,dialogue,dialogue,dialogue,verified
+du52_025,mf2_13,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+du52_026,mf2_13,visual,visual,visual,undetermined,visual,verified
+ec39_002,chnb_Nurse_Edith_Cavell_1939,text,text,text,undetermined,text,verified
+ec39_003,chnb_Nurse_Edith_Cavell_1939,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ec39_004,chnb_Nurse_Edith_Cavell_1939,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
+ec39_005,chnb_Nurse_Edith_Cavell_1939,visual,undetermined,undetermined,undetermined,visual,kept
+ec39_006,chnb_Nurse_Edith_Cavell_1939,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+ec39_007,chnb_Nurse_Edith_Cavell_1939,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+ec39_008,chnb_Nurse_Edith_Cavell_1939,visual,undetermined,visual,undetermined,visual,kept
+ec39_013,chnb_Nurse_Edith_Cavell_1939,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ec39_014,chnb_Nurse_Edith_Cavell_1939,text,undetermined,undetermined,undetermined,text,kept
+ec39_015,chnb_Nurse_Edith_Cavell_1939,dialogue and visual,undetermined,prior,undetermined,dialogue and visual,kept
+ec39_016,chnb_Nurse_Edith_Cavell_1939,dialogue or visual,dialogue,dialogue,undetermined,dialogue,reassigned
+ec39_017,chnb_Nurse_Edith_Cavell_1939,prior,undetermined,undetermined,undetermined,prior,kept
+ec39_021,chnb_Nurse_Edith_Cavell_1939,dialogue or text,dialogue or text,dialogue or text,dialogue or text,dialogue or text,verified
+ec39_023,chnb_Nurse_Edith_Cavell_1939,dialogue and text,dialogue and text,dialogue and text,undetermined,dialogue and text,verified
+ec39_025,chnb_Nurse_Edith_Cavell_1939,text,undetermined,undetermined,undetermined,text,kept
+ec39_027,chnb_Nurse_Edith_Cavell_1939,visual,visual,undetermined,undetermined,visual,kept
+ec39_028,chnb_Nurse_Edith_Cavell_1939,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ej33_001,mf2_33,text,text,text,text,text,verified
+ej33_002,mf2_33,dialogue,several pairs,dialogue,dialogue,dialogue,verified
+ej33_003,mf2_33,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ej33_004,mf2_33,text,text,text,text,text,verified
+ej33_005,mf2_33,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
+ej33_006,mf2_33,visual,undetermined,undetermined,undetermined,visual,kept
+ej33_007,mf2_33,visual,visual,visual,undetermined,visual,verified
+ej33_008,mf2_33,dialogue,dialogue and visual,dialogue,dialogue,dialogue,verified
+ej33_009,mf2_33,audio,dialogue and audio,guessable,three or more sources,dialogue and audio,reassigned
+ej33_010,mf2_33,text,undetermined,undetermined,undetermined,text,kept
+ej33_011,mf2_33,dialogue or text,dialogue or text,dialogue or text,text,text,reassigned
+ej33_012,mf2_33,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+ej33_013,mf2_33,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+ej33_015,mf2_33,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ej33_016,mf2_33,visual,undetermined,undetermined,undetermined,visual,kept
+ej33_021,mf2_33,dialogue and visual,several pairs,several pairs,undetermined,several pairs,reassigned
+ej33_022,mf2_33,prior,undetermined,prior,prior,prior,verified
+fd53_001,mf2_26,text,text,text,text,text,verified
+fd53_002,mf2_26,audio,audio,audio,audio,audio,verified
+fd53_003,mf2_26,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+fd53_006,mf2_26,dialogue or visual,dialogue or visual,undetermined,undetermined,dialogue or visual,kept
+fd53_007,mf2_26,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+fd53_008,mf2_26,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+fd53_009,mf2_26,dialogue and visual,undetermined,visual,undetermined,dialogue and visual,kept
+fd53_010,mf2_26,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+fd53_012,mf2_26,visual,visual,visual,undetermined,visual,verified
+fd53_017,mf2_26,prior,undetermined,prior,undetermined,prior,kept
+fd53_021,mf2_26,dialogue or visual,dialogue,dialogue,several pairs,dialogue,reassigned
+fd53_022,mf2_26,visual,undetermined,undetermined,undetermined,visual,kept
+fd53_023,mf2_26,dialogue and visual,visual,visual,undetermined,visual,reassigned
+fd53_024,mf2_26,visual,visual,visual,undetermined,visual,verified
+fd53_026,mf2_26,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+fd53_027,mf2_26,visual,undetermined,undetermined,undetermined,visual,kept
+fd53_028,mf2_26,dialogue or visual,dialogue,dialogue,dialogue and visual,dialogue,reassigned
+fp31_001,mf2_42,text,text,text,undetermined,text,verified
+fp31_002,mf2_42,text,visual,visual,undetermined,visual,reassigned
+fp31_003,mf2_42,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+fp31_005,mf2_42,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+fp31_006,mf2_42,visual,visual,visual,three or more sources,visual,verified
+fp31_008,mf2_42,visual,visual,dialogue and visual,undetermined,dialogue and visual,reassigned
+fp31_009,mf2_42,audio,audio,audio,undetermined,audio,verified
+fp31_010,mf2_42,audio,audio,audio,several pairs,audio,verified
+fp31_011,mf2_42,dialogue or visual,dialogue or visual,dialogue,undetermined,dialogue,reassigned
+fp31_012,mf2_42,dialogue or visual,undetermined,dialogue and visual,undetermined,dialogue or visual,kept
+fp31_013,mf2_42,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
+fp31_014,mf2_42,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+fp31_015,mf2_42,dialogue and audio,undetermined,undetermined,undetermined,dialogue and audio,kept
+fp31_016,mf2_42,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+fp31_021,mf2_42,dialogue,dialogue,dialogue,dialogue and visual,dialogue,verified
+fp31_022,mf2_42,visual,visual,visual,visual,visual,verified
+fp31_023,mf2_42,prior,undetermined,prior,prior,prior,verified
+ga55_001,mf2_22,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ga55_002,mf2_22,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ga55_003,mf2_22,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ga55_004,mf2_22,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ga55_005,mf2_22,visual,undetermined,undetermined,undetermined,visual,kept
+ga55_007,mf2_22,visual,three or more sources,undetermined,undetermined,visual,kept
+ga55_008,mf2_22,visual,visual,visual,three or more sources,visual,verified
+ga55_009,mf2_22,text,text,text,text,text,verified
+ga55_010,mf2_22,text,undetermined,undetermined,undetermined,text,kept
+ga55_011,mf2_22,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+ga55_013,mf2_22,dialogue or text,dialogue or text,undetermined,text,text,reassigned
+ga55_014,mf2_22,dialogue and visual,visual,visual,visual,visual,reassigned
+ga55_017,mf2_22,prior,undetermined,prior,undetermined,prior,kept
+ga55_021,mf2_22,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+ga55_022,mf2_22,dialogue or visual,dialogue,dialogue or visual,dialogue and audio,dialogue,reassigned
+ga55_023,mf2_22,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+ga55_024,mf2_22,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+gb51_001,mf2_9,text,text,text,text,text,verified
+gb51_002,mf2_9,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+gb51_003,mf2_9,visual and text,undetermined,undetermined,undetermined,visual and text,kept
+gb51_004,mf2_9,dialogue or text,dialogue or text,dialogue or text,dialogue or text,dialogue or text,verified
+gb51_006,mf2_9,visual or audio,visual or audio,visual or audio,visual,visual,reassigned
+gb51_007,mf2_9,dialogue,dialogue,undetermined,undetermined,dialogue,kept
+gb51_011,mf2_9,visual,guessable,visual,visual,visual,verified
+gb51_012,mf2_9,text,undetermined,undetermined,undetermined,text,kept
+gb51_014,mf2_9,dialogue,dialogue,undetermined,undetermined,dialogue,kept
+gb51_017,mf2_9,prior,undetermined,prior,undetermined,prior,kept
+gb51_021,mf2_9,audio,audio,audio,dialogue and audio,audio,verified
+gb51_022,mf2_9,text and audio,undetermined,undetermined,undetermined,text and audio,kept
+gb51_023,mf2_9,visual,undetermined,undetermined,undetermined,visual,kept
+gb51_024,mf2_9,visual,visual,undetermined,undetermined,visual,kept
+gb51_025,mf2_9,dialogue and visual,undetermined,visual,undetermined,dialogue and visual,kept
+gb51_026,mf2_9,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+gb51_027,mf2_9,audio,undetermined,undetermined,undetermined,audio,kept
+gt39_003,chnb_Gulliver_s_Travels_1939,visual,visual,visual,visual,visual,verified
+gt39_007,chnb_Gulliver_s_Travels_1939,text,text,text,three or more sources,text,verified
+gt39_008,chnb_Gulliver_s_Travels_1939,text,text,text,text,text,verified
+gt39_017,chnb_Gulliver_s_Travels_1939,visual and audio,undetermined,visual,undetermined,visual and audio,kept
+gt39_021,chnb_Gulliver_s_Travels_1939,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+gt39_023,chnb_Gulliver_s_Travels_1939,visual,visual,visual,undetermined,visual,verified
+gt39_024,chnb_Gulliver_s_Travels_1939,visual,undetermined,undetermined,undetermined,visual,kept
+gt39_026,chnb_Gulliver_s_Travels_1939,visual,visual,visual,undetermined,visual,verified
+gt39_027,chnb_Gulliver_s_Travels_1939,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+gt39_028,chnb_Gulliver_s_Travels_1939,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+gt39_029,chnb_Gulliver_s_Travels_1939,dialogue or text,dialogue,dialogue,dialogue,dialogue,reassigned
+gt39_031,chnb_Gulliver_s_Travels_1939,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+gt39_032,chnb_Gulliver_s_Travels_1939,dialogue or text,dialogue or text,dialogue or text,three or more sources,dialogue or text,verified
+gt39_033,chnb_Gulliver_s_Travels_1939,dialogue and text,dialogue and text,undetermined,undetermined,dialogue and text,kept
+gt39_034,chnb_Gulliver_s_Travels_1939,prior,undetermined,prior,undetermined,prior,kept
+gt39_037,chnb_Gulliver_s_Travels_1939,visual,visual,visual,undetermined,visual,verified
+hb34_002,mf2_30,dialogue,undetermined,dialogue,undetermined,dialogue,kept
+hb34_010,mf2_30,dialogue and visual,three or more sources,visual,undetermined,three or more sources,reassigned
+hb34_011,mf2_30,dialogue and visual,undetermined,visual,undetermined,dialogue and visual,kept
+hb34_012,mf2_30,text,guessable,guessable,text,guessable,reassigned
+hb34_015,mf2_30,audio,audio,visual or audio,audio,audio,verified
+hb34_016,mf2_30,audio,audio,guessable,audio,audio,verified
+hb34_017,mf2_30,dialogue and audio,guessable,audio,audio,audio,reassigned
+hb34_018,mf2_30,prior,undetermined,prior,prior,prior,verified
+hb34_024,mf2_30,visual,visual,visual,undetermined,visual,verified
+hb34_026,mf2_30,text,text,text,text,text,verified
+hb34_027,mf2_30,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+hb34_028,mf2_30,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+hb34_029,mf2_30,dialogue,dialogue,undetermined,undetermined,dialogue,kept
+hb34_031,mf2_30,visual,undetermined,undetermined,undetermined,visual,kept
+hb34_032,mf2_30,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+hb34_033,mf2_30,dialogue or visual,dialogue or visual,dialogue,undetermined,dialogue,reassigned
+hb34_035,mf2_30,visual,undetermined,undetermined,undetermined,visual,kept
+hd29_001,chnb_Happy_Days_1929,prior,undetermined,undetermined,undetermined,prior,kept
+hd29_003,chnb_Happy_Days_1929,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+hd29_004,chnb_Happy_Days_1929,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+hd29_006,chnb_Happy_Days_1929,dialogue and visual,visual,visual,undetermined,visual,reassigned
+hd29_008,chnb_Happy_Days_1929,visual,undetermined,undetermined,undetermined,visual,kept
+hd29_011,chnb_Happy_Days_1929,dialogue or visual,dialogue or visual,dialogue or visual,undetermined,dialogue or visual,verified
+hd29_013,chnb_Happy_Days_1929,dialogue or text,dialogue or text,dialogue or text,dialogue,dialogue,reassigned
+hd29_016,chnb_Happy_Days_1929,text,text,text,text,text,verified
+hd29_017,chnb_Happy_Days_1929,text,text,text,dialogue and text,text,verified
+hd29_021,chnb_Happy_Days_1929,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+hd29_022,chnb_Happy_Days_1929,visual,guessable,visual,undetermined,visual,verified
+hd29_023,chnb_Happy_Days_1929,visual,undetermined,undetermined,undetermined,visual,kept
+hd29_025,chnb_Happy_Days_1929,dialogue or visual,several pairs,several pairs,undetermined,several pairs,reassigned
+hd29_026,chnb_Happy_Days_1929,dialogue and visual,visual,visual,undetermined,visual,reassigned
+hd29_027,chnb_Happy_Days_1929,visual,visual,visual,undetermined,visual,verified
+hd29_029,chnb_Happy_Days_1929,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+hd29_030,chnb_Happy_Days_1929,dialogue and visual,visual,undetermined,three or more sources,three or more sources,reassigned
+hg40_001,chnb_His_Girl_Friday_1940,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+hg40_003,chnb_His_Girl_Friday_1940,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+hg40_004,chnb_His_Girl_Friday_1940,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+hg40_006,chnb_His_Girl_Friday_1940,visual,undetermined,undetermined,undetermined,visual,kept
+hg40_007,chnb_His_Girl_Friday_1940,visual,guessable,visual,undetermined,visual,verified
+hg40_008,chnb_His_Girl_Friday_1940,visual,visual,visual,undetermined,visual,verified
+hg40_010,chnb_His_Girl_Friday_1940,text,text,text,several pairs,text,verified
+hg40_011,chnb_His_Girl_Friday_1940,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+hg40_013,chnb_His_Girl_Friday_1940,dialogue or visual,dialogue,dialogue,undetermined,dialogue,reassigned
+hg40_015,chnb_His_Girl_Friday_1940,dialogue and text,undetermined,undetermined,undetermined,dialogue and text,kept
+hg40_016,chnb_His_Girl_Friday_1940,dialogue and visual,prior,prior,undetermined,prior,reassigned
+hg40_017,chnb_His_Girl_Friday_1940,prior,undetermined,prior,undetermined,prior,kept
+hg40_021,chnb_His_Girl_Friday_1940,visual or audio,undetermined,undetermined,undetermined,visual or audio,kept
+hg40_022,chnb_His_Girl_Friday_1940,dialogue or visual,dialogue and visual,three or more sources,undetermined,three or more sources,reassigned
+hg40_023,chnb_His_Girl_Friday_1940,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+hg40_024,chnb_His_Girl_Friday_1940,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+hg40_025,chnb_His_Girl_Friday_1940,dialogue,dialogue,dialogue,several pairs,dialogue,verified
+hh53_001,mf2_43,text,text,text,undetermined,text,verified
+hh53_004,mf2_43,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+hh53_006,mf2_43,visual,undetermined,visual,undetermined,visual,kept
+hh53_007,mf2_43,text,text,undetermined,undetermined,text,kept
+hh53_008,mf2_43,visual,undetermined,visual,undetermined,visual,kept
+hh53_012,mf2_43,audio,audio,audio,several pairs,audio,verified
+hh53_016,mf2_43,dialogue or visual,dialogue,dialogue,undetermined,dialogue,reassigned
+hh53_018,mf2_43,prior,undetermined,prior,undetermined,prior,kept
+hh53_022,mf2_43,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+hh53_023,mf2_43,dialogue and visual,dialogue and visual,several pairs,undetermined,dialogue and visual,verified
+hh53_025,mf2_43,audio,visual or audio,prior,audio,audio,verified
+hh53_026,mf2_43,dialogue and audio,undetermined,undetermined,undetermined,dialogue and audio,kept
+hh53_027,mf2_43,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+hh53_028,mf2_43,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+hh53_030,mf2_43,dialogue or text,dialogue,dialogue,dialogue,dialogue,reassigned
+hh53_031,mf2_43,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+hh53_033,mf2_43,visual,undetermined,undetermined,undetermined,visual,kept
+hw48_001,chnb_He_Walked_by_Night_1948,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+hw48_002,chnb_He_Walked_by_Night_1948,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+hw48_004,chnb_He_Walked_by_Night_1948,visual,undetermined,undetermined,undetermined,visual,kept
+hw48_006,chnb_He_Walked_by_Night_1948,visual,visual,visual,undetermined,visual,verified
+hw48_007,chnb_He_Walked_by_Night_1948,dialogue and text,three or more sources,undetermined,undetermined,dialogue and text,kept
+hw48_008,chnb_He_Walked_by_Night_1948,text,visual or text,visual or text,visual or text,visual or text,reassigned
+hw48_009,chnb_He_Walked_by_Night_1948,audio,undetermined,undetermined,undetermined,audio,kept
+hw48_014,chnb_He_Walked_by_Night_1948,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+hw48_015,chnb_He_Walked_by_Night_1948,text,three or more sources,visual,undetermined,three or more sources,reassigned
+hw48_017,chnb_He_Walked_by_Night_1948,prior,undetermined,guessable,undetermined,prior,kept
+hw48_021,chnb_He_Walked_by_Night_1948,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+hw48_022,chnb_He_Walked_by_Night_1948,visual,undetermined,undetermined,undetermined,visual,kept
+hw48_023,chnb_He_Walked_by_Night_1948,dialogue or visual,dialogue,dialogue,undetermined,dialogue,reassigned
+hw48_024,chnb_He_Walked_by_Night_1948,dialogue or visual,dialogue or visual,dialogue,dialogue,dialogue,reassigned
+hw48_025,chnb_He_Walked_by_Night_1948,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+hw48_026,chnb_He_Walked_by_Night_1948,dialogue and visual,undetermined,visual,undetermined,dialogue and visual,kept
+hw48_028,chnb_He_Walked_by_Night_1948,dialogue and audio,dialogue and visual,undetermined,undetermined,dialogue and audio,kept
+jb42_002,chnb_Rudyard_Kipling_s_Jungle_Book_1942,text,text,text,text,text,verified
+jb42_003,chnb_Rudyard_Kipling_s_Jungle_Book_1942,dialogue or visual,dialogue or visual,dialogue or visual,dialogue,dialogue,reassigned
+jb42_006,chnb_Rudyard_Kipling_s_Jungle_Book_1942,visual,visual,visual,visual,visual,verified
+jb42_009,chnb_Rudyard_Kipling_s_Jungle_Book_1942,dialogue and visual,visual,visual,dialogue and visual,visual,reassigned
+jb42_011,chnb_Rudyard_Kipling_s_Jungle_Book_1942,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+jb42_013,chnb_Rudyard_Kipling_s_Jungle_Book_1942,visual,undetermined,visual,undetermined,visual,kept
+jb42_015,chnb_Rudyard_Kipling_s_Jungle_Book_1942,dialogue and visual,visual,undetermined,undetermined,dialogue and visual,kept
+jb42_016,chnb_Rudyard_Kipling_s_Jungle_Book_1942,visual,visual,guessable,undetermined,visual,verified
+jb42_017,chnb_Rudyard_Kipling_s_Jungle_Book_1942,prior,undetermined,prior,undetermined,prior,kept
+jb42_021,chnb_Rudyard_Kipling_s_Jungle_Book_1942,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+jb42_022,chnb_Rudyard_Kipling_s_Jungle_Book_1942,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+jb42_023,chnb_Rudyard_Kipling_s_Jungle_Book_1942,audio,undetermined,undetermined,undetermined,audio,kept
+jb42_024,chnb_Rudyard_Kipling_s_Jungle_Book_1942,visual,undetermined,prior,three or more sources,three or more sources,reassigned
+jb42_025,chnb_Rudyard_Kipling_s_Jungle_Book_1942,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+jb42_026,chnb_Rudyard_Kipling_s_Jungle_Book_1942,visual,undetermined,undetermined,undetermined,visual,kept
+jb42_027,chnb_Rudyard_Kipling_s_Jungle_Book_1942,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+jb42_028,chnb_Rudyard_Kipling_s_Jungle_Book_1942,visual or audio,audio,audio,several pairs,audio,reassigned
+jr50_001,mf2_53,dialogue,dialogue,several pairs,dialogue,dialogue,verified
+jr50_002,mf2_53,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+jr50_003,mf2_53,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+jr50_005,mf2_53,visual,visual,visual,undetermined,visual,verified
+jr50_006,mf2_53,visual,undetermined,visual,undetermined,visual,kept
+jr50_007,mf2_53,visual,visual,visual,undetermined,visual,verified
+jr50_008,mf2_53,text,undetermined,undetermined,undetermined,text,kept
+jr50_011,mf2_53,dialogue or text,dialogue or text,dialogue or text,dialogue,dialogue,reassigned
+jr50_012,mf2_53,dialogue or visual,undetermined,visual,undetermined,dialogue or visual,kept
+jr50_013,mf2_53,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+jr50_017,mf2_53,prior,undetermined,guessable,undetermined,prior,kept
+jr50_021,mf2_53,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+jr50_022,mf2_53,text,undetermined,undetermined,undetermined,text,kept
+jr50_023,mf2_53,visual,dialogue and visual,dialogue and visual,undetermined,dialogue and visual,reassigned
+jr50_024,mf2_53,dialogue and text,undetermined,several pairs,undetermined,dialogue and text,kept
+jr50_025,mf2_53,dialogue and visual,guessable,visual,three or more sources,visual,reassigned
+jr50_026,mf2_53,text,text,text,text,text,verified
+kc52_001,mf2_29,dialogue or text,dialogue,dialogue or text,dialogue,dialogue,reassigned
+kc52_002,mf2_29,dialogue and text,text,text,undetermined,text,reassigned
+kc52_003,mf2_29,visual,undetermined,undetermined,undetermined,visual,kept
+kc52_004,mf2_29,dialogue or text,dialogue or text,dialogue,dialogue,dialogue,reassigned
+kc52_006,mf2_29,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+kc52_008,mf2_29,text,undetermined,text,undetermined,text,kept
+kc52_010,mf2_29,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+kc52_012,mf2_29,text,text,text,text,text,verified
+kc52_013,mf2_29,visual,undetermined,undetermined,undetermined,visual,kept
+kc52_014,mf2_29,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+kc52_016,mf2_29,dialogue,dialogue and visual,undetermined,three or more sources,three or more sources,reassigned
+kc52_017,mf2_29,prior,undetermined,prior,undetermined,prior,kept
+kc52_021,mf2_29,dialogue and visual,guessable,visual,undetermined,visual,reassigned
+kc52_022,mf2_29,text,text,text,text,text,verified
+kc52_023,mf2_29,dialogue and text,dialogue and text,dialogue and text,undetermined,dialogue and text,verified
+kc52_024,mf2_29,visual,undetermined,undetermined,undetermined,visual,kept
+kc52_025,mf2_29,visual,visual,visual,undetermined,visual,verified
+lf36_001,mf2_12,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+lf36_002,mf2_12,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+lf36_004,mf2_12,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+lf36_005,mf2_12,visual,undetermined,visual,visual,visual,verified
+lf36_007,mf2_12,visual,undetermined,undetermined,undetermined,visual,kept
+lf36_009,mf2_12,text,text,text,text,text,verified
+lf36_012,mf2_12,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+lf36_013,mf2_12,dialogue or text,dialogue or text,dialogue or text,dialogue,dialogue,reassigned
+lf36_014,mf2_12,dialogue and visual,visual,visual,undetermined,visual,reassigned
+lf36_015,mf2_12,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+lf36_016,mf2_12,dialogue and visual,visual,visual,three or more sources,visual,reassigned
+lf36_017,mf2_12,prior,undetermined,prior,prior,prior,verified
+lf36_021,mf2_12,text,undetermined,undetermined,undetermined,text,kept
+lf36_022,mf2_12,audio,audio,audio,audio,audio,verified
+lf36_025,mf2_12,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+lf36_026,mf2_12,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+lf36_027,mf2_12,visual,visual,visual,undetermined,visual,verified
+lp39_001,mf2_27,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+lp39_002,mf2_27,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+lp39_003,mf2_27,dialogue,undetermined,dialogue,undetermined,dialogue,kept
+lp39_004,mf2_27,visual,visual,undetermined,undetermined,visual,kept
+lp39_005,mf2_27,visual,visual,visual,visual,visual,verified
+lp39_006,mf2_27,visual,undetermined,undetermined,undetermined,visual,kept
+lp39_007,mf2_27,text,text,text,text,text,verified
+lp39_009,mf2_27,audio,audio,prior,audio,audio,verified
+lp39_011,mf2_27,dialogue or text,several pairs,text,text,text,reassigned
+lp39_021,mf2_27,audio,undetermined,undetermined,undetermined,audio,kept
+lp39_022,mf2_27,dialogue or visual,dialogue and audio,dialogue,undetermined,dialogue and audio,reassigned
+lp39_023,mf2_27,dialogue and visual,undetermined,dialogue and visual,three or more sources,three or more sources,reassigned
+lp39_024,mf2_27,dialogue and visual,visual,guessable,undetermined,visual,reassigned
+lp39_026,mf2_27,prior,undetermined,prior,undetermined,prior,kept
+lp39_027,mf2_27,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+lp39_028,mf2_27,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+lp39_030,mf2_27,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+lt54_001,mf2_54,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+lt54_002,mf2_54,dialogue,dialogue,undetermined,undetermined,dialogue,kept
+lt54_003,mf2_54,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+lt54_004,mf2_54,visual,visual,visual,several pairs,visual,verified
+lt54_005,mf2_54,visual,visual,visual,visual,visual,verified
+lt54_007,mf2_54,text,text,text,text,text,verified
+lt54_008,mf2_54,text,text,text,undetermined,text,verified
+lt54_010,mf2_54,audio,undetermined,undetermined,undetermined,audio,kept
+lt54_012,mf2_54,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
+lt54_013,mf2_54,dialogue or text,undetermined,undetermined,undetermined,dialogue or text,kept
+lt54_014,mf2_54,dialogue and text,dialogue and text,undetermined,undetermined,dialogue and text,kept
+lt54_016,mf2_54,dialogue and visual,visual,visual,undetermined,visual,reassigned
+lt54_017,mf2_54,prior,undetermined,prior,undetermined,prior,kept
+lt54_021,mf2_54,visual,undetermined,several pairs,undetermined,visual,kept
+lt54_022,mf2_54,text,text,text,several pairs,text,verified
+lt54_023,mf2_54,dialogue or visual,visual,undetermined,undetermined,dialogue or visual,kept
+lt54_024,mf2_54,dialogue and visual,visual,visual,visual,visual,reassigned
+mb47_001,mf2_14,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+mb47_002,mf2_14,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+mb47_003,mf2_14,dialogue or text,dialogue or text,dialogue or text,dialogue or text,dialogue or text,verified
+mb47_005,mf2_14,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+mb47_006,mf2_14,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+mb47_007,mf2_14,visual,undetermined,undetermined,undetermined,visual,kept
+mb47_008,mf2_14,visual,undetermined,undetermined,undetermined,visual,kept
+mb47_009,mf2_14,visual,undetermined,undetermined,undetermined,visual,kept
+mb47_010,mf2_14,text,text,text,undetermined,text,verified
+mb47_011,mf2_14,text,text,undetermined,undetermined,text,kept
+mb47_012,mf2_14,audio,audio,audio,dialogue and audio,audio,verified
+mb47_013,mf2_14,dialogue or visual,undetermined,dialogue,dialogue,dialogue,reassigned
+mb47_015,mf2_14,dialogue or text,dialogue or text,dialogue or text,dialogue or text,dialogue or text,verified
+mb47_016,mf2_14,dialogue and visual,undetermined,visual,undetermined,dialogue and visual,kept
+mb47_018,mf2_14,prior,prior,prior,undetermined,prior,verified
+mb47_021,mf2_14,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+mb47_022,mf2_14,dialogue and visual,guessable,visual,dialogue and visual,visual,reassigned
+mc63_001,chnb_McLintock_1963,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+mc63_002,chnb_McLintock_1963,dialogue,guessable,dialogue,dialogue,dialogue,verified
+mc63_003,chnb_McLintock_1963,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+mc63_005,chnb_McLintock_1963,visual,undetermined,three or more sources,undetermined,visual,kept
+mc63_008,chnb_McLintock_1963,text,undetermined,text,undetermined,text,kept
+mc63_009,chnb_McLintock_1963,audio,audio,audio,audio,audio,verified
+mc63_012,chnb_McLintock_1963,text,text,text,text,text,verified
+mc63_013,chnb_McLintock_1963,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
+mc63_014,chnb_McLintock_1963,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+mc63_015,chnb_McLintock_1963,dialogue and visual,visual,visual,visual,visual,reassigned
+mc63_016,chnb_McLintock_1963,dialogue and visual,visual,visual,undetermined,visual,reassigned
+mc63_017,chnb_McLintock_1963,prior,prior,prior,undetermined,prior,verified
+mc63_021,chnb_McLintock_1963,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+mc63_022,chnb_McLintock_1963,visual,undetermined,undetermined,undetermined,visual,kept
+mc63_024,chnb_McLintock_1963,visual or audio,audio,audio,undetermined,audio,reassigned
+mc63_025,chnb_McLintock_1963,dialogue,undetermined,dialogue,three or more sources,dialogue,verified
+mc63_026,chnb_McLintock_1963,visual,undetermined,undetermined,undetermined,visual,kept
+mj41_001,mf2_10,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+mj41_002,mf2_10,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+mj41_003,mf2_10,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+mj41_004,mf2_10,visual,undetermined,undetermined,undetermined,visual,kept
+mj41_005,mf2_10,visual,visual,visual,several pairs,visual,verified
+mj41_006,mf2_10,visual,undetermined,three or more sources,undetermined,visual,kept
+mj41_007,mf2_10,text,undetermined,undetermined,undetermined,text,kept
+mj41_008,mf2_10,text,text,three or more sources,undetermined,three or more sources,reassigned
+mj41_009,mf2_10,audio,audio,audio,audio,audio,verified
+mj41_011,mf2_10,dialogue or text,dialogue or text,dialogue or text,text,text,reassigned
+mj41_012,mf2_10,dialogue or visual,dialogue,dialogue or visual,dialogue,dialogue,reassigned
+mj41_015,mf2_10,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+mj41_016,mf2_10,visual,visual,undetermined,undetermined,visual,kept
+mj41_017,mf2_10,prior,undetermined,undetermined,undetermined,prior,kept
+mj41_021,mf2_10,text,undetermined,undetermined,undetermined,text,kept
+mj41_022,mf2_10,visual or audio,audio,text and audio,undetermined,text and audio,reassigned
+mj41_023,mf2_10,dialogue and text,text,text and audio,undetermined,text and audio,reassigned
+ns37_002,mf2_17,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ns37_003,mf2_17,dialogue or text,dialogue,dialogue,dialogue,dialogue,reassigned
+ns37_005,mf2_17,visual,visual,visual,undetermined,visual,verified
+ns37_007,mf2_17,visual,undetermined,undetermined,undetermined,visual,kept
+ns37_008,mf2_17,text,text,text,undetermined,text,verified
+ns37_010,mf2_17,text,visual or text,visual or text,several pairs,visual or text,reassigned
+ns37_012,mf2_17,audio,audio,audio,undetermined,audio,verified
+ns37_016,mf2_17,dialogue and visual,undetermined,visual,undetermined,dialogue and visual,kept
+ns37_017,mf2_17,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+ns37_018,mf2_17,prior,undetermined,undetermined,undetermined,prior,kept
+ns37_021,mf2_17,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+ns37_024,mf2_17,dialogue,undetermined,dialogue,undetermined,dialogue,kept
+ns37_025,mf2_17,text and audio,audio,text and audio,undetermined,text and audio,verified
+ns37_027,mf2_17,dialogue or visual,dialogue or visual,dialogue or visual,several pairs,dialogue or visual,verified
+ns37_028,mf2_17,visual,undetermined,undetermined,undetermined,visual,kept
+ns37_030,mf2_17,visual or audio,undetermined,undetermined,undetermined,visual or audio,kept
+ns37_031,mf2_17,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+pb31_001,chnb_Parlor_Bedroom_and_Bath_1931,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+pb31_002,chnb_Parlor_Bedroom_and_Bath_1931,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+pb31_003,chnb_Parlor_Bedroom_and_Bath_1931,dialogue,guessable,dialogue,dialogue,dialogue,verified
+pb31_005,chnb_Parlor_Bedroom_and_Bath_1931,visual,undetermined,visual,several pairs,visual and text,reassigned
+pb31_007,chnb_Parlor_Bedroom_and_Bath_1931,dialogue or visual,dialogue,dialogue or visual,dialogue and visual,dialogue,reassigned
+pb31_011,chnb_Parlor_Bedroom_and_Bath_1931,dialogue and visual,visual,visual,dialogue and visual,visual,reassigned
+pb31_012,chnb_Parlor_Bedroom_and_Bath_1931,dialogue and visual,visual,visual,undetermined,visual,reassigned
+pb31_013,chnb_Parlor_Bedroom_and_Bath_1931,prior,undetermined,undetermined,undetermined,prior,kept
+pb31_016,chnb_Parlor_Bedroom_and_Bath_1931,dialogue and audio,undetermined,undetermined,undetermined,dialogue and audio,kept
+pb31_021,chnb_Parlor_Bedroom_and_Bath_1931,visual,visual,visual,visual,visual,verified
+pb31_022,chnb_Parlor_Bedroom_and_Bath_1931,text,undetermined,undetermined,undetermined,text,kept
+pb31_023,chnb_Parlor_Bedroom_and_Bath_1931,visual or audio,visual,undetermined,undetermined,visual or audio,kept
+pb31_024,chnb_Parlor_Bedroom_and_Bath_1931,visual,undetermined,several pairs,undetermined,visual,kept
+pb31_027,chnb_Parlor_Bedroom_and_Bath_1931,audio,undetermined,undetermined,undetermined,audio,kept
+pb31_028,chnb_Parlor_Bedroom_and_Bath_1931,dialogue or text,dialogue,dialogue,dialogue,dialogue,reassigned
+pb31_031,chnb_Parlor_Bedroom_and_Bath_1931,visual,undetermined,undetermined,undetermined,visual,kept
+pb31_032,chnb_Parlor_Bedroom_and_Bath_1931,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+pp47_002,chnb_The_Perils_of_Pauline_1947,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+pp47_003,chnb_The_Perils_of_Pauline_1947,dialogue,dialogue and visual,undetermined,undetermined,dialogue,kept
+pp47_005,chnb_The_Perils_of_Pauline_1947,visual,undetermined,undetermined,undetermined,visual,kept
+pp47_006,chnb_The_Perils_of_Pauline_1947,visual,undetermined,undetermined,undetermined,visual,kept
+pp47_007,chnb_The_Perils_of_Pauline_1947,visual,undetermined,prior,undetermined,visual,kept
+pp47_008,chnb_The_Perils_of_Pauline_1947,text,text,text,text,text,verified
+pp47_010,chnb_The_Perils_of_Pauline_1947,text,undetermined,undetermined,undetermined,text,kept
+pp47_011,chnb_The_Perils_of_Pauline_1947,dialogue or text,text,text,text,text,reassigned
+pp47_013,chnb_The_Perils_of_Pauline_1947,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+pp47_014,chnb_The_Perils_of_Pauline_1947,dialogue and visual,visual,visual,undetermined,visual,reassigned
+pp47_015,chnb_The_Perils_of_Pauline_1947,dialogue and visual,visual,visual,undetermined,visual,reassigned
+pp47_016,chnb_The_Perils_of_Pauline_1947,dialogue and text,text,text,undetermined,text,reassigned
+pp47_017,chnb_The_Perils_of_Pauline_1947,prior,undetermined,prior,undetermined,prior,kept
+pp47_021,chnb_The_Perils_of_Pauline_1947,audio,guessable,prior,undetermined,prior,reassigned
+pp47_022,chnb_The_Perils_of_Pauline_1947,dialogue and text,guessable,text,several pairs,text,reassigned
+pp47_023,chnb_The_Perils_of_Pauline_1947,dialogue or text,several pairs,text,text,text,reassigned
+pp47_024,chnb_The_Perils_of_Pauline_1947,text,text,text,three or more sources,text,verified
+rh47_001,mf2_35,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+rh47_002,mf2_35,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+rh47_003,mf2_35,dialogue,guessable,dialogue,dialogue,dialogue,verified
+rh47_004,mf2_35,visual,guessable,prior,undetermined,prior,reassigned
+rh47_005,mf2_35,visual,undetermined,undetermined,undetermined,visual,kept
+rh47_007,mf2_35,text,text,text,text,text,verified
+rh47_008,mf2_35,text,text,text,text,text,verified
+rh47_009,mf2_35,audio,undetermined,undetermined,undetermined,audio,kept
+rh47_010,mf2_35,audio,undetermined,undetermined,undetermined,audio,kept
+rh47_011,mf2_35,dialogue or visual,dialogue,dialogue,undetermined,dialogue,reassigned
+rh47_013,mf2_35,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
+rh47_015,mf2_35,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+rh47_017,mf2_35,prior,undetermined,undetermined,undetermined,prior,kept
+rh47_021,mf2_35,dialogue,three or more sources,undetermined,three or more sources,three or more sources,reassigned
+rh47_022,mf2_35,dialogue and visual,visual,visual,undetermined,visual,reassigned
+rh47_023,mf2_35,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+rh47_025,mf2_35,visual,visual,visual,undetermined,visual,verified
+rn32_001,chnb_Rain_1932,text,text,undetermined,text,text,verified
+rn32_002,chnb_Rain_1932,text,text,text,text,text,verified
+rn32_006,chnb_Rain_1932,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+rn32_008,chnb_Rain_1932,dialogue,guessable,dialogue,dialogue,dialogue,verified
+rn32_010,chnb_Rain_1932,dialogue or text,dialogue,dialogue,dialogue,dialogue,reassigned
+rn32_011,chnb_Rain_1932,visual,three or more sources,undetermined,undetermined,visual,kept
+rn32_012,chnb_Rain_1932,visual,visual,visual,several pairs,visual,verified
+rn32_015,chnb_Rain_1932,dialogue and visual,undetermined,visual,undetermined,dialogue and visual,kept
+rn32_016,chnb_Rain_1932,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+rn32_017,chnb_Rain_1932,prior,undetermined,prior,undetermined,prior,kept
+rn32_021,chnb_Rain_1932,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+rn32_022,chnb_Rain_1932,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+rn32_023,chnb_Rain_1932,visual,guessable,dialogue or visual,several pairs,visual,verified
+rn32_024,chnb_Rain_1932,dialogue or visual,visual,visual,undetermined,visual,reassigned
+rn32_025,chnb_Rain_1932,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+rn32_026,chnb_Rain_1932,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+rn32_027,chnb_Rain_1932,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+rw51_001,chnb_Royal_Wedding_1951,visual,visual,visual,several pairs,visual,verified
+rw51_002,chnb_Royal_Wedding_1951,visual,undetermined,prior,undetermined,visual,kept
+rw51_004,chnb_Royal_Wedding_1951,audio,undetermined,undetermined,undetermined,audio,kept
+rw51_005,chnb_Royal_Wedding_1951,visual,visual,visual,three or more sources,visual,verified
+rw51_006,chnb_Royal_Wedding_1951,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+rw51_008,chnb_Royal_Wedding_1951,text,several pairs,text and audio,undetermined,text and audio,reassigned
+rw51_012,chnb_Royal_Wedding_1951,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+rw51_013,chnb_Royal_Wedding_1951,audio,audio,audio,undetermined,audio,verified
+rw51_014,chnb_Royal_Wedding_1951,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+rw51_015,chnb_Royal_Wedding_1951,dialogue and text,undetermined,undetermined,undetermined,dialogue and text,kept
+rw51_017,chnb_Royal_Wedding_1951,prior,undetermined,undetermined,undetermined,prior,kept
+rw51_021,chnb_Royal_Wedding_1951,dialogue or visual,dialogue,dialogue,undetermined,dialogue,reassigned
+rw51_022,chnb_Royal_Wedding_1951,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
+rw51_023,chnb_Royal_Wedding_1951,text,text,several pairs,three or more sources,several pairs,reassigned
+rw51_024,chnb_Royal_Wedding_1951,visual and text,undetermined,undetermined,undetermined,visual and text,kept
+rw51_025,chnb_Royal_Wedding_1951,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+rw51_026,chnb_Royal_Wedding_1951,dialogue,dialogue,undetermined,undetermined,dialogue,kept
+sb37_001,mf2_23,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+sb37_002,mf2_23,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+sb37_003,mf2_23,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+sb37_004,mf2_23,visual,visual,visual,visual,visual,verified
+sb37_005,mf2_23,visual,undetermined,undetermined,undetermined,visual,kept
+sb37_007,mf2_23,text,text,text,undetermined,text,verified
+sb37_008,mf2_23,text,text,text,text,text,verified
+sb37_009,mf2_23,audio,undetermined,undetermined,undetermined,audio,kept
+sb37_011,mf2_23,dialogue or text,guessable,dialogue and text,undetermined,dialogue and text,reassigned
+sb37_012,mf2_23,dialogue or text,dialogue or text,dialogue or text,dialogue or text,dialogue or text,verified
+sb37_013,mf2_23,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
+sb37_014,mf2_23,dialogue and visual,visual,visual,undetermined,visual,reassigned
+sb37_015,mf2_23,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+sb37_016,mf2_23,dialogue and visual,visual,visual,visual,visual,reassigned
+sb37_017,mf2_23,prior,prior,prior,undetermined,prior,verified
+sb37_021,mf2_23,visual,undetermined,undetermined,undetermined,visual,kept
+sb37_022,mf2_23,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+ss45_002,mf2_11,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ss45_003,mf2_11,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+ss45_006,mf2_11,visual,undetermined,undetermined,undetermined,visual,kept
+ss45_007,mf2_11,text,text,text,undetermined,text,verified
+ss45_008,mf2_11,text,text,undetermined,text,text,verified
+ss45_009,mf2_11,audio,undetermined,undetermined,undetermined,audio,kept
+ss45_011,mf2_11,visual or audio,undetermined,undetermined,undetermined,visual or audio,kept
+ss45_012,mf2_11,visual or text,visual,visual or text,visual,visual,reassigned
+ss45_013,mf2_11,dialogue or visual,dialogue or visual,dialogue or visual,dialogue,dialogue,reassigned
+ss45_016,mf2_11,dialogue and visual,visual,visual,undetermined,visual,reassigned
+ss45_017,mf2_11,prior,undetermined,prior,undetermined,prior,kept
+ss45_021,mf2_11,visual,undetermined,visual,undetermined,visual,kept
+ss45_022,mf2_11,visual,visual,visual,undetermined,visual,verified
+ss45_023,mf2_11,text,text,text,text,text,verified
+ss45_024,mf2_11,dialogue and visual,visual,visual,undetermined,visual,reassigned
+ss45_025,mf2_11,dialogue and text,undetermined,undetermined,undetermined,dialogue and text,kept
+ss45_026,mf2_11,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+st46_001,chnb_The_Stranger_1946,text,prior,text,text,text,verified
+st46_002,chnb_The_Stranger_1946,visual,undetermined,undetermined,undetermined,visual,kept
+st46_003,chnb_The_Stranger_1946,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+st46_004,chnb_The_Stranger_1946,visual,visual,visual,undetermined,visual,verified
+st46_005,chnb_The_Stranger_1946,dialogue,dialogue,dialogue,undetermined,dialogue,verified
+st46_006,chnb_The_Stranger_1946,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+st46_007,chnb_The_Stranger_1946,text,text,text,text,text,verified
+st46_008,chnb_The_Stranger_1946,audio,undetermined,undetermined,undetermined,audio,kept
+st46_010,chnb_The_Stranger_1946,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+st46_011,chnb_The_Stranger_1946,visual,undetermined,undetermined,undetermined,visual,kept
+st46_012,chnb_The_Stranger_1946,dialogue and text,undetermined,undetermined,undetermined,dialogue and text,kept
+st46_016,chnb_The_Stranger_1946,dialogue and visual,visual,visual,undetermined,visual,reassigned
+st46_017,chnb_The_Stranger_1946,prior,undetermined,prior,undetermined,prior,kept
+st46_021,chnb_The_Stranger_1946,text,undetermined,undetermined,undetermined,text,kept
+st46_022,chnb_The_Stranger_1946,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+st46_023,chnb_The_Stranger_1946,dialogue or visual,dialogue,dialogue,undetermined,dialogue,reassigned
+st46_024,chnb_The_Stranger_1946,dialogue and text,undetermined,undetermined,undetermined,dialogue and text,kept
+su54_001,mf2_5,dialogue,guessable,dialogue,dialogue,dialogue,verified
+su54_002,mf2_5,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+su54_003,mf2_5,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+su54_004,mf2_5,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+su54_005,mf2_5,visual,visual,undetermined,undetermined,visual,kept
+su54_006,mf2_5,visual,undetermined,undetermined,undetermined,visual,kept
+su54_007,mf2_5,visual,visual,undetermined,undetermined,visual,kept
+su54_008,mf2_5,text,text,text,text,text,verified
+su54_009,mf2_5,text,visual,visual and text,undetermined,visual and text,reassigned
+su54_012,mf2_5,dialogue or text,dialogue or text,dialogue or text,dialogue or text,dialogue or text,verified
+su54_014,mf2_5,dialogue or visual,dialogue,dialogue,undetermined,dialogue,reassigned
+su54_017,mf2_5,prior,undetermined,prior,undetermined,prior,kept
+su54_021,mf2_5,dialogue and text,undetermined,undetermined,undetermined,dialogue and text,kept
+su54_022,mf2_5,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+su54_023,mf2_5,text,text,text,undetermined,text,verified
+su54_024,mf2_5,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+su54_025,mf2_5,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+wp29_002,chnb_The_Wild_Party_1929,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+wp29_004,chnb_The_Wild_Party_1929,dialogue,dialogue,dialogue,dialogue,dialogue,verified
+wp29_005,chnb_The_Wild_Party_1929,visual,undetermined,undetermined,undetermined,visual,kept
+wp29_006,chnb_The_Wild_Party_1929,visual,visual,visual,dialogue and visual,visual,verified
+wp29_007,chnb_The_Wild_Party_1929,visual,undetermined,undetermined,undetermined,visual,kept
+wp29_010,chnb_The_Wild_Party_1929,text,text,text,text,text,verified
+wp29_012,chnb_The_Wild_Party_1929,audio,audio,audio,several pairs,audio,verified
+wp29_017,chnb_The_Wild_Party_1929,dialogue and visual,undetermined,dialogue and visual,undetermined,dialogue and visual,kept
+wp29_018,chnb_The_Wild_Party_1929,prior,undetermined,undetermined,undetermined,prior,kept
+wp29_021,chnb_The_Wild_Party_1929,text,text and audio,undetermined,undetermined,text,kept
+wp29_022,chnb_The_Wild_Party_1929,visual or audio,audio,visual or audio,several pairs,audio,reassigned
+wp29_023,chnb_The_Wild_Party_1929,dialogue,undetermined,three or more sources,undetermined,dialogue,kept
+wp29_024,chnb_The_Wild_Party_1929,dialogue and visual,visual,visual,undetermined,visual,reassigned
+wp29_025,chnb_The_Wild_Party_1929,dialogue or visual,dialogue or visual,dialogue,undetermined,dialogue,reassigned
+wp29_026,chnb_The_Wild_Party_1929,text,undetermined,undetermined,undetermined,text,kept
+wp29_027,chnb_The_Wild_Party_1929,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+wp29_028,chnb_The_Wild_Party_1929,dialogue and visual,visual,visual,undetermined,visual,reassigned
