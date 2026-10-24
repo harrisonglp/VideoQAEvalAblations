@@ -11,7 +11,8 @@ request's fingerprint (`request_sha256`, see `fingerprint`; scripts/show_prompts
 request it rebuilds, so a stored answer can be traced to the exact prompt).
 The experiment names its item set, the frame set shown as V (`frames`), the decoding settings (`repeats`), its
 conditions and optionally a subset of films (`films`); the results folder is its `name` (default: the item set).
-Questions are processed film by film, so that the questions of a film reuse the cached film prefix; a re-run skips
+Questions are processed film by film, so that the questions of a film reuse the cached film prefix (the first
+WARMUP_CALLS of a film, from the model's profile, default 1, are sent one at a time to fill the cache); a re-run skips
 the calls that already have a scored record. Answers that the rules cannot score are judged by the same model,
 without the film (conditions.judge_prompt), or, with `--judge none`, stored with `pending_judge` for a later pass with
 one fixed judge model (pipeline.judge); a call that fails five times is left without a score and retried on the next
@@ -27,7 +28,7 @@ from concurrent.futures import ThreadPoolExecutor
 from threading import Lock
 
 from . import conditions as C
-from .common import CONFIGS, DATA, EVALS, RESULTS, read_json, read_jsonl, request_options
+from .common import CONFIGS, DATA, EVALS, RESULTS, read_json, read_jsonl, read_profile, request_options
 
 FRAME_DIRS = {"full": "frames", "notext": "frames_notext"}
 # sent with every request, with the temperature and seed of the repeat: vLLM fills unset sampling parameters from the
@@ -111,6 +112,8 @@ def run_condition(name, cond, items, films, exp, model, url, concurrency, judge_
     cond = {**cond, "frames": cond.get("frames", exp["frames"])}
     frame_dir = FRAME_DIRS[cond["frames"]]
     per_item = cond.get("transform") in PER_ITEM
+    # models with sliding-window layers reuse a film's prefix only from the third request on, so they warm up with two
+    warmup = int(read_profile(model).get("WARMUP_CALLS", 1))
     with open(out, "a") as fh:
         for fid in sorted(films):
             calls = [(it, k) for it in items if it["film"] == fid and applies(cond, it)
@@ -149,9 +152,9 @@ def run_condition(name, cond, items, films, exp, model, url, concurrency, judge_
                 return rec
 
             t0 = time.time()
-            recs = [call(calls[0])]  # the first call fills the prefix cache that the others reuse
+            recs = [call(c) for c in calls[:warmup]]  # the first calls fill the prefix cache that the others reuse
             with ThreadPoolExecutor(concurrency) as pool:
-                recs += list(pool.map(call, calls[1:]))
+                recs += list(pool.map(call, calls[warmup:]))
             ok = [r for r in recs if r["correct"] is not None]
             pending = sum(bool(r.get("pending_judge")) for r in recs)
             print(f"{time.strftime('%T')} {model} {name} {fid}: {sum(r['correct'] for r in ok)}/{len(ok)} correct, "

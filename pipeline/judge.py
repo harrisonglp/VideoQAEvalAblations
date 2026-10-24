@@ -6,7 +6,8 @@
 Readers run with `pipeline.run --judge none` leave such answers with `pending_judge`. This pass sends each of them to
 the judge model (served at --url), without the film, with the same prompt and decoding as the inline judge
 (conditions.judge_prompt, run.judge), and rewrites the reader's result files in place (atomically): `correct`, the
-verdict in `judged`, and `judge_model`. A call that fails five times stays pending for the next pass. Using one judge
+verdict in `judged`, and `judge_model`. A call that fails five times stays pending for the next pass. --conditions limits the pass to some
+result files, so jobs running different conditions of one reader can judge their own files side by side. Using one judge
 for every reader keeps grading the same across readers, so their scores differ only by what they answered.
 """
 import argparse
@@ -25,12 +26,16 @@ def main():
     ap.add_argument("--judge-model", required=True, help="served name of the judge (configs/models/<name>.env)")
     ap.add_argument("--url", required=True, help="the judge's chat-completions URL")
     ap.add_argument("--concurrency", type=int, default=8)
+    ap.add_argument("--conditions", default="", help="comma-separated subset (default: every result file of the reader)")
     a = ap.parse_args()
+    wanted = set(a.conditions.split(",")) if a.conditions else None
     exp = read_json(a.experiment)
     items = {it["id"]: it for it in read_jsonl(DATA / "items" / f"{exp['items']}.jsonl")}
     folder = RESULTS / exp.get("name", exp["items"]) / a.model
     total = left = 0
     for path in sorted(folder.glob("*.jsonl")):
+        if wanted and path.stem not in wanted:
+            continue
         recs = read_jsonl(path)
         todo = [r for r in recs if r.get("pending_judge") and r.get("correct") is None]
         if not todo:
