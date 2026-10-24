@@ -1,0 +1,4 @@
+# muse: the server for muse-spark-open (configs/models/muse-spark-open.env), Meta's container image
+# vllm/vllm-openai:muse-spark-open, built from vllm-project/vllm a34ca64c138ad0360c472ada748b750435b607ae
+# (vLLM 0.1.dev22954+ga34ca64c1, torch 2.13.0+cu130, CUDA 13.0), flashinfer 6b49d21cf3b56ea3048ee42b15ed050ee7e7f6a6,
+# deepgemm 1704143a9f75375d31ba644691645fdf316d4866. GPU NVIDIA B200, driver 615.71.09.
