@@ -1,6 +1,6 @@
 """Statistics of one experiment for one model: results/<name>/<model>/summary.json and units.csv.
 
-    python -m pipeline.analyze configs/experiments/evidence_bank_v1.json qwen36-27b
+    python -m pipeline.analyze configs/experiments/evidence_bank_v1.json gemma4-31b
 
 Every condition of configs/conditions.json that has a results file in the experiment's folder is analysed, so the
 evidence cut and its placebo, run as their own experiment under the same name, are included.

@@ -4,7 +4,7 @@ message and the user message, with each image part shown as <image: films/<id>/<
 also the judge prompt for that answer and its rule score (score_open; "judge" when the rules leave it to the judge).
 
     python3 scripts/show_prompts.py <condition> <question id> [--experiment configs/experiments/evidence_bank_v1.json]
-        [--model qwen36-27b] [--answer "..."]
+        [--model gemma4-31b] [--answer "..."]
 
 Films are read from DATA (data/, or $PAPER1_DATA) as pipeline.run loads them; the fingerprint matches a stored record's
 only when the data root and the model name are the run's.
@@ -49,7 +49,7 @@ def main():
     ap.add_argument("condition")
     ap.add_argument("id", help="question id, e.g. ns37_002")
     ap.add_argument("--experiment", default=str(CONFIGS / "experiments" / "evidence_bank_v1.json"))
-    ap.add_argument("--model", default="qwen36-27b", help="served model name, as given to pipeline.run")
+    ap.add_argument("--model", default="gemma4-31b", help="served model name, as given to pipeline.run")
     ap.add_argument("--answer", help="an answer to score and to show the judge prompt for")
     a = ap.parse_args()
     exp = read_json(a.experiment)

@@ -19,7 +19,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 SHARED=${SHARED_ROOT:-/data/cinesage}
 PY=$SHARED/envs/client/bin/python
-MODEL=qwen36-27b
+MODEL=gemma4-31b
 PROFILE=configs/models/$MODEL.env
 URL=http://127.0.0.1:$(sed -n 's/^PORT=//p' "$PROFILE")/v1/chat/completions
 

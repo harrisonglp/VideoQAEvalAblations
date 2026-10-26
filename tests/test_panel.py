@@ -92,7 +92,7 @@ class RequestOptions(unittest.TestCase):
         self.assertEqual(schema["required"], ["id", "answer"])
 
     def test_real_profiles_parse(self):
-        for m in ("qwen36-27b", "gemma4-31b", "nemotron35-super-vl", "command-a-plus", "muse-spark-open"):
+        for m in ("gemma4-31b", "nemotron35-super-vl", "command-a-plus", "muse-spark-open"):
             extra, _ = request_options(m)
             self.assertIsInstance(extra, dict)
 

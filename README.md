@@ -15,7 +15,7 @@ scripts/run_pipeline.sh                                    # every film of the b
 ```
 
 The script extracts the lanes, builds the items and checks the questions, runs the reader under every condition of the
-main and the evidence-necessity experiment and writes `results/evidence_bank_v1/qwen36-27b/summary.json` and
+main and the evidence-necessity experiment and writes `results/evidence_bank_v1/gemma4-31b/summary.json` and
 `units.csv`; every step resumes where it stopped and logs to `logs/`. To see exactly what the reader receives for one
 question under one condition:
 
@@ -48,9 +48,11 @@ sounds lane) and `materials` (`materials/<id>/*.tsv`, read by `pipeline.validate
 
 ## Reader, conditions and scoring
 
-- **Reader:** Qwen3.6-27B (FP8) served by vLLM 0.28 (`configs/models/qwen36-27b.env`: 262,144-token context, fixed
-  32 GiB KV cache, prefix caching, at most 4 sequences). Thinking is disabled, replies are limited to 128 tokens, and
-  temperature, seed, top-p (0.95), top-k (20) and min-p (0) are sent with each request (`pipeline/run.py`).
+- **Readers:** the evaluation readers of `configs/models/` (Gemma 4 31B, Nemotron 3.5 Super-VL, Command A+, Muse
+  Spark Open), each served by vLLM from a profile that pins its revision (131,072-token context, fixed KV cache,
+  prefix caching). Thinking is disabled (Muse Spark Open runs at its lowest reasoning effort), replies are constrained
+  to the answer's JSON schema and limited to 128 tokens (1,024 for Muse Spark Open), and temperature, seed, top-p
+  (0.95), top-k (20) and min-p (0) are sent with each request (`pipeline/run.py`).
 - **Conditions** (`configs/conditions.json`, implemented in `pipeline/conditions.py`): question only; title only; the
   title with every combination of lanes, over the whole film and restricted to excerpts (cited evidence ± 60 s); all
   lanes with the cited evidence and every mention of the answer (numbers up to 12 excepted) cut out, and a placebo cut
@@ -58,7 +60,8 @@ sounds lane) and `materials` (`materials/<id>/*.tsv`, read by `pipeline.validate
   they're used to sort questions: [`configs/README.md`](configs/README.md).
 - **Scoring:** rules first (`conditions.score_open`: normalised match against the answer and its aliases, numbers in
   digits or words within a tolerance, times, abstention for unanswerable questions); the answers the rules cannot
-  decide are judged by the reader itself, without the film (`conditions.judge_prompt`, greedy).
+  decide are judged without the film (`conditions.judge_prompt`, greedy), by the reader itself (`--judge self`) or,
+  for the panel, by one fixed judge (`pipeline.judge`).
 
 | Experiment (`configs/experiments/`) | Questions | Conditions | Runs |
 |---|---|---|---|
@@ -71,11 +74,11 @@ sounds lane) and `materials` (`materials/<id>/*.tsv`, read by `pipeline.validate
 | `evidence_bank_v1_smoke.json` | 40 (2 films) | as the panel experiment, to test a reader before the panel run | 1, greedy, fixed judge |
 
 ```bash
-pipeline/serve.sh start configs/models/qwen36-27b.env
-python -m pipeline.run --experiment configs/experiments/evidence_bank_v1.json --model qwen36-27b \
-    --url http://127.0.0.1:8010/v1/chat/completions [--films ...] [--conditions ...]      # resumable
-python -m pipeline.analyze configs/experiments/evidence_bank_v1.json qwen36-27b         # summary.json, units.csv
-pipeline/serve.sh stop configs/models/qwen36-27b.env
+pipeline/serve.sh start configs/models/gemma4-31b.env
+python -m pipeline.run --experiment configs/experiments/evidence_bank_v1.json --model gemma4-31b \
+    --url http://127.0.0.1:8011/v1/chat/completions [--films ...] [--conditions ...]      # resumable
+python -m pipeline.analyze configs/experiments/evidence_bank_v1.json gemma4-31b         # summary.json, units.csv
+pipeline/serve.sh stop configs/models/gemma4-31b.env
 ```
 
 The necessity experiment writes to the same results folder and is analysed with the main experiment. Before a run:
@@ -110,10 +113,6 @@ the single-lane matrix, the agreement between readers (the ceiling) and a routin
 `panel_without_muse/`). The whole-film pairs and triples (`evidence_bank_v1_panel_wholefilm.json`) were not run for
 the panel.
 
-Results (`results/evidence_bank_v1/panel/summary.json`): with two training readers, the synthetic labels agree with
-the held-out reader's measured type on 65.5% of the questions it types (95% CI 62.9-67.9), and the reassigned labels
-on 72.8% (70.7-74.9), averaged over the 12 folds (four three-reader panels); 70.3% with one training reader and 76.1%
-with three.
 
 ## Models
 
@@ -125,7 +124,6 @@ with three.
 | nvidia/nemotron-ocr-v2 (`v2_english`) | snapshot 0e83e83f17943524b90afa6c0fd82ac2bc1a40ca | `detector.pth`, `recognizer.pth`, `relational.pth` | `envs/models.sha256` |
 | PANNs CNN14 (AudioSet) | panns_inference 0.1.1 | `Cnn14_mAP=0.431.pth` | `0dc499e40e9761ef5ea061ffc77697697f277f6a960894903df3ada000e34b31` |
 | MIT/ast-finetuned-audioset-10-10-0.4593 (validation only) | snapshot f826b80d28226b62986cc218e5cec390b1096902 | `model.safetensors` | `ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d` |
-| Qwen/Qwen3.6-27B-FP8 (reader) | snapshot e89b16ebf1988b3d6befa7de50abc2d76f26eb09 | 80 files | `envs/models.sha256` |
 | google/gemma-4-31B-it (panel reader, judge) | snapshot 842da3794eaa0b77d5f08bae87a17459d91ff475 | all files | `envs/panel_models/gemma4-31b.sha256` |
 | nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4 (panel reader) | snapshot 59b8721646c38111a242da18218859fb2b454322 | all files | `envs/panel_models/nemotron35-super-vl.sha256` |
 | CohereLabs/command-a-plus-05-2026-w4a4 (panel reader) | snapshot ebd2d72c0f9a84389c6b057136d38c435aea2700 | all files | `envs/panel_models/command-a-plus.sha256` |
@@ -147,7 +145,6 @@ relative to each model's snapshot folder: `cd <snapshot> && sha256sum -c <repo>/
 | `ocr_nemotron_env` | 3.12.3 | `screen_text`, `frames` (nemotron-ocr, OpenCV, Pillow); `scripts/extract_check.py` | `envs/ocr_nemotron_env.txt` |
 | `panns_env` | 3.12.3 | `sounds` (panns_inference) | `envs/panns_env.txt` |
 | `florence_env` | 3.10.20 | `validation_sounds` (Transformers) | `envs/florence_env.txt` |
-| `vllm` | 3.11.15 | `serve.sh` (vLLM 0.28.0) | `envs/vllm.txt` |
 | `vllm32` | 3.11.17 | `serve.sh` for the panel readers (vLLM 0.32.0, CUDA 12.9 build) | `envs/vllm32.txt` |
 | `muse` | container | `serve.sh` for `muse-spark-open` (Meta's vLLM container, CUDA 13.0) | `envs/muse.txt` |
 
@@ -159,11 +156,9 @@ https://download.pytorch.org/whl/cu130`. `nemotron-ocr` is not on PyPI: install 
 the Nemotron OCR v2 snapshot with `pip install --no-build-isolation .` after the rest, with `nvcc` (CUDA 13) on `PATH`,
 `hatchling` installed and the Python headers on `CPATH`; its build script asks for C++17, and torch 2.14's headers need
 `-std=c++20` there. Every lane decodes the film with the system's ffmpeg and ffprobe
-(6.1.1-3ubuntu5+esm8); another version can change the frame JPEGs and the decoded audio. Hardware: NVIDIA DGX Spark
-(GB10, aarch64, CUDA 13, driver 580.82.09), Ubuntu 24.04.3. On it, with three films extracted at a time, a film of 75
-to 90 minutes takes (medians) 14 min for speech, 10 min for screen text, 1 min for frames, under 1 min for sounds and
-2 min for the validation tags. The reader answers the main experiment at about 23 questions a minute; an evidence-cut
-prompt (about 62,000 tokens, little of it shared with other questions) takes minutes.
+(6.1.1-3ubuntu5+esm8); another version can change the frame JPEGs and the decoded audio. Hardware: the lanes on an
+NVIDIA DGX Spark (GB10, aarch64, CUDA 13, driver 580.82.09), Ubuntu 24.04.3; the panel readers on NVIDIA B200 GPUs (one
+per reader, four for Muse Spark Open).
 
 ## Provenance and re-runs
 

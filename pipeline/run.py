@@ -1,8 +1,8 @@
 """Run the reader on the evidence bank under each condition of an experiment, against an OpenAI-compatible server
 (vLLM).
 
-    python -m pipeline.run --experiment configs/experiments/evidence_bank_v1.json --model qwen36-27b \
-        --url http://127.0.0.1:8010/v1/chat/completions [--conditions q,t] [--films mf2_17,...] [--ids hh53_007,...] \
+    python -m pipeline.run --experiment configs/experiments/evidence_bank_v1.json --model gemma4-31b \
+        --url http://127.0.0.1:8011/v1/chat/completions [--conditions q,t] [--films mf2_17,...] [--ids hh53_007,...] \
         [--concurrency 4]
 
 Writes one record per (condition, question, repeat) to results/<experiment name>/<model>/<condition>.jsonl: the reply,

@@ -4,8 +4,8 @@
 
 Run with the ocr_nemotron_env interpreter ($SHARED_ROOT/envs/ocr_nemotron_env/bin/python): the frames comparison
 needs numpy and Pillow, everything else is standard library. Films: the ids given, else those of --films-json, else
-every film with an output in either root. Model outputs can differ slightly between runs on a GPU, so each lane reports agreement levels
-as well as identity:
+every film with an output in either root. Model outputs can differ slightly between runs on a GPU, so each lane reports
+agreement levels as well as identity:
     speech             lines (ref/new); VAD segments with the same (start, end); of those, the share with the same
                        text; word-level similarity of the whole transcript (difflib ratio)
     screen_text        screens and intervals (`items`) identical; else screens matched exactly (Jaccard over (start,

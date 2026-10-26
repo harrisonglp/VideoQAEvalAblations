@@ -7,7 +7,7 @@ it actually needs.
 
 The conditions are defined in [`conditions.json`](conditions.json) and built in
 [`pipeline/conditions.py`](../pipeline/conditions.py). Results are stored one file per condition, so
-`results/evidence_bank_v1/qwen36-27b/w_tdv.jsonl` holds every answer given under `w_tdv`.
+`results/evidence_bank_v1/gemma4-31b/w_tdv.jsonl` holds every answer given under `w_tdv`.
 
 ## Reading the names
 
