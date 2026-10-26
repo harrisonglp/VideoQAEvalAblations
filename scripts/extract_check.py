@@ -2,9 +2,9 @@
 
     python scripts/extract_check.py <reference DATA> <fresh DATA> [<video_id> ...] [--films-json FILE] [--report FILE]
 
-Run with the ocr_env interpreter ($SHARED_ROOT/envs/ocr_env/bin/python): the frames comparison needs numpy and
-Pillow, everything else is standard library. Films: the ids given, else those of --films-json, else every film with an
-output in either root. Model outputs can differ slightly between runs on a GPU, so each lane reports agreement levels
+Run with the ocr_nemotron_env interpreter ($SHARED_ROOT/envs/ocr_nemotron_env/bin/python): the frames comparison
+needs numpy and Pillow, everything else is standard library. Films: the ids given, else those of --films-json, else
+every film with an output in either root. Model outputs can differ slightly between runs on a GPU, so each lane reports agreement levels
 as well as identity:
     speech             lines (ref/new); VAD segments with the same (start, end); of those, the share with the same
                        text; word-level similarity of the whole transcript (difflib ratio)
@@ -83,7 +83,7 @@ def frames(ref: Path, new: Path, vid: str) -> dict:
         import numpy as np
         from PIL import Image
     except ImportError:
-        return {"skipped": "needs numpy and Pillow (run with envs/ocr_env)"}
+        return {"skipped": "needs numpy and Pillow (run with envs/ocr_nemotron_env)"}
     files = sorted(ta["frames"])
     same_bytes = lambda d, f: (ra / d / f).exists() and (rb / d / f).exists() \
         and (ra / d / f).read_bytes() == (rb / d / f).read_bytes()

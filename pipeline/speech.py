@@ -2,14 +2,15 @@
 
 Speech is located with Silero VAD on a vocals stem separated by htdemucs, so that music and effects neither hide speech
 from the VAD nor pass for it, and only the speech segments are transcribed, from the original mix. Each segment
-becomes one line; its language is identified per segment, so non-English speech is transcribed in its own language.
-Readers see each line at its segment start, rounded to the second, with no speaker label, after the speech-only filter
-(conditions.clean_line) applied at prompt time.
+becomes one line; the recogniser detects the language itself (25 European languages), so non-English speech is
+transcribed in its own language. Readers see each line at its segment start, rounded to the second, with no speaker
+label, after the speech-only filter (conditions.clean_line) applied at prompt time.
 
 Models
     htdemucs (Demucs v4, package demucs 4.0.1, weights 955717e8) on cuda:0: the vocals stem
     Silero VAD (package silero-vad 6.2.3), get_speech_timestamps: speech segments, on the stem
-    Qwen/Qwen3-ASR-1.7B (snapshot 7278e1e7, package qwen-asr 0.0.6), bfloat16 on cuda:0: the text, from the mix
+    nvidia/parakeet-tdt-0.6b-v3 (snapshot 541d1f99, transformers AutoModelForTDT, greedy TDT decoding), float32 on
+    cuda:0: the text, from the mix
 Vocals stem
     The soundtrack is decoded as stereo float32 at the separator's 44.1 kHz and normalised with the mean and standard
     deviation of the whole track's mono mix. It is separated in pieces of PIECE_S, each with CONTEXT_S of the
@@ -23,12 +24,10 @@ Settings (constants below)
     CONTEXT_S      10 s of context on each side of a piece
     OVERLAP        0.25 between apply_model's segments within a piece
     SHIFT_SEED     0, the seed of the random shift offsets
-    SR             16000 Hz mono, the input rate of Silero VAD and Qwen3-ASR; the mix as 16-bit PCM scaled to [-1, 1)
+    SR             16000 Hz mono, the input rate of Silero VAD and Parakeet; the mix as 16-bit PCM scaled to [-1, 1)
     VAD            min_silence_duration_ms 400, speech_pad_ms 200, max_speech_duration_s 20; other parameters at the
                    package defaults (threshold 0.5, min_speech_duration_ms 250, 512-sample window)
-    LANGUAGE       None: language identified per segment
-    MAX_BATCH      16 segments per inference batch
-    MAX_NEW_TOKENS 256 per segment
+    MAX_BATCH      16 segments per inference batch (padded to the longest)
     --batch        64 segments per transcribe() call (CALL_SEGMENTS)
 Input
     the source video (common.source_video), decoded by ffmpeg: stereo at 44.1 kHz for the stem, mono at 16 kHz for
@@ -38,8 +37,8 @@ Output
                                         lines: [{start, end, text}], provenance}
     one line per VAD segment, start and end in seconds (2 decimals); segments transcribed as empty are dropped
 Run
-    $SHARED_ROOT/envs/asr_qwen_env/bin/python -m pipeline.speech <video_id> [...] [--batch 64]
-    from the repo root, on a GPU, with Qwen3-ASR in the Hugging Face cache (HF_HOME) and the htdemucs weights in the
+    $SHARED_ROOT/envs/asr_parakeet_env/bin/python -m pipeline.speech <video_id> [...] [--batch 64]
+    from the repo root, on a GPU, with Parakeet in the Hugging Face cache (HF_HOME) and the htdemucs weights in the
     torch hub cache ($XDG_CACHE_HOME/torch/hub/checkpoints); or through pipeline.extract
 """
 import argparse
@@ -52,22 +51,21 @@ import torchaudio
 
 from .common import DATA, audio, provenance, source_video, write_json
 
-MODEL = "Qwen/Qwen3-ASR-1.7B"
+MODEL = "nvidia/parakeet-tdt-0.6b-v3"
+REVISION = "541d1f99c6b0c3cd0b11a95167540bb8edefd82b"
 SEPARATOR = "htdemucs"
 DEVICE = "cuda:0"
 PIECE_S = 600         # separation piece, so memory does not grow with film length
 CONTEXT_S = 10        # separated with the piece and cut afterwards, so the pieces join without edge effects
 OVERLAP = 0.25        # between apply_model's segments within a piece
 SHIFT_SEED = 0
-SR = 16000            # the rate both Silero VAD and Qwen3-ASR expect
+SR = 16000            # the rate both Silero VAD and Parakeet expect
 VAD = {"min_silence_duration_ms": 400,  # a pause of 0.4 s ends a segment, so lines follow phrase breaks
        "speech_pad_ms": 200,            # 0.2 s added at both ends so word onsets and endings are not cut
        "max_speech_duration_s": 20}     # longer speech is split, so each line stays close to its time in the film
-LANGUAGE = None       # identify the language per segment; do not force English
-DTYPE = torch.bfloat16
+DTYPE = torch.float32
 MAX_BATCH = 16        # segments per GPU inference batch
-MAX_NEW_TOKENS = 256  # per segment; 20 s of speech needs far fewer
-CALL_SEGMENTS = 64    # segments per transcribe() call (--batch); the model splits them into batches of MAX_BATCH
+CALL_SEGMENTS = 64    # segments per transcribe() call (--batch), split into batches of MAX_BATCH
 
 
 def load_audio(video_id: str) -> np.ndarray:
@@ -100,7 +98,27 @@ def vocals(sep, wav: torch.Tensor) -> np.ndarray:
     return torch.cat(pieces).numpy().astype(np.float32)
 
 
-def transcribe(model, vad, x: np.ndarray, stem: np.ndarray, call_segments: int = CALL_SEGMENTS) -> tuple[list, list]:
+def recogniser():
+    """(processor, model) of the recogniser, at the pinned snapshot."""
+    from transformers import AutoModelForTDT, AutoProcessor
+    processor = AutoProcessor.from_pretrained(MODEL, revision=REVISION)
+    model = AutoModelForTDT.from_pretrained(MODEL, revision=REVISION, dtype=DTYPE, device_map=DEVICE).eval()
+    return processor, model
+
+
+def recognise(rec, clips: list[np.ndarray]) -> list[str]:
+    """The text of each clip (mono float32 at SR), in batches of MAX_BATCH."""
+    processor, model = rec
+    texts = []
+    for i in range(0, len(clips), MAX_BATCH):
+        inputs = processor(clips[i:i + MAX_BATCH], sampling_rate=SR).to(model.device, dtype=model.dtype)
+        with torch.no_grad():
+            out = model.generate(**inputs, return_dict_in_generate=True)
+        texts += [t.strip() for t in processor.batch_decode(out.sequences, skip_special_tokens=True)]
+    return texts
+
+
+def transcribe(rec, vad, x: np.ndarray, stem: np.ndarray, call_segments: int = CALL_SEGMENTS) -> tuple[list, list]:
     """(VAD segments in samples, lines [{start, end, text}]): segments found on the vocals stem, transcribed from the
     mix x; both mono at SR."""
     from silero_vad import get_speech_timestamps
@@ -108,9 +126,9 @@ def transcribe(model, vad, x: np.ndarray, stem: np.ndarray, call_segments: int =
     lines = []
     for i in range(0, len(segs), call_segments):
         chunk = segs[i:i + call_segments]
-        results = model.transcribe(audio=[(x[g["start"]:g["end"]], SR) for g in chunk], language=LANGUAGE)
-        lines += [{"start": round(g["start"] / SR, 2), "end": round(g["end"] / SR, 2), "text": r.text.strip()}
-                  for g, r in zip(chunk, results) if r.text.strip()]
+        texts = recognise(rec, [x[g["start"]:g["end"]] for g in chunk])
+        lines += [{"start": round(g["start"] / SR, 2), "end": round(g["end"] / SR, 2), "text": t}
+                  for g, t in zip(chunk, texts) if t]
     return segs, lines
 
 
@@ -120,19 +138,17 @@ def main():
     ap.add_argument("--batch", type=int, default=CALL_SEGMENTS)
     a = ap.parse_args()
     from demucs.pretrained import get_model
-    from qwen_asr import Qwen3ASRModel
     from silero_vad import load_silero_vad
     sep = get_model(SEPARATOR).to(DEVICE).eval()
     vad = load_silero_vad()
-    model = Qwen3ASRModel.from_pretrained(MODEL, dtype=DTYPE, device_map=DEVICE, max_inference_batch_size=MAX_BATCH,
-                                          max_new_tokens=MAX_NEW_TOKENS)
-    prov = provenance(__file__, {"separator": SEPARATOR, "vad": "Silero VAD", "asr": MODEL},
+    rec = recogniser()
+    prov = provenance(__file__, {"separator": SEPARATOR, "vad": "Silero VAD", "asr": f"{MODEL}@{REVISION[:8]}"},
                       separator_sr=sep.samplerate, piece_s=PIECE_S, context_s=CONTEXT_S, overlap=OVERLAP,
-                      shift_seed=SHIFT_SEED, sr=SR, vad=VAD, language=LANGUAGE, dtype=str(DTYPE), device=DEVICE,
-                      max_batch=MAX_BATCH, max_new_tokens=MAX_NEW_TOKENS, call_segments=a.batch)
+                      shift_seed=SHIFT_SEED, sr=SR, vad=VAD, dtype=str(DTYPE), device=DEVICE, max_batch=MAX_BATCH,
+                      call_segments=a.batch)
     for vid in a.video_ids:
         stem = vocals(sep, stereo(source_video(vid), sep.samplerate))
-        segs, lines = transcribe(model, vad, load_audio(vid), stem, a.batch)
+        segs, lines = transcribe(rec, vad, load_audio(vid), stem, a.batch)
         write_json(DATA / "transcripts" / f"{vid}.json",
                    {"video_id": vid, "model": MODEL, "vad": {**VAD, "input": f"{SEPARATOR} vocals stem"},
                     "lines": lines, "provenance": prov})

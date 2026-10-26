@@ -27,8 +27,8 @@ python3 scripts/show_prompts.py w_tdv hh53_007 [--answer "a green vest"]
 
 | Lane (input) | Module | Models | Output (under `data/`) |
 |---|---|---|---|
-| speech (D, "said") | `pipeline/speech.py` | htdemucs vocals stem → Silero VAD; Qwen3-ASR-1.7B on the original mix | `transcripts/<id>.json` |
-| screen text (R, "read") | `pipeline/screen_text.py` | PP-OCRv6 medium (PaddleOCR, PyTorch engine), 1 frame/s | `ocr/<id>.json` |
+| speech (D, "said") | `pipeline/speech.py` | htdemucs vocals stem → Silero VAD; Parakeet TDT 0.6B v3 on the original mix | `transcripts/<id>.json` |
+| screen text (R, "read") | `pipeline/screen_text.py` | Nemotron OCR v2 (English, line level), 1 frame/s | `ocr/<id>.json` |
 | frames (V, "seen") | `pipeline/frames.py` | 256 frames sampled uniformly (ffmpeg); text masked with the screen-text reader | `films/<id>/frames_notext/` (+ `frames/`, `frames_textonly/`, `text.json`) |
 | sounds (A, "heard") | `pipeline/sounds.py` | PANNs CNN14 (AudioSet), music 0.25, other labels 0.4 | `sounds/<id>.json` |
 
@@ -121,10 +121,8 @@ with three.
 |---|---|---|---|
 | htdemucs (Demucs v4) | demucs 4.0.1, weights 955717e8 | `955717e8-8726e21a.th` | `8726e21a993978c7ba086d3872e7608d7d5bfca646ca4aca459ffda844faa8b4` |
 | Silero VAD | silero-vad 6.2.3 | `silero_vad.jit` | `e1122837f4154c511485fe0b9c64455f7b929c96fbb8d79fbdb336383ebd3720` |
-| Qwen/Qwen3-ASR-1.7B | snapshot 7278e1e70fe206f11671096ffdd38061171dd6e5 | `model-00001-of-00002.safetensors` | `a4cd1f1a04d90b757dc7f7dd26254e69a013b19e80efe590a83c6a3bde8608d6` |
-| | | `model-00002-of-00002.safetensors` | `6e0b9d9e09e2e0238e7ef3cc8a484ab387e91b90f1900bedf88bc92d7929ccfc` |
-| PP-OCRv6_medium_det | PaddleOCR 3.7.0 official model, safetensors | `model.safetensors` | `bd393266c02e1a680b1b34c301d5d0d81e6290440b7f8ab0f5d5032276b17eb1` |
-| PP-OCRv6_medium_rec | PaddleOCR 3.7.0 official model, safetensors | `model.safetensors` | `5f43c16f2a684b1d2284662178bdb604febd3d6bfdb5ca73828d08d0f7c0c3e9` |
+| nvidia/parakeet-tdt-0.6b-v3 | snapshot 541d1f99c6b0c3cd0b11a95167540bb8edefd82b | `model.safetensors` | `3a2026366188c8c68598edbbff92f8d11590a08e0ae2e6775544e7b07d6a5e11` |
+| nvidia/nemotron-ocr-v2 (`v2_english`) | snapshot 0e83e83f17943524b90afa6c0fd82ac2bc1a40ca | `detector.pth`, `recognizer.pth`, `relational.pth` | `envs/models.sha256` |
 | PANNs CNN14 (AudioSet) | panns_inference 0.1.1 | `Cnn14_mAP=0.431.pth` | `0dc499e40e9761ef5ea061ffc77697697f277f6a960894903df3ada000e34b31` |
 | MIT/ast-finetuned-audioset-10-10-0.4593 (validation only) | snapshot f826b80d28226b62986cc218e5cec390b1096902 | `model.safetensors` | `ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d` |
 | Qwen/Qwen3.6-27B-FP8 (reader) | snapshot e89b16ebf1988b3d6befa7de50abc2d76f26eb09 | 80 files | `envs/models.sha256` |
@@ -136,9 +134,8 @@ with three.
 `envs/models.sha256` lists every model file (with configs, tokenizers and preprocessors) by its path under the shared
 root: `cd /data/cinesage && sha256sum -c <repo>/envs/models.sha256`. The lanes read the models offline from the caches
 that `pipeline.extract` sets (set the same variables to run a lane module directly): `HF_HOME=/data/cinesage/hf-cache`
-and `HF_HUB_OFFLINE=1` (Qwen3-ASR, AST); `HOME=/data/cinesage/cache/serving-home` (PANNs in `panns_data/`) with
-`XDG_CACHE_HOME=$HOME/.cache` (htdemucs in `torch/hub/checkpoints/`); `PADDLE_PDX_CACHE_HOME=/data/cinesage/cache/paddlex`
-(PaddleOCR, with the other variables of `extract.ENV_EXTRA`). The panel readers' lists in `envs/panel_models/` are
+and `HF_HUB_OFFLINE=1` (Parakeet, Nemotron OCR, AST); `HOME=/data/cinesage/cache/serving-home` (PANNs in
+`panns_data/`) with `XDG_CACHE_HOME=$HOME/.cache` (htdemucs in `torch/hub/checkpoints/`). The panel readers' lists in `envs/panel_models/` are
 relative to each model's snapshot folder: `cd <snapshot> && sha256sum -c <repo>/envs/panel_models/<profile>.sha256`.
 
 ## Environments and hardware
@@ -146,8 +143,8 @@ relative to each model's snapshot folder: `cd <snapshot> && sha256sum -c <repo>/
 | Environment | Python | Used by | Packages |
 |---|---|---|---|
 | `client` | 3.10.20 | `extract`, `films`, `materials`, `items`, `validate`, `fidelity`, `run`, `analyze`, `page_cache` (standard library only) | `envs/client.txt` |
-| `asr_qwen_env` | 3.11.15 | `speech` (demucs, silero-vad, qwen-asr, PyTorch) | `envs/asr_qwen_env.txt` |
-| `ocr_env` | 3.12.3 | `screen_text`, `frames` (PaddleOCR, OpenCV, Pillow); `scripts/extract_check.py` | `envs/ocr_env.txt` |
+| `asr_parakeet_env` | 3.12.3 | `speech` (demucs, silero-vad, Transformers, PyTorch) | `envs/asr_parakeet_env.txt` |
+| `ocr_nemotron_env` | 3.12.3 | `screen_text`, `frames` (nemotron-ocr, OpenCV, Pillow); `scripts/extract_check.py` | `envs/ocr_nemotron_env.txt` |
 | `panns_env` | 3.12.3 | `sounds` (panns_inference) | `envs/panns_env.txt` |
 | `florence_env` | 3.10.20 | `validation_sounds` (Transformers) | `envs/florence_env.txt` |
 | `vllm` | 3.11.15 | `serve.sh` (vLLM 0.28.0) | `envs/vllm.txt` |
@@ -158,7 +155,10 @@ The environments live in `$SHARED_ROOT/envs/` (default `/data/cinesage/envs/`); 
 (override one with `PAPER1_PY_CLIENT`, `PAPER1_PY_SPEECH`, `PAPER1_PY_OCR`, `PAPER1_PY_SOUNDS` or
 `PAPER1_PY_VALIDATION`). Each `envs/<environment>.txt` is its `pip freeze`, headed by its Python version; rebuild one
 with `python<version> -m venv <env> && <env>/bin/pip install -r envs/<env>.txt --extra-index-url
-https://download.pytorch.org/whl/cu130`. Every lane decodes the film with the system's ffmpeg and ffprobe
+https://download.pytorch.org/whl/cu130`. `nemotron-ocr` is not on PyPI: install it from the `nemotron-ocr/` folder of
+the Nemotron OCR v2 snapshot with `pip install --no-build-isolation .` after the rest, with `nvcc` (CUDA 13) on `PATH`,
+`hatchling` installed and the Python headers on `CPATH`; its build script asks for C++17, and torch 2.14's headers need
+`-std=c++20` there. Every lane decodes the film with the system's ffmpeg and ffprobe
 (6.1.1-3ubuntu5+esm8); another version can change the frame JPEGs and the decoded audio. Hardware: NVIDIA DGX Spark
 (GB10, aarch64, CUDA 13, driver 580.82.09), Ubuntu 24.04.3. On it, with three films extracted at a time, a film of 75
 to 90 minutes takes (medians) 14 min for speech, 10 min for screen text, 1 min for frames, under 1 min for sounds and
@@ -173,14 +173,14 @@ command-line values included. To verify a re-run, extract into a fresh root and 
 
 ```bash
 PAPER1_DATA=/tmp/rerun python -m pipeline.extract <id> ...
-/data/cinesage/envs/ocr_env/bin/python scripts/extract_check.py data /tmp/rerun <id> ... --report /tmp/rerun/check.json
+/data/cinesage/envs/ocr_nemotron_env/bin/python scripts/extract_check.py data /tmp/rerun <id> ... --report /tmp/rerun/check.json
 ```
 
 For each film and lane it reports whether the outputs are identical, how closely they agree if not, and whether their
 provenance matches. Frame sampling, `film.json` and `materials` are deterministic for the same inputs and ffmpeg, as
 are htdemucs' random shifts of each separation piece (seeded per film, `speech.SHIFT_SEED`). The models run on the GPU
-(Qwen3-ASR in bfloat16), whose kernels are not bitwise reproducible, so texts and scores can differ slightly between
-runs and a segment, read or label near its threshold can flip.
+(Nemotron OCR in mixed precision), whose kernels are not bitwise reproducible, so texts and scores can differ slightly
+between runs and a segment, read or label near its threshold can flip.
 
 ## Layout
 
@@ -197,5 +197,5 @@ results/    run records and analyses
 ```
 
 Shared resources are read from `/data/cinesage` (override with `SHARED_ROOT`): `raw/` (source videos), `envs/`,
-`hf-cache/`, `cache/serving-home/`, `cache/paddlex/`. The reader server accepts local images only from under this
+`hf-cache/`, `cache/serving-home/`. The reader server accepts local images only from under this
 root, so the frames in `data/` (or `PAPER1_DATA`) must resolve to paths inside it.

@@ -10,8 +10,8 @@ Sampling
     With the same ffmpeg build the JPEGs are byte-identical from run to run.
 Masking
     V must not carry written text, which the screen-text lane supplies separately (R). For each frame:
-    1. it is upscaled (bicubic) to screen_text.WIDTH (960 px) and read with the screen-text reader (PP-OCRv6 medium
-       detector and recogniser, see pipeline.screen_text);
+    1. it is upscaled (bicubic) to screen_text.WIDTH (960 px) and read with the screen-text reader (Nemotron OCR v2,
+       see pipeline.screen_text);
     2. masked regions are the boxes of the strings read in this frame that are readable at MASK_SCORE, plus the boxes
        of the screen-text intervals (before joining into screens) that cover the frame's time (start <= t < end) and
        overlap a detector region of this frame (more than TRACK_OVERLAP of either box covered by the other). Detector
@@ -34,7 +34,7 @@ Output (DATA/films/<video_id>/)
                       `frames` lists the sampled frames in time order (pipeline.films lists them in film.json),
                       `masked` holds the unpadded boxes as fractions of the frame, `area` the masked fraction
 Run
-    $SHARED_ROOT/envs/ocr_env/bin/python -m pipeline.frames <video_id> [...] [--device gpu:0]
+    $SHARED_ROOT/envs/ocr_nemotron_env/bin/python -m pipeline.frames <video_id> [...] [--device cuda:0]
     from the repo root, on a GPU, after pipeline.screen_text; or through pipeline.extract
 """
 import argparse
@@ -170,7 +170,7 @@ def mask(ocr, video_id: str, device: str) -> dict:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("video_ids", nargs="+")
-    ap.add_argument("--device", default="gpu:0")
+    ap.add_argument("--device", default="cuda:0")
     a = ap.parse_args()
     ocr = reader(a.device)
     for vid in a.video_ids:

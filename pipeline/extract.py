@@ -4,9 +4,9 @@
         [--force]
 
 Without video ids, every film of --films-json. Per film, in this order:
-    speech             DATA/transcripts/<id>.json           pipeline.speech             asr_qwen_env
-    screen_text        DATA/ocr/<id>.json                   pipeline.screen_text        ocr_env
-    frames             DATA/films/<id>/text.json, frames*/  pipeline.frames             ocr_env
+    speech             DATA/transcripts/<id>.json           pipeline.speech             asr_parakeet_env
+    screen_text        DATA/ocr/<id>.json                   pipeline.screen_text        ocr_nemotron_env
+    frames             DATA/films/<id>/text.json, frames*/  pipeline.frames             ocr_nemotron_env
     sounds             DATA/sounds/<id>.json                pipeline.sounds             panns_env
     validation_sounds  DATA/sound_events/<id>.json          pipeline.validation_sounds  florence_env  (--validation)
     film               DATA/films/<id>/film.json            pipeline.films              client
@@ -20,7 +20,7 @@ libraries of different lanes never share a process. One line per step and film: 
 loading included). The exit status is 1 if any step failed or was blocked.
 
 DATA is <repo>/data, or $PAPER1_DATA (common.DATA), and is passed on to every step. Lanes read model files from the
-caches under the shared root (LANE_ENV, ENV_EXTRA).
+caches under the shared root (LANE_ENV).
 """
 import argparse
 import os
@@ -35,8 +35,8 @@ from .common import DATA, ROOT, SHARED, read_json
 ENVS = SHARED / "envs"
 # environment: interpreter, overridden by the variable named
 PYTHON = {
-    "asr_qwen_env": os.environ.get("PAPER1_PY_SPEECH", str(ENVS / "asr_qwen_env/bin/python")),
-    "ocr_env": os.environ.get("PAPER1_PY_OCR", str(ENVS / "ocr_env/bin/python")),
+    "asr_parakeet_env": os.environ.get("PAPER1_PY_SPEECH", str(ENVS / "asr_parakeet_env/bin/python")),
+    "ocr_nemotron_env": os.environ.get("PAPER1_PY_OCR", str(ENVS / "ocr_nemotron_env/bin/python")),
     "panns_env": os.environ.get("PAPER1_PY_SOUNDS", str(ENVS / "panns_env/bin/python")),
     "florence_env": os.environ.get("PAPER1_PY_VALIDATION", str(ENVS / "florence_env/bin/python")),
     "client": os.environ.get("PAPER1_PY_CLIENT", str(ENVS / "client/bin/python")),
@@ -44,9 +44,10 @@ PYTHON = {
 
 # step: (module, environment, arguments, output marking it done, outputs it needs, steps whose outputs it reads)
 STEPS = {
-    "speech": ("pipeline.speech", "asr_qwen_env", ["{id}"], "transcripts/{id}.json", [], []),
-    "screen_text": ("pipeline.screen_text", "ocr_env", ["{id}", "--device", "gpu:0"], "ocr/{id}.json", [], []),
-    "frames": ("pipeline.frames", "ocr_env", ["{id}", "--device", "gpu:0"], "films/{id}/text.json",
+    "speech": ("pipeline.speech", "asr_parakeet_env", ["{id}"], "transcripts/{id}.json", [], []),
+    "screen_text": ("pipeline.screen_text", "ocr_nemotron_env", ["{id}", "--device", "cuda:0"], "ocr/{id}.json",
+                    [], []),
+    "frames": ("pipeline.frames", "ocr_nemotron_env", ["{id}", "--device", "cuda:0"], "films/{id}/text.json",
                ["ocr/{id}.json"], ["screen_text"]),
     "sounds": ("pipeline.sounds", "panns_env", ["{id}", "--device", "cuda"], "sounds/{id}.json", [], []),
     "validation_sounds": ("pipeline.validation_sounds", "florence_env", ["{id}", "--device", "cuda", "--hop", "3"],
@@ -67,18 +68,13 @@ LANE_ENV = {"HOME": str(HOME), "XDG_CACHE_HOME": str(HOME / ".cache"),
             "HF_HUB_OFFLINE": os.environ.get("HF_HUB_OFFLINE", "1"),
             "PAPER1_DATA": str(DATA),
             "PYTHONPATH": os.pathsep.join(p for p in (str(ROOT), os.environ.get("PYTHONPATH")) if p)}
-# PaddleOCR reads the PP-OCRv6 weights from its own cache under the shared root (Hugging Face as model source); without
-# these variables it looks under $HOME/.paddlex and downloads them.
-PADDLE = SHARED / "cache" / "paddlex"
-ENV_EXTRA = {"ocr_env": {"PADDLE_PDX_CACHE_HOME": str(PADDLE), "PADDLE_PDX_MODEL_SOURCE": "huggingface",
-                         "PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK": "True", "HF_HOME": str(PADDLE / "hf")}}
 
 
 def run_step(step: str, vid: str, films_json: Path) -> tuple[str, float]:
     module, env, args, _, _, _ = STEPS[step]
     cmd = [PYTHON[env], "-m", module, *(a.format(id=vid, films=films_json) for a in args)]
     t0 = time.time()
-    r = subprocess.run(cmd, cwd=ROOT, env={**os.environ, **LANE_ENV, **ENV_EXTRA.get(env, {})})
+    r = subprocess.run(cmd, cwd=ROOT, env={**os.environ, **LANE_ENV})
     return ("ran" if r.returncode == 0 else f"failed (exit {r.returncode})"), time.time() - t0
 
 

@@ -1,14 +1,16 @@
 """Screen-text lane ("read", input R): what is written on screen, as timestamped entries, one per screen of text.
 
 The film is sampled at 1 frame/s, independently of the 256 frames, so that text shown for only a few seconds (inserts,
-signs, letters, intertitles) is not lost between frames. Each sample is read by PaddleOCR; repeated reads of the same
-string are merged into intervals, unreadable and fragmentary intervals are dropped, and intervals that appear together
-are joined in reading order into one entry per screen. Readers see each entry as `[start–end] On screen: text`.
-pipeline.frames uses the same reader, the readability rule (`readable`) and the intervals to mask text in the frames.
+signs, letters, intertitles) is not lost between frames. Each sample is read by Nemotron OCR; repeated reads of the
+same string are merged into intervals, unreadable and fragmentary intervals are dropped, and intervals that appear
+together are joined in reading order into one entry per screen. Readers see each entry as `[start–end] On screen:
+text`. pipeline.frames uses the same reader, the readability rule (`readable`) and the intervals to mask text in the
+frames.
 
 Model
-    PaddleOCR 3.7.0 (PaddleX 3.7.2), PP-OCRv6_medium_det + PP-OCRv6_medium_rec, engine "transformers" (PyTorch);
-    document orientation, unwarping and text-line orientation disabled (film frames are upright and flat)
+    nvidia/nemotron-ocr-v2 (snapshot 0e83e83f, package nemotron-ocr 1.0.0, its CUDA extension built against the
+    environment's PyTorch), VARIANT checkpoint: RegNetX-8GF detector, transformer recogniser and relational model,
+    reads merged to MERGE_LEVEL; every detected region is returned (include_invalid), the reads filtered here
 Settings (constants below)
     FPS 1.0 (--fps)      samples per second of film
     WIDTH 960            samples scaled to 960 px wide, square pixels, height rounded to even
@@ -34,7 +36,8 @@ Output
     `box` is [x0, y0, x1, y1] as fractions of the frame, so it applies to frames of any size.
     DATA/ocr/<video_id>.samples.jsonl: per-sample detections {t, texts, regions}, for audit and --remerge.
 Run
-    $SHARED_ROOT/envs/ocr_env/bin/python -m pipeline.screen_text <video_id> [...] [--fps 1] [--device gpu:0] [--remerge]
+    $SHARED_ROOT/envs/ocr_nemotron_env/bin/python -m pipeline.screen_text <video_id> [...] [--fps 1] [--device cuda:0]
+        [--remerge]
     from the repo root, on a GPU; or through pipeline.extract. --remerge rebuilds `items` and `screens` from the saved
     samples without running OCR.
 """
@@ -50,10 +53,13 @@ import numpy as np
 
 from .common import DATA, provenance, source_video, write_json
 
-DET, REC = "PP-OCRv6_medium_det", "PP-OCRv6_medium_rec"
-MODEL = f"PaddleOCR {DET} + {REC}"
-READER = {"text_detection_model_name": DET, "text_recognition_model_name": REC, "use_doc_orientation_classify": False,
-          "use_doc_unwarping": False, "use_textline_orientation": False, "engine": "transformers"}
+OCR_MODEL = "nvidia/nemotron-ocr-v2"
+REVISION = "0e83e83f17943524b90afa6c0fd82ac2bc1a40ca"
+VARIANT = "v2_english"
+MERGE_LEVEL = "sentence"
+MODEL = f"{OCR_MODEL}@{REVISION[:8]} {VARIANT}"
+READER = {"model": OCR_MODEL, "revision": REVISION, "variant": VARIANT, "merge_level": MERGE_LEVEL,
+          "include_invalid": True}
 FPS = 1.0              # text shown for 1 s or longer is sampled at least once
 WIDTH = 960            # OCR input width, about twice the 448 px frames, so small text keeps enough pixels
 THUMB = (32, 24)       # change-gate thumbnail (w, h), grey
@@ -68,26 +74,30 @@ JOIN_S = 1.0           # start difference within which intervals belong to one s
 
 
 def readable(text: str, score: float, min_score: float) -> bool:
-    """A confident read with at least two ASCII letters or digits. The recogniser is multilingual and turns texture
-    into single CJK characters; the films are in English."""
+    """A confident read with at least two ASCII letters or digits; texture read as one or two stray symbols is not
+    text, and the films are in English."""
     return score >= min_score and sum(c.isascii() and c.isalnum() for c in text) >= 2
 
 
-def reader(device: str = "gpu:0"):
-    from paddleocr import PaddleOCR
-    return PaddleOCR(**READER, device=device)
+def reader(device: str = "cuda:0"):
+    import torch
+    from huggingface_hub import snapshot_download
+    from nemotron_ocr.inference.pipeline_v2 import NemotronOCRV2
+    torch.cuda.set_device(device)
+    path = snapshot_download(OCR_MODEL, revision=REVISION, allow_patterns=[f"{VARIANT}/*"])
+    return NemotronOCRV2(model_dir=f"{path}/{VARIANT}")
 
 
 def detect(ocr, image: np.ndarray) -> tuple[list, list]:
-    """(strings read with score >= KEEP_SCORE [{text, score, box}], all detected text regions [box]); boxes in
-    fractions of the frame."""
-    h, w = image.shape[:2]
-    r = ocr.predict(image)[0]
-    frac = lambda b: [round(float(b[0]) / w, 4), round(float(b[1]) / h, 4), round(float(b[2]) / w, 4), round(float(b[3]) / h, 4)]
-    poly_box = lambda p: frac([min(x for x, _ in p), min(y for _, y in p), max(x for x, _ in p), max(y for _, y in p)])
-    texts = [{"text": t.strip(), "score": round(float(s), 3), "box": frac(b)}
-             for t, s, b in zip(r["rec_texts"], r["rec_scores"], r["rec_boxes"]) if t.strip() and s >= KEEP_SCORE]
-    return texts, [poly_box(p) for p in r["dt_polys"]]
+    """(strings read with score >= KEEP_SCORE [{text, score, box}], all detected text regions [box]) of a BGR frame;
+    boxes in fractions of the frame."""
+    preds = ocr(np.ascontiguousarray(image[:, :, ::-1]), merge_level=MERGE_LEVEL, include_invalid=True)
+    # the reader's "upper" and "lower" are the larger and smaller y
+    box = lambda p: [round(p["left"], 4), round(min(p["upper"], p["lower"]), 4), round(p["right"], 4),
+                     round(max(p["upper"], p["lower"]), 4)]
+    texts = [{"text": p["text"].strip(), "score": round(float(p["confidence"]), 3), "box": box(p)}
+             for p in preds if p["text"].strip() and p["confidence"] >= KEEP_SCORE]
+    return texts, [box(p) for p in preds]
 
 
 def frames(path, fps: float):
@@ -221,7 +231,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("video_ids", nargs="+")
     ap.add_argument("--fps", type=float, default=FPS)
-    ap.add_argument("--device", default="gpu:0")
+    ap.add_argument("--device", default="cuda:0")
     ap.add_argument("--remerge", action="store_true", help="rebuild from saved samples, without running OCR")
     a = ap.parse_args()
     ocr = None if a.remerge else reader(a.device)
