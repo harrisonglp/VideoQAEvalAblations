@@ -1,0 +1,10 @@
+held_out,train,train_size,n,coverage,agree_before,agree_after,kappa_before,kappa_after,family_before,family_after,verified,reassigned,kept
+gemma4-31b,nemotron35-super-vl,1,521,0.614,0.668,0.781,0.595,0.718,0.672,0.783,380,165,303
+gemma4-31b,command-a-plus,1,521,0.614,0.668,0.631,0.595,0.544,0.672,0.635,220,113,515
+gemma4-31b,nemotron35-super-vl+command-a-plus,2,521,0.614,0.668,0.772,0.595,0.702,0.672,0.772,377,182,289
+nemotron35-super-vl,gemma4-31b,1,545,0.643,0.697,0.789,0.633,0.733,0.701,0.791,348,173,327
+nemotron35-super-vl,command-a-plus,1,545,0.643,0.697,0.664,0.633,0.587,0.701,0.67,220,113,515
+nemotron35-super-vl,gemma4-31b+command-a-plus,2,545,0.643,0.697,0.782,0.633,0.72,0.701,0.782,348,191,309
+command-a-plus,gemma4-31b,1,333,0.393,0.661,0.688,0.557,0.577,0.661,0.688,348,173,327
+command-a-plus,nemotron35-super-vl,1,333,0.393,0.661,0.727,0.557,0.624,0.661,0.73,380,165,303
+command-a-plus,gemma4-31b+nemotron35-super-vl,2,333,0.393,0.661,0.697,0.557,0.584,0.661,0.697,390,210,248

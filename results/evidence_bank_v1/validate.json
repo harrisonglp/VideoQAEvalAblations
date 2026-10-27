@@ -1,0 +1,6011 @@
+{
+ "summary": {
+  "items": 1000,
+  "valid": 1000,
+  "with_warnings": 328,
+  "films": {
+   "mf2_17": 20,
+   "mf2_30": 20,
+   "mf2_34": 20,
+   "mf2_43": 20,
+   "chnb_All_Quiet_on_the_Western_Front_1930": 20,
+   "chnb_Billy_the_Kid_in_Santa_Fe_1941": 20,
+   "chnb_Gulliver_s_Travels_1939": 20,
+   "chnb_Happy_Days_1929": 20,
+   "chnb_Parlor_Bedroom_and_Bath_1931": 20,
+   "chnb_The_Wild_Party_1929": 20,
+   "mf2_10": 20,
+   "mf2_11": 20,
+   "mf2_12": 20,
+   "mf2_13": 20,
+   "mf2_14": 20,
+   "mf2_20": 20,
+   "mf2_22": 20,
+   "mf2_23": 20,
+   "mf2_24": 20,
+   "mf2_25": 20,
+   "mf2_26": 20,
+   "mf2_27": 20,
+   "mf2_29": 20,
+   "mf2_33": 20,
+   "mf2_35": 20,
+   "mf2_40": 20,
+   "mf2_42": 20,
+   "mf2_46": 20,
+   "mf2_49": 20,
+   "mf2_51": 20,
+   "mf2_53": 20,
+   "mf2_54": 20,
+   "mf2_5": 20,
+   "mf2_9": 20,
+   "chnb_Angel_on_My_Shoulder_1946": 20,
+   "chnb_Animal_Crackers_1930": 20,
+   "chnb_Becky_Sharp_1935": 20,
+   "chnb_Beneath_the_12_Mile_Reef_1953": 20,
+   "chnb_Blood_on_the_Sun_1945": 20,
+   "chnb_Bulldog_Drummond_1929": 20,
+   "chnb_His_Girl_Friday_1940": 20,
+   "chnb_He_Walked_by_Night_1948": 20,
+   "chnb_McLintock_1963": 20,
+   "chnb_Nurse_Edith_Cavell_1939": 20,
+   "chnb_Rain_1932": 20,
+   "chnb_Royal_Wedding_1951": 20,
+   "chnb_Rudyard_Kipling_s_Jungle_Book_1942": 20,
+   "chnb_The_Big_Trail_1930": 20,
+   "chnb_The_Stranger_1946": 20,
+   "chnb_The_Perils_of_Pauline_1947": 20
+  },
+  "evidence_type": {
+   "dialogue": 196,
+   "visual": 162,
+   "unanswerable": 152,
+   "dialogue and visual": 115,
+   "text": 107,
+   "dialogue or visual": 81,
+   "prior": 50,
+   "audio": 48,
+   "dialogue or text": 36,
+   "dialogue and text": 19,
+   "visual or audio": 12,
+   "dialogue and audio": 9,
+   "visual and text": 5,
+   "dialogue or audio": 3,
+   "text and audio": 2,
+   "visual or text": 2,
+   "visual and audio": 1
+  },
+  "temporal_type": {
+   "scene": 324,
+   "moment": 256,
+   "movie-whole": 202,
+   "movie-any": 143,
+   "multi-scene": 75
+  },
+  "answer_type": {
+   "text": 848,
+   "number": 151,
+   "time": 1
+  }
+ },
+ "items": [
+  {
+   "id": "ns37_031",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ns37_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ns37_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 45:36-45:37",
+    "citation: the answer is also said at 07:08, 17:43 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ns37_005",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'white' is in the on-screen text track elsewhere in the film (23:21)"
+   ]
+  },
+  {
+   "id": "ns37_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ns37_008",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 08:44-08:47"
+   ]
+  },
+  {
+   "id": "ns37_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ns37_030",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ns37_012",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'whistles' is in the transcript elsewhere in the film (22:13)"
+   ]
+  },
+  {
+   "id": "ns37_016",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'brown' is in the on-screen text track elsewhere in the film (01:00)"
+   ]
+  },
+  {
+   "id": "ns37_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ns37_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ns37_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ns37_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ns37_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ns37_024",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 14:51-15:04 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 15:23-15:47 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 38:36-38:41 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "ns37_025",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:11:28-1:11:38"
+   ]
+  },
+  {
+   "id": "ns37_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ns37_027",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 52:58-53:01 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 53:35-53:48 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:02:45-1:02:49 (paraphrase?)",
+    "citation: the answer is also said at 06:08, 07:38, 59:06, 1:02:33 … (5 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ns37_028",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_002",
+   "errors": [],
+   "warnings": [
+    "leak (weak): '4' is in the on-screen text track elsewhere in the film (24:32)",
+    "support: answer not verbatim in the transcript at 13:38-13:45 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 16:36-16:40 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 19:54-19:57 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 20:19-20:26 (paraphrase?)",
+    "citation: the answer is also said at 07:10, 29:26, 30:24 (3 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "hb34_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_011",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_026",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:07:24-1:07:26",
+    "support: answer not in the on-screen text track at 1:16:46-1:16:50"
+   ]
+  },
+  {
+   "id": "hb34_027",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_028",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_029",
+   "errors": [],
+   "warnings": [
+    "leak (weak): '4' is in the on-screen text track elsewhere in the film (24:32)",
+    "support: answer not verbatim in the transcript at 27:16-27:18 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:06:34-1:06:37 (paraphrase?)",
+    "citation: the answer is also said at 07:10, 29:26, 30:24 (3 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "hb34_035",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_031",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_032",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:21:05-1:21:08 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "hb34_033",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hb34_034",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dc61_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dc61_003",
+   "errors": [],
+   "warnings": [
+    "leak (weak): '2' is in the on-screen text track elsewhere in the film (1:31:33)",
+    "citation: the answer is also said at 12:36, 1:26:33 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "dc61_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dc61_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dc61_009",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dc61_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dc61_011",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 35:51-35:59 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "dc61_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dc61_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dc61_016",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 06:35 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "dc61_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dc61_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dc61_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dc61_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dc61_023",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:16:45-1:16:49 (paraphrase?)",
+    "support: answer not in the on-screen text track at 1:31:32-1:31:38"
+   ]
+  },
+  {
+   "id": "dc61_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dc61_025",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 12:31-12:37 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 43:03-43:11 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:27:26-1:27:31 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:32:41-1:32:45 (paraphrase?)",
+    "citation: the answer is also said at 26:31, 1:32:35 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "dc61_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dc61_027",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 21:43, 29:35, 29:41, 33:01 … (6 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "dc61_028",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_022",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 08:44-08:47 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "hh53_023",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 33:18 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "hh53_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_027",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_028",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 19:06 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "hh53_033",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_030",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 02:43-02:44"
+   ]
+  },
+  {
+   "id": "hh53_031",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hh53_032",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "aq30_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 34:23-34:43"
+   ]
+  },
+  {
+   "id": "aq30_004",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:27:22-1:29:30"
+   ]
+  },
+  {
+   "id": "aq30_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "aq30_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "aq30_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "aq30_013",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "aq30_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "aq30_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "aq30_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "aq30_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "aq30_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "aq30_023",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 1:35:18 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "aq30_024",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:33:21-1:33:26 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "aq30_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "aq30_029",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "aq30_030",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "aq30_031",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "aq30_032",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "aq30_033",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'graveyard' is in the transcript elsewhere in the film (26:29)"
+   ]
+  },
+  {
+   "id": "aq30_034",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 59:59-1:00:22 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "bk41_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bk41_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 43:37-43:55 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 44:35-44:42 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 58:02-58:16 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "bk41_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bk41_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bk41_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bk41_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bk41_015",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 47:24-47:26 (paraphrase?)",
+    "citation: the answer is also said at 47:38 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bk41_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bk41_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bk41_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bk41_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bk41_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bk41_022",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 50:01-50:07 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "bk41_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bk41_027",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 31:17-31:24 (paraphrase?)",
+    "citation: the answer is also said at 31:09, 34:18, 59:10 (3 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bk41_028",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 05:44-05:47"
+   ]
+  },
+  {
+   "id": "bk41_029",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bk41_030",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 39:25-39:31 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "bk41_031",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bk41_032",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gt39_003",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gt39_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gt39_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gt39_017",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'king little' is in the transcript elsewhere in the film (1:12:32)",
+    "leak (weak): 'king little' is in the on-screen text track elsewhere in the film (07:37)"
+   ]
+  },
+  {
+   "id": "gt39_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gt39_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gt39_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gt39_037",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gt39_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gt39_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gt39_026",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'one' is in the transcript elsewhere in the film (40:04)",
+    "leak (weak): '1' is in the on-screen text track elsewhere in the film (00:27)"
+   ]
+  },
+  {
+   "id": "gt39_027",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 15:15-15:17 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "gt39_028",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gt39_029",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 07:38-07:45",
+    "citation: the answer is also on screen at 01:43 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "gt39_031",
+   "errors": [],
+   "warnings": [
+    "leak: 'bombo' is in the on-screen text track near the evidence (08:06)",
+    "citation: the answer is also said at 43:46, 1:12:38 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "gt39_032",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 53:08-53:11",
+    "support: answer not in the on-screen text track at 54:16-54:21"
+   ]
+  },
+  {
+   "id": "gt39_033",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 50:22-50:29"
+   ]
+  },
+  {
+   "id": "gt39_034",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gt39_035",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gt39_036",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hd29_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hd29_003",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hd29_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hd29_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hd29_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hd29_011",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 11:26, 13:25 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "hd29_013",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 23:42-23:48 (paraphrase?)",
+    "citation: the answer is also said at 23:35 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "hd29_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hd29_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hd29_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hd29_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hd29_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hd29_022",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'flowers' is in the transcript elsewhere in the film (41:56)"
+   ]
+  },
+  {
+   "id": "hd29_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hd29_025",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:17:04-1:17:36 (paraphrase?)",
+    "citation: the answer is also said at 40:35 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "hd29_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hd29_027",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hd29_029",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 22:18-22:25 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:12:54-1:12:58 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "hd29_030",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hd29_031",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pb31_001",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 52:36-52:38 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 52:50-52:52 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 53:18-53:20 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 53:44-53:46 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 55:52-55:55 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 57:12-57:14 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 58:02-58:03 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:00:02-1:00:05 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:11:59-1:12:01 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "pb31_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pb31_003",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pb31_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pb31_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pb31_031",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pb31_011",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pb31_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pb31_013",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pb31_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pb31_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pb31_021",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'dog' is in the transcript elsewhere in the film (03:50)"
+   ]
+  },
+  {
+   "id": "pb31_022",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 00:41-00:50"
+   ]
+  },
+  {
+   "id": "pb31_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pb31_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pb31_032",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pb31_027",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'bell' is in the on-screen text track elsewhere in the film (00:27)"
+   ]
+  },
+  {
+   "id": "pb31_028",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 18:59-19:07 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 38:27-38:30 (paraphrase?)",
+    "support: answer not in the on-screen text track at 1:00:27-1:00:29",
+    "support: answer not in the on-screen text track at 1:10:30-1:10:31",
+    "support: answer not in the on-screen text track at 1:10:35-1:10:38",
+    "citation: the answer is also said at 18:54, 38:37 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "pb31_029",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pb31_030",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_002",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 40:29-40:33 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "wp29_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_021",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'seven' is in the transcript elsewhere in the film (1:14:58)",
+    "support: answer not in the on-screen text track at 11:04-11:23"
+   ]
+  },
+  {
+   "id": "wp29_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_025",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 41:05-41:08 (paraphrase?)",
+    "citation: the answer is also said at 41:15 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "wp29_026",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 02:33-02:41"
+   ]
+  },
+  {
+   "id": "wp29_027",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_028",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "wp29_029",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mj41_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mj41_002",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 08:46, 24:44, 24:46, 24:48 … (11 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "mj41_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 2:01:08-2:01:14 (paraphrase?)",
+    "citation: the answer is also said at 2:01:02 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "mj41_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mj41_005",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'dog' is in the transcript elsewhere in the film (50:29)"
+   ]
+  },
+  {
+   "id": "mj41_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mj41_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mj41_008",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:56:52-1:56:54"
+   ]
+  },
+  {
+   "id": "mj41_009",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mj41_011",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:54:14-1:54:17 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "mj41_012",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:38:42-1:38:47 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "mj41_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mj41_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mj41_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mj41_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mj41_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mj41_021",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 27:30-27:31",
+    "support: answer not in the on-screen text track at 1:49:31-1:49:35"
+   ]
+  },
+  {
+   "id": "mj41_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mj41_023",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 55:14-55:16"
+   ]
+  },
+  {
+   "id": "mj41_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ss45_026",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 29:59-31:19 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 32:02-32:08 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 40:27-40:34 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 46:14-46:23 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "ss45_002",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 03:37, 31:08, 32:04, 42:38 … (6 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ss45_003",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ss45_006",
+   "errors": [],
+   "warnings": [
+    "leak: 'three' is in the transcript near the evidence (37:39)",
+    "leak (weak): 'three' is in the on-screen text track elsewhere in the film (1:32:16)"
+   ]
+  },
+  {
+   "id": "ss45_007",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 20:56-21:02"
+   ]
+  },
+  {
+   "id": "ss45_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ss45_009",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'whistling' is in the transcript elsewhere in the film (1:16:00)"
+   ]
+  },
+  {
+   "id": "ss45_011",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ss45_012",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:14:08-1:14:13"
+   ]
+  },
+  {
+   "id": "ss45_013",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ss45_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ss45_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ss45_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ss45_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ss45_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ss45_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ss45_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ss45_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ss45_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ss45_025",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:32:15-1:32:23"
+   ]
+  },
+  {
+   "id": "lf36_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_027",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_009",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_026",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 06:35, 20:47, 46:43 (3 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "lf36_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_013",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 10:32-10:36"
+   ]
+  },
+  {
+   "id": "lf36_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_021",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:36:29-1:36:51"
+   ]
+  },
+  {
+   "id": "lf36_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lf36_025",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 38:08-38:12 (paraphrase?)",
+    "citation: the answer is also said at 38:00 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "du52_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "du52_003",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "du52_006",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 20:19-20:29 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "du52_007",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 1:04:10 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "du52_009",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 30:16-30:25 (paraphrase?)",
+    "support: answer not in the on-screen text track at 34:54-34:56"
+   ]
+  },
+  {
+   "id": "du52_010",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 29:30 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "du52_011",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "du52_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "du52_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "du52_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "du52_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "du52_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "du52_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "du52_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "du52_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "du52_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "du52_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "du52_023",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 15:29-15:31",
+    "support: answer not in the on-screen text track at 15:41-15:46",
+    "support: answer not verbatim in the transcript at 36:03-36:05 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 42:37-42:38 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "du52_024",
+   "errors": [],
+   "warnings": [
+    "leak (weak): '42' is in the on-screen text track elsewhere in the film (15:40)"
+   ]
+  },
+  {
+   "id": "du52_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mb47_001",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 10:46, 11:08, 11:13, 11:46 … (5 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "mb47_002",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:04:57-1:05:00 (paraphrase?)",
+    "citation: the answer is also said at 1:04:49 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "mb47_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 48:44-48:46"
+   ]
+  },
+  {
+   "id": "mb47_005",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 55:59-56:01 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:20:40-1:20:43 (paraphrase?)",
+    "citation: the answer is also said at 55:47, 1:20:26 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "mb47_006",
+   "errors": [],
+   "warnings": [
+    "leak (weak): '2' is in the on-screen text track elsewhere in the film (10:25)",
+    "support: answer not verbatim in the transcript at 03:02-03:05 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:00:10-1:00:13 (paraphrase?)",
+    "citation: the answer is also said at 04:25, 05:50, 10:26, 22:36 … (9 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "mb47_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mb47_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mb47_009",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mb47_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mb47_011",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 39:28-39:30"
+   ]
+  },
+  {
+   "id": "mb47_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mb47_013",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 59:14-59:19 (paraphrase?)",
+    "citation: the answer is also said at 47:27 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "mb47_015",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:05:22-1:05:31 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "mb47_016",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 03:20 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "mb47_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mb47_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mb47_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mb47_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mb47_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mb47_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bt34_001",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 03:13-03:22"
+   ]
+  },
+  {
+   "id": "bt34_002",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 03:24-04:25"
+   ]
+  },
+  {
+   "id": "bt34_004",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'can' is in the on-screen text track elsewhere in the film (03:23)",
+    "citation: the answer is also said at 08:53, 12:25, 13:26, 13:35 … (20 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bt34_005",
+   "errors": [],
+   "warnings": [
+    "leak (weak): '4' is in the on-screen text track elsewhere in the film (1:09:48)",
+    "support: answer not verbatim in the transcript at 12:03-12:07 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 15:30-15:32 (paraphrase?)",
+    "citation: the answer is also said at 22:24 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bt34_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bt34_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bt34_009",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bt34_011",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bt34_012",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 53:41 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bt34_014",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'four' is in the transcript elsewhere in the film (22:24)",
+    "support: answer not in the on-screen text track at 1:10:52-1:10:54",
+    "support: answer not in the on-screen text track at 1:11:40-1:11:59",
+    "support: answer not in the on-screen text track at 1:12:18-1:12:36"
+   ]
+  },
+  {
+   "id": "bt34_015",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:12:16-1:12:22 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "bt34_016",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 57:03-57:07 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "bt34_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bt34_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bt34_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bt34_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bt34_021",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:10:47-1:11:02"
+   ]
+  },
+  {
+   "id": "bt34_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bt34_023",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 12:30-12:35 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 41:36-41:51 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "bt34_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ga55_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ga55_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ga55_003",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ga55_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ga55_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ga55_007",
+   "errors": [],
+   "warnings": [
+    "leak: 'four' is in the transcript near the evidence (1:27:02)",
+    "leak: '4' is in the on-screen text track near the evidence (49:58)"
+   ]
+  },
+  {
+   "id": "ga55_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ga55_009",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ga55_010",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 35:46-36:20"
+   ]
+  },
+  {
+   "id": "ga55_011",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 22:38-22:41 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 22:45-22:49 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "ga55_013",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 02:30-02:32",
+    "support: answer not verbatim in the transcript at 04:01-04:09 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 06:13-06:15 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 20:14-20:17 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 20:32-20:33 (paraphrase?)",
+    "support: answer not in the on-screen text track at 27:36-27:40",
+    "support: answer not in the on-screen text track at 51:09-51:15",
+    "support: answer not verbatim in the transcript at 1:02:06-1:02:08 (paraphrase?)",
+    "support: answer not in the on-screen text track at 1:09:14-1:09:21",
+    "support: answer not in the on-screen text track at 1:15:53-1:16:01",
+    "support: answer not verbatim in the transcript at 1:18:33-1:18:37 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:23:52-1:23:57 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:35:21-1:35:23 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "ga55_014",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 07:10 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ga55_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ga55_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ga55_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ga55_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ga55_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ga55_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ga55_022",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 15:28, 15:50, 31:53 (3 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ga55_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "sb37_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "sb37_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "sb37_003",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "sb37_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "sb37_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "sb37_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "sb37_008",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also on screen at 1:11:37 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "sb37_009",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'whistling' is in the transcript elsewhere in the film (18:32)"
+   ]
+  },
+  {
+   "id": "sb37_011",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 11:06-11:15",
+    "support: answer not verbatim in the transcript at 11:29-11:58 (paraphrase?)",
+    "support: answer not in the on-screen text track at 17:28-17:37",
+    "citation: the answer is also said at 1:31:31 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "sb37_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "sb37_013",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:13:47-1:13:50 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "sb37_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "sb37_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "sb37_016",
+   "errors": [],
+   "warnings": [
+    "leak: 'furs' is in the on-screen text track near the evidence (1:48:37)"
+   ]
+  },
+  {
+   "id": "sb37_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "sb37_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "sb37_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "sb37_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "sb37_022",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 28:16-28:21 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:09:55-1:10:08 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "sb37_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "as49_001",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:02:00-1:02:01 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "as49_002",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 32:57, 1:00:30 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "as49_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 26:57-26:58 (paraphrase?)",
+    "citation: the answer is also said at 26:52 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "as49_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "as49_007",
+   "errors": [],
+   "warnings": [
+    "leak: 'fear' is in the transcript near the evidence (02:22)"
+   ]
+  },
+  {
+   "id": "as49_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "as49_009",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "as49_011",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 38:51-39:05"
+   ]
+  },
+  {
+   "id": "as49_012",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:15:48-1:16:22 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "as49_013",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'diana' is in the on-screen text track elsewhere in the film (1:18:41)",
+    "support: answer not verbatim in the transcript at 1:07:35-1:07:49 (paraphrase?)",
+    "citation: the answer is also said at 05:34, 08:26, 08:40, 09:42 … (15 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "as49_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "as49_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "as49_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "as49_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "as49_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "as49_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "as49_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "as49_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "as49_022",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'bag' is in the transcript elsewhere in the film (11:46)"
+   ]
+  },
+  {
+   "id": "as49_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dm63_001",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 59:02, 59:06 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "dm63_002",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:03:24-1:03:30 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "dm63_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 23:03-23:05 (paraphrase?)",
+    "citation: the answer is also said at 22:57 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "dm63_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dm63_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dm63_028",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:12:50-1:12:54 (paraphrase?)",
+    "support: answer not in the on-screen text track at 58:23-58:28"
+   ]
+  },
+  {
+   "id": "dm63_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dm63_011",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 49:45-49:50 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "dm63_013",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 16:52-16:58 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "dm63_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dm63_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dm63_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dm63_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dm63_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dm63_022",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'six' is in the transcript elsewhere in the film (58:19)",
+    "support: answer not in the on-screen text track at 04:24-04:47"
+   ]
+  },
+  {
+   "id": "dm63_023",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:02:16-1:02:19 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "dm63_029",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dm63_025",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 55:19-55:46 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:04:52-1:04:58 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "dm63_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dm63_027",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fd53_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fd53_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fd53_003",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 23:02, 47:23 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "fd53_006",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 25:57-26:01 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 28:08-28:21 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 31:53-31:57 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "fd53_007",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 33:49, 34:01, 34:04, 34:18 (4 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "fd53_008",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 04:40 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "fd53_009",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fd53_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fd53_027",
+   "errors": [],
+   "warnings": [
+    "leak: 'four' is in the transcript near the evidence (33:47)"
+   ]
+  },
+  {
+   "id": "fd53_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fd53_028",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fd53_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fd53_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fd53_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fd53_021",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 58:18 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "fd53_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fd53_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fd53_024",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'three' is in the transcript elsewhere in the film (33:36)"
+   ]
+  },
+  {
+   "id": "fd53_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fd53_026",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 02:36, 11:54, 12:17, 12:18 … (9 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "lp39_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 52:29-52:38 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 56:11-56:29 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 56:44-57:19 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "lp39_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_027",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_009",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_011",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_028",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_022",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 39:35-40:18 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "lp39_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_030",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lp39_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_001",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 13:16-13:19 (paraphrase?)",
+    "citation: the answer is also said at 13:09 (1 uncited); cite every occurrence",
+    "citation: the answer is also on screen at 1:12:00 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "kc52_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_003",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_006",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 15:12-15:19 (paraphrase?)",
+    "citation: the answer is also said at 08:32, 16:27, 18:35, 35:18 … (5 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "kc52_008",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also on screen at 12:51 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "kc52_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_013",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "kc52_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ej33_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ej33_002",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 32:10 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ej33_003",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ej33_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ej33_005",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 20:51-21:41 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 34:40-34:55 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "ej33_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ej33_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ej33_008",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 35:34-36:16 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 43:01-43:05 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "ej33_009",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'chicken' is in the transcript elsewhere in the film (20:45)"
+   ]
+  },
+  {
+   "id": "ej33_010",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 36:21-36:41",
+    "support: answer not in the on-screen text track at 37:44-37:50"
+   ]
+  },
+  {
+   "id": "ej33_011",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 34:48, 34:50 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ej33_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ej33_013",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ej33_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ej33_016",
+   "errors": [],
+   "warnings": [
+    "leak: 'drum' is in the transcript near the evidence (1:13:31)"
+   ]
+  },
+  {
+   "id": "ej33_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ej33_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ej33_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ej33_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ej33_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_001",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 22:14-22:18 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "rh47_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_003",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 07:07, 54:52 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "rh47_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_009",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_011",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_013",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_021",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:07:53-1:08:01 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "rh47_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rh47_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ck45_001",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 01:23-01:28 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:18:32-1:18:35 (paraphrase?)",
+    "citation: the answer is also said at 01:17, 1:18:25 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ck45_002",
+   "errors": [],
+   "warnings": [
+    "leak (weak): '4' is in the on-screen text track elsewhere in the film (48:41)",
+    "support: answer not verbatim in the transcript at 06:23-06:27 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 41:59-42:04 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:23:42-1:23:45 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:24:00-1:24:03 (paraphrase?)",
+    "citation: the answer is also said at 21:58, 22:17, 49:57 (3 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ck45_003",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ck45_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ck45_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ck45_009",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ck45_010",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 25:07-25:17",
+    "support: answer not in the on-screen text track at 48:23-48:31",
+    "support: answer not in the on-screen text track at 1:21:28-1:21:38"
+   ]
+  },
+  {
+   "id": "ck45_011",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:27:20-1:27:31"
+   ]
+  },
+  {
+   "id": "ck45_012",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'trumpet' is in the transcript elsewhere in the film (1:26:18)"
+   ]
+  },
+  {
+   "id": "ck45_013",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 49:01-49:14 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "ck45_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ck45_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ck45_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ck45_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ck45_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ck45_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ck45_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ck45_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ck45_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ck45_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fp31_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fp31_002",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 02:10-02:14"
+   ]
+  },
+  {
+   "id": "fp31_003",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'four' is in the on-screen text track elsewhere in the film (01:13)",
+    "support: answer not verbatim in the transcript at 05:15-05:22 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 06:44-06:58 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 08:17-08:26 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 20:23-20:27 (paraphrase?)",
+    "citation: the answer is also said at 03:42, 13:00, 20:13, 31:00 … (9 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "fp31_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fp31_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fp31_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fp31_009",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'whistling' is in the transcript elsewhere in the film (1:32:41)"
+   ]
+  },
+  {
+   "id": "fp31_010",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'whistling' is in the transcript elsewhere in the film (1:32:41)"
+   ]
+  },
+  {
+   "id": "fp31_011",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 57:00-57:08 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "fp31_012",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 25:25-25:37 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "fp31_013",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'three' is in the on-screen text track elsewhere in the film (00:30)",
+    "support: answer not verbatim in the transcript at 47:27-49:33 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:10:14-1:11:21 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:34:51-1:39:42 (paraphrase?)",
+    "citation: the answer is also said at 21:38, 1:12:15, 1:26:36, 1:29:39 … (5 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "fp31_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fp31_015",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 49:09, 1:06:36, 1:07:17 (3 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "fp31_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fp31_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fp31_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fp31_021",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 19:54-19:57 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 20:13-20:23 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 39:03-39:07 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 39:12-39:15 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "fp31_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fp31_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "fp31_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "cb50_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "cb50_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:11:58-1:12:09 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "cb50_005",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 23:14-23:34 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 28:36-28:42 (paraphrase?)",
+    "citation: the answer is also said at 22:12 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "cb50_027",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'crown' is in the transcript elsewhere in the film (1:51:10)"
+   ]
+  },
+  {
+   "id": "cb50_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "cb50_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "cb50_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "cb50_011",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:08:50-1:08:59"
+   ]
+  },
+  {
+   "id": "cb50_028",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "cb50_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "cb50_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "cb50_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "cb50_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "cb50_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "cb50_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "cb50_022",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'bell' is in the transcript elsewhere in the film (1:03:02)"
+   ]
+  },
+  {
+   "id": "cb50_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "cb50_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "cb50_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "cb50_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dt45_001",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 50:21-50:33 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "dt45_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dt45_005",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'three' is in the transcript elsewhere in the film (05:34)",
+    "leak (weak): 'three' is in the on-screen text track elsewhere in the film (56:07)"
+   ]
+  },
+  {
+   "id": "dt45_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dt45_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dt45_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dt45_009",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 55:35-55:37"
+   ]
+  },
+  {
+   "id": "dt45_012",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 05:28-05:40 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 06:07-06:55 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 07:12-07:19 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 22:50-23:17 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 23:23-24:02 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "dt45_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dt45_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dt45_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dt45_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dt45_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dt45_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dt45_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dt45_027",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "dt45_023",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 43:49-43:54 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "dt45_024",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 52:48-52:54"
+   ]
+  },
+  {
+   "id": "dt45_025",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 33:12-33:16 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "dt45_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bb59_002",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 08:20-08:34",
+    "support: answer not in the on-screen text track at 24:42-25:01",
+    "support: answer not in the on-screen text track at 43:04-43:06",
+    "support: answer not in the on-screen text track at 43:14-43:17",
+    "support: answer not in the on-screen text track at 1:04:14-1:04:17"
+   ]
+  },
+  {
+   "id": "bb59_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 00:37-00:39 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 05:41-05:43 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 51:29-51:31 (paraphrase?)",
+    "citation: the answer is also said at 02:56, 31:52 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bb59_004",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'miller' is in the on-screen text track elsewhere in the film (00:50)"
+   ]
+  },
+  {
+   "id": "bb59_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bb59_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bb59_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bb59_009",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'flutes' is in the transcript elsewhere in the film (48:03)"
+   ]
+  },
+  {
+   "id": "bb59_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bb59_026",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 52:43-52:44 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "bb59_013",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bb59_027",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bb59_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bb59_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bb59_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bb59_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bb59_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bb59_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bb59_023",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 14:26-14:29 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "bb59_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bb59_025",
+   "errors": [],
+   "warnings": [
+    "leak: '5' is in the transcript near the evidence (28:29)"
+   ]
+  },
+  {
+   "id": "jr50_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jr50_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jr50_003",
+   "errors": [],
+   "warnings": [
+    "leak: 'burwell' is in the on-screen text track near the evidence (56:03)",
+    "support: answer not verbatim in the transcript at 1:06:54-1:06:57 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "jr50_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jr50_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jr50_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jr50_008",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 39:26-39:33"
+   ]
+  },
+  {
+   "id": "jr50_011",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 18:00-18:02 (paraphrase?)",
+    "support: answer not in the on-screen text track at 18:30-18:34"
+   ]
+  },
+  {
+   "id": "jr50_012",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 38:09-38:18 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "jr50_013",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jr50_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jr50_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jr50_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jr50_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jr50_021",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 25:18-25:27 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 52:31-52:39 (paraphrase?)",
+    "citation: the answer is also said at 49:04 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "jr50_022",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 04:48-04:53",
+    "support: answer not in the on-screen text track at 1:11:52-1:11:55"
+   ]
+  },
+  {
+   "id": "jr50_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jr50_024",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also on screen at 1:11:17 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "jr50_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jr50_026",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 29:35-29:39"
+   ]
+  },
+  {
+   "id": "lt54_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lt54_002",
+   "errors": [],
+   "warnings": [
+    "leak (weak): '3' is in the on-screen text track elsewhere in the film (23:19)",
+    "support: answer not verbatim in the transcript at 11:29-11:31 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 59:53-59:56 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:50:07-1:50:10 (paraphrase?)",
+    "citation: the answer is also said at 20:12, 43:47, 51:10, 51:39 … (5 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "lt54_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:39:03-1:39:13 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "lt54_004",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'golden' is in the transcript elsewhere in the film (20:00)",
+    "leak (weak): 'golden' is in the on-screen text track elsewhere in the film (1:01:20)"
+   ]
+  },
+  {
+   "id": "lt54_005",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'white' is in the transcript elsewhere in the film (34:42)"
+   ]
+  },
+  {
+   "id": "lt54_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lt54_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lt54_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lt54_012",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 35:01-35:07 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 35:22-35:26 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 35:57-35:59 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "lt54_013",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lt54_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lt54_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lt54_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lt54_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lt54_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lt54_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lt54_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lt54_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "lt54_023",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 41:32, 1:17:36 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "lt54_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_001",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 00:10, 04:29, 05:33, 16:31 … (9 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "su54_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 04:04-04:08 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 06:16-06:22 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:15:21-1:15:34 (paraphrase?)",
+    "citation: the answer is also said at 00:10, 04:29, 05:33, 16:31 … (10 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "su54_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_009",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 02:07-02:08"
+   ]
+  },
+  {
+   "id": "su54_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_021",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:16:35-1:16:42"
+   ]
+  },
+  {
+   "id": "su54_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "su54_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gb51_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gb51_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gb51_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 22:28-22:36"
+   ]
+  },
+  {
+   "id": "gb51_004",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 23:39-23:43 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "gb51_006",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'pig' is in the transcript elsewhere in the film (49:18)"
+   ]
+  },
+  {
+   "id": "gb51_007",
+   "errors": [],
+   "warnings": [
+    "leak (weak): '10' is in the on-screen text track elsewhere in the film (02:24)",
+    "support: answer not verbatim in the transcript at 44:46-44:48 (paraphrase?)",
+    "citation: the answer is also said at 21:40, 21:43, 44:34 (3 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "gb51_011",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'four' is in the transcript elsewhere in the film (10:31)",
+    "leak (weak): '4' is in the on-screen text track elsewhere in the film (01:13)"
+   ]
+  },
+  {
+   "id": "gb51_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gb51_014",
+   "errors": [],
+   "warnings": [
+    "leak (weak): '4' is in the on-screen text track elsewhere in the film (01:13)",
+    "support: answer not verbatim in the transcript at 1:13:55-1:14:10 (paraphrase?)",
+    "citation: the answer is also said at 10:31, 24:44, 42:26, 50:07 … (6 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "gb51_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gb51_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gb51_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gb51_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gb51_021",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'pig' is in the transcript elsewhere in the film (49:18)"
+   ]
+  },
+  {
+   "id": "gb51_022",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 01:23-01:48"
+   ]
+  },
+  {
+   "id": "gb51_023",
+   "errors": [],
+   "warnings": [
+    "leak: 'three' is in the transcript near the evidence (22:52)",
+    "leak: '3' is in the on-screen text track near the evidence (22:26)"
+   ]
+  },
+  {
+   "id": "gb51_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "gb51_025",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 13:53 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "gb51_026",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 38:56-39:00 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 44:05-44:06 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 44:33-44:36 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 44:58-45:00 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:03:47-1:03:50 (paraphrase?)",
+    "citation: the answer is also said at 26:39 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "gb51_027",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ao46_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ao46_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ao46_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ao46_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ao46_007",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also on screen at 1:03:58, 1:04:08 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ao46_008",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 43:14-43:18 (paraphrase?)",
+    "support: answer not in the on-screen text track at 40:09-40:17",
+    "citation: the answer is also said at 43:06 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ao46_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ao46_011",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 54:06-54:26 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "ao46_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ao46_015",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:29:47-1:29:55 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "ao46_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ao46_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ao46_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ao46_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ao46_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ao46_021",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 17:05-17:09 (paraphrase?)",
+    "support: answer not in the on-screen text track at 16:58-17:27",
+    "support: answer not in the on-screen text track at 1:40:37-1:40:43"
+   ]
+  },
+  {
+   "id": "ao46_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ao46_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ao46_024",
+   "errors": [],
+   "warnings": [
+    "leak (weak): '4' is in the on-screen text track elsewhere in the film (43:23)",
+    "citation: the answer is also said at 01:40, 14:28, 55:48 (3 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ao46_025",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 55:35-55:43 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 55:46-55:53 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "ac30_002",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 28:25-28:27 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 28:52-28:54 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 30:38-30:40 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 47:34-47:36 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:30:26-1:30:28 (paraphrase?)",
+    "citation: the answer is also said at 06:13, 13:44, 20:01, 26:45 … (9 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ac30_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 56:39-56:41 (paraphrase?)",
+    "citation: the answer is also said at 26:17, 41:34, 42:01, 42:46 … (7 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ac30_004",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 20:41, 23:06, 38:13, 38:55 … (6 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ac30_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ac30_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ac30_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ac30_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ac30_012",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 10:14, 1:06:28 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ac30_026",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 45:53 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ac30_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ac30_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ac30_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ac30_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ac30_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ac30_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ac30_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ac30_022",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 48:04-48:08 (paraphrase?)",
+    "citation: the answer is also said at 47:52 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ac30_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ac30_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ac30_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bs35_001",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 20:32-20:42 (paraphrase?)",
+    "citation: the answer is also said at 20:26, 27:59 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bs35_002",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 49:28-49:37 (paraphrase?)",
+    "citation: the answer is also said at 49:22 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bs35_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bs35_006",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'diamonds' is in the transcript elsewhere in the film (53:17)"
+   ]
+  },
+  {
+   "id": "bs35_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bs35_009",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 11:42-11:52"
+   ]
+  },
+  {
+   "id": "bs35_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bs35_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bs35_012",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:02:49-1:02:53 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "bs35_013",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:11:14-1:11:47 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "bs35_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bs35_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bs35_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bs35_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bs35_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bs35_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bs35_022",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 28:44-28:47 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 51:19-51:23 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 53:14-53:18 (paraphrase?)",
+    "citation: the answer is also said at 26:45, 32:17, 32:44 (3 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bs35_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bs35_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bs35_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "br53_001",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 00:58-01:04"
+   ]
+  },
+  {
+   "id": "br53_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "br53_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 49:44-49:51 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:08:18-1:08:21 (paraphrase?)",
+    "citation: the answer is also on screen at 06:25 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "br53_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "br53_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "br53_006",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 08:21-08:31 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 37:41-37:45 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 52:11-52:33 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 59:50-1:00:21 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:17:56-1:17:59 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "br53_007",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 28:21-28:39"
+   ]
+  },
+  {
+   "id": "br53_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "br53_010",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 18:39 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "br53_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "br53_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "br53_015",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:23:58-1:24:01 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "br53_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "br53_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "br53_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "br53_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "br53_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "br53_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "br53_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "br53_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_003",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_023",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 10:43, 25:26, 52:49, 58:13 (4 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bo45_006",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 12:00-12:03 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 26:49-26:52 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 39:23-39:32 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 58:07-58:08 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "bo45_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_009",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'dog' is in the transcript elsewhere in the film (12:28)"
+   ]
+  },
+  {
+   "id": "bo45_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_011",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 10:32, 25:26 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bo45_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bo45_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_001",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 06:10-06:15 (paraphrase?)",
+    "citation: the answer is also said at 06:02 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bd29_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_003",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_006",
+   "errors": [],
+   "warnings": [
+    "leak: 'round' is in the transcript near the evidence (09:23)"
+   ]
+  },
+  {
+   "id": "bd29_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_009",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_010",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_013",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:20:30-1:21:18 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:23:48-1:24:22 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:27:57-1:28:46 (paraphrase?)",
+    "citation: the answer is also said at 1:03:04 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bd29_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bd29_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hg40_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hg40_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 54:15-54:20 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "hg40_004",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:08:38-1:08:50 (paraphrase?)",
+    "citation: the answer is also said at 1:08:31 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "hg40_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hg40_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hg40_008",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'umbrella' is in the transcript elsewhere in the film (13:44)"
+   ]
+  },
+  {
+   "id": "hg40_010",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 40:16-40:21"
+   ]
+  },
+  {
+   "id": "hg40_011",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 29:54-30:04 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "hg40_013",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:26:07-1:26:13 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "hg40_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hg40_016",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 1:04:12 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "hg40_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hg40_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hg40_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hg40_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hg40_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hg40_022",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 17:32-17:45 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "hg40_023",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:24:10-1:24:14 (paraphrase?)",
+    "citation: the answer is also said at 1:05:25 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "hg40_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hg40_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hw48_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hw48_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hw48_004",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'four' is in the transcript elsewhere in the film (10:43)"
+   ]
+  },
+  {
+   "id": "hw48_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hw48_007",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 28:49-28:50"
+   ]
+  },
+  {
+   "id": "hw48_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hw48_009",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hw48_028",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hw48_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hw48_015",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 39:12-39:15"
+   ]
+  },
+  {
+   "id": "hw48_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hw48_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hw48_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hw48_021",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:12:16-1:12:34 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "hw48_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hw48_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hw48_024",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:00:30-1:00:34 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "hw48_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hw48_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "hw48_027",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mc63_001",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:12:29-1:12:31 (paraphrase?)",
+    "citation: the answer is also said at 1:12:24 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "mc63_002",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 1:18:37 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "mc63_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:47:28-1:47:30 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:51:26-1:51:34 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:53:25-1:53:27 (paraphrase?)",
+    "citation: the answer is also said at 58:23, 1:18:26, 1:33:01, 1:39:22 … (8 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "mc63_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mc63_008",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:52:09-1:52:14"
+   ]
+  },
+  {
+   "id": "mc63_009",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'lamb' is in the transcript elsewhere in the film (33:11)"
+   ]
+  },
+  {
+   "id": "mc63_025",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 41:08-41:47 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "mc63_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mc63_013",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 58:55-59:01 (paraphrase?)",
+    "citation: the answer is also said at 12:54, 37:28, 58:45 (3 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "mc63_014",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 1:02:20, 1:33:56, 1:34:33, 1:35:54 … (6 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "mc63_015",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 01:16, 33:53, 1:20:34 (3 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "mc63_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mc63_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mc63_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mc63_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mc63_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mc63_021",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 29:02-29:08 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 33:17-33:26 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:13:27-1:13:37 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:25:17-1:25:23 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:28:33-1:28:37 (paraphrase?)",
+    "citation: the answer is also said at 13:33 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "mc63_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mc63_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "mc63_024",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'train' is in the transcript elsewhere in the film (24:48)"
+   ]
+  },
+  {
+   "id": "ec39_002",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 22:09-22:11",
+    "support: answer not in the on-screen text track at 24:33-24:36"
+   ]
+  },
+  {
+   "id": "ec39_003",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 45:29, 1:09:30 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ec39_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ec39_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ec39_006",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 54:59-55:05 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "ec39_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ec39_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ec39_013",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 23:04, 45:29 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ec39_014",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:19:09-1:19:16"
+   ]
+  },
+  {
+   "id": "ec39_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ec39_016",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 1:12:43 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ec39_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ec39_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ec39_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ec39_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ec39_027",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ec39_023",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also on screen at 00:15 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ec39_028",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 09:41-09:44 (paraphrase?)",
+    "citation: the answer is also said at 09:30 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "ec39_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "ec39_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rn32_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rn32_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rn32_006",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 25:55-26:01 (paraphrase?)",
+    "citation: the answer is also said at 32:12 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "rn32_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rn32_027",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 09:54-09:58 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 10:07-10:11 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 16:03-16:07 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 42:52-42:56 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 43:21-43:25 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 44:52-44:56 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 45:05-45:09 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 46:48-46:52 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 51:29-51:33 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:13:31-1:13:35 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:14:32-1:14:36 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:32:18-1:32:22 (paraphrase?)",
+    "citation: the answer is also said at 1:13:26 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "rn32_010",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:04:23-1:04:35"
+   ]
+  },
+  {
+   "id": "rn32_011",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rn32_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rn32_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rn32_016",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:24:31-1:24:37 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "rn32_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rn32_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rn32_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rn32_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rn32_021",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rn32_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rn32_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rn32_024",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:05:36-1:05:52 (paraphrase?)",
+    "citation: the answer is also said at 1:20:58 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "rn32_025",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 59:36-59:42 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:12:36-1:12:42 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:22:58-1:23:03 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "rn32_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rw51_001",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rw51_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rw51_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rw51_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rw51_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rw51_008",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 36:31-36:34"
+   ]
+  },
+  {
+   "id": "rw51_026",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:10:59-1:11:04 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "rw51_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rw51_013",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rw51_014",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 12:28, 1:09:16 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "rw51_015",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:12:22-1:12:23",
+    "support: answer not in the on-screen text track at 1:12:58-1:13:06"
+   ]
+  },
+  {
+   "id": "rw51_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rw51_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rw51_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rw51_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "rw51_021",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 13:36-13:46 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 20:33-20:37 (paraphrase?)",
+    "citation: the answer is also said at 20:28 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "rw51_022",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 26:30-27:21 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:09:18-1:10:08 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:13:10-1:14:08 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:27:18-1:27:26 (paraphrase?)",
+    "citation: the answer is also said at 28:04, 36:48, 43:02 (3 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "rw51_023",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 28:37-28:46"
+   ]
+  },
+  {
+   "id": "rw51_024",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'eleven' is in the transcript elsewhere in the film (26:25)",
+    "citation: the answer is also on screen at 01:30, 13:09 (2 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "rw51_025",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 42:53-42:57 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "jb42_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jb42_003",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 07:29, 1:01:33, 1:08:12 (3 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "jb42_028",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'sheep' is in the transcript elsewhere in the film (51:18)"
+   ]
+  },
+  {
+   "id": "jb42_006",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'white' is in the transcript elsewhere in the film (48:51)"
+   ]
+  },
+  {
+   "id": "jb42_009",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 03:18 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "jb42_011",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jb42_013",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jb42_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jb42_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jb42_017",
+   "errors": [],
+   "warnings": [
+    "leak: 'four' is in the transcript near the evidence (1:21:01)"
+   ]
+  },
+  {
+   "id": "jb42_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jb42_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jb42_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jb42_021",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 1:35:41-1:35:50 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "jb42_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jb42_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jb42_024",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'buddha' is in the transcript elsewhere in the film (1:32:06)"
+   ]
+  },
+  {
+   "id": "jb42_025",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "jb42_026",
+   "errors": [],
+   "warnings": [
+    "leak: 'three' is in the transcript near the evidence (1:11:03)"
+   ]
+  },
+  {
+   "id": "jb42_027",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bg30_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bg30_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 05:03-05:08 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:03:30-1:03:43 (paraphrase?)",
+    "citation: the answer is also said at 08:07, 14:31, 39:03, 39:55 … (8 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bg30_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bg30_006",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'zigzags' is in the transcript elsewhere in the film (54:59)"
+   ]
+  },
+  {
+   "id": "bg30_008",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 20:14-21:20"
+   ]
+  },
+  {
+   "id": "bg30_009",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bg30_012",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bg30_013",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'eight' is in the transcript elsewhere in the film (09:55)",
+    "support: answer not in the on-screen text track at 30:06-30:14",
+    "support: answer not in the on-screen text track at 35:13-35:24",
+    "support: answer not in the on-screen text track at 49:03-49:10",
+    "support: answer not in the on-screen text track at 1:00:05-1:00:13",
+    "support: answer not in the on-screen text track at 1:04:13-1:04:23",
+    "support: answer not in the on-screen text track at 1:29:10-1:29:20",
+    "support: answer not in the on-screen text track at 1:30:53-1:31:03",
+    "support: answer not in the on-screen text track at 1:48:10-1:48:18"
+   ]
+  },
+  {
+   "id": "bg30_014",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 53:07 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bg30_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bg30_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bg30_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bg30_021",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 08:02-08:14 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "bg30_022",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bg30_023",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bg30_024",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 1:31:23 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "bg30_025",
+   "errors": [],
+   "warnings": [
+    "leak: 'four' is in the transcript near the evidence (1:06:59)"
+   ]
+  },
+  {
+   "id": "bg30_026",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bg30_027",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "bg30_028",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 02:35-02:43 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "st46_001",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also on screen at 23:50 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "st46_002",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "st46_003",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "st46_004",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "st46_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "st46_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "st46_007",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:18:47-1:18:51"
+   ]
+  },
+  {
+   "id": "st46_008",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "st46_010",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 11:02-11:08 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:00:17-1:00:19 (paraphrase?)",
+    "citation: the answer is also said at 1:00:09 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "st46_011",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "st46_012",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:17:26-1:17:44"
+   ]
+  },
+  {
+   "id": "st46_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "st46_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "st46_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "st46_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "st46_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "st46_021",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 05:49-05:53",
+    "support: answer not in the on-screen text track at 06:15-06:19"
+   ]
+  },
+  {
+   "id": "st46_022",
+   "errors": [],
+   "warnings": [
+    "leak: 'red' is in the on-screen text track near the evidence (20:45)",
+    "support: answer not verbatim in the transcript at 22:47-22:53 (paraphrase?)",
+    "citation: the answer is also said at 22:37, 28:03, 31:50, 42:18 … (11 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "st46_023",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 49:52-50:01 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "st46_024",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:12:18-1:12:27",
+    "support: answer not in the on-screen text track at 1:18:47-1:18:51"
+   ]
+  },
+  {
+   "id": "pp47_024",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pp47_002",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 10:24-10:27 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 15:44-15:48 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 1:04:12-1:04:15 (paraphrase?)",
+    "citation: the answer is also said at 10:11, 10:36, 1:03:59 (3 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "pp47_003",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 09:52-09:55 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 19:23-19:26 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 54:06-54:10 (paraphrase?)",
+    "support: answer not verbatim in the transcript at 57:34-57:51 (paraphrase?)",
+    "citation: the answer is also said at 35:49, 41:12, 1:09:12, 1:14:31 (4 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "pp47_005",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pp47_006",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pp47_007",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pp47_008",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'eight' is in the transcript elsewhere in the film (15:46)"
+   ]
+  },
+  {
+   "id": "pp47_010",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 1:17:33-1:17:40"
+   ]
+  },
+  {
+   "id": "pp47_011",
+   "errors": [],
+   "warnings": [
+    "support: answer not verbatim in the transcript at 35:35-35:38 (paraphrase?)"
+   ]
+  },
+  {
+   "id": "pp47_013",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pp47_014",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pp47_015",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pp47_016",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pp47_017",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pp47_018",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pp47_019",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pp47_020",
+   "errors": [],
+   "warnings": []
+  },
+  {
+   "id": "pp47_021",
+   "errors": [],
+   "warnings": [
+    "leak (weak): 'singing' is in the transcript elsewhere in the film (16:52)"
+   ]
+  },
+  {
+   "id": "pp47_022",
+   "errors": [],
+   "warnings": [
+    "citation: the answer is also said at 38:40 (1 uncited); cite every occurrence"
+   ]
+  },
+  {
+   "id": "pp47_023",
+   "errors": [],
+   "warnings": [
+    "support: answer not in the on-screen text track at 51:19-51:22",
+    "support: answer not verbatim in the transcript at 1:11:40-1:11:49 (paraphrase?)"
+   ]
+  }
+ ]
+}

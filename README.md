@@ -113,6 +113,12 @@ the single-lane matrix, the agreement between readers (the ceiling) and a routin
 `panel_without_muse/`). The whole-film pairs and triples (`evidence_bank_v1_panel_wholefilm.json`) were not run for
 the panel.
 
+Final results are in `results/evidence_bank_v1/`. With two training readers, the synthetic labels agree with the
+held-out reader's measured type on 66.4% of the questions it types (95% CI 63.8--68.7), and the reassigned labels on
+72.5% (70.6--74.4), averaged over 12 folds (four three-reader panels). Reassigning from one reader reaches 70.1%;
+from three, 74.3%. The threshold-rule sensitivity gives 71.9% with two readers, and the three-reader panel without
+Muse gives 75.0% (from 67.5% before reassignment).
+
 
 ## Models
 
