@@ -7,7 +7,72 @@ excerpts around the cited evidence, or the film with that evidence cut out. The 
 still answered show which evidence it needs. The question set (1,000 questions about 50 public-domain films) is in
 [`evals/evidence_bank_v1/`](evals/evidence_bank_v1/README.md).
 
+## How the experiment works
+
+The experiment separates three things that are easy to confuse:
+
+1. **The synthetic label** is the evidence type assigned when the question was written, such as `dialogue`,
+   `visual`, `dialogue or text` or `dialogue and visual`. It lives in
+   [`evals/evidence_bank_v1/questions.jsonl`](evals/evidence_bank_v1/questions.jsonl).
+2. **A reader's measured type** comes from its answers under the 16 excerpt cells: title only plus every non-empty
+   combination of speech (D), frames (V), screen text (R) and sounds (A). For example, a question is measured as
+   `visual` if frames alone are the best sufficient source.
+3. **The panel label** pools the ablations of several readers. It verifies the synthetic label when they agree,
+   reassigns it when the pooled measured type differs, and keeps it unchanged when the models cannot determine a
+   type.
+
+The full path through the repository is:
+
+1. The bank defines 1,000 questions, their reference answers, synthetic labels and cited evidence intervals.
+2. `pipeline.extract` turns each of the 50 films into four independent evidence lanes under `data/`.
+3. `pipeline.items` turns the bank into the normalized items consumed by the runner.
+4. `pipeline.run` sends every item to one reader under every condition and writes one JSONL file per condition.
+5. Rule-based scoring handles exact answers, aliases, numbers, times and abstentions. `pipeline.judge` sends only
+   undecided short answers to the fixed judge.
+6. `pipeline.analyze` summarizes one reader. `pipeline.panel` pools readers, reassigns labels and performs the
+   leave-one-model-out test used in the paper.
+
+In leave-one-model-out evaluation, labels are reassigned from one, two or three readers and compared with the
+measured type of a reader that was not used during reassignment. “Before” is agreement between the synthetic label
+and the held-out reader; “after” is agreement after reassignment. The paper's main result trains on two readers and
+tests on the third, averaged over 12 folds (four three-reader panels).
+
+## Where everything is
+
+| Path | What it contains |
+|---|---|
+| [`evals/evidence_bank_v1/`](evals/evidence_bank_v1/README.md) | The released benchmark: 1,000 questions, 50-film manifest, writing/review protocol and examples |
+| [`evals/evidence_bank_v1/FORMAT.md`](evals/evidence_bank_v1/FORMAT.md) | Field-by-field question schema, evidence intervals, evidence-type vocabulary and scoring rules |
+| [`configs/README.md`](configs/README.md) | How condition names work (`td`, `w_tdvra`, and so on), how measured types are assigned and which conditions each experiment runs |
+| `configs/conditions.json` | Machine-readable definitions of the inputs and transforms in every condition |
+| `configs/experiments/` | Lists of questions, films, conditions, repeats and panel readers for each experiment |
+| `configs/models/` | Pinned reader checkpoints, ports, context limits, KV-cache sizes and server/request options |
+| `pipeline/` | Extraction, prompt construction, running, judging and analysis code; the main entry points are listed below |
+| `results/evidence_bank_v1/` | Final reader answers, per-reader analyses, panel labels, folds, profiles and sensitivity analyses |
+| `envs/` | Reproducible package lists and SHA-256 manifests for lane and reader models |
+| `scripts/` | End-to-end runner, prompt viewer and extraction comparison tool |
+| `tests/` | Unit tests for conditions, scoring and panel assignment (`python3 -m unittest discover tests`) |
+| `data/` | Generated evidence lanes. It is intentionally not tracked; rebuild it from the source films or point `PAPER1_DATA` at another copy |
+
+The most useful pipeline modules are:
+
+| Module | Responsibility |
+|---|---|
+| `pipeline/extract.py` | Runs all lane extractors in dependency order |
+| `pipeline/speech.py`, `screen_text.py`, `frames.py`, `sounds.py` | Build the four evidence lanes |
+| `pipeline/items.py` | Normalizes the question bank into runnable items |
+| `pipeline/conditions.py` | Builds prompts, applies ablations, parses answers and implements rule scoring |
+| `pipeline/run.py` | Runs one reader and writes resumable condition JSONL records |
+| `pipeline/judge.py` | Applies the same fixed judge to undecided answers from every reader |
+| `pipeline/analyze.py` | Produces one reader's accuracy, measured types, coverage and related statistics |
+| `pipeline/panel.py` | Pools readers, verifies/reassigns labels, bootstraps films, computes leave-one-model-out agreement and routing |
+| `pipeline/serve.sh` | Starts and stops a reader's vLLM server from its model profile |
+
 ## Quick start
+
+This command exercises extraction and one reader end to end. It expects the source videos and model caches under
+`$SHARED_ROOT` (default `/data/cinesage`); the public-domain videos are not stored in git. The final four-reader panel
+uses the separate commands in “Panel: several readers, labels verified or reassigned” below.
 
 ```bash
 scripts/run_pipeline.sh --films mf2_17,mf2_9 --workers 2   # a few films, end to end
@@ -84,6 +149,55 @@ pipeline/serve.sh stop configs/models/gemma4-31b.env
 The necessity experiment writes to the same results folder and is analysed with the main experiment. Before a run:
 `python -m pipeline.items` (items), `python -m pipeline.validate evals/evidence_bank_v1/questions.jsonl` (questions
 against the extracted inputs) and `python -m pipeline.fidelity` (how much of each question's evidence the inputs carry).
+
+## How results are organized
+
+The committed final results have this structure:
+
+```text
+results/evidence_bank_v1/
+├── validate.json                  question and evidence validation report
+├── fidelity.json / fidelity.csv   whether cited evidence reached the generated lanes
+├── gemma4-31b/                    one folder per evaluation reader
+│   ├── q.jsonl                    one answer record per question for this condition
+│   ├── t.jsonl
+│   ├── ...                        the other 20 panel conditions
+│   ├── summary.json               reader-level accuracies, measured types and coverage
+│   └── units.csv                  per-question scores and measured types
+├── nemotron35-super-vl/
+├── command-a-plus/
+├── muse-spark-open/
+├── panel/                         main “best” reassignment rule
+│   ├── summary.json               headline results, CIs, ceilings, transitions and routing
+│   ├── labels.csv                 synthetic, per-reader and final panel type per question
+│   ├── folds.csv                  every leave-one-model-out fold
+│   └── profiles.csv               reader × condition accuracy
+├── panel_threshold/               sensitivity analysis with the threshold rule
+└── panel_without_muse/            three-reader sensitivity analysis
+```
+
+Each `<reader>/<condition>.jsonl` line is one `(condition, question, repeat)` call. Important fields are:
+
+| Field | Meaning |
+|---|---|
+| `condition`, `model`, `film`, `id`, `rep` | Identity of the call |
+| `gold` | Reference answer |
+| `text` | Raw constrained model reply |
+| `pred` | Parsed short answer used for scoring |
+| `correct` | Final score, `1` or `0` |
+| `judged`, `judge_model` | Present when rule scoring deferred to the fixed judge |
+| `n_frames`, `frames` | Number and kind of frames in the request |
+| `latency_s`, `prompt_tokens`, `cached_tokens` | Runtime and token accounting |
+| `request_sha256` | Fingerprint of the exact request; `scripts/show_prompts.py` rebuilds and prints it |
+| `error` | Present only if the request failed |
+
+The question-only, title-only and five whole-film conditions contain 1,000 records each. The 15 excerpt conditions
+contain 798 because prior and unanswerable questions do not cite evidence intervals. A complete panel reader therefore
+has 7 × 1,000 + 15 × 798 = 18,970 records across 22 files.
+
+For the paper's headline numbers, read `panel/summary.json` → `leave_one_model_out.train_2`. For question-level
+label changes, use `panel/labels.csv`. For each held-out/train combination, use `panel/folds.csv`. For the evidence
+profile plotted in the paper, use `panel/profiles.csv` and `panel/summary.json` → `single_lane_matrix`.
 
 ## Panel: several readers, labels verified or reassigned
 
@@ -183,19 +297,7 @@ are htdemucs' random shifts of each separation piece (seeded per film, `speech.S
 (Nemotron OCR in mixed precision), whose kernels are not bitwise reproducible, so texts and scores can differ slightly
 between runs and a segment, read or label near its threshold can flip.
 
-## Layout
-
-```
-pipeline/   speech, screen_text, frames, sounds (lanes); validation_sounds; films, materials; extract (entry point);
-            items, conditions, run, judge, analyze, panel, validate, fidelity; common; page_cache; serve.sh
-configs/    conditions.json, experiments/, models/ (vLLM profile)
-evals/      evidence_bank_v1/ (questions, films, README, FORMAT)
-envs/       package lists of the environments; models.sha256
-scripts/    run_pipeline.sh, show_prompts.py, extract_check.py
-tests/      unit tests (python3 -m unittest discover tests)
-data/       generated inputs (rebuildable; PAPER1_DATA=<dir> builds into another root)
-results/    run records and analyses
-```
+## Shared resources
 
 Shared resources are read from `/data/cinesage` (override with `SHARED_ROOT`): `raw/` (source videos), `envs/`,
 `hf-cache/`, `cache/serving-home/`. The reader server accepts local images only from under this
