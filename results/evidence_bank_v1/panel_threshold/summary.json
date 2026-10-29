@@ -1,9 +1,8 @@
 {
  "experiment": "evidence_bank_v1",
  "readers": [
-  "gemma4-31b",
-  "nemotron35-super-vl",
-  "command-a-plus",
+  "gemma4-31b-think",
+  "nemotron35-super-vl-think",
   "muse-spark-open"
  ],
  "tau": 0.5,
@@ -17,365 +16,222 @@
  "typed_by_excerpts": 798,
  "leave_one_model_out": {
   "train_1": {
-   "folds": 12,
-   "before": 66.4,
+   "folds": 6,
+   "before": 65.6,
    "before_ci": [
-    63.8,
-    68.7
+    63.3,
+    67.7
    ],
-   "after": 70.1,
+   "after": 72.6,
    "after_ci": [
-    68.2,
-    72.1
+    70.0,
+    75.0
    ],
-   "gain": 3.8,
+   "gain": 7.0,
    "gain_ci": [
-    1.8,
-    5.9
+    4.6,
+    9.4
    ],
-   "kappa_before": 0.587,
-   "kappa_after": 0.622,
-   "family_before": 66.7,
-   "family_after": 70.6,
-   "coverage": 0.605
+   "kappa_before": 0.59,
+   "kappa_after": 0.662,
+   "family_before": 66.2,
+   "family_after": 73.2,
+   "coverage": 0.703
   },
   "train_2": {
-   "folds": 12,
-   "before": 66.4,
+   "folds": 3,
+   "before": 65.6,
    "before_ci": [
-    63.8,
-    68.7
+    63.3,
+    67.7
    ],
-   "after": 71.9,
+   "after": 71.1,
    "after_ci": [
-    69.6,
-    74.3
+    68.1,
+    74.0
    ],
-   "gain": 5.6,
+   "gain": 5.5,
    "gain_ci": [
-    3.0,
-    8.2
+    2.9,
+    8.4
    ],
-   "kappa_before": 0.587,
-   "kappa_after": 0.644,
-   "family_before": 66.7,
-   "family_after": 72.3,
-   "coverage": 0.605,
-   "by_panel": {
-    "gemma4-31b+nemotron35-super-vl+command-a-plus": {
-     "folds": 3,
-     "before": 67.5,
-     "before_ci": [
-      64.8,
-      70.1
-     ],
-     "after": 74.8,
-     "after_ci": [
-      71.9,
-      77.4
-     ],
-     "gain": 7.2,
-     "gain_ci": [
-      4.4,
-      10.2
-     ]
-    },
-    "gemma4-31b+nemotron35-super-vl+muse-spark-open": {
-     "folds": 3,
-     "before": 66.4,
-     "before_ci": [
-      63.7,
-      68.9
-     ],
-     "after": 74.7,
-     "after_ci": [
-      71.6,
-      77.6
-     ],
-     "gain": 8.3,
-     "gain_ci": [
-      4.9,
-      11.7
-     ]
-    },
-    "gemma4-31b+command-a-plus+muse-spark-open": {
-     "folds": 3,
-     "before": 65.2,
-     "before_ci": [
-      62.5,
-      67.8
-     ],
-     "after": 67.7,
-     "after_ci": [
-      64.7,
-      70.6
-     ],
-     "gain": 2.5,
-     "gain_ci": [
-      -0.4,
-      5.2
-     ]
-    },
-    "nemotron35-super-vl+command-a-plus+muse-spark-open": {
-     "folds": 3,
-     "before": 66.2,
-     "before_ci": [
-      63.5,
-      68.9
-     ],
-     "after": 70.5,
-     "after_ci": [
-      67.5,
-      73.5
-     ],
-     "gain": 4.3,
-     "gain_ci": [
-      1.6,
-      6.9
-     ]
-    }
-   }
-  },
-  "train_3": {
-   "folds": 4,
-   "before": 66.4,
-   "before_ci": [
-    63.8,
-    68.7
-   ],
-   "after": 74.5,
-   "after_ci": [
-    72.3,
-    76.8
-   ],
-   "gain": 8.2,
-   "gain_ci": [
-    5.6,
-    10.7
-   ],
-   "kappa_before": 0.587,
-   "kappa_after": 0.672,
-   "family_before": 66.7,
-   "family_after": 74.8,
-   "coverage": 0.605
+   "kappa_before": 0.59,
+   "kappa_after": 0.647,
+   "family_before": 66.2,
+   "family_after": 72.0,
+   "coverage": 0.703
   }
  },
  "status_all_readers": {
-  "kept": 266,
-  "verified": 410,
-  "reassigned": 172
+  "kept": 251,
+  "verified": 421,
+  "reassigned": 176
  },
  "transitions_all_readers": {
-  "dialogue and visual -> visual": 46,
+  "dialogue and visual -> visual": 43,
   "dialogue or visual -> dialogue": 38,
-  "dialogue or text -> dialogue": 7,
+  "dialogue or visual -> visual": 10,
   "dialogue or text -> text": 6,
-  "dialogue or visual -> visual": 6,
+  "visual -> guessable": 5,
+  "dialogue or text -> dialogue": 5,
   "dialogue and text -> text": 5,
+  "dialogue and visual -> several pairs": 4,
   "dialogue and audio -> audio": 4,
-  "visual -> guessable": 4,
-  "dialogue or visual -> several pairs": 3,
-  "visual and text -> text": 3,
-  "visual -> dialogue and visual": 3,
+  "dialogue and visual -> prior": 3,
+  "visual -> several pairs": 3,
   "visual or audio -> audio": 3,
-  "dialogue and visual -> guessable": 3,
-  "dialogue and visual -> several pairs": 2,
-  "dialogue and visual -> three or more sources": 2,
+  "visual or audio -> visual": 2,
+  "dialogue or visual -> several pairs": 2,
   "text -> visual": 2,
-  "dialogue -> several pairs": 2,
-  "text -> several pairs": 2,
-  "audio -> visual or audio": 2,
+  "dialogue -> dialogue or text": 2,
+  "text -> visual or text": 2,
   "visual -> prior": 2,
+  "visual and text -> text": 2,
+  "prior -> guessable": 2,
+  "audio -> visual or audio": 2,
+  "dialogue and visual -> guessable": 2,
+  "audio -> prior": 2,
   "dialogue and audio -> dialogue": 1,
-  "visual or audio -> visual": 1,
-  "dialogue or text -> dialogue and text": 1,
-  "audio -> text and audio": 1,
-  "dialogue and text -> three or more sources": 1
+  "dialogue or text -> dialogue and text": 1
  },
  "status_by_family": {
   "and": {
-   "kept": 71,
-   "reassigned": 71,
-   "verified": 9
+   "kept": 69,
+   "reassigned": 69,
+   "verified": 13
   },
   "or": {
-   "verified": 42,
-   "reassigned": 72,
-   "kept": 20
+   "reassigned": 76,
+   "verified": 41,
+   "kept": 17
   },
   "prior": {
-   "kept": 25,
-   "verified": 24,
-   "reassigned": 1
+   "kept": 23,
+   "verified": 25,
+   "reassigned": 2
   },
   "single": {
-   "kept": 150,
-   "verified": 335,
-   "reassigned": 28
+   "kept": 142,
+   "verified": 342,
+   "reassigned": 29
   }
  },
  "ceiling": {
-  "gemma4-31b~nemotron35-super-vl": {
-   "n": 466,
-   "agreement": 0.815,
-   "kappa": 0.756
+  "gemma4-31b-think~nemotron35-super-vl-think": {
+   "n": 494,
+   "agreement": 0.794,
+   "kappa": 0.735
   },
-  "gemma4-31b~command-a-plus": {
-   "n": 315,
-   "agreement": 0.692,
-   "kappa": 0.57
+  "gemma4-31b-think~muse-spark-open": {
+   "n": 536,
+   "agreement": 0.728,
+   "kappa": 0.658
   },
-  "gemma4-31b~muse-spark-open": {
-   "n": 501,
-   "agreement": 0.743,
-   "kappa": 0.675
-  },
-  "nemotron35-super-vl~command-a-plus": {
-   "n": 319,
-   "agreement": 0.743,
-   "kappa": 0.637
-  },
-  "nemotron35-super-vl~muse-spark-open": {
-   "n": 515,
-   "agreement": 0.765,
-   "kappa": 0.702
-  },
-  "command-a-plus~muse-spark-open": {
-   "n": 327,
-   "agreement": 0.624,
-   "kappa": 0.499
+  "nemotron35-super-vl-think~muse-spark-open": {
+   "n": 535,
+   "agreement": 0.74,
+   "kappa": 0.676
   }
  },
  "single_lane_matrix": {
-  "gemma4-31b": {
+  "gemma4-31b-think": {
    "dialogue": {
-    "w_td": 83.2,
-    "w_tv": 1.0,
-    "w_tr": 0.0,
-    "w_ta": 0.5,
-    "w_tdvra": 83.2
+    "w_td": 87.2,
+    "w_tv": 2.6,
+    "w_tr": 1.0,
+    "w_ta": 1.5,
+    "w_tdvra": 86.7
    },
    "visual": {
-    "w_td": 0.0,
-    "w_tv": 52.5,
-    "w_tr": 0.0,
+    "w_td": 1.2,
+    "w_tv": 55.6,
+    "w_tr": 0.6,
     "w_ta": 0.6,
-    "w_tdvra": 45.1
+    "w_tdvra": 50.0
    },
    "text": {
     "w_td": 0.0,
-    "w_tv": 2.8,
-    "w_tr": 66.4,
+    "w_tv": 5.6,
+    "w_tr": 77.6,
     "w_ta": 0.0,
-    "w_tdvra": 70.1
+    "w_tdvra": 74.8
    },
    "audio": {
     "w_td": 0.0,
-    "w_tv": 4.2,
+    "w_tv": 0.0,
     "w_tr": 0.0,
-    "w_ta": 56.2,
-    "w_tdvra": 58.3
-   }
-  },
-  "nemotron35-super-vl": {
-   "dialogue": {
-    "w_td": 84.2,
-    "w_tv": 0.5,
-    "w_tr": 0.5,
-    "w_ta": 0.0,
-    "w_tdvra": 82.1
-   },
-   "visual": {
-    "w_td": 0.0,
-    "w_tv": 48.1,
-    "w_tr": 0.0,
-    "w_ta": 1.9,
-    "w_tdvra": 49.4
-   },
-   "text": {
-    "w_td": 0.0,
-    "w_tv": 2.8,
-    "w_tr": 66.4,
-    "w_ta": 0.0,
-    "w_tdvra": 65.4
-   },
-   "audio": {
-    "w_td": 2.1,
-    "w_tv": 12.5,
-    "w_tr": 2.1,
     "w_ta": 60.4,
-    "w_tdvra": 58.3
+    "w_tdvra": 60.4
    }
   },
-  "command-a-plus": {
+  "nemotron35-super-vl-think": {
    "dialogue": {
-    "w_td": 70.4,
-    "w_tv": 0.0,
-    "w_tr": 0.0,
+    "w_td": 86.7,
+    "w_tv": 0.5,
+    "w_tr": 1.5,
     "w_ta": 0.0,
-    "w_tdvra": 69.4
+    "w_tdvra": 82.7
    },
    "visual": {
-    "w_td": 0.0,
-    "w_tv": 11.7,
-    "w_tr": 0.0,
-    "w_ta": 0.6,
-    "w_tdvra": 21.6
+    "w_td": 1.9,
+    "w_tv": 47.5,
+    "w_tr": 0.6,
+    "w_ta": 1.9,
+    "w_tdvra": 47.5
    },
    "text": {
     "w_td": 0.0,
-    "w_tv": 0.9,
-    "w_tr": 41.1,
+    "w_tv": 2.8,
+    "w_tr": 76.6,
     "w_ta": 0.0,
-    "w_tdvra": 47.7
+    "w_tdvra": 72.0
    },
    "audio": {
-    "w_td": 0.0,
-    "w_tv": 0.0,
-    "w_tr": 0.0,
-    "w_ta": 29.2,
-    "w_tdvra": 45.8
+    "w_td": 4.2,
+    "w_tv": 12.5,
+    "w_tr": 6.2,
+    "w_ta": 60.4,
+    "w_tdvra": 62.5
    }
   },
   "muse-spark-open": {
    "dialogue": {
-    "w_td": 90.8,
-    "w_tv": 4.1,
-    "w_tr": 2.0,
-    "w_ta": 3.1,
-    "w_tdvra": 91.3
+    "w_td": 91.8,
+    "w_tv": 4.6,
+    "w_tr": 1.0,
+    "w_ta": 3.6,
+    "w_tdvra": 91.8
    },
    "visual": {
-    "w_td": 2.5,
-    "w_tv": 68.5,
-    "w_tr": 3.1,
-    "w_ta": 2.5,
-    "w_tdvra": 67.9
+    "w_td": 3.7,
+    "w_tv": 69.1,
+    "w_tr": 4.3,
+    "w_ta": 4.9,
+    "w_tdvra": 70.4
    },
    "text": {
-    "w_td": 0.9,
-    "w_tv": 10.3,
+    "w_td": 1.9,
+    "w_tv": 12.1,
     "w_tr": 75.7,
     "w_ta": 3.7,
     "w_tdvra": 77.6
    },
    "audio": {
-    "w_td": 8.3,
-    "w_tv": 14.6,
-    "w_tr": 6.2,
-    "w_ta": 60.4,
+    "w_td": 10.4,
+    "w_tv": 20.8,
+    "w_tr": 10.4,
+    "w_ta": 62.5,
     "w_tdvra": 62.5
    }
   }
  },
  "routing_whole_film_all_lanes": {
-  "routed_by_synthetic_label": 73.9,
-  "routed_by_reassigned_label": 73.9,
-  "gemma4-31b": 52.8,
-  "nemotron35-super-vl": 57.2,
-  "command-a-plus": 21.6,
-  "muse-spark-open": 73.9,
-  "oracle_any_reader": 78.8,
+  "routed_by_synthetic_label": 75.4,
+  "routed_by_reassigned_label": 75.4,
+  "gemma4-31b-think": 57.4,
+  "nemotron35-super-vl-think": 54.1,
+  "muse-spark-open": 75.4,
+  "oracle_any_reader": 78.5,
   "n": 848
  }
 }
