@@ -8,7 +8,7 @@ readers, the sufficiency threshold `tau`, the training-set sizes of the folds an
 
 Measured type
     From the 16 excerpt cells (the title alone and the 15 lane sets). A cell's score is the mean over the readers
-    pooled (for one reader: 0 or 1, one greedy run), and it suffices when the score is >= tau. Rule "best" (default):
+    pooled (for one reader: 0 or 1, one recorded run), and it suffices when the score is >= tau. Rule "best" (default):
     undetermined if all lanes do not suffice, guessable if the question alone does, prior if the title does; else,
     among the single lanes that suffice, those with the highest score (one: that lane; two: "X or Y"; more: any
     source); else, among the lane pairs that suffice, those with the highest score (one: "X and Y"; more: several

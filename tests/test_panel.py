@@ -1,7 +1,7 @@
 import unittest
 from unittest import mock
 
-from pipeline import panel
+from pipeline import panel, run
 from pipeline.common import request_options
 
 
@@ -92,9 +92,31 @@ class RequestOptions(unittest.TestCase):
         self.assertEqual(schema["required"], ["id", "answer"])
 
     def test_real_profiles_parse(self):
-        for m in ("gemma4-31b", "nemotron35-super-vl", "command-a-plus", "muse-spark-open"):
+        for m in ("gemma4-31b", "nemotron35-super-vl", "gemma4-31b-think", "nemotron35-super-vl-think", "muse-spark-open"):
             extra, _ = request_options(m)
             self.assertIsInstance(extra, dict)
+
+    def test_thinking_profiles_have_no_answer_limit(self):
+        for m in ("gemma4-31b-think", "nemotron35-super-vl-think", "muse-spark-open"):
+            extra, max_tokens = request_options(m)
+            self.assertEqual(max_tokens, 0)
+            self.assertIn("temperature", extra)
+
+
+class Retry(unittest.TestCase):
+    def test_reply_that_runs_out_of_context_is_asked_again_with_the_next_seed(self):
+        replies = [{"choices": [{"message": {"content": ""}, "finish_reason": "length"}]},
+                   {"choices": [{"message": {"content": "answer"}, "finish_reason": "stop"}]}]
+        seeds = []
+        with mock.patch("pipeline.run.post", side_effect=lambda _, b: seeds.append(b["seed"]) or replies.pop(0)):
+            text, usage = run.complete("url", {"temperature": 1.0, "seed": 0})
+        self.assertEqual((text, usage["seed"], seeds), ("answer", 1, [0, 1]))
+
+    def test_greedy_replies_are_not_retried(self):
+        reply = {"choices": [{"message": {"content": ""}, "finish_reason": "length"}]}
+        with mock.patch("pipeline.run.post", return_value=reply) as post:
+            run.complete("url", {"temperature": 0.0, "seed": 0})
+        self.assertEqual(post.call_count, 1)
 
 
 if __name__ == "__main__":

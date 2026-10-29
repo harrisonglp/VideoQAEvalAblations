@@ -264,6 +264,15 @@ def main():
                 **({"placebo_rate": round(pa / pn, 3), "net": round(a / n - pa / pn, 3)} if pn else {})}
             for k, (a, n, pa, pn) in sorted(nec.items())}
 
+    recs = [r for c in S for r in read_jsonl(out_dir / f"{c}.jsonl") if "finish_reason" in r]
+    if recs:  # reply lengths (reasoning included), replies asked again with a later seed, and replies still without an answer
+        tokens = sorted(r["completion_tokens"] or 0 for r in recs)
+        summary["generation"] = {
+            "records": len(recs), "completion_tokens_median": tokens[len(tokens) // 2],
+            "completion_tokens_p99": tokens[int(0.99 * (len(tokens) - 1))],
+            "retried": sum(r.get("seed") not in (None, exp["repeats"][r["rep"]].get("seed")) for r in recs),
+            "unresolved": sum(r["finish_reason"] == "length" or not r.get("pred") for r in recs)}
+
     write_json(out_dir / "summary.json", summary)
     with open(out_dir / "units.csv", "w", newline="") as f:
         w = csv.writer(f)

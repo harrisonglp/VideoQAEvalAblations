@@ -1,0 +1,12 @@
+{
+ "description": "Does thinking change a reader's measured types? Gemma 4 31B and Nemotron 3.5 Super-VL with thinking off (greedy, 128 answer tokens) and on (the panel profiles). The ceiling entries of the summary give the agreement between the two runs of each reader; the fold results are not used. Writes to results/<experiment>/panel_thinking/.",
+ "experiment": "configs/experiments/evidence_bank_v1_panel.json",
+ "readers": ["gemma4-31b", "gemma4-31b-think", "nemotron35-super-vl", "nemotron35-super-vl-think"],
+ "judge": "gemma4-31b",
+ "rule": "best",
+ "tau": 0.5,
+ "train_sizes": [1],
+ "bootstrap": 2000,
+ "seed": 12345,
+ "out": "panel_thinking"
+}

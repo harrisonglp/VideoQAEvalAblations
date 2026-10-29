@@ -1,11 +1,11 @@
 {
- "description": "Panel analysis: labels verified or reassigned from the evaluation readers' excerpt ablations, leave-one-model-out agreement (training sets of one reader, of two as in the paper, and of three), profiles and routing.",
+ "description": "Panel analysis: labels verified or reassigned from the evaluation readers' excerpt ablations (every reader reasons), leave-one-model-out agreement (training sets of one reader, and of two as in the paper), profiles and routing.",
  "experiment": "configs/experiments/evidence_bank_v1_panel.json",
- "readers": ["gemma4-31b", "nemotron35-super-vl", "command-a-plus", "muse-spark-open"],
+ "readers": ["gemma4-31b-think", "nemotron35-super-vl-think", "muse-spark-open"],
  "judge": "gemma4-31b",
  "rule": "best",
  "tau": 0.5,
- "train_sizes": [1, 2, 3],
+ "train_sizes": [1, 2],
  "bootstrap": 2000,
  "seed": 12345
 }

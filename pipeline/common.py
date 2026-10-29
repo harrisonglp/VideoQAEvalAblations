@@ -60,7 +60,8 @@ ANSWER_SCHEMA = {"type": "json_schema", "json_schema": {"name": "answer", "stric
 def request_options(model: str) -> tuple[dict, int | None]:
     """(fields added to every request of this model, its answer token limit or None for the default), from its
     profile's REQUEST_EXTRA (JSON), ANSWER_SCHEMA (1: replies constrained to the answer JSON, as response_format) and
-    MAX_TOKENS. Without REQUEST_EXTRA, thinking is turned off through the chat template, as for the first reader."""
+    MAX_TOKENS (0: no limit, the reply may use the rest of the context). Without REQUEST_EXTRA, thinking is turned off
+    through the chat template, as for the first reader."""
     p = read_profile(model)
     extra = json.loads(p["REQUEST_EXTRA"]) if p.get("REQUEST_EXTRA") else {"chat_template_kwargs": {"enable_thinking": False}}
     if p.get("ANSWER_SCHEMA") == "1":

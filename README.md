@@ -35,7 +35,7 @@ The full path through the repository is:
 In leave-one-model-out evaluation, labels are reassigned from one, two or three readers and compared with the
 measured type of a reader that was not used during reassignment. “Before” is agreement between the synthetic label
 and the held-out reader; “after” is agreement after reassignment. The paper's main result trains on two readers and
-tests on the third, averaged over 12 folds (four three-reader panels).
+tests on the third, averaged over the three folds.
 
 ## Where everything is
 
@@ -71,7 +71,7 @@ The most useful pipeline modules are:
 ## Quick start
 
 This command exercises extraction and one reader end to end. It expects the source videos and model caches under
-`$SHARED_ROOT` (default `/data/cinesage`); the public-domain videos are not stored in git. The final four-reader panel
+`$SHARED_ROOT` (default `/data/cinesage`); the public-domain videos are not stored in git. The final three-reader panel
 uses the separate commands in “Panel: several readers, labels verified or reassigned” below.
 
 ```bash
@@ -113,11 +113,12 @@ sounds lane) and `materials` (`materials/<id>/*.tsv`, read by `pipeline.validate
 
 ## Reader, conditions and scoring
 
-- **Readers:** the evaluation readers of `configs/models/` (Gemma 4 31B, Nemotron 3.5 Super-VL, Command A+, Muse
-  Spark Open), each served by vLLM from a profile that pins its revision (131,072-token context, fixed KV cache,
-  prefix caching). Thinking is disabled (Muse Spark Open runs at its lowest reasoning effort), replies are constrained
-  to the answer's JSON schema and limited to 128 tokens (1,024 for Muse Spark Open), and temperature, seed, top-p
-  (0.95), top-k (20) and min-p (0) are sent with each request (`pipeline/run.py`).
+- **Readers:** the evaluation readers of `configs/models/` (Gemma 4 31B, Nemotron 3.5 Super-VL and Muse Spark Open),
+  each served by vLLM from a profile that pins its revision (131,072-token context, fixed KV cache, prefix caching).
+  Every reader reasons, replies are constrained to the answer's JSON schema after the reasoning, and there is no
+  answer-token limit beyond the context. Each profile uses its developer's recommended sampling with seed 0:
+  Gemma temperature 1.0 / top-p 0.95 / top-k 64; Nemotron's vision setting, temperature 0.6 / top-p 0.95 / no
+  top-k; Muse at low reasoning effort, temperature 1.0 / top-p 1.0 / no top-k (`pipeline/run.py`).
 - **Conditions** (`configs/conditions.json`, implemented in `pipeline/conditions.py`): question only; title only; the
   title with every combination of lanes, over the whole film and restricted to excerpts (cited evidence ± 60 s); all
   lanes with the cited evidence and every mention of the answer (numbers up to 12 excepted) cut out, and a placebo cut
@@ -134,9 +135,9 @@ sounds lane) and `materials` (`materials/<id>/*.tsv`, read by `pipeline.validate
 | `evidence_bank_v1_necessity.json` | 300 (15 films, stratified) | evidence cut and placebo | 1, greedy |
 | `evidence_bank_v1_reliability.json` | 200 (10 films, drawn at random) | 23 of the main conditions (not the whole-film lane pairs and triples) | 4, temperature 0.7 |
 | `evidence_bank_v1_screen.json` | all 1,000 | question only, title only | 4, temperature 0.7 |
-| `evidence_bank_v1_panel.json` | all 1,000, per evaluation reader | question only, title only, the 15 excerpt lane sets, the whole film with one lane or all lanes | 1, greedy, fixed judge |
-| `evidence_bank_v1_panel_wholefilm.json` | all 1,000, per evaluation reader | the whole-film lane pairs and triples | 1, greedy, fixed judge |
-| `evidence_bank_v1_smoke.json` | 40 (2 films) | as the panel experiment, to test a reader before the panel run | 1, greedy, fixed judge |
+| `evidence_bank_v1_panel.json` | all 1,000, per evaluation reader | question only, title only, the 15 excerpt lane sets, the whole film with one lane or all lanes | 1, developer-recommended sampling, fixed seed and fixed judge |
+| `evidence_bank_v1_panel_wholefilm.json` | all 1,000, per evaluation reader | the whole-film lane pairs and triples | 1, developer-recommended sampling, fixed seed and fixed judge |
+| `evidence_bank_v1_smoke.json` | 40 (2 films) | as the panel experiment, to test a reader before the panel run | 1, developer-recommended sampling, fixed seed and fixed judge |
 
 ```bash
 pipeline/serve.sh start configs/models/gemma4-31b.env
@@ -158,22 +159,23 @@ The committed final results have this structure:
 results/evidence_bank_v1/
 ├── validate.json                  question and evidence validation report
 ├── fidelity.json / fidelity.csv   whether cited evidence reached the generated lanes
-├── gemma4-31b/                    one folder per evaluation reader
+├── gemma4-31b-think/              one folder per evaluation reader
 │   ├── q.jsonl                    one answer record per question for this condition
 │   ├── t.jsonl
 │   ├── ...                        the other 20 panel conditions
-│   ├── summary.json               reader-level accuracies, measured types and coverage
+│   ├── summary.json               reader-level accuracies, measured types, coverage and generation lengths
 │   └── units.csv                  per-question scores and measured types
-├── nemotron35-super-vl/
-├── command-a-plus/
+├── nemotron35-super-vl-think/
 ├── muse-spark-open/
+├── gemma4-31b/                    the same two readers with thinking off (greedy), for panel_thinking only
+├── nemotron35-super-vl/
 ├── panel/                         main “best” reassignment rule
 │   ├── summary.json               headline results, CIs, ceilings, transitions and routing
 │   ├── labels.csv                 synthetic, per-reader and final panel type per question
 │   ├── folds.csv                  every leave-one-model-out fold
 │   └── profiles.csv               reader × condition accuracy
 ├── panel_threshold/               sensitivity analysis with the threshold rule
-└── panel_without_muse/            three-reader sensitivity analysis
+└── panel_thinking/                measured-type agreement with thinking off versus on
 ```
 
 Each `<reader>/<condition>.jsonl` line is one `(condition, question, repeat)` call. Important fields are:
@@ -188,6 +190,7 @@ Each `<reader>/<condition>.jsonl` line is one `(condition, question, repeat)` ca
 | `judged`, `judge_model` | Present when rule scoring deferred to the fixed judge |
 | `n_frames`, `frames` | Number and kind of frames in the request |
 | `latency_s`, `prompt_tokens`, `cached_tokens` | Runtime and token accounting |
+| `completion_tokens`, `finish_reason`, `seed` | Reply length including reasoning, why it stopped, and the seed that produced it (one higher per retry) |
 | `request_sha256` | Fingerprint of the exact request; `scripts/show_prompts.py` rebuilds and prints it |
 | `error` | Present only if the request failed |
 
@@ -201,37 +204,34 @@ profile plotted in the paper, use `panel/profiles.csv` and `panel/summary.json` 
 
 ## Panel: several readers, labels verified or reassigned
 
-The evaluation readers (`configs/models/`: `gemma4-31b`, `nemotron35-super-vl`, `command-a-plus`, `muse-spark-open`)
-each run the panel experiment. Each profile pins the model's revision and sets its request options: thinking off, or
-the lowest reasoning effort for `muse-spark-open`, whose reasoning cannot be turned off, and replies constrained to the
-answer's JSON schema. Answers the rules cannot score are left for one fixed judge, so grading is the same for every
+The evaluation readers (`configs/models/`: `gemma4-31b-think`, `nemotron35-super-vl-think`, `muse-spark-open`)
+each run the panel experiment. Each profile pins the model's revision and turns thinking on (Muse Spark Open, which
+always reasons, runs at its lowest effort). Replies are constrained to the answer's JSON schema after the reasoning.
+A reply that runs out of context or has no answer is asked again with the next seed, up to five tries. Answers the
+rules cannot score are left for one fixed judge, Gemma 4 31B with thinking off, so grading is the same for every
 reader:
 
 ```bash
-python -m pipeline.run --experiment configs/experiments/evidence_bank_v1_panel.json --model gemma4-31b \
+python -m pipeline.run --experiment configs/experiments/evidence_bank_v1_panel.json --model gemma4-31b-think \
     --url http://127.0.0.1:8011/v1/chat/completions --judge none                     # per reader, resumable
-python -m pipeline.judge --experiment configs/experiments/evidence_bank_v1_panel.json --model gemma4-31b \
+python -m pipeline.judge --experiment configs/experiments/evidence_bank_v1_panel.json --model gemma4-31b-think \
     --judge-model gemma4-31b --url http://127.0.0.1:8011/v1/chat/completions         # the judge, for every reader
-python -m pipeline.analyze configs/experiments/evidence_bank_v1_panel.json gemma4-31b  # per reader
+python -m pipeline.analyze configs/experiments/evidence_bank_v1_panel.json gemma4-31b-think  # per reader
 python -m pipeline.panel configs/experiments/panel_v1.json                             # results/evidence_bank_v1/panel/
 ```
 
 `pipeline.panel` (`configs/experiments/panel_v1.json`) types every question from the readers' excerpt ablations,
 verifies or reassigns its synthetic label to the evidence source the readers do best with (rule `best`), and
-measures leave-one-model-out agreement: labels reassigned from one, two or three readers against the measured type
+measures leave-one-model-out agreement: labels reassigned from one or two readers against the measured type
 of a reader that took no part, before and after, averaged over the folds, with bootstrap intervals over films. Folds
-with two training readers are also reported per three-reader panel. It also writes each reader's accuracy profile,
+with two training readers form the paper's three leave-one-model-out folds. It also writes each reader's accuracy profile,
 the single-lane matrix, the agreement between readers (the ceiling) and a routing check. Outputs: `summary.json`,
 `labels.csv`, `folds.csv`, `profiles.csv`. Two variants write next to it: `panel_v1_threshold.json` (rule
-`threshold`, into `panel_threshold/`) and `panel_v1_without_muse.json` (the three other readers, into
-`panel_without_muse/`). The whole-film pairs and triples (`evidence_bank_v1_panel_wholefilm.json`) were not run for
+`threshold`, into `panel_threshold/`) and `panel_v1_thinking.json` (Gemma and Nemotron with thinking off versus on,
+into `panel_thinking/`). The whole-film pairs and triples (`evidence_bank_v1_panel_wholefilm.json`) were not run for
 the panel.
 
-Final results are in `results/evidence_bank_v1/`. With two training readers, the synthetic labels agree with the
-held-out reader's measured type on 66.4% of the questions it types (95% CI 63.8--68.7), and the reassigned labels on
-72.5% (70.6--74.4), averaged over 12 folds (four three-reader panels). Reassigning from one reader reaches 70.1%;
-from three, 74.3%. The threshold-rule sensitivity gives 71.9% with two readers, and the three-reader panel without
-Muse gives 75.0% (from 67.5% before reassignment).
+Final results are in `results/evidence_bank_v1/`; `panel/summary.json` is the source for the paper's headline numbers.
 
 
 ## Models
@@ -244,9 +244,8 @@ Muse gives 75.0% (from 67.5% before reassignment).
 | nvidia/nemotron-ocr-v2 (`v2_english`) | snapshot 0e83e83f17943524b90afa6c0fd82ac2bc1a40ca | `detector.pth`, `recognizer.pth`, `relational.pth` | `envs/models.sha256` |
 | PANNs CNN14 (AudioSet) | panns_inference 0.1.1 | `Cnn14_mAP=0.431.pth` | `0dc499e40e9761ef5ea061ffc77697697f277f6a960894903df3ada000e34b31` |
 | MIT/ast-finetuned-audioset-10-10-0.4593 (validation only) | snapshot f826b80d28226b62986cc218e5cec390b1096902 | `model.safetensors` | `ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d` |
-| google/gemma-4-31B-it (panel reader, judge) | snapshot 842da3794eaa0b77d5f08bae87a17459d91ff475 | all files | `envs/panel_models/gemma4-31b.sha256` |
-| nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4 (panel reader) | snapshot 59b8721646c38111a242da18218859fb2b454322 | all files | `envs/panel_models/nemotron35-super-vl.sha256` |
-| CohereLabs/command-a-plus-05-2026-w4a4 (panel reader) | snapshot ebd2d72c0f9a84389c6b057136d38c435aea2700 | all files | `envs/panel_models/command-a-plus.sha256` |
+| google/gemma-4-31B-it (panel reader, judge) | snapshot 842da3794eaa0b77d5f08bae87a17459d91ff475 | all files | `envs/panel_models/gemma4-31b-think.sha256` (same list as `gemma4-31b.sha256`) |
+| nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4 (panel reader) | snapshot 59b8721646c38111a242da18218859fb2b454322 | all files | `envs/panel_models/nemotron35-super-vl-think.sha256` (same list as `nemotron35-super-vl.sha256`) |
 | meta-models/Muse-Spark-Open-816B-A42B-NVFP4 (panel reader) | snapshot 4239e4db19376904f2e82c167e78f70abb5455fe | all files | `envs/panel_models/muse-spark-open.sha256` |
 
 `envs/models.sha256` lists every model file (with configs, tokenizers and preprocessors) by its path under the shared

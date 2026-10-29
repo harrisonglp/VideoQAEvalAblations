@@ -68,8 +68,8 @@ is what the answer depends on. It's not that the film just got shorter.
 
 ## How a question gets sorted
 
-A question counts as answered under a condition when its score there is at least 0.5 (with one greedy run that just
-means correct). The measured evidence type is the smallest set of lanes that answers it:
+A question counts as answered under a condition when its score there is at least 0.5 (with one run per reader that
+just means correct). The measured evidence type is the smallest set of lanes that answers it:
 
 - right under `q`: *guessable*
 - right under `t`: *prior* (known without watching)
