@@ -110,6 +110,15 @@ class FixedRule(unittest.TestCase):
         self.assertEqual(panel.fixed_rule("text"), "text")
 
 
+class Judge(unittest.TestCase):
+    def test_judge_reply_is_free_text_even_when_the_profile_has_an_answer_schema(self):
+        reply = {"choices": [{"message": {"content": "correct"}, "finish_reason": "stop"}]}
+        with mock.patch("pipeline.run.post", return_value=reply) as post:
+            score, _ = run.judge("url", "gemma4-31b", {"question": "q", "reference": "r"}, "a")
+        self.assertEqual(score, 1)
+        self.assertNotIn("response_format", post.call_args[0][1])
+
+
 class Retry(unittest.TestCase):
     def test_reply_that_runs_out_of_context_is_asked_again_with_the_next_seed(self):
         replies = [{"choices": [{"message": {"content": ""}, "finish_reason": "length"}]},

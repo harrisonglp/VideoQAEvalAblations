@@ -7,7 +7,8 @@ Readers run with `pipeline.run --judge none` leave such answers with `pending_ju
 the judge model (served at --url), without the film, with the same prompt and decoding as the inline judge
 (conditions.judge_prompt, run.judge), and rewrites the reader's result files in place (atomically): `correct`, the
 verdict in `judged`, and `judge_model`. A call that fails five times stays pending for the next pass. --conditions limits the pass to some
-result files, so jobs running different conditions of one reader can judge their own files side by side. Using one judge
+result files, so jobs running different conditions of one reader can judge their own files side by side. --again judges
+every answer that already has a verdict once more (after a change to the judge). Using one judge
 for every reader keeps grading the same across readers, so their scores differ only by what they answered.
 """
 import argparse
@@ -27,6 +28,7 @@ def main():
     ap.add_argument("--url", required=True, help="the judge's chat-completions URL")
     ap.add_argument("--concurrency", type=int, default=8)
     ap.add_argument("--conditions", default="", help="comma-separated subset (default: every result file of the reader)")
+    ap.add_argument("--again", action="store_true", help="also judge the answers that already have a verdict")
     a = ap.parse_args()
     wanted = set(a.conditions.split(",")) if a.conditions else None
     exp = read_json(a.experiment)
@@ -37,7 +39,7 @@ def main():
         if wanted and path.stem not in wanted:
             continue
         recs = read_jsonl(path)
-        todo = [r for r in recs if r.get("pending_judge") and r.get("correct") is None]
+        todo = [r for r in recs if (r.get("pending_judge") and r.get("correct") is None) or (a.again and "judged" in r)]
         if not todo:
             continue
 
@@ -45,7 +47,7 @@ def main():
             score, verdict = judge(a.url, a.judge_model, items[r["id"]], r["pred"])
             if score is not None:
                 r.update(correct=score, judged=verdict, judge_model=a.judge_model)
-                r.pop("pending_judge")
+                r.pop("pending_judge", None)
             return score is not None
 
         with ThreadPoolExecutor(a.concurrency) as pool:

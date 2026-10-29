@@ -36,7 +36,7 @@ FRAME_DIRS = {"full": "frames", "notext": "frames_notext"}
 SAMPLING = {"top_p": 0.95, "top_k": 20, "min_p": 0.0, "repetition_penalty": 1.0, "presence_penalty": 0.0,
             "frequency_penalty": 0.0}
 PER_ITEM = ("cut_evidence", "cut_placebo", "window_only")  # transforms that depend on the question's evidence
-MAX_TOKENS, JUDGE_MAX_TOKENS, ATTEMPTS = 128, 16, 5
+MAX_TOKENS, JUDGE_MAX_TOKENS, ATTEMPTS = 128, 32, 5
 # what reasoning models put before the answer when the server does not separate it: the answer follows the last marker
 REASONING_ENDS = ("</think>", "<channel|>", "<|END_THINKING|>")
 
@@ -93,8 +93,10 @@ def fingerprint(body) -> str:
 
 
 def judge(url, model, item, answer):
-    """(score, verdict) from the model as judge; (None, None) when the call fails."""
+    """(score, verdict) from the model as judge; (None, None) when the call fails. The verdict is free text, so a
+    profile's answer schema is not applied."""
     extra, _ = request_options(model)
+    extra.pop("response_format", None)
     text, _ = complete(url, {"model": model, "temperature": 0.0, "max_tokens": JUDGE_MAX_TOKENS, **extra,
                              "messages": C.judge_prompt(item, answer)})
     if text is None:
