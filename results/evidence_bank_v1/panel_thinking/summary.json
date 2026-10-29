@@ -18,106 +18,106 @@
  "leave_one_model_out": {
   "train_1": {
    "folds": 12,
-   "before": 68.0,
+   "before": 68.5,
    "before_ci": [
-    65.6,
-    70.2
+    66.1,
+    70.9
    ],
    "after": 79.2,
    "after_ci": [
-    76.9,
-    81.4
+    76.6,
+    81.5
    ],
-   "gain": 11.2,
+   "gain": 10.7,
    "gain_ci": [
-    8.7,
-    13.8
+    8.1,
+    13.3
    ],
-   "kappa_before": 0.613,
-   "kappa_after": 0.737,
-   "family_before": 68.5,
-   "family_after": 79.4,
-   "coverage": 0.645,
+   "kappa_before": 0.62,
+   "kappa_after": 0.739,
+   "family_before": 68.9,
+   "family_after": 79.5,
+   "coverage": 0.663,
    "comparisons": {
     "fixed rule": {
-     "after": 77.5,
+     "after": 77.0,
      "after_ci": [
-      75.2,
-      79.7
+      74.4,
+      79.4
      ],
-     "gain": 9.5,
+     "gain": 8.5,
      "gain_ci": [
-      6.5,
-      12.3
+      5.2,
+      11.4
      ]
     },
     "two-source only": {
      "after": 81.7,
      "after_ci": [
-      79.5,
-      83.8
+      79.3,
+      83.9
      ],
-     "gain": 13.7,
+     "gain": 13.2,
      "gain_ci": [
-      11.4,
-      16.3
+      10.9,
+      15.8
      ]
     },
     "type map": {
-     "after": 79.2,
+     "after": 79.0,
      "after_ci": [
-      76.7,
-      81.6
+      76.4,
+      81.5
      ],
-     "gain": 11.2,
+     "gain": 10.4,
      "gain_ci": [
-      9.0,
-      13.6
+      8.1,
+      12.8
      ]
     }
    },
    "by_family": {
     "and": {
-     "n": 864,
-     "before": 12.2,
-     "after": 61.5
+     "n": 894,
+     "before": 12.1,
+     "after": 60.9
     },
     "or": {
-     "n": 1281,
-     "before": 30.9,
-     "after": 67.8
+     "n": 1311,
+     "before": 33.0,
+     "after": 67.6
     },
     "prior": {
      "n": 264,
      "before": 93.2,
-     "after": 93.2
+     "after": 93.9
     },
     "single": {
-     "n": 4152,
-     "before": 89.5,
-     "after": 85.4
+     "n": 4278,
+     "before": 89.7,
+     "after": 85.7
     }
    }
   }
  },
  "status_all_readers": {
-  "kept": 256,
-  "verified": 401,
-  "reassigned": 191
+  "kept": 242,
+  "verified": 417,
+  "reassigned": 189
  },
  "transitions_all_readers": {
-  "dialogue or visual -> dialogue": 50,
-  "dialogue and visual -> visual": 43,
+  "dialogue and visual -> visual": 47,
+  "dialogue or visual -> dialogue": 45,
   "dialogue or visual -> visual": 9,
   "dialogue or text -> dialogue": 9,
   "dialogue or text -> text": 9,
   "visual -> guessable": 6,
-  "visual or audio -> audio": 4,
+  "visual or audio -> audio": 5,
+  "dialogue and visual -> guessable": 5,
   "dialogue and text -> text": 4,
-  "dialogue and visual -> guessable": 4,
-  "visual or audio -> visual": 3,
   "dialogue and audio -> audio": 3,
   "audio -> prior": 3,
+  "visual or audio -> visual": 2,
   "dialogue or visual -> dialogue and visual": 2,
   "text -> visual": 2,
   "dialogue and visual -> prior": 2,
@@ -125,88 +125,88 @@
   "visual and text -> text": 2,
   "prior -> guessable": 2,
   "dialogue -> guessable": 2,
-  "visual -> dialogue and visual": 2,
+  "visual -> prior": 2,
   "dialogue and audio -> dialogue": 1,
   "dialogue or text -> dialogue and text": 1,
   "audio -> text and audio": 1,
-  "dialogue or visual -> several pairs": 1,
-  "dialogue and text -> three or more sources": 1
+  "dialogue or visual -> prior": 1,
+  "dialogue or visual -> several pairs": 1
  },
  "status_by_family": {
   "and": {
-   "kept": 68,
-   "verified": 13,
-   "reassigned": 70
+   "kept": 65,
+   "verified": 12,
+   "reassigned": 74
   },
   "or": {
-   "reassigned": 95,
-   "kept": 19,
-   "verified": 20
+   "reassigned": 91,
+   "kept": 20,
+   "verified": 23
   },
   "prior": {
-   "verified": 31,
-   "kept": 17,
+   "verified": 32,
+   "kept": 16,
    "reassigned": 2
   },
   "single": {
-   "kept": 152,
-   "verified": 337,
-   "reassigned": 24
+   "kept": 141,
+   "verified": 350,
+   "reassigned": 22
   }
  },
  "ceiling": {
   "gemma4-31b~gemma4-31b-think": {
-   "n": 503,
-   "agreement": 0.845,
-   "kappa": 0.8
+   "n": 517,
+   "agreement": 0.851,
+   "kappa": 0.809
   },
   "gemma4-31b~nemotron35-super-vl": {
-   "n": 466,
-   "agreement": 0.815,
-   "kappa": 0.756
+   "n": 479,
+   "agreement": 0.81,
+   "kappa": 0.75
   },
   "gemma4-31b~nemotron35-super-vl-think": {
-   "n": 477,
-   "agreement": 0.786,
-   "kappa": 0.723
+   "n": 496,
+   "agreement": 0.774,
+   "kappa": 0.709
   },
   "gemma4-31b-think~nemotron35-super-vl": {
-   "n": 476,
-   "agreement": 0.813,
-   "kappa": 0.754
+   "n": 491,
+   "agreement": 0.811,
+   "kappa": 0.753
   },
   "gemma4-31b-think~nemotron35-super-vl-think": {
-   "n": 494,
-   "agreement": 0.794,
-   "kappa": 0.735
+   "n": 512,
+   "agreement": 0.783,
+   "kappa": 0.724
   },
   "nemotron35-super-vl~nemotron35-super-vl-think": {
-   "n": 501,
-   "agreement": 0.868,
-   "kappa": 0.829
+   "n": 523,
+   "agreement": 0.872,
+   "kappa": 0.836
   }
  },
  "inconsistent_cells": {
-  "gemma4-31b": 136,
-  "gemma4-31b-think": 197,
-  "nemotron35-super-vl": 130,
-  "nemotron35-super-vl-think": 231
+  "gemma4-31b": 128,
+  "gemma4-31b-think": 187,
+  "nemotron35-super-vl": 132,
+  "nemotron35-super-vl-think": 219
  },
  "single_lane_matrix": {
   "gemma4-31b": {
    "dialogue": {
-    "w_td": 83.2,
+    "w_td": 85.7,
     "w_tv": 1.0,
     "w_tr": 0.0,
     "w_ta": 0.5,
-    "w_tdvra": 83.2
+    "w_tdvra": 85.7
    },
    "visual": {
     "w_td": 0.0,
-    "w_tv": 52.5,
+    "w_tv": 53.1,
     "w_tr": 0.0,
     "w_ta": 0.6,
-    "w_tdvra": 45.1
+    "w_tdvra": 46.9
    },
    "text": {
     "w_td": 0.0,
@@ -219,24 +219,24 @@
     "w_td": 0.0,
     "w_tv": 4.2,
     "w_tr": 0.0,
-    "w_ta": 56.2,
-    "w_tdvra": 58.3
+    "w_ta": 60.4,
+    "w_tdvra": 62.5
    }
   },
   "gemma4-31b-think": {
    "dialogue": {
-    "w_td": 87.2,
+    "w_td": 89.3,
     "w_tv": 2.6,
     "w_tr": 1.0,
     "w_ta": 1.5,
-    "w_tdvra": 86.7
+    "w_tdvra": 88.8
    },
    "visual": {
     "w_td": 1.2,
-    "w_tv": 55.6,
+    "w_tv": 56.8,
     "w_tr": 0.6,
     "w_ta": 0.6,
-    "w_tdvra": 50.0
+    "w_tdvra": 51.9
    },
    "text": {
     "w_td": 0.0,
@@ -246,32 +246,32 @@
     "w_tdvra": 74.8
    },
    "audio": {
-    "w_td": 0.0,
+    "w_td": 2.1,
     "w_tv": 0.0,
     "w_tr": 0.0,
-    "w_ta": 60.4,
-    "w_tdvra": 60.4
+    "w_ta": 62.5,
+    "w_tdvra": 62.5
    }
   },
   "nemotron35-super-vl": {
    "dialogue": {
-    "w_td": 84.2,
+    "w_td": 85.7,
     "w_tv": 0.5,
     "w_tr": 0.5,
     "w_ta": 0.0,
-    "w_tdvra": 82.1
+    "w_tdvra": 83.2
    },
    "visual": {
     "w_td": 0.0,
-    "w_tv": 48.1,
+    "w_tv": 52.5,
     "w_tr": 0.0,
     "w_ta": 1.9,
-    "w_tdvra": 49.4
+    "w_tdvra": 54.3
    },
    "text": {
     "w_td": 0.0,
     "w_tv": 2.8,
-    "w_tr": 66.4,
+    "w_tr": 67.3,
     "w_ta": 0.0,
     "w_tdvra": 65.4
    },
@@ -279,49 +279,49 @@
     "w_td": 2.1,
     "w_tv": 12.5,
     "w_tr": 2.1,
-    "w_ta": 60.4,
-    "w_tdvra": 58.3
+    "w_ta": 64.6,
+    "w_tdvra": 62.5
    }
   },
   "nemotron35-super-vl-think": {
    "dialogue": {
-    "w_td": 86.7,
+    "w_td": 87.8,
     "w_tv": 0.5,
     "w_tr": 1.5,
     "w_ta": 0.0,
-    "w_tdvra": 82.7
+    "w_tdvra": 85.2
    },
    "visual": {
     "w_td": 1.9,
-    "w_tv": 47.5,
+    "w_tv": 52.5,
     "w_tr": 0.6,
-    "w_ta": 1.9,
-    "w_tdvra": 47.5
+    "w_ta": 2.5,
+    "w_tdvra": 50.6
    },
    "text": {
     "w_td": 0.0,
     "w_tv": 2.8,
-    "w_tr": 76.6,
+    "w_tr": 77.6,
     "w_ta": 0.0,
-    "w_tdvra": 72.0
+    "w_tdvra": 72.9
    },
    "audio": {
     "w_td": 4.2,
     "w_tv": 12.5,
     "w_tr": 6.2,
-    "w_ta": 60.4,
-    "w_tdvra": 62.5
+    "w_ta": 62.5,
+    "w_tdvra": 64.6
    }
   }
  },
  "routing_whole_film_all_lanes": {
-  "routed_by_synthetic_label": 58.5,
-  "routed_by_reassigned_label": 57.4,
-  "gemma4-31b": 52.8,
-  "gemma4-31b-think": 57.4,
-  "nemotron35-super-vl": 57.2,
-  "nemotron35-super-vl-think": 54.1,
-  "oracle_any_reader": 71.5,
+  "routed_by_synthetic_label": 60.1,
+  "routed_by_reassigned_label": 60.5,
+  "gemma4-31b": 54.4,
+  "gemma4-31b-think": 59.6,
+  "nemotron35-super-vl": 58.6,
+  "nemotron35-super-vl-think": 56.2,
+  "oracle_any_reader": 72.8,
   "n": 848
  }
 }

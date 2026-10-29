@@ -17,198 +17,198 @@
  "leave_one_model_out": {
   "train_1": {
    "folds": 6,
-   "before": 65.6,
+   "before": 65.8,
    "before_ci": [
     63.3,
-    67.7
+    68.2
    ],
    "after": 72.6,
    "after_ci": [
-    70.0,
-    75.0
+    70.1,
+    74.8
    ],
-   "gain": 7.0,
+   "gain": 6.7,
    "gain_ci": [
-    4.6,
-    9.4
+    4.3,
+    9.2
    ],
-   "kappa_before": 0.59,
-   "kappa_after": 0.662,
-   "family_before": 66.2,
+   "kappa_before": 0.593,
+   "kappa_after": 0.663,
+   "family_before": 66.3,
    "family_after": 73.2,
-   "coverage": 0.703,
+   "coverage": 0.72,
    "comparisons": {
     "fixed rule": {
-     "after": 73.5,
+     "after": 73.0,
      "after_ci": [
-      70.9,
-      75.9
+      70.4,
+      75.4
      ],
-     "gain": 7.9,
+     "gain": 7.1,
      "gain_ci": [
-      5.3,
-      10.4
-     ]
-    },
-    "two-source only": {
-     "after": 75.9,
-     "after_ci": [
-      73.4,
-      78.1
-     ],
-     "gain": 10.3,
-     "gain_ci": [
-      7.9,
-      12.8
-     ]
-    },
-    "type map": {
-     "after": 75.3,
-     "after_ci": [
-      72.6,
-      77.9
-     ],
-     "gain": 9.7,
-     "gain_ci": [
-      7.8,
-      11.7
-     ]
-    }
-   },
-   "by_family": {
-    "and": {
-     "n": 508,
-     "before": 10.2,
-     "after": 49.6
-    },
-    "or": {
-     "n": 690,
-     "before": 33.9,
-     "after": 57.8
-    },
-    "prior": {
-     "n": 154,
-     "before": 90.9,
-     "after": 94.2
-    },
-    "single": {
-     "n": 2226,
-     "before": 85.9,
-     "after": 80.5
-    }
-   }
-  },
-  "train_2": {
-   "folds": 3,
-   "before": 65.6,
-   "before_ci": [
-    63.3,
-    67.7
-   ],
-   "after": 71.1,
-   "after_ci": [
-    68.1,
-    74.0
-   ],
-   "gain": 5.5,
-   "gain_ci": [
-    2.9,
-    8.4
-   ],
-   "kappa_before": 0.59,
-   "kappa_after": 0.647,
-   "family_before": 66.2,
-   "family_after": 72.0,
-   "coverage": 0.703,
-   "comparisons": {
-    "fixed rule": {
-     "after": 73.5,
-     "after_ci": [
-      70.9,
-      75.9
-     ],
-     "gain": 7.9,
-     "gain_ci": [
-      5.3,
-      10.4
+      4.3,
+      9.8
      ]
     },
     "two-source only": {
      "after": 75.7,
      "after_ci": [
-      73.0,
-      78.3
+      73.3,
+      78.0
      ],
-     "gain": 10.1,
+     "gain": 9.9,
      "gain_ci": [
-      7.5,
-      12.9
+      7.6,
+      12.3
      ]
     },
     "type map": {
-     "after": 74.9,
+     "after": 75.0,
      "after_ci": [
-      72.1,
-      77.6
+      72.3,
+      77.5
      ],
-     "gain": 9.3,
+     "gain": 9.1,
      "gain_ci": [
-      7.5,
-      11.3
+      7.0,
+      11.2
      ]
     }
    },
    "by_family": {
     "and": {
-     "n": 254,
+     "n": 530,
      "before": 10.2,
-     "after": 50.4
+     "after": 49.8
     },
     "or": {
-     "n": 345,
-     "before": 33.9,
-     "after": 56.8
+     "n": 702,
+     "before": 35.3,
+     "after": 56.7
     },
     "prior": {
-     "n": 77,
-     "before": 90.9,
-     "after": 94.8
+     "n": 152,
+     "before": 90.8,
+     "after": 95.4
     },
     "single": {
-     "n": 1113,
-     "before": 85.9,
-     "after": 78.6
+     "n": 2280,
+     "before": 86.1,
+     "after": 80.9
+    }
+   }
+  },
+  "train_2": {
+   "folds": 3,
+   "before": 65.8,
+   "before_ci": [
+    63.3,
+    68.2
+   ],
+   "after": 71.2,
+   "after_ci": [
+    68.3,
+    74.1
+   ],
+   "gain": 5.4,
+   "gain_ci": [
+    2.7,
+    8.4
+   ],
+   "kappa_before": 0.593,
+   "kappa_after": 0.65,
+   "family_before": 66.3,
+   "family_after": 72.1,
+   "coverage": 0.72,
+   "comparisons": {
+    "fixed rule": {
+     "after": 73.0,
+     "after_ci": [
+      70.4,
+      75.4
+     ],
+     "gain": 7.1,
+     "gain_ci": [
+      4.3,
+      9.8
+     ]
+    },
+    "two-source only": {
+     "after": 75.8,
+     "after_ci": [
+      73.0,
+      78.3
+     ],
+     "gain": 9.9,
+     "gain_ci": [
+      7.3,
+      12.7
+     ]
+    },
+    "type map": {
+     "after": 74.4,
+     "after_ci": [
+      71.7,
+      77.0
+     ],
+     "gain": 8.6,
+     "gain_ci": [
+      6.5,
+      10.7
+     ]
+    }
+   },
+   "by_family": {
+    "and": {
+     "n": 265,
+     "before": 10.2,
+     "after": 50.6
+    },
+    "or": {
+     "n": 351,
+     "before": 35.3,
+     "after": 56.7
+    },
+    "prior": {
+     "n": 76,
+     "before": 90.8,
+     "after": 96.1
+    },
+    "single": {
+     "n": 1140,
+     "before": 86.1,
+     "after": 78.9
     }
    }
   }
  },
  "status_all_readers": {
-  "kept": 251,
-  "verified": 421,
-  "reassigned": 176
+  "kept": 237,
+  "verified": 433,
+  "reassigned": 178
  },
  "transitions_all_readers": {
-  "dialogue and visual -> visual": 43,
-  "dialogue or visual -> dialogue": 38,
+  "dialogue and visual -> visual": 45,
+  "dialogue or visual -> dialogue": 36,
   "dialogue or visual -> visual": 10,
-  "dialogue or text -> text": 6,
+  "dialogue or text -> text": 5,
   "visual -> guessable": 5,
   "dialogue or text -> dialogue": 5,
   "dialogue and text -> text": 5,
   "dialogue and visual -> several pairs": 4,
   "dialogue and audio -> audio": 4,
+  "dialogue or visual -> several pairs": 3,
   "dialogue and visual -> prior": 3,
-  "visual -> several pairs": 3,
   "visual or audio -> audio": 3,
+  "dialogue or visual -> three or more sources": 2,
   "visual or audio -> visual": 2,
-  "dialogue or visual -> several pairs": 2,
   "text -> visual": 2,
   "dialogue -> dialogue or text": 2,
   "text -> visual or text": 2,
   "visual -> prior": 2,
   "visual and text -> text": 2,
   "prior -> guessable": 2,
-  "audio -> visual or audio": 2,
+  "audio -> any source": 2,
   "dialogue and visual -> guessable": 2,
   "audio -> prior": 2,
   "dialogue and audio -> dialogue": 1,
@@ -216,14 +216,14 @@
  },
  "status_by_family": {
   "and": {
-   "kept": 69,
-   "reassigned": 69,
-   "verified": 13
+   "kept": 67,
+   "reassigned": 72,
+   "verified": 12
   },
   "or": {
    "reassigned": 76,
-   "verified": 41,
-   "kept": 17
+   "verified": 43,
+   "kept": 15
   },
   "prior": {
    "kept": 23,
@@ -231,48 +231,48 @@
    "reassigned": 2
   },
   "single": {
-   "kept": 142,
-   "verified": 342,
-   "reassigned": 29
+   "kept": 132,
+   "verified": 353,
+   "reassigned": 28
   }
  },
  "ceiling": {
   "gemma4-31b-think~nemotron35-super-vl-think": {
-   "n": 494,
-   "agreement": 0.794,
-   "kappa": 0.735
+   "n": 512,
+   "agreement": 0.783,
+   "kappa": 0.724
   },
   "gemma4-31b-think~muse-spark-open": {
-   "n": 536,
-   "agreement": 0.728,
-   "kappa": 0.658
+   "n": 548,
+   "agreement": 0.732,
+   "kappa": 0.664
   },
   "nemotron35-super-vl-think~muse-spark-open": {
-   "n": 535,
-   "agreement": 0.74,
-   "kappa": 0.676
+   "n": 555,
+   "agreement": 0.735,
+   "kappa": 0.673
   }
  },
  "inconsistent_cells": {
-  "gemma4-31b-think": 197,
-  "nemotron35-super-vl-think": 231,
-  "muse-spark-open": 221
+  "gemma4-31b-think": 187,
+  "nemotron35-super-vl-think": 219,
+  "muse-spark-open": 218
  },
  "single_lane_matrix": {
   "gemma4-31b-think": {
    "dialogue": {
-    "w_td": 87.2,
+    "w_td": 89.3,
     "w_tv": 2.6,
     "w_tr": 1.0,
     "w_ta": 1.5,
-    "w_tdvra": 86.7
+    "w_tdvra": 88.8
    },
    "visual": {
     "w_td": 1.2,
-    "w_tv": 55.6,
+    "w_tv": 56.8,
     "w_tr": 0.6,
     "w_ta": 0.6,
-    "w_tdvra": 50.0
+    "w_tdvra": 51.9
    },
    "text": {
     "w_td": 0.0,
@@ -282,81 +282,81 @@
     "w_tdvra": 74.8
    },
    "audio": {
-    "w_td": 0.0,
+    "w_td": 2.1,
     "w_tv": 0.0,
     "w_tr": 0.0,
-    "w_ta": 60.4,
-    "w_tdvra": 60.4
+    "w_ta": 62.5,
+    "w_tdvra": 62.5
    }
   },
   "nemotron35-super-vl-think": {
    "dialogue": {
-    "w_td": 86.7,
+    "w_td": 87.8,
     "w_tv": 0.5,
     "w_tr": 1.5,
     "w_ta": 0.0,
-    "w_tdvra": 82.7
+    "w_tdvra": 85.2
    },
    "visual": {
     "w_td": 1.9,
-    "w_tv": 47.5,
+    "w_tv": 52.5,
     "w_tr": 0.6,
-    "w_ta": 1.9,
-    "w_tdvra": 47.5
+    "w_ta": 2.5,
+    "w_tdvra": 50.6
    },
    "text": {
     "w_td": 0.0,
     "w_tv": 2.8,
-    "w_tr": 76.6,
+    "w_tr": 77.6,
     "w_ta": 0.0,
-    "w_tdvra": 72.0
+    "w_tdvra": 72.9
    },
    "audio": {
     "w_td": 4.2,
     "w_tv": 12.5,
     "w_tr": 6.2,
-    "w_ta": 60.4,
-    "w_tdvra": 62.5
+    "w_ta": 62.5,
+    "w_tdvra": 64.6
    }
   },
   "muse-spark-open": {
    "dialogue": {
-    "w_td": 91.8,
+    "w_td": 93.4,
     "w_tv": 4.6,
     "w_tr": 1.0,
     "w_ta": 3.6,
-    "w_tdvra": 91.8
+    "w_tdvra": 93.4
    },
    "visual": {
-    "w_td": 3.7,
-    "w_tv": 69.1,
-    "w_tr": 4.3,
-    "w_ta": 4.9,
-    "w_tdvra": 70.4
+    "w_td": 4.9,
+    "w_tv": 71.6,
+    "w_tr": 4.9,
+    "w_ta": 6.2,
+    "w_tdvra": 71.0
    },
    "text": {
     "w_td": 1.9,
     "w_tv": 12.1,
-    "w_tr": 75.7,
+    "w_tr": 76.6,
     "w_ta": 3.7,
-    "w_tdvra": 77.6
+    "w_tdvra": 78.5
    },
    "audio": {
     "w_td": 10.4,
     "w_tv": 20.8,
     "w_tr": 10.4,
-    "w_ta": 62.5,
-    "w_tdvra": 62.5
+    "w_ta": 64.6,
+    "w_tdvra": 66.7
    }
   }
  },
  "routing_whole_film_all_lanes": {
-  "routed_by_synthetic_label": 75.4,
-  "routed_by_reassigned_label": 75.4,
-  "gemma4-31b-think": 57.4,
-  "nemotron35-super-vl-think": 54.1,
-  "muse-spark-open": 75.4,
-  "oracle_any_reader": 78.5,
+  "routed_by_synthetic_label": 76.4,
+  "routed_by_reassigned_label": 76.4,
+  "gemma4-31b-think": 59.6,
+  "nemotron35-super-vl-think": 56.2,
+  "muse-spark-open": 76.4,
+  "oracle_any_reader": 79.6,
   "n": 848
  }
 }

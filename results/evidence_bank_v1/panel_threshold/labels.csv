@@ -5,9 +5,9 @@ ac30_004,chnb_Animal_Crackers_1930,dialogue,dialogue,dialogue,dialogue,dialogue,
 ac30_005,chnb_Animal_Crackers_1930,visual,undetermined,visual,visual,visual,verified
 ac30_007,chnb_Animal_Crackers_1930,visual,undetermined,undetermined,visual,visual,kept
 ac30_008,chnb_Animal_Crackers_1930,text,text,text,prior,text,verified
-ac30_010,chnb_Animal_Crackers_1930,audio,undetermined,undetermined,undetermined,audio,kept
+ac30_010,chnb_Animal_Crackers_1930,audio,audio,audio,audio,audio,verified
 ac30_012,chnb_Animal_Crackers_1930,dialogue or visual,visual,visual,visual,visual,reassigned
-ac30_015,chnb_Animal_Crackers_1930,visual,visual,visual,several pairs,visual,verified
+ac30_015,chnb_Animal_Crackers_1930,visual,visual,visual,visual,visual,verified
 ac30_016,chnb_Animal_Crackers_1930,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
 ac30_017,chnb_Animal_Crackers_1930,prior,undetermined,prior,undetermined,prior,kept
 ac30_021,chnb_Animal_Crackers_1930,dialogue,dialogue,dialogue,dialogue,dialogue,verified
@@ -19,10 +19,10 @@ ac30_026,chnb_Animal_Crackers_1930,dialogue or visual,dialogue,dialogue,dialogue
 ao46_001,chnb_Angel_on_My_Shoulder_1946,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 ao46_004,chnb_Angel_on_My_Shoulder_1946,audio,audio,guessable,audio,audio,verified
 ao46_005,chnb_Angel_on_My_Shoulder_1946,text,text,text,text,text,verified
-ao46_006,chnb_Angel_on_My_Shoulder_1946,dialogue and visual,several pairs,undetermined,several pairs,dialogue and visual,verified
+ao46_006,chnb_Angel_on_My_Shoulder_1946,dialogue and visual,visual,three or more sources,several pairs,several pairs,reassigned
 ao46_007,chnb_Angel_on_My_Shoulder_1946,text,text,text,text,text,verified
 ao46_008,chnb_Angel_on_My_Shoulder_1946,dialogue or text,dialogue,dialogue or text,dialogue or text,dialogue or text,verified
-ao46_011,chnb_Angel_on_My_Shoulder_1946,dialogue or visual,undetermined,undetermined,three or more sources,dialogue or visual,kept
+ao46_011,chnb_Angel_on_My_Shoulder_1946,dialogue or visual,dialogue and visual,undetermined,visual,three or more sources,reassigned
 ao46_012,chnb_Angel_on_My_Shoulder_1946,dialogue and visual,undetermined,undetermined,visual and audio,dialogue and visual,kept
 ao46_015,chnb_Angel_on_My_Shoulder_1946,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 ao46_016,chnb_Angel_on_My_Shoulder_1946,visual,undetermined,undetermined,undetermined,visual,kept
@@ -31,7 +31,7 @@ ao46_021,chnb_Angel_on_My_Shoulder_1946,dialogue or text,text,text,text,text,rea
 ao46_022,chnb_Angel_on_My_Shoulder_1946,visual,several pairs,undetermined,undetermined,visual,kept
 ao46_023,chnb_Angel_on_My_Shoulder_1946,visual,undetermined,undetermined,undetermined,visual,kept
 ao46_024,chnb_Angel_on_My_Shoulder_1946,dialogue,dialogue,dialogue,prior,dialogue,verified
-ao46_025,chnb_Angel_on_My_Shoulder_1946,dialogue,several pairs,dialogue,dialogue,dialogue,verified
+ao46_025,chnb_Angel_on_My_Shoulder_1946,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 ao46_026,chnb_Angel_on_My_Shoulder_1946,dialogue and audio,dialogue,dialogue,dialogue,dialogue,reassigned
 aq30_003,chnb_All_Quiet_on_the_Western_Front_1930,text,undetermined,text,several pairs,text,verified
 aq30_004,chnb_All_Quiet_on_the_Western_Front_1930,text,text,text,text,text,verified
@@ -43,7 +43,7 @@ aq30_014,chnb_All_Quiet_on_the_Western_Front_1930,dialogue and visual,undetermin
 aq30_016,chnb_All_Quiet_on_the_Western_Front_1930,audio,undetermined,undetermined,undetermined,audio,kept
 aq30_021,chnb_All_Quiet_on_the_Western_Front_1930,prior,undetermined,prior,prior,prior,verified
 aq30_023,chnb_All_Quiet_on_the_Western_Front_1930,dialogue,dialogue,dialogue,dialogue,dialogue,verified
-aq30_024,chnb_All_Quiet_on_the_Western_Front_1930,dialogue or visual,several pairs,visual,visual,visual,reassigned
+aq30_024,chnb_All_Quiet_on_the_Western_Front_1930,dialogue or visual,visual,visual,guessable,visual,reassigned
 aq30_025,chnb_All_Quiet_on_the_Western_Front_1930,dialogue and visual,visual,visual,visual,visual,reassigned
 aq30_029,chnb_All_Quiet_on_the_Western_Front_1930,dialogue,dialogue,dialogue,prior,dialogue,verified
 aq30_030,chnb_All_Quiet_on_the_Western_Front_1930,dialogue or visual,dialogue and visual,several pairs,any source,several pairs,reassigned
@@ -60,11 +60,11 @@ as49_009,mf2_24,audio,undetermined,undetermined,undetermined,audio,kept
 as49_011,mf2_24,dialogue or text,dialogue and text,dialogue and text,dialogue,dialogue and text,reassigned
 as49_012,mf2_24,dialogue or visual,dialogue or visual,visual,visual,visual,reassigned
 as49_013,mf2_24,dialogue or visual,undetermined,undetermined,dialogue,dialogue or visual,kept
-as49_014,mf2_24,dialogue and audio,guessable,undetermined,audio,audio,reassigned
+as49_014,mf2_24,dialogue and audio,guessable,audio,audio,audio,reassigned
 as49_015,mf2_24,dialogue and visual,undetermined,undetermined,prior,dialogue and visual,kept
 as49_016,mf2_24,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
 as49_017,mf2_24,prior,prior,prior,prior,prior,verified
-as49_021,mf2_24,visual,undetermined,undetermined,visual or audio,visual,kept
+as49_021,mf2_24,visual,undetermined,undetermined,prior,visual,kept
 as49_022,mf2_24,visual,undetermined,undetermined,undetermined,visual,kept
 as49_023,mf2_24,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 bb59_002,mf2_51,text,visual,visual,visual,visual,reassigned
@@ -82,7 +82,7 @@ bb59_022,mf2_51,visual,visual,undetermined,prior,visual,verified
 bb59_023,mf2_51,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 bb59_024,mf2_51,audio,audio,audio,audio,audio,verified
 bb59_025,mf2_51,prior,undetermined,undetermined,undetermined,prior,kept
-bb59_026,mf2_51,dialogue or visual,dialogue or visual,dialogue,dialogue or visual,dialogue or visual,verified
+bb59_026,mf2_51,dialogue or visual,dialogue or visual,prior,dialogue or visual,dialogue or visual,verified
 bb59_027,mf2_51,dialogue and visual,undetermined,undetermined,visual,dialogue and visual,kept
 bd29_001,chnb_Bulldog_Drummond_1929,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 bd29_002,chnb_Bulldog_Drummond_1929,dialogue,dialogue,dialogue,dialogue,dialogue,verified
@@ -92,7 +92,7 @@ bd29_006,chnb_Bulldog_Drummond_1929,visual,undetermined,undetermined,visual,visu
 bd29_008,chnb_Bulldog_Drummond_1929,text,text,text,text,text,verified
 bd29_009,chnb_Bulldog_Drummond_1929,text,text,text,text,text,verified
 bd29_010,chnb_Bulldog_Drummond_1929,audio,undetermined,undetermined,undetermined,audio,kept
-bd29_013,chnb_Bulldog_Drummond_1929,dialogue or visual,guessable,undetermined,dialogue or visual,several pairs,reassigned
+bd29_013,chnb_Bulldog_Drummond_1929,dialogue or visual,guessable,several pairs,dialogue or visual,several pairs,reassigned
 bd29_014,chnb_Bulldog_Drummond_1929,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
 bd29_016,chnb_Bulldog_Drummond_1929,dialogue and text,dialogue and text,three or more sources,dialogue,dialogue and text,verified
 bd29_017,chnb_Bulldog_Drummond_1929,prior,undetermined,prior,undetermined,prior,kept
@@ -108,7 +108,7 @@ bg30_006,chnb_The_Big_Trail_1930,visual,visual,visual,visual,visual,verified
 bg30_008,chnb_The_Big_Trail_1930,text,text,text,text,text,verified
 bg30_009,chnb_The_Big_Trail_1930,audio,undetermined,undetermined,undetermined,audio,kept
 bg30_012,chnb_The_Big_Trail_1930,dialogue,dialogue,dialogue,dialogue,dialogue,verified
-bg30_013,chnb_The_Big_Trail_1930,text,text,undetermined,text,text,verified
+bg30_013,chnb_The_Big_Trail_1930,text,text,text,text,text,verified
 bg30_014,chnb_The_Big_Trail_1930,dialogue and visual,undetermined,dialogue and visual,undetermined,dialogue and visual,kept
 bg30_021,chnb_The_Big_Trail_1930,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
 bg30_022,chnb_The_Big_Trail_1930,audio,audio,audio,audio,audio,verified
@@ -120,7 +120,7 @@ bg30_027,chnb_The_Big_Trail_1930,dialogue and visual,undetermined,undetermined,u
 bg30_028,chnb_The_Big_Trail_1930,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 bk41_001,chnb_Billy_the_Kid_in_Santa_Fe_1941,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 bk41_003,chnb_Billy_the_Kid_in_Santa_Fe_1941,dialogue,dialogue,dialogue,dialogue,dialogue,verified
-bk41_004,chnb_Billy_the_Kid_in_Santa_Fe_1941,visual,undetermined,undetermined,undetermined,visual,kept
+bk41_004,chnb_Billy_the_Kid_in_Santa_Fe_1941,visual,undetermined,undetermined,visual,visual,kept
 bk41_006,chnb_Billy_the_Kid_in_Santa_Fe_1941,visual,undetermined,undetermined,undetermined,visual,kept
 bk41_007,chnb_Billy_the_Kid_in_Santa_Fe_1941,visual,visual,visual,visual,visual,verified
 bk41_008,chnb_Billy_the_Kid_in_Santa_Fe_1941,text,text,text,text,text,verified
@@ -143,13 +143,13 @@ bo45_009,chnb_Blood_on_the_Sun_1945,visual,visual,undetermined,visual,visual,ver
 bo45_011,chnb_Blood_on_the_Sun_1945,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 bo45_012,chnb_Blood_on_the_Sun_1945,text,text,text,text,text,verified
 bo45_014,chnb_Blood_on_the_Sun_1945,visual,undetermined,undetermined,three or more sources,visual,kept
-bo45_016,chnb_Blood_on_the_Sun_1945,dialogue or visual,dialogue or visual,undetermined,prior,dialogue or visual,verified
+bo45_016,chnb_Blood_on_the_Sun_1945,dialogue or visual,dialogue or visual,dialogue,prior,dialogue or visual,verified
 bo45_017,chnb_Blood_on_the_Sun_1945,prior,undetermined,prior,prior,prior,verified
 bo45_021,chnb_Blood_on_the_Sun_1945,dialogue and visual,visual,visual,visual,visual,reassigned
 bo45_022,chnb_Blood_on_the_Sun_1945,dialogue or text,dialogue or text,dialogue or text,dialogue or text,dialogue or text,verified
 bo45_023,chnb_Blood_on_the_Sun_1945,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 bo45_024,chnb_Blood_on_the_Sun_1945,dialogue,dialogue,dialogue,dialogue,dialogue,verified
-bo45_025,chnb_Blood_on_the_Sun_1945,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+bo45_025,chnb_Blood_on_the_Sun_1945,dialogue and visual,undetermined,undetermined,several pairs,dialogue and visual,kept
 bo45_026,chnb_Blood_on_the_Sun_1945,dialogue and visual,three or more sources,undetermined,visual,three or more sources,reassigned
 br53_001,chnb_Beneath_the_12_Mile_Reef_1953,text,undetermined,undetermined,prior,text,kept
 br53_002,chnb_Beneath_the_12_Mile_Reef_1953,audio,audio,several pairs,audio,audio,verified
@@ -176,7 +176,7 @@ bs35_007,chnb_Becky_Sharp_1935,visual,visual,visual,undetermined,visual,verified
 bs35_009,chnb_Becky_Sharp_1935,text,undetermined,undetermined,undetermined,text,kept
 bs35_010,chnb_Becky_Sharp_1935,text,text,text,text,text,verified
 bs35_012,chnb_Becky_Sharp_1935,dialogue or visual,undetermined,undetermined,undetermined,dialogue or visual,kept
-bs35_013,chnb_Becky_Sharp_1935,dialogue or visual,undetermined,guessable,visual,visual,reassigned
+bs35_013,chnb_Becky_Sharp_1935,dialogue or visual,undetermined,guessable,dialogue or visual,visual,reassigned
 bs35_014,chnb_Becky_Sharp_1935,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
 bs35_016,chnb_Becky_Sharp_1935,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
 bs35_021,chnb_Becky_Sharp_1935,dialogue,dialogue,prior,dialogue,dialogue,verified
@@ -187,7 +187,7 @@ bs35_025,chnb_Becky_Sharp_1935,prior,undetermined,prior,prior,prior,verified
 bs35_026,chnb_Becky_Sharp_1935,dialogue and visual,undetermined,undetermined,visual,dialogue and visual,kept
 bt34_001,mf2_20,text,undetermined,undetermined,text,text,kept
 bt34_002,mf2_20,visual or text,visual or text,visual or text,visual or text,visual or text,verified
-bt34_004,mf2_20,dialogue and visual,undetermined,undetermined,visual,dialogue and visual,kept
+bt34_004,mf2_20,dialogue and visual,visual,several pairs,visual,visual,reassigned
 bt34_005,mf2_20,dialogue,undetermined,three or more sources,dialogue,dialogue,verified
 bt34_006,mf2_20,dialogue and visual,undetermined,undetermined,visual,dialogue and visual,kept
 bt34_007,mf2_20,dialogue,dialogue,dialogue,dialogue,dialogue,verified
@@ -200,12 +200,12 @@ bt34_016,mf2_20,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 bt34_017,mf2_20,prior,undetermined,prior,prior,prior,verified
 bt34_021,mf2_20,visual and text,visual,visual,visual,visual,reassigned
 bt34_022,mf2_20,visual,visual or text,several pairs,visual or text,visual or text,reassigned
-bt34_023,mf2_20,dialogue,undetermined,undetermined,dialogue,dialogue,kept
-bt34_024,mf2_20,visual,undetermined,undetermined,undetermined,visual,kept
+bt34_023,mf2_20,dialogue,dialogue and audio,dialogue,dialogue,dialogue,verified
+bt34_024,mf2_20,visual,visual,visual,undetermined,visual,verified
 cb50_001,mf2_46,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 cb50_003,mf2_46,dialogue,dialogue,dialogue,guessable,dialogue,verified
 cb50_005,mf2_46,dialogue,undetermined,dialogue,dialogue,dialogue,verified
-cb50_007,mf2_46,visual,prior,several pairs,prior,prior,reassigned
+cb50_007,mf2_46,visual,prior,visual,prior,prior,reassigned
 cb50_008,mf2_46,visual,undetermined,undetermined,three or more sources,visual,kept
 cb50_010,mf2_46,text,text,text,guessable,text,verified
 cb50_011,mf2_46,text,undetermined,undetermined,undetermined,text,kept
@@ -228,33 +228,33 @@ ck45_009,mf2_40,visual,visual,dialogue and visual,visual,visual,verified
 ck45_010,mf2_40,text,undetermined,undetermined,undetermined,text,kept
 ck45_011,mf2_40,text,text,text,text,text,verified
 ck45_012,mf2_40,audio,undetermined,undetermined,undetermined,audio,kept
-ck45_013,mf2_40,dialogue or audio,dialogue or audio,guessable,dialogue or audio,dialogue or audio,verified
-ck45_014,mf2_40,dialogue or visual,dialogue or visual,dialogue,dialogue,dialogue,reassigned
+ck45_013,mf2_40,dialogue or audio,dialogue or audio,guessable,guessable,guessable,reassigned
+ck45_014,mf2_40,dialogue or visual,any source,prior,dialogue,dialogue,reassigned
 ck45_015,mf2_40,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
 ck45_017,mf2_40,prior,undetermined,prior,prior,prior,verified
 ck45_021,mf2_40,visual,undetermined,undetermined,guessable,visual,kept
 ck45_022,mf2_40,dialogue and visual,visual,visual,visual,visual,reassigned
 ck45_023,mf2_40,dialogue and visual,prior,prior,guessable,prior,reassigned
-ck45_024,mf2_40,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+ck45_024,mf2_40,dialogue and visual,dialogue and visual,undetermined,undetermined,dialogue and visual,kept
 dc61_001,mf2_34,audio,audio,audio,audio,audio,verified
 dc61_003,mf2_34,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 dc61_005,mf2_34,visual,visual,visual,dialogue or visual,visual,verified
 dc61_006,mf2_34,visual,visual,visual,visual,visual,verified
 dc61_009,mf2_34,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 dc61_010,mf2_34,dialogue and visual,visual,visual,visual,visual,reassigned
-dc61_011,mf2_34,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+dc61_011,mf2_34,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 dc61_012,mf2_34,audio,audio,audio,audio,audio,verified
-dc61_014,mf2_34,visual,undetermined,undetermined,prior,visual,kept
+dc61_014,mf2_34,visual,undetermined,visual and text,prior,visual and text,reassigned
 dc61_016,mf2_34,dialogue and visual,undetermined,undetermined,visual,dialogue and visual,kept
 dc61_017,mf2_34,text,undetermined,text,text,text,verified
 dc61_018,mf2_34,prior,undetermined,prior,prior,prior,verified
 dc61_021,mf2_34,text,text,text,text,text,verified
-dc61_023,mf2_34,dialogue or text,dialogue or text,dialogue or text,any source,dialogue or text,verified
+dc61_023,mf2_34,dialogue or text,dialogue or text,prior,any source,dialogue or text,verified
 dc61_025,mf2_34,dialogue,undetermined,undetermined,undetermined,dialogue,kept
 dc61_026,mf2_34,visual and text,undetermined,several pairs,text,several pairs,reassigned
 dc61_027,mf2_34,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
 dm63_001,mf2_25,dialogue,dialogue,dialogue,dialogue,dialogue,verified
-dm63_002,mf2_25,dialogue,undetermined,undetermined,dialogue,dialogue,kept
+dm63_002,mf2_25,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 dm63_003,mf2_25,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 dm63_005,mf2_25,visual,undetermined,undetermined,undetermined,visual,kept
 dm63_006,mf2_25,visual,visual,visual,visual,visual,verified
@@ -264,8 +264,8 @@ dm63_013,mf2_25,dialogue or visual,dialogue or visual,dialogue,dialogue or visua
 dm63_015,mf2_25,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
 dm63_017,mf2_25,prior,undetermined,undetermined,prior,prior,kept
 dm63_021,mf2_25,audio,audio,visual or audio,audio,audio,verified
-dm63_022,mf2_25,text,text,undetermined,visual or text,text,verified
-dm63_023,mf2_25,dialogue or visual,dialogue or visual,dialogue,dialogue or visual,dialogue or visual,verified
+dm63_022,mf2_25,text,text,prior,visual or text,text,verified
+dm63_023,mf2_25,dialogue or visual,dialogue or visual,dialogue or visual,dialogue or visual,dialogue or visual,verified
 dm63_025,mf2_25,dialogue,undetermined,undetermined,undetermined,dialogue,kept
 dm63_026,mf2_25,visual,undetermined,undetermined,undetermined,visual,kept
 dm63_028,mf2_25,dialogue or text,text,text,dialogue or text,text,reassigned
@@ -277,7 +277,7 @@ dt45_006,mf2_49,visual,visual,visual,visual,visual,verified
 dt45_007,mf2_49,visual,visual,visual,visual,visual,verified
 dt45_008,mf2_49,text,text,text,text,text,verified
 dt45_009,mf2_49,text,text,text,text,text,verified
-dt45_012,mf2_49,dialogue or visual,undetermined,undetermined,visual,dialogue or visual,kept
+dt45_012,mf2_49,dialogue or visual,undetermined,undetermined,dialogue or visual,dialogue or visual,kept
 dt45_014,mf2_49,dialogue and visual,undetermined,visual,visual,visual,reassigned
 dt45_015,mf2_49,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
 dt45_017,mf2_49,prior,undetermined,prior,prior,prior,verified
@@ -290,7 +290,7 @@ dt45_027,mf2_49,visual,guessable,visual,guessable,guessable,reassigned
 du52_001,mf2_13,text,undetermined,undetermined,undetermined,text,kept
 du52_003,mf2_13,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
 du52_006,mf2_13,dialogue or visual,visual,visual,dialogue or visual,visual,reassigned
-du52_007,mf2_13,dialogue and visual,several pairs,visual,visual or audio,visual,reassigned
+du52_007,mf2_13,dialogue and visual,dialogue or visual,visual,prior,dialogue or visual,reassigned
 du52_009,mf2_13,dialogue or text,text and audio,undetermined,text,several pairs,reassigned
 du52_010,mf2_13,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 du52_011,mf2_13,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
@@ -306,11 +306,11 @@ du52_025,mf2_13,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 du52_026,mf2_13,visual,visual,visual,visual,visual,verified
 ec39_002,chnb_Nurse_Edith_Cavell_1939,text,undetermined,undetermined,undetermined,text,kept
 ec39_003,chnb_Nurse_Edith_Cavell_1939,dialogue,dialogue,dialogue,dialogue,dialogue,verified
-ec39_004,chnb_Nurse_Edith_Cavell_1939,dialogue or visual,several pairs,undetermined,visual,visual and text,reassigned
+ec39_004,chnb_Nurse_Edith_Cavell_1939,dialogue or visual,visual and text,undetermined,visual,visual and text,reassigned
 ec39_005,chnb_Nurse_Edith_Cavell_1939,visual,undetermined,undetermined,visual,visual,kept
 ec39_006,chnb_Nurse_Edith_Cavell_1939,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 ec39_007,chnb_Nurse_Edith_Cavell_1939,dialogue and visual,undetermined,undetermined,guessable,dialogue and visual,kept
-ec39_008,chnb_Nurse_Edith_Cavell_1939,visual,undetermined,several pairs,visual,several pairs,reassigned
+ec39_008,chnb_Nurse_Edith_Cavell_1939,visual,undetermined,visual,visual,visual,verified
 ec39_013,chnb_Nurse_Edith_Cavell_1939,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 ec39_014,chnb_Nurse_Edith_Cavell_1939,text,undetermined,undetermined,undetermined,text,kept
 ec39_015,chnb_Nurse_Edith_Cavell_1939,dialogue and visual,undetermined,visual,visual,visual,reassigned
@@ -319,7 +319,7 @@ ec39_017,chnb_Nurse_Edith_Cavell_1939,prior,undetermined,undetermined,undetermin
 ec39_021,chnb_Nurse_Edith_Cavell_1939,dialogue or text,dialogue or text,dialogue or text,dialogue or text,dialogue or text,verified
 ec39_023,chnb_Nurse_Edith_Cavell_1939,dialogue and text,undetermined,undetermined,undetermined,dialogue and text,kept
 ec39_025,chnb_Nurse_Edith_Cavell_1939,text,text,text,text,text,verified
-ec39_027,chnb_Nurse_Edith_Cavell_1939,visual,visual,several pairs,visual,visual,verified
+ec39_027,chnb_Nurse_Edith_Cavell_1939,visual,visual,visual,visual,visual,verified
 ec39_028,chnb_Nurse_Edith_Cavell_1939,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 ej33_001,mf2_33,text,text,text,text,text,verified
 ej33_002,mf2_33,dialogue,dialogue,dialogue,dialogue,dialogue,verified
@@ -328,9 +328,9 @@ ej33_004,mf2_33,text,text,text,text,text,verified
 ej33_005,mf2_33,dialogue or visual,undetermined,undetermined,dialogue,dialogue or visual,kept
 ej33_006,mf2_33,visual,undetermined,undetermined,undetermined,visual,kept
 ej33_007,mf2_33,visual,undetermined,several pairs,undetermined,visual,kept
-ej33_008,mf2_33,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+ej33_008,mf2_33,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 ej33_009,mf2_33,audio,audio,audio,any source,audio,verified
-ej33_010,mf2_33,text,text,text,text,text,verified
+ej33_010,mf2_33,text,text,undetermined,text,text,verified
 ej33_011,mf2_33,dialogue or text,dialogue or text,text,dialogue or text,dialogue or text,verified
 ej33_012,mf2_33,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
 ej33_013,mf2_33,dialogue and visual,three or more sources,undetermined,undetermined,dialogue and visual,kept
@@ -377,12 +377,12 @@ ga55_002,mf2_22,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 ga55_003,mf2_22,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 ga55_004,mf2_22,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 ga55_005,mf2_22,visual,undetermined,undetermined,undetermined,visual,kept
-ga55_007,mf2_22,visual,undetermined,visual and text,visual,visual,verified
+ga55_007,mf2_22,visual,undetermined,several pairs,visual,visual,verified
 ga55_008,mf2_22,visual,visual,visual,visual,visual,verified
 ga55_009,mf2_22,text,text,text,text,text,verified
 ga55_010,mf2_22,text,undetermined,undetermined,undetermined,text,kept
 ga55_011,mf2_22,dialogue or visual,undetermined,undetermined,dialogue,dialogue or visual,kept
-ga55_013,mf2_22,dialogue or text,text,text,dialogue or text,text,reassigned
+ga55_013,mf2_22,dialogue or text,dialogue or text,text,dialogue or text,dialogue or text,verified
 ga55_014,mf2_22,dialogue and visual,visual,visual,dialogue or visual,visual,reassigned
 ga55_017,mf2_22,prior,undetermined,prior,undetermined,prior,kept
 ga55_021,mf2_22,dialogue,dialogue,dialogue,dialogue,dialogue,verified
@@ -397,7 +397,7 @@ gb51_006,mf2_9,visual or audio,visual or audio,visual or audio,prior,visual or a
 gb51_007,mf2_9,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 gb51_011,mf2_9,visual,several pairs,visual,visual,visual,verified
 gb51_012,mf2_9,text,text,text,text,text,verified
-gb51_014,mf2_9,dialogue,dialogue,undetermined,dialogue,dialogue,verified
+gb51_014,mf2_9,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 gb51_017,mf2_9,prior,undetermined,undetermined,undetermined,prior,kept
 gb51_021,mf2_9,audio,audio,audio,audio,audio,verified
 gb51_022,mf2_9,text and audio,prior,undetermined,text and audio,text and audio,verified
@@ -426,7 +426,7 @@ hb34_002,mf2_30,dialogue,prior,undetermined,dialogue,dialogue,verified
 hb34_010,mf2_30,dialogue and visual,three or more sources,undetermined,visual,dialogue and visual,verified
 hb34_011,mf2_30,dialogue and visual,visual,undetermined,visual,visual,reassigned
 hb34_012,mf2_30,text,visual or text,text,text,text,verified
-hb34_015,mf2_30,audio,audio,any source,guessable,visual or audio,reassigned
+hb34_015,mf2_30,audio,dialogue or audio,any source,guessable,any source,reassigned
 hb34_016,mf2_30,audio,audio,any source,any source,visual or audio,reassigned
 hb34_017,mf2_30,dialogue and audio,guessable,audio,audio,audio,reassigned
 hb34_018,mf2_30,prior,undetermined,prior,undetermined,prior,kept
@@ -437,13 +437,13 @@ hb34_028,mf2_30,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 hb34_029,mf2_30,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 hb34_031,mf2_30,visual,undetermined,undetermined,undetermined,visual,kept
 hb34_032,mf2_30,dialogue or visual,guessable,dialogue,dialogue,dialogue,reassigned
-hb34_033,mf2_30,dialogue or visual,dialogue or visual,dialogue,prior,dialogue or visual,verified
+hb34_033,mf2_30,dialogue or visual,dialogue or visual,dialogue,guessable,dialogue or visual,verified
 hb34_035,mf2_30,visual,undetermined,undetermined,visual,visual,kept
 hd29_001,chnb_Happy_Days_1929,prior,undetermined,prior,prior,prior,verified
 hd29_003,chnb_Happy_Days_1929,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 hd29_004,chnb_Happy_Days_1929,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 hd29_006,chnb_Happy_Days_1929,dialogue and visual,undetermined,visual or audio,visual,visual,reassigned
-hd29_008,chnb_Happy_Days_1929,visual,undetermined,undetermined,visual,visual,kept
+hd29_008,chnb_Happy_Days_1929,visual,undetermined,visual,visual,visual,verified
 hd29_011,chnb_Happy_Days_1929,dialogue or visual,dialogue or visual,dialogue or visual,undetermined,dialogue or visual,verified
 hd29_013,chnb_Happy_Days_1929,dialogue or text,dialogue or text,dialogue or text,dialogue or text,dialogue or text,verified
 hd29_016,chnb_Happy_Days_1929,text,text,text,text,text,verified
@@ -451,7 +451,7 @@ hd29_017,chnb_Happy_Days_1929,text,text,text,text,text,verified
 hd29_021,chnb_Happy_Days_1929,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 hd29_022,chnb_Happy_Days_1929,visual,visual,guessable,guessable,guessable,reassigned
 hd29_023,chnb_Happy_Days_1929,visual,undetermined,visual,visual,visual,verified
-hd29_025,chnb_Happy_Days_1929,dialogue or visual,dialogue,undetermined,several pairs,dialogue and visual,reassigned
+hd29_025,chnb_Happy_Days_1929,dialogue or visual,dialogue,undetermined,several pairs,several pairs,reassigned
 hd29_026,chnb_Happy_Days_1929,dialogue and visual,visual,visual,visual,visual,reassigned
 hd29_027,chnb_Happy_Days_1929,visual,visual,visual,visual,visual,verified
 hd29_029,chnb_Happy_Days_1929,dialogue,undetermined,undetermined,several pairs,dialogue,kept
@@ -469,15 +469,15 @@ hg40_015,chnb_His_Girl_Friday_1940,dialogue and text,dialogue and text,dialogue 
 hg40_016,chnb_His_Girl_Friday_1940,dialogue and visual,guessable,prior,guessable,guessable,reassigned
 hg40_017,chnb_His_Girl_Friday_1940,prior,undetermined,prior,prior,prior,verified
 hg40_021,chnb_His_Girl_Friday_1940,visual or audio,undetermined,undetermined,undetermined,visual or audio,kept
-hg40_022,chnb_His_Girl_Friday_1940,dialogue or visual,dialogue,dialogue and visual,dialogue,dialogue,reassigned
+hg40_022,chnb_His_Girl_Friday_1940,dialogue or visual,dialogue,several pairs,dialogue,dialogue,reassigned
 hg40_023,chnb_His_Girl_Friday_1940,dialogue,dialogue,dialogue,dialogue,dialogue,verified
-hg40_024,chnb_His_Girl_Friday_1940,dialogue and visual,visual and text,several pairs,visual,several pairs,reassigned
+hg40_024,chnb_His_Girl_Friday_1940,dialogue and visual,visual,several pairs,visual,visual,reassigned
 hg40_025,chnb_His_Girl_Friday_1940,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 hh53_001,mf2_43,text,text,text,text,text,verified
 hh53_004,mf2_43,dialogue,dialogue,dialogue,dialogue,dialogue,verified
-hh53_006,mf2_43,visual,visual,undetermined,several pairs,several pairs,reassigned
+hh53_006,mf2_43,visual,visual,visual,visual,visual,verified
 hh53_007,mf2_43,text,text,undetermined,undetermined,text,kept
-hh53_008,mf2_43,visual,several pairs,visual,visual,visual,verified
+hh53_008,mf2_43,visual,several pairs,visual,visual or audio,visual,verified
 hh53_012,mf2_43,audio,audio,audio,audio,audio,verified
 hh53_016,mf2_43,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
 hh53_018,mf2_43,prior,undetermined,prior,prior,prior,verified
@@ -489,15 +489,15 @@ hh53_027,mf2_43,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 hh53_028,mf2_43,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 hh53_030,mf2_43,dialogue or text,dialogue,dialogue,dialogue,dialogue,reassigned
 hh53_031,mf2_43,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
-hh53_033,mf2_43,visual,undetermined,undetermined,several pairs,visual,kept
+hh53_033,mf2_43,visual,visual,undetermined,several pairs,visual,verified
 hw48_001,chnb_He_Walked_by_Night_1948,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 hw48_002,chnb_He_Walked_by_Night_1948,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 hw48_004,chnb_He_Walked_by_Night_1948,visual,undetermined,undetermined,undetermined,visual,kept
 hw48_006,chnb_He_Walked_by_Night_1948,visual,undetermined,undetermined,undetermined,visual,kept
-hw48_007,chnb_He_Walked_by_Night_1948,dialogue and text,dialogue and text,dialogue and text,undetermined,dialogue and text,verified
+hw48_007,chnb_He_Walked_by_Night_1948,dialogue and text,dialogue and text,dialogue and text,dialogue and text,dialogue and text,verified
 hw48_008,chnb_He_Walked_by_Night_1948,text,text,text,text,text,verified
 hw48_009,chnb_He_Walked_by_Night_1948,audio,undetermined,undetermined,undetermined,audio,kept
-hw48_014,chnb_He_Walked_by_Night_1948,dialogue and visual,undetermined,undetermined,dialogue and visual,dialogue and visual,kept
+hw48_014,chnb_He_Walked_by_Night_1948,dialogue and visual,undetermined,undetermined,several pairs,dialogue and visual,kept
 hw48_015,chnb_He_Walked_by_Night_1948,text,undetermined,undetermined,undetermined,text,kept
 hw48_017,chnb_He_Walked_by_Night_1948,prior,undetermined,prior,undetermined,prior,kept
 hw48_021,chnb_He_Walked_by_Night_1948,dialogue,dialogue,dialogue,dialogue,dialogue,verified
@@ -534,7 +534,7 @@ jr50_008,mf2_53,text,undetermined,undetermined,undetermined,text,kept
 jr50_011,mf2_53,dialogue or text,dialogue or text,dialogue or text,dialogue or text,dialogue or text,verified
 jr50_012,mf2_53,dialogue or visual,undetermined,visual,visual,visual,reassigned
 jr50_013,mf2_53,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
-jr50_017,mf2_53,prior,prior,guessable,guessable,guessable,reassigned
+jr50_017,mf2_53,prior,undetermined,guessable,guessable,guessable,reassigned
 jr50_021,mf2_53,dialogue,undetermined,undetermined,undetermined,dialogue,kept
 jr50_022,mf2_53,text,text,undetermined,text,text,verified
 jr50_023,mf2_53,visual,dialogue and visual,several pairs,dialogue and visual,dialogue and visual,reassigned
@@ -550,7 +550,7 @@ kc52_008,mf2_29,text,text,text,text,text,verified
 kc52_010,mf2_29,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 kc52_012,mf2_29,text,text,text,text,text,verified
 kc52_013,mf2_29,visual,undetermined,undetermined,undetermined,visual,kept
-kc52_014,mf2_29,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+kc52_014,mf2_29,dialogue or visual,dialogue or visual,dialogue or visual,dialogue or visual,dialogue or visual,verified
 kc52_016,mf2_29,dialogue,several pairs,dialogue,dialogue,dialogue,verified
 kc52_017,mf2_29,prior,undetermined,prior,prior,prior,verified
 kc52_021,mf2_29,dialogue and visual,undetermined,several pairs,visual,several pairs,reassigned
@@ -587,7 +587,7 @@ lp39_011,mf2_27,dialogue or text,dialogue or text,text,dialogue or text,dialogue
 lp39_021,mf2_27,audio,audio,any source,any source,any source,reassigned
 lp39_022,mf2_27,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
 lp39_023,mf2_27,dialogue and visual,dialogue and visual,visual,visual,visual,reassigned
-lp39_024,mf2_27,dialogue and visual,visual,undetermined,dialogue or visual,visual,reassigned
+lp39_024,mf2_27,dialogue and visual,visual,guessable,dialogue or visual,visual,reassigned
 lp39_026,mf2_27,prior,undetermined,prior,undetermined,prior,kept
 lp39_027,mf2_27,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 lp39_028,mf2_27,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
@@ -620,7 +620,7 @@ mb47_009,mf2_14,visual,undetermined,undetermined,visual,visual,kept
 mb47_010,mf2_14,text,text,text,text,text,verified
 mb47_011,mf2_14,text,undetermined,undetermined,undetermined,text,kept
 mb47_012,mf2_14,audio,audio,visual or audio,prior,audio,verified
-mb47_013,mf2_14,dialogue or visual,undetermined,dialogue,dialogue,dialogue,reassigned
+mb47_013,mf2_14,dialogue or visual,several pairs,dialogue,dialogue,dialogue,reassigned
 mb47_015,mf2_14,dialogue or text,dialogue or text,dialogue or text,dialogue or text,dialogue or text,verified
 mb47_016,mf2_14,dialogue and visual,undetermined,undetermined,visual,dialogue and visual,kept
 mb47_018,mf2_14,prior,prior,prior,prior,prior,verified
@@ -647,10 +647,10 @@ mj41_001,mf2_10,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 mj41_002,mf2_10,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 mj41_003,mf2_10,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 mj41_004,mf2_10,visual,undetermined,undetermined,undetermined,visual,kept
-mj41_005,mf2_10,visual,visual,visual,visual,visual,verified
+mj41_005,mf2_10,visual,visual,visual or audio,visual,visual,verified
 mj41_006,mf2_10,visual,undetermined,prior,undetermined,visual,kept
 mj41_007,mf2_10,text,three or more sources,undetermined,undetermined,text,kept
-mj41_008,mf2_10,text,text,several pairs,undetermined,several pairs,reassigned
+mj41_008,mf2_10,text,text,text,text,text,verified
 mj41_009,mf2_10,audio,audio,audio,visual or audio,audio,verified
 mj41_011,mf2_10,dialogue or text,dialogue or text,text,dialogue or text,dialogue or text,verified
 mj41_012,mf2_10,dialogue or visual,dialogue or visual,prior,guessable,prior,reassigned
@@ -668,7 +668,7 @@ ns37_008,mf2_17,text,undetermined,undetermined,undetermined,text,kept
 ns37_010,mf2_17,text,text,text,text,text,verified
 ns37_012,mf2_17,audio,audio,audio,audio,audio,verified
 ns37_016,mf2_17,dialogue and visual,guessable,visual,prior,visual,reassigned
-ns37_017,mf2_17,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
+ns37_017,mf2_17,dialogue and visual,visual,visual,visual,visual,reassigned
 ns37_018,mf2_17,prior,undetermined,prior,prior,prior,verified
 ns37_021,mf2_17,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
 ns37_024,mf2_17,dialogue,dialogue,dialogue,dialogue,dialogue,verified
@@ -688,7 +688,7 @@ pb31_013,chnb_Parlor_Bedroom_and_Bath_1931,prior,undetermined,undetermined,prior
 pb31_016,chnb_Parlor_Bedroom_and_Bath_1931,dialogue and audio,undetermined,undetermined,undetermined,dialogue and audio,kept
 pb31_021,chnb_Parlor_Bedroom_and_Bath_1931,visual,visual,visual,any source,visual,verified
 pb31_022,chnb_Parlor_Bedroom_and_Bath_1931,text,undetermined,text,undetermined,text,kept
-pb31_023,chnb_Parlor_Bedroom_and_Bath_1931,visual or audio,undetermined,undetermined,visual,visual or audio,kept
+pb31_023,chnb_Parlor_Bedroom_and_Bath_1931,visual or audio,visual or audio,audio,visual or audio,visual or audio,verified
 pb31_024,chnb_Parlor_Bedroom_and_Bath_1931,visual,undetermined,undetermined,visual,visual,kept
 pb31_027,chnb_Parlor_Bedroom_and_Bath_1931,audio,undetermined,undetermined,undetermined,audio,kept
 pb31_028,chnb_Parlor_Bedroom_and_Bath_1931,dialogue or text,dialogue,dialogue,dialogue,dialogue,reassigned
@@ -698,7 +698,7 @@ pp47_002,chnb_The_Perils_of_Pauline_1947,dialogue,dialogue,dialogue,dialogue,dia
 pp47_003,chnb_The_Perils_of_Pauline_1947,dialogue,undetermined,undetermined,undetermined,dialogue,kept
 pp47_005,chnb_The_Perils_of_Pauline_1947,visual,undetermined,undetermined,visual,visual,kept
 pp47_006,chnb_The_Perils_of_Pauline_1947,visual,undetermined,undetermined,visual,visual,kept
-pp47_007,chnb_The_Perils_of_Pauline_1947,visual,visual,guessable,visual,visual,verified
+pp47_007,chnb_The_Perils_of_Pauline_1947,visual,visual,guessable,visual or audio,visual or audio,reassigned
 pp47_008,chnb_The_Perils_of_Pauline_1947,text,text,text,text,text,verified
 pp47_010,chnb_The_Perils_of_Pauline_1947,text,undetermined,undetermined,undetermined,text,kept
 pp47_011,chnb_The_Perils_of_Pauline_1947,dialogue or text,text,text,text,text,reassigned
@@ -724,7 +724,7 @@ rh47_011,mf2_35,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigne
 rh47_013,mf2_35,dialogue or visual,dialogue,dialogue or visual,dialogue or visual,dialogue or visual,verified
 rh47_015,mf2_35,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
 rh47_017,mf2_35,prior,undetermined,undetermined,undetermined,prior,kept
-rh47_021,mf2_35,dialogue,undetermined,undetermined,undetermined,dialogue,kept
+rh47_021,mf2_35,dialogue,undetermined,undetermined,dialogue,dialogue,kept
 rh47_022,mf2_35,dialogue and visual,visual,undetermined,prior,prior,reassigned
 rh47_023,mf2_35,dialogue and visual,undetermined,undetermined,undetermined,dialogue and visual,kept
 rh47_025,mf2_35,visual,visual,undetermined,visual,visual,verified
@@ -803,9 +803,9 @@ st46_004,chnb_The_Stranger_1946,visual,visual,visual,visual,visual,verified
 st46_005,chnb_The_Stranger_1946,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 st46_006,chnb_The_Stranger_1946,dialogue,dialogue,dialogue,dialogue,dialogue,verified
 st46_007,chnb_The_Stranger_1946,text,text,text,text,text,verified
-st46_008,chnb_The_Stranger_1946,audio,undetermined,undetermined,undetermined,audio,kept
+st46_008,chnb_The_Stranger_1946,audio,undetermined,undetermined,audio,audio,kept
 st46_010,chnb_The_Stranger_1946,dialogue or visual,dialogue,dialogue or visual,dialogue or visual,dialogue or visual,verified
-st46_011,chnb_The_Stranger_1946,visual,undetermined,undetermined,undetermined,visual,kept
+st46_011,chnb_The_Stranger_1946,visual,prior,visual,undetermined,visual,verified
 st46_012,chnb_The_Stranger_1946,dialogue and text,undetermined,undetermined,visual,dialogue and text,kept
 st46_016,chnb_The_Stranger_1946,dialogue and visual,visual,visual,visual,visual,reassigned
 st46_017,chnb_The_Stranger_1946,prior,prior,prior,prior,prior,verified
@@ -823,7 +823,7 @@ su54_007,mf2_5,visual,undetermined,undetermined,undetermined,visual,kept
 su54_008,mf2_5,text,text,text,text,text,verified
 su54_009,mf2_5,text,text,text,text,text,verified
 su54_012,mf2_5,dialogue or text,dialogue or text,dialogue or text,dialogue or text,dialogue or text,verified
-su54_014,mf2_5,dialogue or visual,dialogue,dialogue,dialogue,dialogue,reassigned
+su54_014,mf2_5,dialogue or visual,guessable,dialogue or visual,guessable,guessable,reassigned
 su54_017,mf2_5,prior,undetermined,prior,prior,prior,verified
 su54_021,mf2_5,dialogue and text,dialogue and text,dialogue and text,dialogue,dialogue and text,verified
 su54_022,mf2_5,dialogue and visual,visual and audio,visual,visual,visual,reassigned

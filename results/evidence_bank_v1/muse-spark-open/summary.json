@@ -10,112 +10,112 @@
  },
  "conditions": {
   "q": {
-   "accuracy": 7.7,
+   "accuracy": 8.5,
    "ci": [
-    6.3,
-    9.1
+    6.9,
+    10.2
    ],
    "coverage": 1000,
-   "delta": -70.9,
+   "delta": -71.0,
    "delta_ci": [
-    -73.8,
-    -67.9
+    -74.0,
+    -68.0
    ],
    "p": 0.00019998000199980003,
-   "lost": 719,
-   "gained": 10,
+   "lost": 723,
+   "gained": 13,
    "p_holm": 0.0042
   },
   "t": {
-   "accuracy": 15.7,
+   "accuracy": 16.1,
    "ci": [
-    13.8,
-    17.5
+    14.2,
+    18.0
    ],
    "coverage": 1000,
-   "delta": -62.9,
+   "delta": -63.4,
    "delta_ci": [
-    -65.7,
-    -60.1
+    -66.4,
+    -60.5
    ],
    "p": 0.00019998000199980003,
-   "lost": 650,
-   "gained": 21,
+   "lost": 657,
+   "gained": 23,
    "p_holm": 0.0042
   },
   "td": {
-   "accuracy": 46.8,
+   "accuracy": 47.4,
    "ci": [
-    44.8,
-    48.9
+    45.3,
+    49.5
    ],
    "coverage": 1000,
-   "delta": -31.8,
+   "delta": -32.1,
    "delta_ci": [
-    -34.7,
-    -29.0
+    -35.0,
+    -29.3
    ],
    "p": 0.00019998000199980003,
-   "lost": 336,
-   "gained": 18,
+   "lost": 340,
+   "gained": 19,
    "p_holm": 0.0042
   },
   "tv": {
-   "accuracy": 34.6,
+   "accuracy": 35.3,
    "ci": [
-    31.7,
-    37.5
+    32.5,
+    38.1
    ],
    "coverage": 1000,
-   "delta": -44.0,
+   "delta": -44.2,
    "delta_ci": [
     -47.7,
-    -40.4
+    -40.8
    ],
    "p": 0.00019998000199980003,
-   "lost": 473,
-   "gained": 33,
+   "lost": 474,
+   "gained": 32,
    "p_holm": 0.0042
   },
   "tr": {
-   "accuracy": 27.8,
+   "accuracy": 27.7,
    "ci": [
-    26.0,
-    29.6
+    25.9,
+    29.5
    ],
    "coverage": 1000,
-   "delta": -50.8,
+   "delta": -51.8,
    "delta_ci": [
-    -53.6,
-    -48.0
+    -54.4,
+    -49.3
    ],
    "p": 0.00019998000199980003,
-   "lost": 513,
+   "lost": 523,
    "gained": 5,
    "p_holm": 0.0042
   },
   "ta": {
-   "accuracy": 20.3,
+   "accuracy": 20.8,
    "ci": [
-    18.4,
-    22.2
+    18.9,
+    22.7
    ],
    "coverage": 1000,
-   "delta": -58.3,
+   "delta": -58.7,
    "delta_ci": [
-    -61.5,
-    -55.1
+    -61.7,
+    -55.6
    ],
    "p": 0.00019998000199980003,
-   "lost": 602,
-   "gained": 19,
+   "lost": 608,
+   "gained": 21,
    "p_holm": 0.0042
   },
   "tdvra": {
-   "accuracy": 78.6,
+   "accuracy": 79.5,
    "ci": [
-    76.1,
-    81.1
+    77.1,
+    82.0
    ],
    "coverage": 1000,
    "delta": 0.0,
@@ -128,259 +128,259 @@
    "gained": 0
   },
   "w_td": {
-   "accuracy": 38.5,
+   "accuracy": 39.5,
    "ci": [
-    36.1,
-    40.8
+    37.1,
+    41.8
    ],
    "coverage": 798,
-   "delta": -39.5,
+   "delta": -39.6,
    "delta_ci": [
-    -42.9,
-    -36.1
+    -43.0,
+    -36.4
    ],
    "p": 0.00019998000199980003,
-   "lost": 329,
-   "gained": 14,
+   "lost": 332,
+   "gained": 16,
    "p_holm": 0.0042
   },
   "w_tv": {
-   "accuracy": 34.2,
+   "accuracy": 35.2,
    "ci": [
-    31.3,
-    37.1
+    32.5,
+    37.9
    ],
    "coverage": 798,
-   "delta": -43.7,
+   "delta": -43.9,
    "delta_ci": [
-    -47.2,
-    -40.1
+    -47.1,
+    -40.5
    ],
    "p": 0.00019998000199980003,
-   "lost": 383,
-   "gained": 34,
+   "lost": 380,
+   "gained": 30,
    "p_holm": 0.0042
   },
   "w_tr": {
-   "accuracy": 18.0,
+   "accuracy": 18.4,
    "ci": [
-    15.8,
-    20.4
+    16.1,
+    20.9
    ],
    "coverage": 798,
-   "delta": -59.9,
+   "delta": -60.7,
    "delta_ci": [
-    -63.0,
-    -56.6
+    -63.5,
+    -57.6
    ],
    "p": 0.00019998000199980003,
-   "lost": 486,
-   "gained": 8,
+   "lost": 493,
+   "gained": 9,
    "p_holm": 0.0042
   },
   "w_ta": {
-   "accuracy": 9.9,
+   "accuracy": 10.5,
    "ci": [
-    7.9,
-    11.9
+    8.5,
+    12.5
    ],
    "coverage": 798,
-   "delta": -68.0,
+   "delta": -68.5,
    "delta_ci": [
-    -71.5,
-    -64.6
+    -72.0,
+    -65.1
    ],
    "p": 0.00019998000199980003,
-   "lost": 549,
-   "gained": 6,
+   "lost": 554,
+   "gained": 7,
    "p_holm": 0.0042
   },
   "w_tdv": {
-   "accuracy": 62.8,
+   "accuracy": 63.5,
    "ci": [
-    59.4,
-    66.0
+    60.4,
+    66.5
    ],
    "coverage": 798,
-   "delta": -15.2,
+   "delta": -15.5,
    "delta_ci": [
-    -18.3,
-    -12.0
+    -18.8,
+    -12.5
    ],
    "p": 0.00019998000199980003,
-   "lost": 155,
-   "gained": 34,
+   "lost": 157,
+   "gained": 33,
    "p_holm": 0.0042
   },
   "w_tdr": {
-   "accuracy": 50.5,
+   "accuracy": 51.5,
    "ci": [
-    48.0,
-    53.1
+    49.1,
+    54.0
    ],
    "coverage": 798,
-   "delta": -27.4,
+   "delta": -27.6,
    "delta_ci": [
     -30.4,
-    -24.4
+    -24.7
    ],
    "p": 0.00019998000199980003,
-   "lost": 237,
-   "gained": 18,
+   "lost": 239,
+   "gained": 19,
    "p_holm": 0.0042
   },
   "w_tda": {
-   "accuracy": 42.5,
+   "accuracy": 43.2,
    "ci": [
-    39.8,
-    45.1
+    40.6,
+    45.9
    ],
    "coverage": 798,
-   "delta": -35.5,
+   "delta": -35.8,
    "delta_ci": [
-    -38.8,
-    -32.3
+    -39.2,
+    -32.7
    ],
    "p": 0.00019998000199980003,
-   "lost": 296,
-   "gained": 13,
+   "lost": 300,
+   "gained": 14,
    "p_holm": 0.0042
   },
   "w_tvr": {
-   "accuracy": 47.1,
+   "accuracy": 48.5,
    "ci": [
-    43.9,
-    50.5
+    45.4,
+    51.7
    ],
    "coverage": 798,
-   "delta": -30.8,
+   "delta": -30.6,
    "delta_ci": [
-    -34.0,
-    -27.5
+    -33.5,
+    -27.6
    ],
    "p": 0.00019998000199980003,
-   "lost": 283,
-   "gained": 37,
+   "lost": 277,
+   "gained": 33,
    "p_holm": 0.0042
   },
   "w_tva": {
-   "accuracy": 37.7,
+   "accuracy": 38.8,
    "ci": [
-    34.5,
-    40.9
+    35.9,
+    41.8
    ],
    "coverage": 798,
    "delta": -40.2,
    "delta_ci": [
-    -43.6,
-    -36.9
+    -43.4,
+    -37.0
    ],
    "p": 0.00019998000199980003,
-   "lost": 354,
-   "gained": 33,
+   "lost": 351,
+   "gained": 30,
    "p_holm": 0.0042
   },
   "w_tra": {
-   "accuracy": 23.1,
+   "accuracy": 23.9,
    "ci": [
-    20.4,
-    25.8
+    21.3,
+    26.7
    ],
    "coverage": 798,
-   "delta": -54.9,
+   "delta": -55.1,
    "delta_ci": [
-    -58.4,
-    -51.2
+    -58.5,
+    -51.6
    ],
    "p": 0.00019998000199980003,
-   "lost": 449,
-   "gained": 11,
+   "lost": 452,
+   "gained": 12,
    "p_holm": 0.0042
   },
   "w_tdvr": {
-   "accuracy": 75.7,
+   "accuracy": 77.1,
    "ci": [
-    72.7,
-    78.5
+    74.3,
+    79.6
    ],
    "coverage": 798,
-   "delta": -2.3,
+   "delta": -2.0,
    "delta_ci": [
-    -4.8,
-    0.3
+    -4.4,
+    0.4
    ],
-   "p": 0.08399160083991601,
-   "lost": 60,
-   "gained": 42,
-   "p_holm": 0.1456
+   "p": 0.10478952104789521,
+   "lost": 57,
+   "gained": 41,
+   "p_holm": 0.1252
   },
   "w_tdva": {
-   "accuracy": 68.3,
+   "accuracy": 70.2,
    "ci": [
-    65.2,
-    71.4
+    67.1,
+    73.1
    ],
    "coverage": 798,
-   "delta": -9.6,
+   "delta": -8.9,
    "delta_ci": [
-    -12.2,
-    -7.1
+    -11.5,
+    -6.4
    ],
    "p": 0.00019998000199980003,
-   "lost": 117,
-   "gained": 40,
+   "lost": 113,
+   "gained": 42,
    "p_holm": 0.0042
   },
   "w_tdra": {
-   "accuracy": 55.4,
+   "accuracy": 56.1,
    "ci": [
-    53.1,
-    57.8
+    53.7,
+    58.7
    ],
    "coverage": 798,
-   "delta": -22.6,
+   "delta": -22.9,
    "delta_ci": [
-    -25.4,
-    -19.8
+    -25.6,
+    -20.3
    ],
    "p": 0.00019998000199980003,
-   "lost": 196,
-   "gained": 16,
+   "lost": 200,
+   "gained": 17,
    "p_holm": 0.0042
   },
   "w_tvra": {
-   "accuracy": 50.9,
+   "accuracy": 52.6,
    "ci": [
-    47.6,
-    54.1
+    49.6,
+    55.6
    ],
    "coverage": 798,
-   "delta": -27.1,
+   "delta": -26.4,
    "delta_ci": [
-    -30.0,
-    -24.1
+    -29.2,
+    -23.6
    ],
    "p": 0.00019998000199980003,
-   "lost": 251,
-   "gained": 35,
+   "lost": 245,
+   "gained": 34,
    "p_holm": 0.0042
   },
   "w_tdvra": {
-   "accuracy": 79.8,
+   "accuracy": 81.1,
    "ci": [
-    77.1,
-    82.6
+    78.4,
+    83.8
    ],
    "coverage": 798,
-   "delta": 1.9,
+   "delta": 2.0,
    "delta_ci": [
-    -0.1,
-    3.9
+    0.0,
+    4.1
    ],
-   "p": 0.07279272072792721,
-   "lost": 27,
-   "gained": 42,
-   "p_holm": 0.1456
+   "p": 0.06259374062593741,
+   "lost": 24,
+   "gained": 40,
+   "p_holm": 0.1252
   }
  },
  "shapley": {
@@ -388,73 +388,73 @@
    "inputs": "DVRA",
    "n": 798,
    "D": {
-    "value": 30.6,
+    "value": 30.7,
     "ci": [
-     28.3,
+     28.5,
      32.9
     ]
    },
    "V": {
-    "value": 26.3,
+    "value": 26.9,
     "ci": [
-     24.1,
-     28.7
+     24.8,
+     29.1
     ]
    },
    "R": {
-    "value": 12.2,
+    "value": 12.1,
     "ci": [
      10.1,
-     14.4
+     14.3
     ]
    },
    "A": {
-    "value": 4.1,
+    "value": 4.2,
     "ci": [
-     2.8,
-     5.4
+     3.0,
+     5.5
     ]
    },
    "DxV": {
-    "value": -3.3,
+    "value": -4.0,
     "ci": [
-     -6.0,
-     -0.4
+     -6.9,
+     -1.1
     ]
    },
    "DxR": {
-    "value": 0.6,
+    "value": 0.8,
     "ci": [
-     -2.0,
-     3.3
+     -1.9,
+     3.4
     ]
    },
    "DxA": {
-    "value": 0.8,
+    "value": 0.4,
     "ci": [
-     -1.4,
-     3.0
+     -1.8,
+     2.5
     ]
    },
    "VxR": {
-    "value": 1.5,
+    "value": 2.0,
     "ci": [
-     -1.1,
-     4.1
+     -0.6,
+     4.8
     ]
    },
    "VxA": {
     "value": 0.3,
     "ci": [
      -2.1,
-     2.5
+     2.6
     ]
    },
    "RxA": {
-    "value": 1.8,
+    "value": 2.1,
     "ci": [
-     -0.5,
-     4.1
+     -0.1,
+     4.5
     ]
    }
   }
@@ -465,22 +465,22 @@
    "threshold": 0.5,
    "units": 848,
    "untestable": 0,
-   "undetermined": 180,
-   "unstable": 221,
-   "coverage": 0.788,
+   "undetermined": 170,
+   "unstable": 218,
+   "coverage": 0.8,
    "by_type": {
-    "n": 668,
-    "agreement": 0.614,
-    "kappa": 0.545,
+    "n": 678,
+    "agreement": 0.619,
+    "kappa": 0.553,
     "confusion": {
      "audio -> any source": 3,
-     "audio -> audio": 19,
+     "audio -> audio": 21,
      "audio -> guessable": 2,
      "audio -> prior": 2,
      "audio -> three or more sources": 1,
      "audio -> visual or audio": 3,
      "dialogue -> any source": 1,
-     "dialogue -> dialogue": 165,
+     "dialogue -> dialogue": 168,
      "dialogue -> dialogue or audio": 1,
      "dialogue -> dialogue or text": 1,
      "dialogue -> dialogue or visual": 2,
@@ -492,41 +492,39 @@
      "dialogue and audio -> guessable": 1,
      "dialogue and text -> any source": 1,
      "dialogue and text -> dialogue": 4,
-     "dialogue and text -> dialogue and text": 1,
+     "dialogue and text -> dialogue and text": 2,
      "dialogue and text -> several pairs": 1,
      "dialogue and text -> text": 5,
      "dialogue and text -> visual": 1,
-     "dialogue and visual -> dialogue and visual": 1,
      "dialogue and visual -> dialogue or visual": 2,
      "dialogue and visual -> guessable": 4,
-     "dialogue and visual -> prior": 6,
-     "dialogue and visual -> several pairs": 2,
+     "dialogue and visual -> prior": 7,
+     "dialogue and visual -> several pairs": 4,
      "dialogue and visual -> three or more sources": 3,
-     "dialogue and visual -> visual": 57,
+     "dialogue and visual -> visual": 58,
      "dialogue and visual -> visual and audio": 2,
-     "dialogue and visual -> visual or audio": 1,
      "dialogue or audio -> dialogue": 1,
-     "dialogue or audio -> dialogue or audio": 2,
+     "dialogue or audio -> dialogue or audio": 1,
+     "dialogue or audio -> guessable": 1,
      "dialogue or text -> any source": 1,
      "dialogue or text -> dialogue": 6,
      "dialogue or text -> dialogue or text": 23,
      "dialogue or text -> prior": 2,
      "dialogue or text -> text": 4,
      "dialogue or visual -> any source": 2,
-     "dialogue or visual -> dialogue": 31,
-     "dialogue or visual -> dialogue or visual": 22,
-     "dialogue or visual -> guessable": 5,
-     "dialogue or visual -> prior": 5,
+     "dialogue or visual -> dialogue": 29,
+     "dialogue or visual -> dialogue or visual": 25,
+     "dialogue or visual -> guessable": 8,
+     "dialogue or visual -> prior": 4,
      "dialogue or visual -> several pairs": 2,
-     "dialogue or visual -> three or more sources": 1,
-     "dialogue or visual -> visual": 9,
+     "dialogue or visual -> visual": 7,
      "prior -> guessable": 3,
      "prior -> prior": 28,
      "text -> any source": 2,
      "text -> guessable": 1,
      "text -> prior": 6,
      "text -> several pairs": 4,
-     "text -> text": 66,
+     "text -> text": 67,
      "text -> visual": 1,
      "text -> visual or text": 3,
      "text and audio -> text and audio": 2,
@@ -534,48 +532,48 @@
      "visual -> dialogue and visual": 2,
      "visual -> dialogue or visual": 2,
      "visual -> guessable": 12,
-     "visual -> prior": 5,
-     "visual -> several pairs": 6,
+     "visual -> prior": 6,
+     "visual -> several pairs": 4,
      "visual -> three or more sources": 3,
-     "visual -> visual": 78,
+     "visual -> visual": 79,
      "visual -> visual and text": 1,
-     "visual -> visual or audio": 2,
+     "visual -> visual or audio": 3,
      "visual -> visual or text": 2,
      "visual and text -> text": 2,
      "visual and text -> visual": 1,
      "visual and text -> visual or text": 1,
      "visual or audio -> audio": 3,
      "visual or audio -> prior": 1,
-     "visual or audio -> visual": 2,
-     "visual or audio -> visual or audio": 2,
+     "visual or audio -> visual": 1,
+     "visual or audio -> visual or audio": 3,
      "visual or text -> text": 1,
      "visual or text -> visual or text": 1
     }
    },
    "by_family": {
-    "n": 668,
-    "agreement": 0.618,
-    "kappa": 0.309,
+    "n": 678,
+    "agreement": 0.624,
+    "kappa": 0.322,
     "confusion": {
      "and -> and": 6,
      "and -> guessable": 5,
-     "and -> or": 4,
-     "and -> other": 7,
-     "and -> prior": 6,
-     "and -> single": 76,
-     "or -> guessable": 5,
-     "or -> or": 50,
-     "or -> other": 6,
-     "or -> prior": 8,
-     "or -> single": 57,
+     "and -> or": 3,
+     "and -> other": 9,
+     "and -> prior": 7,
+     "and -> single": 77,
+     "or -> guessable": 9,
+     "or -> or": 53,
+     "or -> other": 5,
+     "or -> prior": 7,
+     "or -> single": 52,
      "prior -> guessable": 3,
      "prior -> prior": 28,
      "single -> and": 3,
      "single -> guessable": 17,
-     "single -> or": 16,
-     "single -> other": 22,
-     "single -> prior": 20,
-     "single -> single": 329
+     "single -> or": 17,
+     "single -> other": 20,
+     "single -> prior": 21,
+     "single -> single": 336
     }
    }
   }
