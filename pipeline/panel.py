@@ -28,8 +28,14 @@ Leave-one-model-out
     95% intervals: bootstrap over films (all questions of a drawn film together), the same resamples for before and
     after, so their difference is paired. With more than three readers, the folds of training size 2 are also
     reported per three-reader panel (each panel: three folds, every reader held out once).
+Comparisons
+    Other labels scored on the same folds: "fixed rule" ("X or Y" -> X, "X and Y" -> Y, no readers), "two-source only"
+    (the reassigned label for "or" and "and" labels, the synthetic label otherwise) and "type map" (each synthetic
+    label replaced by the type T most often reassigns it to on the other films). Agreement before and after is also
+    given per label family, pooled over the folds.
 Also
-    The ceiling: agreement between two readers' measured types. Profiles: every reader's accuracy per condition on
+    The ceiling: agreement between two readers' measured types. Inconsistent cells: per reader, the questions where a
+    lane set suffices but a larger one does not (single runs make some of these). Profiles: every reader's accuracy per condition on
     the answerable questions, and the single-lane matrix (labelled single-source type x lane given alone, excerpts).
     Routing: each question goes to the reader that is most accurate with all lanes over the whole film on questions of
     the same evidence source (chosen on the other films), by synthetic and by reassigned label (pooled from all
@@ -111,6 +117,13 @@ def boot_mean(per_fold, films_order, B, seed):
             "gain": round(100 * (pt[1] - pt[0]), 1), "gain_ci": ci([x[1] - x[0] for x in bs])}
 
 
+def fixed_rule(label: str) -> str:
+    """"X or Y" -> X, "X and Y" -> Y, any other label unchanged."""
+    if " or " in label:
+        return label.split(" or ")[0]
+    return label.split(" and ")[1] if " and " in label else label
+
+
 def by_panel(rows, readers):
     """Folds of training size 2 grouped by the three readers they involve (the training pair and the held-out
     reader), so each group is a three-reader leave-one-model-out with three folds. rows: (fold row, per film)."""
@@ -157,18 +170,40 @@ def main():
             out[u] = (want[u], "kept") if p == "undetermined" else (p, "verified" if p == want[u] else "reassigned")
         return out
 
+    testable = [u for u in answerable if want[u] != "untestable"]
     folds, by_size = [], collections.defaultdict(list)
+    compare, by_fam = collections.defaultdict(lambda: collections.defaultdict(list)), collections.defaultdict(dict)
     for h in readers:
         others = [m for m in readers if m != h]
         for k in cfg.get("train_sizes", [2]):
             for T in combinations(others, k):
                 new = reassign(T)
-                testable = [u for u in answerable if want[u] != "untestable"]
                 base_u = [u for u in testable if own[h][u] != "undetermined"]
+                moved = collections.defaultdict(collections.Counter)
+                for u in testable:
+                    if new[u][1] != "kept":
+                        moved[(want[u], film_of[u])][new[u][0]] += 1
+
+                def type_map(u):
+                    c = sum((n for (w, f), n in moved.items() if w == want[u] and f != film_of[u]), collections.Counter())
+                    return c.most_common(1)[0][0] if c else want[u]
+                labels = {"fixed rule": lambda u: fixed_rule(want[u]),
+                          "two-source only": lambda u: new[u][0] if family(want[u]) in ("or", "and") else want[u],
+                          "type map": type_map}
                 per_film = collections.defaultdict(lambda: [0, 0, 0])
+                alt = {name: collections.defaultdict(lambda: [0, 0, 0]) for name in labels}
+                fam = by_fam[k]
                 for u in base_u:
                     r = per_film[film_of[u]]
                     r[0] += 1; r[1] += want[u] == own[h][u]; r[2] += new[u][0] == own[h][u]
+                    for name, lab in labels.items():
+                        a = alt[name][film_of[u]]
+                        a[0] += 1; a[1] += want[u] == own[h][u]
+                        a[2] += lab(u) == own[h][u]
+                    f = fam.setdefault(family(want[u]), [0, 0, 0])
+                    f[0] += 1; f[1] += want[u] == own[h][u]; f[2] += new[u][0] == own[h][u]
+                for name in labels:
+                    compare[k][name].append(dict(alt[name]))
                 status = collections.Counter(new[u][1] for u in testable)
                 before = agreement([(want[u], own[h][u]) for u in base_u])
                 after = agreement([(new[u][0], own[h][u]) for u in base_u])
@@ -192,7 +227,11 @@ def main():
         summary["leave_one_model_out"][f"train_{k}"] = {
             "folds": len(rows), **res, "kappa_before": mean("kappa_before"), "kappa_after": mean("kappa_after"),
             "family_before": round(100 * mean("family_before"), 1), "family_after": round(100 * mean("family_after"), 1),
-            "coverage": mean("coverage")}
+            "coverage": mean("coverage"),
+            "comparisons": {name: {key: v for key, v in boot_mean(pfs, films_order, B, seed).items()
+                                   if not key.startswith("before")} for name, pfs in compare[k].items()},
+            "by_family": {f: {"n": n, "before": round(100 * b / n, 1), "after": round(100 * a / n, 1)}
+                          for f, (n, b, a) in sorted(by_fam[k].items())}}
     if len(readers) > 3 and 2 in by_size:
         summary["leave_one_model_out"]["train_2"]["by_panel"] = {
             name: {"folds": len(rows), **boot_mean([pf for _, pf in rows], films_order, B, seed)}
@@ -209,6 +248,9 @@ def main():
                           for a, b in combinations(readers, 2)}
     for v in summary["ceiling"].values():
         v.pop("confusion", None)
+    summary["inconsistent_cells"] = {
+        m: sum(any(scores[m][CELLS[a]][u] >= tau > scores[m][CELLS[b]][u] for a in CELLS for b in CELLS if a < b)
+               for u in on_set) for m in readers}
 
     profiles, matrix = [], {}
     for m in readers:
@@ -255,6 +297,8 @@ def main():
     for k, v in summary["leave_one_model_out"].items():
         print(f"{k}: before {v['before']} {v['before_ci']}  after {v['after']} {v['after_ci']}  gain {v['gain']} {v['gain_ci']}  "
               f"({v['folds']} folds, coverage {v['coverage']})")
+        for name, c in v["comparisons"].items():
+            print(f"    {name}: {c['after']} {c['after_ci']}  gain {c['gain']} {c['gain_ci']}")
     print("status:", summary["status_all_readers"])
 
 

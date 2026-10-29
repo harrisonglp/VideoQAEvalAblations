@@ -36,7 +36,67 @@
    "kappa_after": 0.662,
    "family_before": 66.2,
    "family_after": 73.2,
-   "coverage": 0.703
+   "coverage": 0.703,
+   "comparisons": {
+    "fixed rule": {
+     "after": 73.5,
+     "after_ci": [
+      70.9,
+      75.9
+     ],
+     "gain": 7.9,
+     "gain_ci": [
+      5.3,
+      10.4
+     ]
+    },
+    "two-source only": {
+     "after": 75.9,
+     "after_ci": [
+      73.4,
+      78.1
+     ],
+     "gain": 10.3,
+     "gain_ci": [
+      7.9,
+      12.8
+     ]
+    },
+    "type map": {
+     "after": 75.3,
+     "after_ci": [
+      72.6,
+      77.9
+     ],
+     "gain": 9.7,
+     "gain_ci": [
+      7.8,
+      11.7
+     ]
+    }
+   },
+   "by_family": {
+    "and": {
+     "n": 508,
+     "before": 10.2,
+     "after": 49.6
+    },
+    "or": {
+     "n": 690,
+     "before": 33.9,
+     "after": 57.8
+    },
+    "prior": {
+     "n": 154,
+     "before": 90.9,
+     "after": 94.2
+    },
+    "single": {
+     "n": 2226,
+     "before": 85.9,
+     "after": 80.5
+    }
+   }
   },
   "train_2": {
    "folds": 3,
@@ -59,7 +119,67 @@
    "kappa_after": 0.672,
    "family_before": 66.2,
    "family_after": 74.2,
-   "coverage": 0.703
+   "coverage": 0.703,
+   "comparisons": {
+    "fixed rule": {
+     "after": 73.5,
+     "after_ci": [
+      70.9,
+      75.9
+     ],
+     "gain": 7.9,
+     "gain_ci": [
+      5.3,
+      10.4
+     ]
+    },
+    "two-source only": {
+     "after": 76.2,
+     "after_ci": [
+      73.6,
+      78.5
+     ],
+     "gain": 10.6,
+     "gain_ci": [
+      8.1,
+      13.3
+     ]
+    },
+    "type map": {
+     "after": 75.1,
+     "after_ci": [
+      72.3,
+      77.8
+     ],
+     "gain": 9.5,
+     "gain_ci": [
+      7.6,
+      11.5
+     ]
+    }
+   },
+   "by_family": {
+    "and": {
+     "n": 254,
+     "before": 10.2,
+     "after": 52.0
+    },
+    "or": {
+     "n": 345,
+     "before": 33.9,
+     "after": 57.4
+    },
+    "prior": {
+     "n": 77,
+     "before": 90.9,
+     "after": 94.8
+    },
+    "single": {
+     "n": 1113,
+     "before": 85.9,
+     "after": 81.8
+    }
+   }
   }
  },
  "status_all_readers": {
@@ -132,6 +252,11 @@
    "agreement": 0.74,
    "kappa": 0.676
   }
+ },
+ "inconsistent_cells": {
+  "gemma4-31b-think": 197,
+  "nemotron35-super-vl-think": 231,
+  "muse-spark-open": 221
  },
  "single_lane_matrix": {
   "gemma4-31b-think": {

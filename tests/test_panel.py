@@ -103,6 +103,13 @@ class RequestOptions(unittest.TestCase):
             self.assertIn("temperature", extra)
 
 
+class FixedRule(unittest.TestCase):
+    def test_either_takes_the_first_source_and_both_the_second(self):
+        self.assertEqual(panel.fixed_rule("dialogue or visual"), "dialogue")
+        self.assertEqual(panel.fixed_rule("dialogue and visual"), "visual")
+        self.assertEqual(panel.fixed_rule("text"), "text")
+
+
 class Retry(unittest.TestCase):
     def test_reply_that_runs_out_of_context_is_asked_again_with_the_next_seed(self):
         replies = [{"choices": [{"message": {"content": ""}, "finish_reason": "length"}]},

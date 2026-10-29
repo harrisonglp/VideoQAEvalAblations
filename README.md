@@ -225,7 +225,9 @@ verifies or reassigns its synthetic label to the evidence source the readers do 
 measures leave-one-model-out agreement: labels reassigned from one or two readers against the measured type
 of a reader that took no part, before and after, averaged over the folds, with bootstrap intervals over films. Folds
 with two training readers form the paper's three leave-one-model-out folds. It also writes each reader's accuracy profile,
-the single-lane matrix, the agreement between readers (the ceiling) and a routing check. Outputs: `summary.json`,
+the single-lane matrix, the agreement between readers (the ceiling) and a routing check. Next to each fold average
+it scores three simpler label corrections on the same folds (a fixed rule, reassigning two-source labels only, and a
+type-level map) and breaks the agreement down by label family. Outputs: `summary.json`,
 `labels.csv`, `folds.csv`, `profiles.csv`. Two variants write next to it: `panel_v1_threshold.json` (rule
 `threshold`, into `panel_threshold/`) and `panel_v1_thinking.json` (Gemma and Nemotron with thinking off versus on,
 into `panel_thinking/`). The whole-film pairs and triples (`evidence_bank_v1_panel_wholefilm.json`) were not run for

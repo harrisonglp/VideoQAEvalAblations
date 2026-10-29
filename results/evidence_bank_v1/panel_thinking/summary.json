@@ -37,7 +37,67 @@
    "kappa_after": 0.737,
    "family_before": 68.5,
    "family_after": 79.4,
-   "coverage": 0.645
+   "coverage": 0.645,
+   "comparisons": {
+    "fixed rule": {
+     "after": 77.5,
+     "after_ci": [
+      75.2,
+      79.7
+     ],
+     "gain": 9.5,
+     "gain_ci": [
+      6.5,
+      12.3
+     ]
+    },
+    "two-source only": {
+     "after": 81.7,
+     "after_ci": [
+      79.5,
+      83.8
+     ],
+     "gain": 13.7,
+     "gain_ci": [
+      11.4,
+      16.3
+     ]
+    },
+    "type map": {
+     "after": 79.2,
+     "after_ci": [
+      76.7,
+      81.6
+     ],
+     "gain": 11.2,
+     "gain_ci": [
+      9.0,
+      13.6
+     ]
+    }
+   },
+   "by_family": {
+    "and": {
+     "n": 864,
+     "before": 12.2,
+     "after": 61.5
+    },
+    "or": {
+     "n": 1281,
+     "before": 30.9,
+     "after": 67.8
+    },
+    "prior": {
+     "n": 264,
+     "before": 93.2,
+     "after": 93.2
+    },
+    "single": {
+     "n": 4152,
+     "before": 89.5,
+     "after": 85.4
+    }
+   }
   }
  },
  "status_all_readers": {
@@ -125,6 +185,12 @@
    "agreement": 0.868,
    "kappa": 0.829
   }
+ },
+ "inconsistent_cells": {
+  "gemma4-31b": 136,
+  "gemma4-31b-think": 197,
+  "nemotron35-super-vl": 130,
+  "nemotron35-super-vl-think": 231
  },
  "single_lane_matrix": {
   "gemma4-31b": {
