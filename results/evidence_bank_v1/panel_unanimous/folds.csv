@@ -1,0 +1,10 @@
+held_out,train,train_size,n,coverage,agree_before,agree_after,kappa_before,kappa_after,family_before,family_after,verified,reassigned,kept,after_fixed_rule,after_two_source_only,after_type_map
+gemma4-31b-think,nemotron35-super-vl-think,1,569,0.671,0.671,0.754,0.603,0.691,0.678,0.756,400,185,263,0.742,0.775,0.768
+gemma4-31b-think,muse-spark-open,1,569,0.671,0.671,0.719,0.603,0.651,0.678,0.726,420,258,170,0.742,0.775,0.759
+gemma4-31b-think,nemotron35-super-vl-think+muse-spark-open,2,569,0.671,0.671,0.768,0.603,0.706,0.678,0.773,393,162,293,0.742,0.779,0.768
+nemotron35-super-vl-think,gemma4-31b-think,1,585,0.69,0.684,0.768,0.624,0.715,0.687,0.768,382,187,279,0.756,0.798,0.776
+nemotron35-super-vl-think,muse-spark-open,1,585,0.69,0.684,0.733,0.624,0.674,0.687,0.745,420,258,170,0.756,0.793,0.769
+nemotron35-super-vl-think,gemma4-31b-think+muse-spark-open,2,585,0.69,0.684,0.793,0.624,0.743,0.687,0.797,385,163,300,0.756,0.812,0.779
+muse-spark-open,gemma4-31b-think,1,678,0.8,0.619,0.692,0.553,0.627,0.624,0.698,382,187,279,0.692,0.701,0.712
+muse-spark-open,nemotron35-super-vl-think,1,678,0.8,0.619,0.689,0.553,0.623,0.624,0.701,400,185,263,0.692,0.702,0.712
+muse-spark-open,gemma4-31b-think+nemotron35-super-vl-think,2,678,0.8,0.619,0.673,0.553,0.603,0.624,0.678,360,152,336,0.692,0.681,0.715

@@ -80,22 +80,296 @@
     "and": {
      "n": 894,
      "before": 12.1,
-     "after": 60.9
+     "after": 60.9,
+     "fixed rule": 64.8,
+     "two-source only": 60.9,
+     "type map": 62.9
     },
     "or": {
      "n": 1311,
      "before": 33.0,
-     "after": 67.6
+     "after": 67.6,
+     "fixed rule": 40.5,
+     "two-source only": 67.6,
+     "type map": 51.9
     },
     "prior": {
      "n": 264,
      "before": 93.2,
-     "after": 93.9
+     "after": 93.9,
+     "fixed rule": 93.2,
+     "two-source only": 93.2,
+     "type map": 93.2
     },
     "single": {
      "n": 4278,
      "before": 89.7,
-     "after": 85.7
+     "after": 85.7,
+     "fixed rule": 89.7,
+     "two-source only": 89.7,
+     "type map": 89.7
+    }
+   },
+   "label_sets": {
+    "synthetic": {
+     "agreement": 68.5,
+     "ci": [
+      66.1,
+      70.9
+     ]
+    },
+    "reassigned": {
+     "agreement": 79.2,
+     "ci": [
+      76.6,
+      81.5
+     ]
+    },
+    "fixed rule": {
+     "agreement": 77.0,
+     "ci": [
+      74.4,
+      79.4
+     ]
+    },
+    "two-source only": {
+     "agreement": 81.7,
+     "ci": [
+      79.3,
+      83.9
+     ]
+    },
+    "type map": {
+     "agreement": 79.0,
+     "ci": [
+      76.4,
+      81.5
+     ]
+    }
+   },
+   "paired": {
+    "reassigned - synthetic": {
+     "diff": 10.7,
+     "ci": [
+      8.1,
+      13.3
+     ]
+    },
+    "reassigned - fixed rule": {
+     "diff": 2.2,
+     "ci": [
+      0.1,
+      4.5
+     ]
+    },
+    "type map - fixed rule": {
+     "diff": 2.0,
+     "ci": [
+      0.4,
+      3.7
+     ]
+    },
+    "type map - reassigned": {
+     "diff": -0.3,
+     "ci": [
+      -2.3,
+      1.7
+     ]
+    },
+    "two-source only - type map": {
+     "diff": 2.8,
+     "ci": [
+      0.9,
+      4.6
+     ]
+    },
+    "two-source only - reassigned": {
+     "diff": 2.5,
+     "ci": [
+      1.6,
+      3.3
+     ]
+    },
+    "two-source only - fixed rule": {
+     "diff": 4.7,
+     "ci": [
+      2.7,
+      7.0
+     ]
+    }
+   },
+   "kappa_ci": {
+    "synthetic": {
+     "kappa": 0.62,
+     "ci": [
+      0.591,
+      0.648
+     ]
+    },
+    "reassigned": {
+     "kappa": 0.739,
+     "ci": [
+      0.709,
+      0.766
+     ]
+    }
+   },
+   "subsets": {
+    "all testable": {
+     "label_sets": {
+      "synthetic": {
+       "agreement": 45.4,
+       "ci": [
+        43.6,
+        47.3
+       ]
+      },
+      "reassigned": {
+       "agreement": 52.5,
+       "ci": [
+        50.2,
+        54.9
+       ]
+      },
+      "fixed rule": {
+       "agreement": 51.0,
+       "ci": [
+        48.7,
+        53.4
+       ]
+      },
+      "two-source only": {
+       "agreement": 54.2,
+       "ci": [
+        51.9,
+        56.5
+       ]
+      },
+      "type map": {
+       "agreement": 52.3,
+       "ci": [
+        50.1,
+        54.8
+       ]
+      }
+     },
+     "paired": {
+      "reassigned - synthetic": {
+       "diff": 7.1,
+       "ci": [
+        5.3,
+        8.9
+       ]
+      }
+     }
+    },
+    "typed by every reader": {
+     "label_sets": {
+      "synthetic": {
+       "agreement": 71.5,
+       "ci": [
+        68.2,
+        74.7
+       ]
+      },
+      "reassigned": {
+       "agreement": 83.6,
+       "ci": [
+        80.6,
+        86.2
+       ]
+      },
+      "fixed rule": {
+       "agreement": 79.6,
+       "ci": [
+        76.5,
+        82.3
+       ]
+      },
+      "two-source only": {
+       "agreement": 86.3,
+       "ci": [
+        83.6,
+        88.6
+       ]
+      },
+      "type map": {
+       "agreement": 81.5,
+       "ci": [
+        78.4,
+        84.3
+       ]
+      }
+     },
+     "paired": {
+      "reassigned - synthetic": {
+       "diff": 12.1,
+       "ci": [
+        8.9,
+        15.5
+       ]
+      }
+     }
+    },
+    "evidence reachable": {
+     "label_sets": {
+      "synthetic": {
+       "agreement": 67.9,
+       "ci": [
+        64.9,
+        70.6
+       ]
+      },
+      "reassigned": {
+       "agreement": 78.6,
+       "ci": [
+        75.7,
+        81.1
+       ]
+      },
+      "fixed rule": {
+       "agreement": 76.7,
+       "ci": [
+        74.0,
+        79.2
+       ]
+      },
+      "two-source only": {
+       "agreement": 81.4,
+       "ci": [
+        78.9,
+        83.7
+       ]
+      },
+      "type map": {
+       "agreement": 78.8,
+       "ci": [
+        76.2,
+        81.4
+       ]
+      }
+     },
+     "paired": {
+      "reassigned - synthetic": {
+       "diff": 10.7,
+       "ci": [
+        7.9,
+        13.6
+       ]
+      }
+     }
+    }
+   },
+   "agree_split": {
+    "agree": {
+     "n": 1823,
+     "held_out_agrees_new": 60.4,
+     "held_out_agrees_old": 20.9
+    },
+    "split": {
+     "n": 0,
+     "held_out_agrees_new": null,
+     "held_out_agrees_old": null
     }
    }
   }

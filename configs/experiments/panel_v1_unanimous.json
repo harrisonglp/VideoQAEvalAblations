@@ -1,0 +1,12 @@
+{
+ "description": "Sensitivity analysis of panel_v1: tau 1.0, so a lane set suffices only when every pooled reader answers from it (with two training readers, both must). Writes to results/<experiment>/panel_unanimous/.",
+ "experiment": "configs/experiments/evidence_bank_v1_panel.json",
+ "readers": ["gemma4-31b-think", "nemotron35-super-vl-think", "muse-spark-open"],
+ "judge": "gemma4-31b",
+ "rule": "best",
+ "tau": 1.0,
+ "train_sizes": [1, 2],
+ "bootstrap": 2000,
+ "seed": 12345,
+ "out": "panel_unanimous"
+}

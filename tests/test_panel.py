@@ -64,6 +64,30 @@ class Bootstrap(unittest.TestCase):
         self.assertLessEqual(res["gain_ci"][0], 25.0)
 
 
+class BootSets(unittest.TestCase):
+    def test_point_estimates_and_paired_difference(self):
+        # one fold, two films: label set a gets 3 of 4 right, b gets 4 of 4
+        fold = {"a": {"f1": [2, 1], "f2": [2, 2]}, "b": {"f1": [2, 2], "f2": [2, 2]}}
+        sets, diffs = panel.boot_sets([fold], ["f1", "f2"], 200, 1, (("b", "a"),))
+        self.assertEqual((sets["a"]["agreement"], sets["b"]["agreement"], diffs["b - a"]["diff"]), (75.0, 100.0, 25.0))
+        self.assertLessEqual(diffs["b - a"]["ci"][0], 25.0)
+
+    def test_same_resamples_as_boot_mean(self):
+        fold = {"f1": [3, 1, 2], "f2": [2, 2, 2], "f3": [4, 1, 3]}
+        old = panel.boot_mean([fold], ["f1", "f2", "f3"], 300, 7)
+        sets, diffs = panel.boot_sets([{"before": {f: [n, b] for f, (n, b, _) in fold.items()},
+                                        "after": {f: [n, a] for f, (n, _, a) in fold.items()}}],
+                                      ["f1", "f2", "f3"], 300, 7, (("after", "before"),))
+        self.assertEqual(sets["before"]["ci"], old["before_ci"])
+        self.assertEqual(diffs["after - before"]["ci"], old["gain_ci"])
+
+    def test_kappa_counts_matches_agreement(self):
+        from collections import Counter
+        from pipeline.analyze import agreement
+        pairs = [("dialogue", "dialogue")] * 5 + [("visual", "dialogue")] * 2 + [("visual", "visual")] * 3
+        self.assertAlmostEqual(panel.kappa_counts(Counter(pairs)), agreement(pairs)["kappa"], places=3)
+
+
 class ByPanel(unittest.TestCase):
     def test_four_readers_give_four_panels_of_three_folds(self):
         readers = ["a", "b", "c", "d"]

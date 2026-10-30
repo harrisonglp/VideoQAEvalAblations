@@ -175,7 +175,8 @@ results/evidence_bank_v1/
 │   ├── folds.csv                  every leave-one-model-out fold
 │   └── profiles.csv               reader × condition accuracy
 ├── panel_threshold/               sensitivity analysis with the threshold rule
-└── panel_thinking/                measured-type agreement with thinking off versus on
+├── panel_thinking/                measured-type agreement with thinking off versus on
+└── panel_unanimous/               tau 1.0 variant (both training readers must answer)
 ```
 
 Each `<reader>/<condition>.jsonl` line is one `(condition, question, repeat)` call. Important fields are:
@@ -227,10 +228,14 @@ of a reader that took no part, before and after, averaged over the folds, with b
 with two training readers form the paper's three leave-one-model-out folds. It also writes each reader's accuracy profile,
 the single-lane matrix, the agreement between readers (the ceiling) and a routing check. Next to each fold average
 it scores three simpler label corrections on the same folds (a fixed rule, reassigning two-source labels only, and a
-type-level map) and breaks the agreement down by label family. Outputs: `summary.json`,
-`labels.csv`, `folds.csv`, `profiles.csv`. Two variants write next to it: `panel_v1_threshold.json` (rule
-`threshold`, into `panel_threshold/`) and `panel_v1_thinking.json` (Gemma and Nemotron with thinking off versus on,
-into `panel_thinking/`). The whole-film pairs and triples (`evidence_bank_v1_panel_wholefilm.json`) were not run for
+type-level map) and breaks the agreement down by label family. `summary.json` also has paired differences between
+the label sets (same film resamples), bootstrap intervals for kappa, the same comparisons on every testable question
+(an undetermined held-out type counts as a miss), on the questions every reader types and on the questions whose
+cited evidence reaches its lanes, and the held-out agreement of reassignments the training readers agree on versus
+split on. Outputs: `summary.json`, `labels.csv`, `folds.csv`, `profiles.csv`. Three variants write next to it:
+`panel_v1_threshold.json` (rule `threshold`, into `panel_threshold/`), `panel_v1_unanimous.json` (tau 1.0, so both
+training readers must answer, into `panel_unanimous/`) and `panel_v1_thinking.json` (Gemma and Nemotron with thinking
+off versus on, into `panel_thinking/`). The whole-film pairs and triples (`evidence_bank_v1_panel_wholefilm.json`) were not run for
 the panel.
 
 Final results are in `results/evidence_bank_v1/`; `panel/summary.json` is the source for the paper's headline numbers.

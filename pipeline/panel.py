@@ -32,7 +32,11 @@ Comparisons
     Other labels scored on the same folds: "fixed rule" ("X or Y" -> X, "X and Y" -> Y, no readers), "two-source only"
     (the reassigned label for "or" and "and" labels, the synthetic label otherwise) and "type map" (each synthetic
     label replaced by the type T most often reassigns it to on the other films). Agreement before and after is also
-    given per label family, pooled over the folds.
+    given per label family, pooled over the folds, for every label set. Paired differences between label sets use the
+    same film resamples. The same label sets are also scored on three other question sets: every testable question
+    (an undetermined held-out type counts as disagreement), the questions every reader types, and the questions whose
+    cited evidence reaches its lanes (results/<experiment>/fidelity.csv, when present). Reassignments are split by
+    whether every training reader's own type equals the new label, and Cohen's kappa gets a bootstrap interval.
 Also
     The ceiling: agreement between two readers' measured types. Inconsistent cells: per reader, the questions where a
     lane set suffices but a larger one does not (single runs make some of these). Profiles: every reader's accuracy per condition on
@@ -117,6 +121,72 @@ def boot_mean(per_fold, films_order, B, seed):
             "gain": round(100 * (pt[1] - pt[0]), 1), "gain_ci": ci([x[1] - x[0] for x in bs])}
 
 
+def draws_for(films_order, B, seed):
+    """The film resamples boot_mean draws (same seed and order), as film counts."""
+    rng = random.Random(seed)
+    return [collections.Counter(rng.choice(films_order) for _ in films_order) for _ in range(B)]
+
+
+def _ci(xs, digits=1, scale=100):
+    xs, B = sorted(xs), len(xs)
+    return [round(scale * xs[int(0.025 * B)], digits), round(scale * xs[int(0.975 * B) - 1], digits)]
+
+
+def boot_sets(per_fold, films_order, B, seed, pairs=()):
+    """Fold-averaged agreement of label sets scored on the same questions, with 95% intervals, and the paired
+    differences (a - b) for the given pairs, all on the same film resamples. per_fold: list of
+    {label set: {film: [n, matches]}}."""
+    def stat(cnt):
+        out = {}
+        for name in per_fold[0]:
+            tot = 0.0
+            for fold in per_fold:
+                t = fold[name]
+                n = sum(t[f][0] * c for f, c in cnt.items() if f in t)
+                tot += sum(t[f][1] * c for f, c in cnt.items() if f in t) / n if n else 0
+            out[name] = tot / len(per_fold)
+        return out
+    pt = stat(collections.Counter(films_order))
+    bs = [stat(d) for d in draws_for(films_order, B, seed)]
+    sets = {name: {"agreement": round(100 * pt[name], 1), "ci": _ci([b[name] for b in bs])} for name in pt}
+    diffs = {f"{a} - {b}": {"diff": round(100 * (pt[a] - pt[b]), 1), "ci": _ci([x[a] - x[b] for x in bs])}
+             for a, b in pairs}
+    return sets, diffs
+
+
+def kappa_counts(conf):
+    """Cohen's kappa from a Counter of (label, type) pairs, as in pipeline.analyze.agreement."""
+    n = sum(conf.values())
+    if not n:
+        return None
+    po = sum(v for (a, b), v in conf.items() if a == b) / n
+    pa, pb = collections.Counter(), collections.Counter()
+    for (a, b), v in conf.items():
+        pa[a] += v
+        pb[b] += v
+    pe = sum(pa[k] * pb[k] for k in set(pa) | set(pb)) / n ** 2
+    return (po - pe) / (1 - pe) if pe < 1 else None
+
+
+def boot_kappa(per_fold, films_order, B, seed):
+    """Fold mean of Cohen's kappa and its 95% interval. per_fold: list of {film: Counter((label, held-out type))}."""
+    def stat(cnt):
+        ks = []
+        for fold in per_fold:
+            conf = collections.Counter()
+            for f, c in cnt.items():
+                for pair, v in fold.get(f, {}).items():
+                    conf[pair] += v * c
+            ks.append(kappa_counts(conf) or 0)
+        return sum(ks) / len(ks)
+    return {"kappa": round(stat(collections.Counter(films_order)), 3),
+            "ci": _ci([stat(d) for d in draws_for(films_order, B, seed)], 3, 1)}
+
+
+PAIRS = (("reassigned", "synthetic"), ("reassigned", "fixed rule"), ("type map", "fixed rule"), ("type map", "reassigned"),
+         ("two-source only", "type map"), ("two-source only", "reassigned"), ("two-source only", "fixed rule"))
+
+
 def fixed_rule(label: str) -> str:
     """"X or Y" -> X, "X and Y" -> Y, any other label unchanged."""
     if " or " in label:
@@ -162,6 +232,8 @@ def main():
     own = {m: {u: type_of(scores, [m], u, tau, on_set, rule) for u in answerable} for m in readers}
     film_of = {u: items[u]["film"] for u in answerable}
     films_order = sorted(set(film_of.values()))
+    fid = base / "fidelity.csv"
+    reach = {r["id"]: int(r["reachable"]) for r in csv.DictReader(open(fid))} if fid.exists() else {}
 
     def reassign(T):
         out = {}
@@ -173,6 +245,8 @@ def main():
     testable = [u for u in answerable if want[u] != "untestable"]
     folds, by_size = [], collections.defaultdict(list)
     compare, by_fam = collections.defaultdict(lambda: collections.defaultdict(list)), collections.defaultdict(dict)
+    set_tallies, kappa_tallies = collections.defaultdict(list), collections.defaultdict(list)
+    split = collections.defaultdict(lambda: {"agree": collections.Counter(), "split": collections.Counter()})
     for h in readers:
         others = [m for m in readers if m != h]
         for k in cfg.get("train_sizes", [2]):
@@ -187,9 +261,33 @@ def main():
                 def type_map(u):
                     c = sum((n for (w, f), n in moved.items() if w == want[u] and f != film_of[u]), collections.Counter())
                     return c.most_common(1)[0][0] if c else want[u]
+                mapped = {u: type_map(u) for u in testable}
                 labels = {"fixed rule": lambda u: fixed_rule(want[u]),
                           "two-source only": lambda u: new[u][0] if family(want[u]) in ("or", "and") else want[u],
-                          "type map": type_map}
+                          "type map": mapped.get}
+                sets = {"synthetic": want.get, "reassigned": lambda u: new[u][0], **labels}
+                subsets = {"typed": base_u, "all testable": testable,
+                           "typed by every reader": [u for u in base_u if all(own[m][u] != "undetermined" for m in readers)]}
+                if reach:
+                    subsets["evidence reachable"] = [u for u in base_u if reach.get(u, 1)]
+                tally = {}
+                for sub, us in subsets.items():
+                    tally[sub] = {}
+                    for name, lab in sets.items():
+                        t = collections.defaultdict(lambda: [0, 0])
+                        for u in us:
+                            c = t[film_of[u]]
+                            c[0] += 1; c[1] += lab(u) == own[h][u]
+                        tally[sub][name] = dict(t)
+                set_tallies[k].append(tally)
+                kap = {name: collections.defaultdict(collections.Counter) for name in ("synthetic", "reassigned")}
+                for u in base_u:
+                    kap["synthetic"][film_of[u]][(want[u], own[h][u])] += 1
+                    kap["reassigned"][film_of[u]][(new[u][0], own[h][u])] += 1
+                    if new[u][1] == "reassigned":
+                        g = split[k]["agree" if all(own[m][u] == new[u][0] for m in T) else "split"]
+                        g["n"] += 1; g["new"] += own[h][u] == new[u][0]; g["old"] += own[h][u] == want[u]
+                kappa_tallies[k].append(kap)
                 per_film = collections.defaultdict(lambda: [0, 0, 0])
                 alt = {name: collections.defaultdict(lambda: [0, 0, 0]) for name in labels}
                 fam = by_fam[k]
@@ -200,8 +298,10 @@ def main():
                         a = alt[name][film_of[u]]
                         a[0] += 1; a[1] += want[u] == own[h][u]
                         a[2] += lab(u) == own[h][u]
-                    f = fam.setdefault(family(want[u]), [0, 0, 0])
-                    f[0] += 1; f[1] += want[u] == own[h][u]; f[2] += new[u][0] == own[h][u]
+                    f = fam.setdefault(family(want[u]), collections.Counter())
+                    f["n"] += 1
+                    for name, lab in sets.items():
+                        f[name] += lab(u) == own[h][u]
                 for name in labels:
                     compare[k][name].append(dict(alt[name]))
                 status = collections.Counter(new[u][1] for u in testable)
@@ -214,7 +314,10 @@ def main():
                        "agree_before": before.get("agreement"), "agree_after": after.get("agreement"),
                        "kappa_before": before.get("kappa"), "kappa_after": after.get("kappa"),
                        "family_before": fam_b.get("agreement"), "family_after": fam_a.get("agreement"),
-                       "verified": status["verified"], "reassigned": status["reassigned"], "kept": status["kept"]}
+                       "verified": status["verified"], "reassigned": status["reassigned"], "kept": status["kept"],
+                       **{"after_" + name.replace(" ", "_").replace("-", "_"): round(sum(m for _, m in tally["typed"][name].values())
+                                                                                  / len(base_u), 3) if base_u else None
+                          for name in labels}}
                 folds.append(row)
                 by_size[k].append((row, dict(per_film)))
 
@@ -224,14 +327,27 @@ def main():
     for k, rows in sorted(by_size.items()):
         res = boot_mean([pf for _, pf in rows], films_order, B, seed)
         mean = lambda key: round(sum(r[key] for r, _ in rows if r[key] is not None) / len(rows), 3)
+        label_sets, paired = boot_sets([t["typed"] for t in set_tallies[k]], films_order, B, seed, PAIRS)
         summary["leave_one_model_out"][f"train_{k}"] = {
             "folds": len(rows), **res, "kappa_before": mean("kappa_before"), "kappa_after": mean("kappa_after"),
             "family_before": round(100 * mean("family_before"), 1), "family_after": round(100 * mean("family_after"), 1),
             "coverage": mean("coverage"),
             "comparisons": {name: {key: v for key, v in boot_mean(pfs, films_order, B, seed).items()
                                    if not key.startswith("before")} for name, pfs in compare[k].items()},
-            "by_family": {f: {"n": n, "before": round(100 * b / n, 1), "after": round(100 * a / n, 1)}
-                          for f, (n, b, a) in sorted(by_fam[k].items())}}
+            "by_family": {f: {"n": c["n"], "before": round(100 * c["synthetic"] / c["n"], 1),
+                              "after": round(100 * c["reassigned"] / c["n"], 1),
+                              **{name: round(100 * c[name] / c["n"], 1) for name in ("fixed rule", "two-source only", "type map")}}
+                          for f, c in sorted(by_fam[k].items())},
+            "label_sets": label_sets,
+            "paired": paired,
+            "kappa_ci": {name: boot_kappa([kt[name] for kt in kappa_tallies[k]], films_order, B, seed)
+                         for name in ("synthetic", "reassigned")},
+            "subsets": {sub: dict(zip(("label_sets", "paired"), boot_sets([t[sub] for t in set_tallies[k]], films_order, B, seed,
+                                                                          (("reassigned", "synthetic"),))))
+                        for sub in set_tallies[k][0] if sub != "typed"},
+            "agree_split": {g: {"n": c["n"], "held_out_agrees_new": round(100 * c["new"] / c["n"], 1) if c["n"] else None,
+                                "held_out_agrees_old": round(100 * c["old"] / c["n"], 1) if c["n"] else None}
+                            for g, c in split[k].items()}}
     if len(readers) > 3 and 2 in by_size:
         summary["leave_one_model_out"]["train_2"]["by_panel"] = {
             name: {"folds": len(rows), **boot_mean([pf for _, pf in rows], films_order, B, seed)}
@@ -299,6 +415,13 @@ def main():
               f"({v['folds']} folds, coverage {v['coverage']})")
         for name, c in v["comparisons"].items():
             print(f"    {name}: {c['after']} {c['after_ci']}  gain {c['gain']} {c['gain_ci']}")
+        for name, d in v["paired"].items():
+            print(f"    paired {name}: {d['diff']} {d['ci']}")
+        for sub, r in v["subsets"].items():
+            ls = r["label_sets"]
+            print(f"    {sub}: " + "  ".join(f"{n} {x['agreement']}" for n, x in ls.items())
+                  + f"  gain {r['paired']['reassigned - synthetic']['diff']} {r['paired']['reassigned - synthetic']['ci']}")
+        print("    agree/split:", v["agree_split"], " kappa:", v["kappa_ci"])
     print("status:", summary["status_all_readers"])
 
 
